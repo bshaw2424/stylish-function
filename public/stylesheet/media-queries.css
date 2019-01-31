@@ -21,13 +21,16 @@
     justify-content: start;
     align-items: start;
    }
-
    .footer-items {
        text-align: left;
        display: block;
        width: 100%;
    }
+   .footer-nav ul li a  {
+       padding: 8px 14px;
+   }
    .footer-items:hover {
        background: rgba(0,0,0,0.3);
+      text-decoration: underline;
    }
 }
