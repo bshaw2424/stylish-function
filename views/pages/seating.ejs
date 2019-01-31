@@ -1,13 +1,35 @@
 <% include ../partials/header %>
 
-<nav id="navigation">
-<% include ../partials/nav %>
-</nav>
-<section style="background: #d3d3d3; margin: 25px auto" class="container z-depth-1">
-    <h4 style="padding-top: 10px; text-align: center; margin: 0;">Seating</h4>
-    <p style="text-align: center; padding: 10px">this is the seating section with a description soon to come!!!</p>
-</section>
-
-
-
+  <nav id="navigation">
+    <% include ../partials/nav %>
+  </nav>
+  <!-- page intro-description section -->
+  <section class="page-intro">
+    <div class="container">
+      <h4>Seating</h4>
+      <p>this is the seating section with a description soon to come!!!</p>
+      <ul id="page-nav">
+        <li><a href="#">Sofa</a></li>
+        <li><a href="#">Lounge</a></li>
+        <li><a href="#">Bean Bag</a></li>
+      </ul>
+    </div>
+  </section>
+  <hr />
+  <!-- Page filter section with a search bar and select menu -->
+  <section id="filter-section">
+    <div id="search">
+      <input type="search" name="search-box"  id="seach" placeholder="Find more of what you are looking for...">
+      <button type="submit" class="btn-small"><i class="material-icons">send</i></button>
+    </div>
+    <select class="browser-default" name="" id="">
+      <option value="" disabled selected>Sort By:</option>
+      <option value="">Relevance</option>
+      <option value="">Newest</option>
+      <option value="">Price: Low to High</option>
+      <option value="">Price: High to Low</option>
+    </select>
+  </section>
+  <hr />
+  
 <% include ../partials/footer %>
