@@ -1,9 +1,6 @@
 /* media queries */
 
 @media screen and (max-width: 600px) {
-    body, html {
-        max-width: 600px;
-    }
    .header-info .message {
        font-size: 1.7rem;
    }
@@ -13,6 +10,37 @@
    }
    #about-section h4 {
        font-size: 1.7rem;
+   }
+   #about-section .card h5 {
+       font-size: 2rem; 
+   }
+   #about-section .card img {
+       display: block;
+   }
+   article p, .content-text {
+       text-align: center;
+   }
+   #filter-section {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+   #filter-section #search, 
+   #filter-section .btn-small, 
+   #filter-section .browser-default, 
+   #filter-section #search input[type="search"] {
+       width: 100%;
+       margin-bottom: 8px;
+   }
+   #filter-section #search {
+       padding: 0;
+   }
+   #filter-section .browser-default {
+       border: 1px solid black;
+   }
+   .page-intro #page-nav {
+       width: 100%;
    }
    .footer-nav ul {
     display: flex;

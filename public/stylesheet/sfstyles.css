@@ -97,9 +97,10 @@ a {
 }
 /* header section */
 #display-header {
-	background: url("../images/functionalSpace.jpeg")  center;
+	background: url("../images/functionalSpace.jpeg") no-repeat center center;
 	height: 55vh;
 	width: 100%;
+	object-fit: fill;
 	position: relative;
 }
 .header-info {
@@ -132,14 +133,19 @@ a {
 	margin: auto 50%;
 	transform: translateX(-50%);
 }
+.info-box .card img {
+	height: 3rem;
+}
+
 /* article section */
     article {
-		font-size: 1.5rem;
 		font-family: var(--content-font);
 	}
 	article p {
 		margin-bottom: 2rem;
+		font-size: 1.3rem;
 	}
+
 /* featured section */
 #featured {
 	background: var(--background);
