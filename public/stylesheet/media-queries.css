@@ -2,11 +2,47 @@
 
 @media screen and (max-width: 600px) {
    .header-info .message {
-       font-size: 1.7rem;
+       font-size: 2rem;
+       max-width: 80%;
+       margin: auto;
    }
-   .logo {
-       width: 60%;
+   #lead-nav {
+       width: 100%;
+   }
+   .nav-trigger i.material-icons {
+       cursor: pointer;
+   }
+   .sub-nav {
+       display: none;
+       transition: all 1s ease-in;
+   }
+   .sub-nav ul{
+       display: flex;
+       flex-direction: column;
+   }
+   .sub-nav ul li {
+       padding: 8px 0;
+       text-align: center;
+       border-bottom: 1px solid rgba(0,0,0, 0.4);
+       transition: all .3s ease-in;
+   }
+   .sub-nav ul li {
+      color: black;
+      font-size: 1.3rem;
+   }
+   .sub-nav ul li:hover {
+       background: #d3d3d3;
+       color: white;
+       text-shadow: 1px 1px #ee6e73;
+   }
+   .sub-nav ul {
        height: 100%;
+       width: 100%;
+   }
+   #lead-nav .brand-logo {
+       width: 80%;
+       margin-left: 10%;
+       padding-left: 8%;
    }
    #about-section h4 {
        font-size: 1.7rem;
@@ -36,13 +72,32 @@
    #filter-section #search {
        padding: 0;
    }
-   #filter-section .browser-default {
-       border: 1px solid black;
+  .browser-default {
+       display: block;
+       width: 90%;
+       margin: 0 5% 1rem 5%;
+   }
+   .info-box .card {
+       margin: 0;
+       margin-top: 2rem;
    }
    .page-intro #page-nav {
        width: 100%;
    }
+   #featured .card-title {
+       font-size: 1.7rem;
+   }
+   #featured .card-title a:hover {
+       transition: all .5s ease-in;
+   }
+   #featured .card-title a:hover {
+	color: black;
+    text-shadow: 1px 1px #ee6e73;
+   }
    .footer-nav ul {
+    width: 45%;
+    margin: 0 auto;
+    padding: 15px 0;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -58,7 +113,51 @@
        padding: 8px 14px;
    }
    .footer-items:hover {
-       background: rgba(0,0,0,0.3);
       text-decoration: underline;
    }
 }
+@media screen and (max-width: 990px) {
+    .header-info .message {
+        font-size: 3.5rem;
+        max-width: 80%;
+        margin: auto;
+    }
+    #lead-nav .brand-logo {
+        font-size: 3rem;
+    }
+    .sub-nav {
+        display: none;
+        transition: all 1s ease-in;
+        width: 100%;
+    }
+    .sub-nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-nav ul li {
+        padding: 8px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0, 0.4);
+        transition: all .3s ease-in;
+    }
+    .sub-nav ul li {
+       color: white;
+       background: rgba(0,0,0, 0.3);
+       font-size: 1.3rem;
+       padding: 1rem 1.6rem;
+    }
+    .sub-nav ul li:hover {
+        background: white;
+        color: black;
+        text-shadow: 1px 1px #ee6e73;
+    }
+    .sub-nav ul {
+        height: 100%;
+    }   
+    .info-box .card {
+        margin: 0;
+        margin-top: 2rem;
+    }
+
+}
+

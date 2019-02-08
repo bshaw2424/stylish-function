@@ -31,10 +31,6 @@ a {
 	word-wrap: break-word;
 }
 /* nav section */
-.lead-nav {
-	display: flex;
-	justify-content: space-between;
-}
 .logo {
 	font-size: 2.5rem;
 	font-family: var(--heading-font);
@@ -62,7 +58,7 @@ a {
 }
 #filter-section {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	padding: 12px 0;
 	margin: 0 10%;
@@ -119,6 +115,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	text-transform: capitalize;
 	justify-content: center;
 	align-items: center;
 	font-family: var(--heading-font);
@@ -172,13 +169,15 @@ a {
 	cursor: pointer;
 }
 #featured .card-title {
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 }
 #featured .card-title a {
-	color: var(--black);
+	color: #ee6e73;
+	text-shadow: 1px 1px black;
+	font-family: var(--heading-font);
 }
 #featured h1 {
-	padding: 1rem 0;
+	padding: 1.5rem 0;
 	text-align: center;
 	font-size: 3.5rem;
 	margin: 0;
@@ -190,18 +189,25 @@ a {
 
 /* footer */
 #footer-section {
-    background: #ee6e73
+	background: #ee6e73;
+}
+.footer-nav p {
+	padding:8px 0; 
+	text-align: center; 
+	color: white; 
+	text-transform: uppercase; 
+	margin: 0 auto; 
+	width: 50%;
 }
 .footer-nav ul {
+	width: 100%;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .footer-nav ul li {
 	padding-right: 1rem;
-}
-.footer-nav ul li:last-child {
-	padding-right: 0;
 }
 .footer-nav ul li a {
 	text-transform: capitalize;
