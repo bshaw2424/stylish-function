@@ -1,8 +1,12 @@
 /* media queries */
-
+@media screen and (max-width: 320px) {
+    #lead-nav div .brand-logo {
+        padding-left: 0;
+    }
+}
 @media screen and (max-width: 600px) {
    .header-info .message {
-       font-size: 2rem;
+       font-size: 2.5rem;
        max-width: 80%;
        margin: auto;
    }
@@ -31,9 +35,9 @@
       font-size: 1.3rem;
    }
    .sub-nav ul li:hover {
-       background: #d3d3d3;
-       color: white;
-       text-shadow: 1px 1px #ee6e73;
+    background: #d3d3d3;
+    color: white;
+    text-shadow: 1px 1px #ee6e73;
    }
    .sub-nav ul {
        height: 100%;
@@ -62,6 +66,9 @@
        align-items: center;
        justify-content: center;
    }
+   .desktop-nav {
+        display: none;
+    }
    #filter-section #search, 
    #filter-section .btn-small, 
    #filter-section .browser-default, 
@@ -116,7 +123,7 @@
       text-decoration: underline;
    }
 }
-@media screen and (max-width: 990px) {
+@media screen  and (min-width: 601px) and (max-width: 990px) {
     .header-info .message {
         font-size: 3.5rem;
         max-width: 80%;
@@ -124,6 +131,9 @@
     }
     #lead-nav .brand-logo {
         font-size: 3rem;
+    }
+    nav {
+        line-height: 56px;
     }
     .sub-nav {
         display: none;
@@ -141,23 +151,68 @@
         transition: all .3s ease-in;
     }
     .sub-nav ul li {
-       color: white;
-       background: rgba(0,0,0, 0.3);
+       color: black;
+       background: white;
        font-size: 1.3rem;
        padding: 1rem 1.6rem;
     }
     .sub-nav ul li:hover {
-        background: white;
-        color: black;
+        background: #d3d3d3;
+        color: white;
         text-shadow: 1px 1px #ee6e73;
     }
     .sub-nav ul {
         height: 100%;
     }   
+    .desktop-nav {
+        display: none;
+    }
     .info-box .card {
         margin: 0;
         margin-top: 2rem;
     }
-
+    #page-nav {
+        width: 40%;
+    }
 }
+@media screen and (min-width: 991px) {
+    #display-header {
+        background: url("../images/functionalSpace.jpeg") no-repeat center/cover;
+    }
+    .header-info .message {
+        font-size: 3rem;
+        max-width: 70%;
+        margin: auto;
+    }
+    .partial-nav {
+        display: none;
+    }
+    #navigation #lead-nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: auto;
+    }
+    .nav-trigger .material-icons {
+       display: none;
+       color: blue;
+    }
+    #about-section {
+        margin: 1.5rem auto;
+    }
+    .content-text {
+        margin: auto;
+    }
+    .card .card-content {
+        padding: 12px;
+    }
+} 
+@media screen and (orientation: landscape) {
+    #display-header, .header-info {
+        min-height: 70vh;
+    }
+    .header-info .message {
+        font-size: 2.5rem;
+    }
+  }
 

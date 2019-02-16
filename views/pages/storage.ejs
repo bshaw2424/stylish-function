@@ -1,22 +1,30 @@
 <% include ../partials/header %>
 
-  <nav id="navigation">
+<nav id="navigation">
     <% include ../partials/nav %>
   </nav>
+  <div class="hide-on-large-only">
+    <% include ../partials/mobile-nav %>
+  </div>
   <!-- page intro-description section -->
   <section class="page-intro">
     <div class="container">
       <h4>Storage</h4>
-      <p>this is the seating section with a description soon to come!!!</p>
+      <p>this is the storage section with a description soon to come!!!</p>
     </div>
   </section>
   <hr />
   <!-- Page filter section with a search bar and select menu -->
   <section id="filter-section">
     <div id="search">
-      <input type="search" name="search-box"  id="seach" placeholder="Find more of what you are looking for...">
-        <button type="submit" class="btn-small"><i class="material-icons">send</i></button>
-      </div>
+      <input type="search" name="search-box"  class="search-input" placeholder="Find more of what you are looking for...">
+      <button type="submit" class="btn-small"><i class="material-icons">send</i></button>
+    </div>
+  </section>
+ 
+  <main id="product-features">
+  <div class="container">
+    <div class="row">
       <select class="browser-default" name="" id="">
         <option value="" disabled selected>Sort By:</option>
         <option value="">Relevance</option>
@@ -24,7 +32,108 @@
         <option value="">Price: Low to High</option>
         <option value="">Price: High to Low</option>
       </select>
-    </section>
-    <hr />
- 
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-image">
+            <img src="../images/singlechair.jpeg" alt="">
+          </div>
+          <div class="card-content">
+            <p>afldsfj;asljf</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="../images/singlechair.jpeg" alt="">
+            </div>
+            <div class="card-content">
+              <p>afldsfj;asljf</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <img src="../images/singlechair.jpeg" alt="">
+              </div>
+              <div class="card-content">
+                <p>afldsfj;asljf</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="../images/singlechair.jpeg" alt="">
+                </div>
+                <div class="card-content">
+                  <p>afldsfj;asljf</p>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l4">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="../images/singlechair.jpeg" alt="">
+                  </div>
+                  <div class="card-content">
+                    <p>afldsfj;asljf</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="../images/singlechair.jpeg" alt="">
+                    </div>
+                    <div class="card-content">
+                      <p>afldsfj;asljf</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="../images/singlechair.jpeg" alt="">
+                      </div>
+                      <div class="card-content">
+                        <p>afldsfj;asljf</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s12 m6 l4">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="../images/singlechair.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                          <p>afldsfj;asljf</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <div class="card">
+                          <div class="card-image">
+                            <img src="../images/singlechair.jpeg" alt="">
+                          </div>
+                          <div class="card-content">
+                            <p>afldsfj;asljf</p>
+                          </div>
+                        </div>
+                      </div>
+    </div>
+  </div>
+  <hr>
+  <ul class="pagination center white s12" style="padding: 15px">
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active"><a href="#!">1</a></li>
+      <li class="waves-effect"><a href="#!">2</a></li>
+      <li class="waves-effect"><a href="#!">3</a></li>
+      <li class="waves-effect"><a href="#!">4</a></li>
+      <li class="waves-effect"><a href="#!">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+    </main>          
+  
 <% include ../partials/footer %>

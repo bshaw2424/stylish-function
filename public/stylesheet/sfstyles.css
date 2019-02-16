@@ -5,11 +5,21 @@
 	--background: #F9F4D9;
 	--heading-font: 'Slabo 27px', serif;
 	--content-font:  'Montserrat', sans-serif;
+	--flex-display: flex;
+}
+html {
+	overflow: auto;
 }
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	margin-bottom: 4rem;
+	width: 100%;
 }
 li {
 	list-style: none;
@@ -30,14 +40,11 @@ a {
 #about-section .card, article {
 	word-wrap: break-word;
 }
+
 /* nav section */
 .logo {
 	font-size: 2.5rem;
 	font-family: var(--heading-font);
-}
-#navigation {
-	/*position: fixed; */
-	z-index: 1
 }
 #page-nav {
 	display: flex;
@@ -75,15 +82,15 @@ a {
 }
 /* page section*/
 .page-intro {
-	margin: 25px auto; 
-	padding-bottom: 1rem; 
-	border-radius: .75rem;
+	margin: auto; 
+	padding-bottom: 1.8rem; 
+	border-bottom: 1px solid black;
 }
 .page-intro #page-nav {
 	background: #d3d3d3;
 }
 .page-intro h4 {
-	padding-top: 10px; 
+	padding-top: 1rem; 
 	text-align: center; 
 	margin: 0;
 }
@@ -120,15 +127,25 @@ a {
 	align-items: center;
 	font-family: var(--heading-font);
 }
+.nav-trigger .material-icons {
+	margin-left: 1rem;
+}
+#navigation {
+	z-index: 1;
+}
 
 /* about section */
 #about-section .card {
 	padding: 20px 30px;
+	animation: about 4s forwards;
 }
 #about-section .card img {
 	display: block;
 	margin: auto 50%;
 	transform: translateX(-50%);
+}
+#about-section .content-text {
+	text-align: center;
 }
 .info-box .card img {
 	height: 3rem;
@@ -146,11 +163,11 @@ a {
 /* featured section */
 #featured {
 	background: var(--background);
-	margin-bottom: 0;
-	padding-bottom: 1rem;
 }
 #featured .row {
 	width: 90%;
+	margin-bottom: 0;
+	padding-bottom: 1rem;
 }
 #featured .card {
 	border: none;
@@ -185,7 +202,21 @@ a {
 	text-shadow: 1px 1px 1px black;
 	font-family: var(--heading-font);
 }
-
+#product-features {
+	background: var(--background);
+	padding-top: 1rem;
+}
+select .browser-default {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+select {
+	display: inline-block;
+	width: 20%;
+	margin: 1rem auto;
+	margin-left: 80%;
+}
 
 /* footer */
 #footer-section {
@@ -218,4 +249,13 @@ a {
 	padding: 1rem;
 	background: var(--black);
 	color: var(--white);
+}
+
+@keyframes about {
+	from {
+	   opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
