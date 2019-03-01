@@ -5,14 +5,7 @@
      })
   });
   
-//info section keyframes
-let page = document.querySelector("#about-section");
-window.addEventListener("scroll", function(e){
-    let wind = window.screenY;
-    if (wind === "560px") {
-        page.style.display = "none"
-    }
-})
+
 
 
 
@@ -23,16 +16,11 @@ window.addEventListener("scroll", stickyNavbar);
 
 function stickyNavbar() {
     var sticky = nav.offsetTop;
-    console.log(nav.offsetTop)
+    console.log(sticky)
     if (window.pageYOffset !== sticky) {
         nav.classList.add("sticky")
-        nav.style.background = "rgba(0,0,0, 0.5)"
-        nav.style.transition = "background 2.5s ease-in"
       } else {
-        nav.style.background = "#ee6e73";
         nav.classList.remove("sticky");
-        nav.style.transition = "background 1s ease-out"
-        
       }
 };
   

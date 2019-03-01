@@ -1,17 +1,24 @@
 <% include ../partials/header %>
  
+  <!-- navigation for desktop only -->
   <nav id="navigation">
     <% include ../partials/nav %>
   </nav>
+  <!-- navigation on mobile device -->
   <div class="partial-nav">
     <% include ../partials/mobile-nav %>
   </div>
+  <!-- display header section -->
   <header id="display-header">
-    <% include ../partials/display-header %>
+    <div class="header-info">
+      <h4 class="message"> style function ........ </h4>
+    </div>
   </header>
+  <!-- detail about section -->
   <section id="about-section">
     <% include ../partials/about-section %>
   </section>
+  <!-- featured section -->
   <main id="featured">
     <% include ../partials/cards %>
   </main>

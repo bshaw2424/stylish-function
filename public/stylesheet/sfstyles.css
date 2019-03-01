@@ -32,10 +32,18 @@ a {
 #featured h3, 
 #about-section .card h5, 
 #about-section h4,
-#featured .card-title, 
+.card .card-title, 
 .copyright {
 	text-transform: capitalize;
 	text-align: center;
+}
+article h3, #featured h1 {
+	padding: 1rem 0;
+	text-align: center;
+	margin: 0;
+	color: #ee6e73;
+	text-shadow: 1px 1px 1px black;
+	font-family: var(--heading-font);
 }
 #about-section .card, article {
 	word-wrap: break-word;
@@ -58,10 +66,11 @@ a {
 	color: black;
 	display: inline-block;
 	height: 100%;
-	padding: 1rem;
+	padding: 1rem .50rem;
 }
 #page-nav li a:hover {
-	text-decoration: underline;
+	background: rgba(0,0,0, 0.2);
+	color: white;
 }
 #filter-section {
 	display: flex;
@@ -101,7 +110,7 @@ a {
 /* header section */
 #display-header {
 	background: url("../images/functionalSpace.jpeg") no-repeat center center;
-	height: 55vh;
+	height: 40vh;
 	width: 100%;
 	object-fit: fill;
 	position: relative;
@@ -111,7 +120,7 @@ a {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	height: 55vh;
+	height: 40vh;
 	width: 100%;
 	background: rgba(0,0,0, 0.6);
 	color: var(--white);
@@ -135,9 +144,11 @@ a {
 }
 
 /* about section */
+#about-section {
+	background: var(--background);
+}
 #about-section .card {
 	padding: 20px 30px;
-	animation: about 4s forwards;
 }
 #about-section .card img {
 	display: block;
@@ -154,16 +165,18 @@ a {
 /* article section */
     article {
 		font-family: var(--content-font);
+		background: white;
 	}
-	article p {
-		margin-bottom: 2rem;
-		font-size: 1.3rem;
+	article h3 {
+		text-align: center;
+	}
+	article ul {
+		max-width: 50%;
+		padding-bottom: 1rem; 
+		margin: auto;
 	}
 
 /* featured section */
-#featured {
-	background: var(--background);
-}
 #featured .row {
 	width: 90%;
 	margin-bottom: 0;
@@ -189,22 +202,16 @@ a {
 	font-size: 1.3rem;
 }
 #featured .card-title a {
-	color: #ee6e73;
-	text-shadow: 1px 1px black;
+	color: black;
 	font-family: var(--heading-font);
 }
 #featured h1 {
-	padding: 1.5rem 0;
-	text-align: center;
+	padding: 1rem 0;
 	font-size: 3.5rem;
-	margin: 0;
-	color: #ee6e73;
-	text-shadow: 1px 1px 1px black;
-	font-family: var(--heading-font);
 }
 #product-features {
 	background: var(--background);
-	padding-top: 1rem;
+	padding: 1rem 0;
 }
 select .browser-default {
 	display: flex;
@@ -251,11 +258,9 @@ select {
 	color: var(--white);
 }
 
-@keyframes about {
-	from {
-	   opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+
+.age {
+	padding: 1rem 8px;
+	display: flex;
+	justify-content: space-between;
 }

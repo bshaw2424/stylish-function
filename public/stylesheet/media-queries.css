@@ -48,6 +48,9 @@
        margin-left: 10%;
        padding-left: 8%;
    }
+   #about-section {
+    padding-bottom: 1rem;
+   }
    #about-section h4 {
        font-size: 1.7rem;
    }
@@ -102,7 +105,7 @@
     text-shadow: 1px 1px #ee6e73;
    }
    .footer-nav ul {
-    width: 45%;
+    width: 100%;
     margin: 0 auto;
     padding: 15px 0;
     display: flex;
@@ -134,6 +137,9 @@
     }
     nav {
         line-height: 56px;
+    }
+    #about-section {
+        padding-bottom: 1rem;
     }
     .sub-nav {
         display: none;
@@ -198,7 +204,7 @@
        color: blue;
     }
     #about-section {
-        margin: 1.5rem auto;
+        padding: 1rem 0;
     }
     .content-text {
         margin: auto;
@@ -212,7 +218,7 @@
         min-height: 70vh;
     }
     .header-info .message {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
   }
 
