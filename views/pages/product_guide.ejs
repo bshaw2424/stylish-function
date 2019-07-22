@@ -3,41 +3,43 @@
 <nav id="navigation">
   <% include ../partials/nav %>
 </nav>
+
 <!-- page intro-description section -->
 <section class="page-intro">
   <div class="container">
-    <h3>Seating</h3>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem vel minus atque dignissimos eum aliquam labore
       reiciendis! Minus eligendi voluptas ipsam dolorem aut quia blanditiis facilis iste repellat quidem dolores nisi
       veritatis necessitatibus architecto animi in tempore consequuntur, doloremque accusamus, deleniti reprehenderit
-    </p>
+      exercitationem! Natus dolor vero magnam reprehenderit reiciendis quidem eaque, aspernatur, unde earum, aperiam
+      recusandae autem libero voluptates? Itaque cupiditate aperiam veniam? Saepe aperiam blanditiis itaque error dolore
+      ratione incidunt officiis dolorem, autem illo expedita quis ullam nulla facere possimus voluptas consequatur
+      consequuntur rerum ex pariatur accusamus voluptate, perspiciatis nam eos. Eum sapiente ea esse blanditiis!
+      Doloribus, sint excepturi.</p>
   </div>
 </section>
 <!-- Page filter section with a search bar and select menu -->
 <section id="filter-section">
-  <div class="container">
-    <div class="category-filter filter">
-      <span class="category-title">Categories:</span>
-      <ul>
-        <li><a href="">seating</a></li>
-        <li><a href="">storage</a></li>
-        <li><a href="">table</a></li>
-      </ul>
-    </div>
-    <div class="price-filter filter">
-      <span class="category-title">Sort By:</span>
-      <ul>
-        <li><a href="">newest</a></li>
-        <li><a href="">low to high</a></li>
-        <li><a href="">high to low</a></li>
-      </ul>
-    </div>
+  <div class="category-filter filter">
+    <span class="category-title categories">Categories</span>
+    <ul class="inActive">
+      <li><a href="">seating</a></li>
+      <li><a href="">storage</a></li>
+      <li><a href="">table</a></li>
+    </ul>
+  </div>
+  <div class="price-filter filter">
+    <span class="category-title price">Sort By</span>
+    <ul>
+      <li><a href="">newest</a></li>
+      <li><a href="">low to high</a></li>
+      <li><a href="">high to low</a></li>
+    </ul>
   </div>
 </section>
 <main id="product-features">
   <div class="container">
     <div class="row">
-      <% seating.forEach(seats => { %>
+      <% products.forEach(product => { %>
       <aside id="aside-categories" class="product-aside">
         <p>categories</p>
         <ul>
@@ -66,14 +68,14 @@
           </a>
         </ul>
       </aside>
-      <div class="product-card col s12 m6 l4">
+      <div style="position: relative" class="col s12 m6 l4">
         <div class="card">
           <div class="card-image">
-            <img src="<%= seats.main_image %>" alt="<%= seats.title %>" />
+            <img src="<%= product.main_image %>" alt="#" />
           </div>
-          <div class="purchase-information">
-            <p class="card-title"> <a href="<%= seats._id %>" target="_blank"><%= seats.title %> </p></a>
-            <p class="card-price"><%= `$${seats.price}` %></p>
+          <div class="purchase-information  ">
+            <p class="card-title"> <a href="<%= product._id %>" target="_blank"><%= product.title %> </p></a>
+            <p class="card-price"><%= `$${product.price}` %></p>
           </div>
         </div>
       </div>

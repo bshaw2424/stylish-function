@@ -1,224 +1,521 @@
-/* media queries */
-@media screen and (max-width: 320px) {
-    #lead-nav div .brand-logo {
-        padding-left: 0;
+/* landscape media query */
+@media screen and (orientation: landscape) {
+
+    #display-header,
+    .header-info {
+        min-height: 70vh;
+    }
+
+    #about-section .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-section .info-box {
+        margin-top: 2rem;
+    }
+
+    #about-section ul li {
+        text-align: justify;
     }
 }
-@media screen and (max-width: 600px) {
-   .header-info .message {
-       font-size: 2.5rem;
-       max-width: 80%;
-       margin: auto;
-   }
-   #lead-nav {
-       width: 100%;
-   }
-   .nav-trigger i.material-icons {
-       cursor: pointer;
-   }
-   .sub-nav {
-       display: none;
-       transition: all 1s ease-in;
-   }
-   .sub-nav ul{
-       display: flex;
-       flex-direction: column;
-   }
-   .sub-nav ul li {
-       padding: 8px 0;
-       text-align: center;
-       border-bottom: 1px solid rgba(0,0,0, 0.4);
-       transition: all .3s ease-in;
-   }
-   .sub-nav ul li {
-      color: black;
-      font-size: 1.3rem;
-   }
-   .sub-nav ul li:hover {
-    background: #d3d3d3;
-    color: white;
-    text-shadow: 1px 1px #ee6e73;
-   }
-   .sub-nav ul {
-       height: 100%;
-       width: 100%;
-   }
-   #lead-nav .brand-logo {
-       width: 80%;
-       margin-left: 10%;
-       padding-left: 8%;
-   }
-   #about-section {
-    padding-bottom: 1rem;
-   }
-   #about-section h4 {
-       font-size: 1.7rem;
-   }
-   #about-section .card h5 {
-       font-size: 2rem; 
-   }
-   #about-section .card img {
-       display: block;
-   }
-   article p, .content-text {
-       text-align: center;
-   }
-   #filter-section {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
-   }
-   .desktop-nav {
-        display: none;
+
+@media screen and (min-width: 1025px) {
+    #display-header {
+        background: url("../images/functionalSpace.jpeg") no-repeat center/cover;
     }
-   #filter-section #search, 
-   #filter-section .btn-small, 
-   #filter-section .browser-default, 
-   #filter-section #search input[type="search"] {
-       width: 100%;
-       margin-bottom: 8px;
-   }
-   #filter-section #search {
-       padding: 0;
-   }
-  .browser-default {
-       display: block;
-       width: 90%;
-       margin: 0 5% 1rem 5%;
-   }
-   .info-box .card {
-       margin: 0;
-       margin-top: 2rem;
-   }
-   .page-intro #page-nav {
-       width: 100%;
-   }
-   #featured .card-title {
-       font-size: 1.7rem;
-   }
-   #featured .card-title a:hover {
-       transition: all .5s ease-in;
-   }
-   #featured .card-title a:hover {
-	color: black;
-    text-shadow: 1px 1px #ee6e73;
-   }
-   .footer-nav ul {
-    width: 100%;
-    margin: 0 auto;
-    padding: 15px 0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: start;
-    align-items: start;
-   }
-   .footer-items {
-       text-align: left;
-       display: block;
-       width: 100%;
-   }
-   .footer-nav ul li a  {
-       padding: 8px 14px;
-   }
-   .footer-items:hover {
-      text-decoration: underline;
-   }
-}
-@media screen  and (min-width: 601px) and (max-width: 990px) {
-    .header-info .message {
-        font-size: 3.5rem;
-        max-width: 80%;
-        margin: auto;
+
+    .header-info,
+    #display-header {
+        height: 30vh;
     }
-    #lead-nav .brand-logo {
-        font-size: 3rem;
-    }
-    nav {
-        line-height: 56px;
-    }
-    #about-section {
-        padding-bottom: 1rem;
-    }
-    .sub-nav {
-        display: none;
-        transition: all 1s ease-in;
+
+    .header-info {
         width: 100%;
     }
-    .sub-nav ul{
+
+    .header-info div {
+        width: 100%;
+    }
+
+    .purchase-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .purchase-information .card-title {
+        font-size: 1.4rem;
         display: flex;
         flex-direction: column;
     }
-    .sub-nav ul li {
-        padding: 8px 0;
-        text-align: center;
-        border-bottom: 1px solid rgba(0,0,0, 0.4);
-        transition: all .3s ease-in;
+
+    .purchase-information .card-price {
+        font-size: 1rem;
     }
-    .sub-nav ul li {
-       color: black;
-       background: white;
-       font-size: 1.3rem;
-       padding: 1rem 1.6rem;
+
+    #about-section {
+        padding-bottom: 1rem;
     }
-    .sub-nav ul li:hover {
-        background: #d3d3d3;
-        color: white;
-        text-shadow: 1px 1px #ee6e73;
+
+    #about-section ul {
+        margin: 0 .6rem;
     }
-    .sub-nav ul {
-        height: 100%;
-    }   
-    .desktop-nav {
+
+    #about-section .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #about-section .message {
+        margin: 0 auto;
+        padding: 1.5rem 0;
+        text-align: center
+    }
+
+    .content-text {
+        margin: auto;
+    }
+
+    .card .card-content {
+        padding: 12px;
+    }
+
+    #filter-section,
+    .filter {
         display: none;
     }
+
+    #product-features {
+        padding-top: 3rem;
+    }
+
+    .product-aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-aside ul a {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    .header-info div {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .header-info div h2 {
+        text-align: center;
+        font-size: 3.3rem;
+        width: 90%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .header-info div h5 {
+        font-size: 1.2rem;
+    }
+
+    .product-aside {
+        display: none;
+    }
+
+    #filter-section {
+        width: 60%;
+        margin: 0 auto;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #filter-section>div {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .filter {
+        margin: 1rem 0;
+    }
+
+    .filter .category-title,
+    .filter ul li a {
+        font-size: 1.2rem;
+    }
+
+    .filter ul {
+        top: 29px;
+        left: 0;
+    }
+
+    .filter ul li {
+        padding: 4px 0;
+    }
+
+    .mobile-purchase-button {
+        display: none;
+    }
+
+    .purchase-information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding: 6px 0;
+    }
+
+    .card {
+        padding: 0;
+    }
+
+    .purchase-information .card-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* media queries */
+@media screen and (min-width: 601px) and (max-width: 990px) {
+    #navigation {
+        height: 116px;
+    }
+
+    #navigation>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    #navigation .nav-logo {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .desktop-nav ul li a {
+        font-size: 1.3rem;
+    }
+
+    .header-info div {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .header-info div h2 {
+        font-size: 2.3rem;
+        width: 100%;
+    }
+
+    .header-info div h5 {
+        font-size: 1.2rem;
+    }
+
+    #product-features {
+        margin-top: 1rem;
+    }
+
+    .purchase-information {
+        max-width: 100%;
+        margin: .5rem auto 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .purchase-information .card-title a {
+        font-size: 2rem;
+    }
+
+    .purchase-information .card-price {
+        font-size: 1.3rem;
+    }
+
+    #about-section {
+        padding-bottom: 1rem;
+    }
+
+    .product-aside {
+        display: none;
+    }
+
+    #filter-section {
+        max-width: 70%;
+        margin: 0 auto;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #filter-section .category-title {
+        font-size: 1.3rem;
+    }
+
+    #filter-section .filter ul {
+        top: 29px;
+        left: 0;
+    }
+
+    #filter-section .filter ul li {
+        padding: 4px 0;
+    }
+
+    #filter-section .filter ul li a {
+        font-size: 1.3rem;
+    }
+
+    #box-info {
+        margin-top: 0;
+    }
+
+    #about-section .info-box .content-text ul li {
+        max-width: 50%;
+        list-style: circle;
+        margin: 0 auto;
+    }
+
     .info-box .card {
         margin: 0;
         margin-top: 2rem;
     }
-    #page-nav {
-        width: 40%;
+
+    #featured h1 {
+        padding-top: 1rem;
     }
+
+    .page-intro {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
 }
-@media screen and (min-width: 991px) {
+
+@media screen and (max-width: 600px) {
     #display-header {
-        background: url("../images/functionalSpace.jpeg") no-repeat center/cover;
+        background: url("../images/functionalSpace.jpeg") no-repeat center center;
+        height: 40vh;
+        width: 100%;
+        object-fit: cover;
     }
-    .header-info .message {
-        font-size: 3rem;
-        max-width: 70%;
-        margin: auto;
+
+    #navigation {
+        height: 112px;
     }
-    .partial-nav {
-        display: none;
-    }
-    #navigation #lead-nav {
+
+    #navigation>div {
         display: flex;
-        justify-content: space-between;
-        max-width: 80%;
-        margin: auto;
+        flex-direction: column;
+        align-items: center;
     }
-    .nav-trigger .material-icons {
-       display: none;
-       color: blue;
+
+    #navigation .nav-logo {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        text-align: center;
     }
+
+    #navigation .nav-logo a {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .navigation .desktop-nav li a {
+        padding: 0;
+    }
+
+    .header-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-info h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 2.2rem;
+        line-height: 3rem;
+        width: 80%;
+        padding-left: 2px;
+        margin: 1rem auto;
+        letter-spacing: 1px;
+    }
+
+    .header-info h5 {
+        width: 90%;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        margin: 0 auto;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        padding: .5rem;
+        text-align: center;
+    }
+
     #about-section {
         padding: 1rem 0;
+        padding-top: 0;
     }
-    .content-text {
-        margin: auto;
-    }
-    .card .card-content {
-        padding: 12px;
-    }
-} 
-@media screen and (orientation: landscape) {
-    #display-header, .header-info {
-        min-height: 70vh;
-    }
-    .header-info .message {
-        font-size: 2.3rem;
-    }
-  }
 
+    #about-section>div h3 {
+        text-align: left;
+        margin: .70rem auto;
+        font-size: 1.2rem;
+    }
+
+    article p,
+    .content-text {
+        text-align: center;
+    }
+
+    .info-box .card {
+        margin: 0;
+        margin-top: 2rem;
+    }
+
+    #box-info {
+        margin-top: 0;
+    }
+
+    .page-intro {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    #featured .card-title {
+        font-size: 1.7rem;
+    }
+
+    #featured h5 {
+        font-size: 1.2rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #featured .card-title a:hover {
+        transition: all .5s ease-in;
+    }
+
+    #featured .card-title a:hover {
+        color: black;
+        text-shadow: 1px 1px #ee6e73;
+    }
+
+    .purchase-information .card-title,
+    .purchase-information .card-price {
+        padding: 0;
+    }
+
+    .purchase-information .card-title {
+        font-size: 1.6rem;
+    }
+
+    .purchase-information .card-price {
+        font-size: 1.2rem;
+    }
+
+    .product-aside {
+        display: none;
+    }
+
+    #filter-section>div {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer-nav ul {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .footer-items {
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+
+    .footer-nav ul li a {
+        padding: 8px 14px;
+    }
+
+    .footer-items:hover {
+        text-decoration: underline;
+    }
+
+    .desk-top-purchase-button {
+        display: none;
+    }
+
+    .mobile-purchase-button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    #display-header {
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navigation>div {
+        height: 100%;
+        width: 100%;
+    }
+
+    .header-info {
+        height: 100%;
+        width: 100%;
+    }
+
+    .desktop-nav {
+        height: 100%;
+    }
+
+    .desktop-nav li a {
+        padding: 0 9px;
+    }
+
+    .header-info h2 {
+        font-size: 2rem;
+        width: 90%;
+        padding-left: 15px;
+        margin: 0 auto;
+    }
+
+    .header-info h5 {
+        width: 90%;
+    }
+
+    .purchase-information .card-title,
+    .purchase-information .card-price {
+        padding: 0;
+    }
+
+    .desk-top-purchase-button {
+        display: none;
+    }
+
+    .mobile-purchase-button {
+        display: block;
+    }
+
+}

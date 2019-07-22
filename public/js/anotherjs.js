@@ -1,30 +1,34 @@
- $(document).ready(function(){
+ $(document).ready(function () {
      //open and close mobile navigation...hamburger icon
-     $(".nav-trigger").on("click", () =>{
-         $(".sub-nav").toggle();
+     $('.nav-trigger').click(function () {
+         $('.sub-nav').slideToggle();
      })
-  });
-  
+ });
+
+ let main_image = document.querySelector(".image-section > img"),
+     grouped_images = document.querySelectorAll(".sub-images"),
+     sorted_options = document.getElementById("sorted-options"),
+     lead = document.querySelector(".sub-nav"),
+     nav = document.querySelector('.nav-trigger');
 
 
 
 
-// sticky navigation bar
-let nav = document.querySelector("#navigation");
 
-window.addEventListener("scroll", stickyNavbar);
+ grouped_images.forEach(img => img.addEventListener("click", switchMainProductPicture))
 
-function stickyNavbar() {
-    var sticky = nav.offsetTop;
-    console.log(sticky)
-    if (window.pageYOffset !== sticky) {
-        nav.classList.add("sticky")
-      } else {
-        nav.classList.remove("sticky");
-      }
-};
-  
+ function switchMainProductPicture(e) {
 
-      
+     main_image.src = e.target.src;
+
+ }
 
 
+ (() => {
+     let cat = document.querySelector('.categories');
+     let ul = document.querySelector('.filter ul');
+
+     cat.addEventListener('click', function () {
+         ul.classList.toggle('active')
+     });
+ })();

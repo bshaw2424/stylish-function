@@ -1,0 +1,67 @@
+<% include ../partials/header %>
+
+<nav id="navigation">
+    <% include ../partials/nav %>
+  </nav>
+  <div class="hide-on-large-only">
+    <% include ../partials/mobile-nav %>
+  </div>
+  <!-- page intro-description section -->
+  <section class="page-intro">
+    <div class="container">
+      <!-- <p>this is the seating section with a description soon to come!!!</p> -->
+      <aside>
+        <h6>seating categories</h6>
+        <ul id="page-nav">
+          <li><a href="#">Sofa</a></li>
+          <li><a href="#">Sofa Bed</a></li>
+          <li><a href="#">Chairs</a></li>
+          <li><a href="#">Bean Bag Chairs</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+  <!-- Page filter section with a search bar and select menu -->
+  <section id="filter-section">
+    <div id="search">
+      <input type="search" name="search-box"  class="search-input" placeholder="Find more of what you are looking for...">
+      <button type="submit" class="btn-small"><i class="material-icons">send</i></button>
+    </div>
+  </section>
+ <main id="product-features">
+   <span><i class="material-icons">arrow_upward</i></span>
+    <div class="container" >
+      <div class="row">
+        <div id="sorted-options">
+          <a href="/storage/newest">Newest</a>
+          <a href="/storage/low-price"><strong>Price:</strong> Low to High</a>
+          <a href="/storage/high-price"><strong>Price:</strong> High to Low</a>
+        </div>
+        <% storage_LowPricing.forEach(lowPriceStorage => { %>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+                <img src="<%= lowPriceStorage.main_image %>" alt="#" />
+              </div>
+              <div class="purchase-information  ">
+                <p class="card-title"> <%= lowPriceStorage.title %> </p>
+                <p class="card-price"><%= `$${lowPriceStorage.price}` %></p>
+              </div>
+              <a class="btn btn-small main-display-btn" href='/seating/<%= lowPriceStorage._id %>'>more details</a>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </main>   
+   <ul class="pagination center white s12">
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active"><a href="#!">1</a></li>
+      <li class="waves-effect"><a href="#!">2</a></li>
+      <li class="waves-effect"><a href="#!">3</a></li>
+      <li class="waves-effect"><a href="#!">4</a></li>
+      <li class="waves-effect"><a href="#!">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>         
+  
+<% include ../partials/footer %>
