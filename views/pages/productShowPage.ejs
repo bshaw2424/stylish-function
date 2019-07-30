@@ -1,32 +1,30 @@
 <% include ../partials/header %>
+<% include ../partials/nav %>
 
-<nav id="navigation">
-  <% include ../partials/nav %>
-</nav>
-<main>
+<main class="container">
+  <p class="content-title"><%= show.title %></p>
   <section id="main-section">
     <div class="image-section">
       <img src="<%= show.main_image %>" alt="main-image" />
     </div>
-    <section class="sub-images" id="mobile-sub-pictures">
+    <section class="sub-images mobile-sub-pictures">
       <% show.sub_image.forEach(img =>{ %>
-      <img src="<%= img %>" alt="">
+      <img src="<%= img %>" alt="#">
       <% }) %>
     </section>
     <div class="container">
       <div class="content-body">
         <div>
-          <p class="content-title"><%= show.title %></p>
-          <p class="content-price desktop-price"><strong>$<%= show.price %></strong></p>
+          <p class="content-price mobile-price"><strong>$<%= show.price %></strong></p>
         </div>
         <p class="content-desc"><%= show.description %></p>
-        <p class="content-price mobile-price"><strong>$<%= show.price %></strong></p>
+        <p class="content-price deskTop-price"><strong>$<%= show.price %></strong></p>
         <a class="btn btn-small show-page-btn desk-top-purchase-button" href="https://bit.ly/2OxIBgU"
           target="_blank">more info</a>
       </div>
     </div>
   </section>
-  <section class="sub-images" id="large-sub-pictures">
+  <section class="sub-images large-sub-pictures">
     <% show.sub_image.forEach(img =>{ %>
     <img src="<%= img %>" alt="">
     <% }) %>

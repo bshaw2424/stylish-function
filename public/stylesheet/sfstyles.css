@@ -28,6 +28,7 @@ li {
 
 a {
 	text-decoration: none;
+	color: blue;
 	text-transform: capitalize;
 }
 
@@ -58,8 +59,16 @@ a,
 article,
 p {
 	font-family: var(--content-font-family);
+	margin: 0 0 1rem 0;
 }
 
+.large-sub-pictures img,
+.mobile-sub-pictures img {
+	width: 11%;
+
+}
+
+/* toggle class */
 .filter .inActive {
 	display: none;
 }
@@ -76,6 +85,15 @@ p {
 #product-features {
 	position: relative;
 	padding: 1rem 0;
+}
+
+#product-features .card-image {
+	opacity: 0.8;
+	transition: opacity 0.3s ease-in;
+}
+
+#product-features .card-image:hover {
+	opacity: 1;
 }
 
 /* finished at this point to continue */
@@ -96,10 +114,6 @@ article {
 	word-wrap: break-word;
 }
 
-.card {
-	padding-bottom: .75rem;
-}
-
 .product-card {
 	position: relative;
 }
@@ -114,7 +128,8 @@ article {
 
 .page-intro {
 	margin: auto;
-	padding: 1.5rem 0.5rem;
+	padding: 1rem 0.5rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .page-intro aside {
@@ -149,10 +164,16 @@ nav {
 #navigation>div {
 	display: flex;
 	justify-content: space-between;
+	max-width: 90%;
+	margin: 0 auto;
 }
 
 #navigation .nav-logo {
 	font-size: 2.5rem;
+}
+
+.desktop-nav a {
+	font-size: 1.1rem;
 }
 
 #navigation,
@@ -162,11 +183,19 @@ nav {
 
 /* header section */
 #display-header {
-	background: url("../images/functionalSpace.jpeg") no-repeat center center;
+	/* background: url("../images/functionalSpace.jpeg") no-repeat center center; */
 	height: 40vh;
 	width: 100%;
 	object-fit: fill;
 	position: relative;
+}
+
+#display-header {
+	height: 40vh;
+}
+
+.header-info {
+	height: 100%;
 }
 
 #display-header::after {
@@ -179,14 +208,26 @@ nav {
 	background: rgba(0, 0, 0, 0.3);
 }
 
+.display-title {
+	max-width: 90%;
+	margin: 0 auto;
+	padding-top: 1rem;
+	font-size: 3rem;
+}
+
+.display-title a {
+	color: #fff;
+	position: relative;
+	z-index: 2;
+}
+
 .header-info {
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
-	height: 40vh;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.2);
 	color: #fff;
 	text-align: center;
 	z-index: 1;
@@ -212,11 +253,12 @@ nav {
 	color: #fff;
 	font-size: 2.2rem;
 	text-align: center;
+	text-shadow: 1px 1px #000;
 	border: none;
 }
 
-.description-info h5 {
-	font-size: 1.5rem;
+.description-info h6 {
+	font-size: 1.8rem;
 	padding: .5rem 0;
 	color: #000;
 	text-align: center;
@@ -242,7 +284,7 @@ nav {
 
 .description-info>div span img {
 	display: inline-block;
-	height: 75px;
+	height: 80px;
 }
 
 .header-info div {
@@ -278,21 +320,6 @@ nav {
 
 #about-section #modular-box {
 	margin-top: 0;
-}
-
-/* article section */
-article {
-	background: #fff;
-}
-
-article h3 {
-	text-align: center;
-}
-
-article ul {
-	max-width: 50%;
-	padding-bottom: 1rem;
-	margin: auto;
 }
 
 /* featured section */
@@ -346,12 +373,6 @@ article ul {
 }
 
 /* fitler section */
-#filter-section {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	margin: 1.5rem 0;
-}
 
 .filter {
 	max-width: 40%;
@@ -363,7 +384,7 @@ article ul {
 	position: absolute;
 	min-width: 100%;
 	z-index: 1;
-	top: 24px;
+	top: 100%;
 	left: 0;
 }
 
@@ -393,14 +414,18 @@ article ul {
 	background: var(--sub-background-color);
 	color: #fff;
 	text-align: center;
+	font-size: 1.2rem;
 	cursor: pointer;
 	display: inline-block;
-	padding: .1rem 0;
 	width: 100%;
 }
 
+.category-filter {
+	margin-bottom: 1rem;
+}
+
 .product-aside {
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 }
@@ -436,14 +461,12 @@ article ul {
 	transition: color .2s ease-in;
 }
 
-.product-aside a:nth-child(1),
-.product-aside a:nth-child(2) {
-	border-bottom: 3px solid var(--product-bgColor);
-}
+
 
 .product-aside a:hover {
-	background: #f4f4f4;
-	color: #333;
+	background: #333;
+	opacity: .3;
+	color: #fff;
 }
 
 #aside-categories,
@@ -454,11 +477,11 @@ article ul {
 }
 
 #aside-filter {
-	top: 13.5rem;
+	top: 12.5rem;
 }
 
 #aside-categories {
-	top: 3.5rem;
+	top: 1.5rem;
 }
 
 .purchase-information {
@@ -466,12 +489,17 @@ article ul {
 	justify-content: space-between;
 }
 
+.purchase-information .card-title,
+.purchase-information .card-price {
+	margin: 0;
+}
+
 .purchase-information .card-title {
-	font-size: 3rem;
+	font-size: 1.5rem;
 }
 
 .purchase-information .card-price {
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 .main-display-btn {
@@ -494,7 +522,6 @@ article ul {
 	width: 100%;
 	margin: 0 auto;
 	display: flex;
-	align-items: center;
 	justify-content: center;
 }
 

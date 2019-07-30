@@ -27,16 +27,12 @@
         background: url("../images/functionalSpace.jpeg") no-repeat center/cover;
     }
 
-    .header-info,
-    #display-header {
-        height: 30vh;
+    #display-header,
+    .header-info {
+        min-height: 10vh;
     }
 
     .header-info {
-        width: 100%;
-    }
-
-    .header-info div {
         width: 100%;
     }
 
@@ -55,29 +51,11 @@
 
     .purchase-information .card-price {
         font-size: 1rem;
+        padding-bottom: .5rem;
     }
 
-    #about-section {
-        padding-bottom: 1rem;
-    }
-
-    #about-section ul {
-        margin: 0 .6rem;
-    }
-
-    #about-section .row {
-        display: flex;
-        flex-direction: row;
-    }
-
-    #about-section .message {
-        margin: 0 auto;
-        padding: 1.5rem 0;
-        text-align: center
-    }
-
-    .content-text {
-        margin: auto;
+    .purchase-information .card-title {
+        padding-top: .5rem;
     }
 
     .card .card-content {
@@ -98,30 +76,41 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        font-size: 1.3rem;
     }
 
     .product-aside ul a {
         width: 100%;
+        font-size: 1.2rem;
     }
 
+    #aside-filter,
+    #aside-categories {
+        display: block;
+    }
 
 }
 
 @media screen and (max-width: 1024px) {
-    .header-info div {
-        width: 95%;
+    #display-header {
+        background: url("../images/functionalSpace.jpeg") no-repeat center center;
+    }
+
+    #display-header,
+    .header-info {
+        height: 27vh;
+    }
+
+    .header-info {
+        height: 22vh;
+        max-width: 100%;
         margin: 0 auto;
     }
 
-    .header-info div h2 {
+    .header-info h2 {
         text-align: center;
-        font-size: 3.3rem;
-        width: 90%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    }
-
-    .header-info div h5 {
-        font-size: 1.2rem;
+        font-size: 2.5rem;
+        max-width: 80%;
     }
 
     .product-aside {
@@ -129,34 +118,38 @@
     }
 
     #filter-section {
-        width: 60%;
+        max-width: 70%;
         margin: 0 auto;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    #filter-section>div {
-        width: 50%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
     }
 
     .filter {
+        width: 30%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         margin: 1rem 0;
     }
 
-    .filter .category-title,
+    #filter-section div {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .filter ul {
+        top: 100%;
+    }
+
+    .filter ul li {
+        padding: .3rem 0;
+    }
+
     .filter ul li a {
         font-size: 1.2rem;
     }
 
-    .filter ul {
-        top: 29px;
-        left: 0;
-    }
-
-    .filter ul li {
-        padding: 4px 0;
+    .category-title {
+        padding: .3rem;
+        font-size: 1.2rem;
     }
 
     .mobile-purchase-button {
@@ -182,8 +175,17 @@
 
 /* media queries */
 @media screen and (min-width: 601px) and (max-width: 990px) {
+    #display-header {
+        background: url("../images/functionalSpace.jpeg") no-repeat center center;
+    }
+
+    #display-header,
+    .header-info {
+        height: 34vh;
+    }
+
     #navigation {
-        height: 116px;
+        height: 128px;
     }
 
     #navigation>div {
@@ -201,8 +203,8 @@
     }
 
 
-    .desktop-nav ul li a {
-        font-size: 1.3rem;
+    .desktop-nav a {
+        font-size: 1.2rem;
     }
 
     .header-info div {
@@ -210,37 +212,25 @@
         width: 95%;
     }
 
-    .header-info div h2 {
+    .header-info h2 {
         font-size: 2.3rem;
-        width: 100%;
-    }
-
-    .header-info div h5 {
-        font-size: 1.2rem;
-    }
-
-    #product-features {
-        margin-top: 1rem;
+        max-width: 90%;
     }
 
     .purchase-information {
         max-width: 100%;
-        margin: .5rem auto 0;
+        margin: 0 auto;
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
 
     .purchase-information .card-title a {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .purchase-information .card-price {
-        font-size: 1.3rem;
-    }
-
-    #about-section {
-        padding-bottom: 1rem;
+        font-size: 1.2rem;
     }
 
     .product-aside {
@@ -248,48 +238,32 @@
     }
 
     #filter-section {
-        max-width: 70%;
-        margin: 0 auto;
-        margin-top: 1rem;
+        max-width: 100%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
 
-    #filter-section .category-title {
-        font-size: 1.3rem;
+    #filter-section div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
-    #filter-section .filter ul {
-        top: 29px;
-        left: 0;
+    .filter {
+        width: 30%;
     }
 
-    #filter-section .filter ul li {
-        padding: 4px 0;
-    }
-
-    #filter-section .filter ul li a {
-        font-size: 1.3rem;
-    }
-
-    #box-info {
-        margin-top: 0;
-    }
-
-    #about-section .info-box .content-text ul li {
-        max-width: 50%;
-        list-style: circle;
-        margin: 0 auto;
-    }
-
-    .info-box .card {
-        margin: 0;
-        margin-top: 2rem;
+    .filter ul {
+        top: 100%;
     }
 
     #featured h1 {
         padding-top: 1rem;
+    }
+
+    .desk-top-purchase-button {
+        display: none;
     }
 
     .page-intro {
@@ -302,9 +276,13 @@
 @media screen and (max-width: 600px) {
     #display-header {
         background: url("../images/functionalSpace.jpeg") no-repeat center center;
-        height: 40vh;
         width: 100%;
         object-fit: cover;
+    }
+
+    #display-header,
+    .header-info {
+        height: 40vh;
     }
 
     #navigation {
@@ -317,19 +295,15 @@
         align-items: center;
     }
 
-    #navigation .nav-logo {
+    .nav-logo {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         width: 100%;
-        text-align: center;
-    }
-
-    #navigation .nav-logo a {
         font-size: 2rem;
         text-align: center;
     }
 
-    .navigation .desktop-nav li a {
-        padding: 0;
+    .desktop-nav li a {
+        font-size: 1rem;
     }
 
     .header-info {
@@ -341,34 +315,41 @@
     .header-info h2 {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         font-size: 2.2rem;
         line-height: 3rem;
-        width: 80%;
-        padding-left: 2px;
+        width: 70%;
+        padding-left: 18px;
         margin: 1rem auto;
         letter-spacing: 1px;
     }
 
-    .header-info h5 {
-        width: 90%;
-        border: 4px solid rgba(255, 255, 255, 0.3);
-        margin: 0 auto;
-        text-transform: capitalize;
-        font-size: 1.2rem;
-        padding: .5rem;
-        text-align: center;
+    #filter-section {
+        border-top: none;
+        max-width: 70%;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #about-section {
-        padding: 1rem 0;
-        padding-top: 0;
+    .filter {
+        margin: 0;
+        min-width: 100%;
     }
 
-    #about-section>div h3 {
-        text-align: left;
-        margin: .70rem auto;
-        font-size: 1.2rem;
+    .filter ul {
+        top: 100%;
+        display: none;
+    }
+
+    .category-filter {
+        margin-bottom: 1rem;
+    }
+
+    .categories,
+    .price {
+        margin-top: 1rem;
     }
 
     article p,
@@ -376,36 +357,24 @@
         text-align: center;
     }
 
-    .info-box .card {
-        margin: 0;
-        margin-top: 2rem;
-    }
-
-    #box-info {
-        margin-top: 0;
-    }
-
     .page-intro {
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .description-info .icons {
+        display: none;
     }
 
     #featured .card-title {
         font-size: 1.7rem;
     }
 
-    #featured h5 {
-        font-size: 1.2rem;
-        width: 80%;
-        margin: 0 auto;
+    #main-section .sub-images {
+        margin-top: .5rem;
     }
 
-    #featured .card-title a:hover {
-        transition: all .5s ease-in;
-    }
-
-    #featured .card-title a:hover {
-        color: black;
-        text-shadow: 1px 1px #ee6e73;
+    #main-section .sub-images img:first-child {
+        margin-left: 0;
     }
 
     .purchase-information .card-title,
@@ -423,13 +392,6 @@
 
     .product-aside {
         display: none;
-    }
-
-    #filter-section>div {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
     }
 
     .footer-nav ul {
@@ -469,7 +431,7 @@
 
 @media screen and (max-width: 360px) {
     #display-header {
-        height: 60vh;
+        height: 55vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -482,8 +444,17 @@
     }
 
     .header-info {
+        display: flex;
+        flex-direction: column;
         height: 100%;
         width: 100%;
+    }
+
+    .header-info h2 {
+        font-size: 2rem;
+        width: 80%;
+        padding-left: 18px;
+        margin: 0 auto;
     }
 
     .desktop-nav {
@@ -491,18 +462,45 @@
     }
 
     .desktop-nav li a {
+        font-size: 1rem;
         padding: 0 9px;
     }
 
-    .header-info h2 {
-        font-size: 2rem;
-        width: 90%;
-        padding-left: 15px;
-        margin: 0 auto;
+    #filter-section {
+        margin: 1rem auto;
+        max-width: 100%;
     }
 
-    .header-info h5 {
-        width: 90%;
+    .category-filter {
+        margin-bottom: 1rem;
+    }
+
+    .filter {
+        margin: 0;
+        min-width: 70%;
+    }
+
+
+    .categories,
+    .price {
+        margin-top: 1rem;
+    }
+
+    .filter ul {
+        min-width: 100%;
+        top: 100%;
+        left: 0;
+    }
+
+    #filter-section div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .category-title {
+        width: 100%;
     }
 
     .purchase-information .card-title,

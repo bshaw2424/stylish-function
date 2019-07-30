@@ -22,13 +22,3 @@
      main_image.src = e.target.src;
 
  }
-
-
- (() => {
-     let cat = document.querySelector('.categories');
-     let ul = document.querySelector('.filter ul');
-
-     cat.addEventListener('click', function () {
-         ul.classList.toggle('active')
-     });
- })();

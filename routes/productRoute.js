@@ -28,16 +28,6 @@ router.get("/inspiration", (req, res) => {
   });
 });
 
-router.get("/resources", (req, res) => {
-  productList.find({}, (err, seating) => {
-    if (err) {
-      console.log(`Error: ${err}`)
-    } else {
-      res.send("this is the resource page")
-      // res.render("pages/seating", {seats: seating}); 
-    }
-  });
-});
 
 // product links
 router.get("/seating", (req, res) => {
@@ -94,7 +84,9 @@ router.get("/:id", (req, res) => {
   })
 });
 
-
+router.get("/resource", (req, res) => {
+  res.send("pages/resource");
+});
 // Catch all 404 route
 // router.get("*", (req, res) => res.render('pages/error'));
 
