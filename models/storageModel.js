@@ -1,3 +1,27 @@
-const mongoose    = require('mongoose');
-const { Schema }  = mongoose;
- productSchema = require('../Schema/productSchema');
+const mongoose = require('mongoose');
+const {
+    Schema
+} = mongoose;
+const productSchema = require('../Schema/productSchema');
+const storageModel = mongoose.model('storage', productSchema);
+
+
+// let storageProducts = new storageModel({
+//     title: 'lounge Chair',
+//     main_image: 'https://bit.ly/2K66GuS',
+//     sub_image: ['https://bit.ly/318HCcm', 'https://bit.ly/33dk6Nc', 'https://bit.ly/2Yv9Wnz'],
+//     price: 218.99,
+//     category: 'sofa',
+//     description: 'Lend any arrangement a midcentury-inspired touch with this lounge chair. The frame of this piece is crafted from solid wood, upholstered with a polyester blend in a solid color, and features button tufted details, and square arms. It is perfectly at home in modern and contemporary aesthetics. This chair contains flame retardant material, and therefore is fire resistant. To clean, we recommend wiping with a damp cloth. This lounge chair requires assembly upon arrival.',
+// });
+
+// storageProducts.save((err, storage) => {
+//     if (err) {
+//         console.log(`there was a error ${err}`)
+//     } else {
+//         console.log("product saved to database");
+//         console.log(storage)
+//     }
+// });
+
+module.exports = storageModel;

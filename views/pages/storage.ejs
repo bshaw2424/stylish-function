@@ -1,8 +1,7 @@
 <% include ../partials/header %>
 
-<nav id="navigation">
-  <% include ../partials/nav %>
-</nav>
+<% include ../partials/nav %>
+
 <!-- page intro-description section -->
 <section class="page-intro">
   <div class="container">
@@ -19,43 +18,20 @@
 </section>
 <!-- Page filter section with a search bar and select menu -->
 <section id="filter-section">
-  <div class="container">
-    <div class="category-filter filter">
-      <span class="category-title">Categories:</span>
-      <ul>
-        <li><a href="">seating</a></li>
-        <li><a href="">storage</a></li>
-        <li><a href="">table</a></li>
-      </ul>
-    </div>
-    <div class="price-filter filter">
-      <span class="category-title">Sort By:</span>
-      <ul>
-        <li><a href="">newest</a></li>
-        <li><a href="">low to high</a></li>
-        <li><a href="">high to low</a></li>
-      </ul>
-    </div>
+  <div class="price-filter filter">
+    <span class="category-title">Sort By:</span>
+    <ul class="inActive">
+      <li><a href="">newest</a></li>
+      <li><a href="">low to high</a></li>
+      <li><a href="">high to low</a></li>
+    </ul>
+  </div>
   </div>
 </section>
 <main id="product-features">
   <div class="container">
     <div class="row">
       <% storage.forEach(storageProducts => { %>
-      <aside id="aside-categories" class="product-aside">
-        <p>categories</p>
-        <ul>
-          <a href="/seating">
-            <li>seating</li>
-          </a>
-          <a href="/storage">
-            <li>storage</li>
-          </a>
-          <a href="/table">
-            <li>tables</li>
-          </a>
-        </ul>
-      </aside>
       <aside id="aside-filter" class="product-aside">
         <p> filter </p>
         <ul>
@@ -73,13 +49,13 @@
       <div class="product-card col s12 m6 l4">
         <div class="card">
           <div class="card-image">
-            <a href="<%= storageProducts._id %>" target="_blank">
+            <a href="storage/<%= storageProducts._id %>" target="_blank">
               <img src="<%= storageProducts.main_image %>" alt="<%= storageProducts.title %>>" />
             </a>
           </div>
           <div class="purchase-information">
             <p class="card-title">
-              <a href="<%= storageProducts._id %>" target="_blank"><%= storageProducts.title %>
+              <a href="storage/<%= storageProducts._id %>" target="_blank"><%= storageProducts.title %>
             </p>
             </a>
             <p class="card-price"><%= `$${storageProducts.price}` %></p>

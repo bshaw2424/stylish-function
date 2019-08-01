@@ -469,7 +469,6 @@ nav {
 	color: #fff;
 }
 
-#aside-categories,
 #aside-filter {
 	position: absolute;
 	left: 2rem;
@@ -477,7 +476,7 @@ nav {
 }
 
 #aside-filter {
-	top: 12.5rem;
+	top: 1.5rem;
 }
 
 #aside-categories {
@@ -538,6 +537,6 @@ nav {
 
 .copyright {
 	padding: 1rem;
-	background: rgb(137, 175, 206);
+	background: #333;
 	color: var(--white);
 }

@@ -67,38 +67,46 @@
 
 	#main-section {
 		display: flex;
+		padding-right: 10%;
 	}
 
 	.image-section {
-		width: 100%;
+		width: 75%;
 		padding-bottom: 1rem;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
 	}
 
 	.image-section img {
-		width: 100%;
+		width: 72%;
 		height: 100%;
+		margin-right: 1.5rem;
 	}
 
 	.large-sub-pictures {
 		display: flex;
 		width: 100%;
-		margin: 1rem 0;
+		margin: .5rem auto;
 	}
 
 	.large-sub-pictures img {
-		width: 17%;
-		margin: 0 0.5rem 1rem 0;
+		width: 20%;
+		margin: 0 0.5rem .5rem 0;
 	}
 
 	.large-sub-pictures img:last-child {
 		margin-right: 0;
 	}
 
+	.large-sub-pictures img:first-child {
+		margin-left: 11%;
+	}
+
 	.content-body {
 		display: flex;
 		flex-direction: column;
 		min-width: 100%;
-		margin-left: 1.5rem;
 		word-wrap: break-word;
 		border-top: 0;
 		border-bottom: 0;
@@ -107,14 +115,14 @@
 
 
 	.deskTop-price {
-		font-size: 2rem;
+		font-size: 1.5rem;
 		padding-bottom: 0.5rem;
 	}
 
 	.mobile-purchase-button {
 		width: 30%;
 		display: block;
-		margin: 2rem auto;
+		margin: 1rem auto 2rem auto;
 	}
 }
 

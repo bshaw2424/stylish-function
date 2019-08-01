@@ -9,7 +9,7 @@
     </div>
     <section class="sub-images mobile-sub-pictures">
       <% show.sub_image.forEach(img =>{ %>
-      <img src="<%= img %>" alt="#">
+      <img src="<%= img %>" alt="<%= img.title %>">
       <% }) %>
     </section>
     <div class="container">
@@ -19,8 +19,6 @@
         </div>
         <p class="content-desc"><%= show.description %></p>
         <p class="content-price deskTop-price"><strong>$<%= show.price %></strong></p>
-        <a class="btn btn-small show-page-btn desk-top-purchase-button" href="https://bit.ly/2OxIBgU"
-          target="_blank">more info</a>
       </div>
     </div>
   </section>

@@ -7,6 +7,9 @@ const router = express.Router({
 const dbConnect = require('./mongodb_connect');
 const app = express();
 const PORT = process.env.PORT || 8080;
+const seatingRoutes = require('./routes/seatingRoute');
+const storageRoutes = require('./routes/storageRoute');
+const tableRoutes = require('./routes/tableRoute');
 const index = require('./routes/indexRoute');
 const staticRoute = require('./routes/staticRoutes');
 // const staticRoutes = require('./routes/staticRoutes');
@@ -19,7 +22,9 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use('/', index, staticRoute);
-app.use(require('./routes/productRoute'));
+app.use('/seating', seatingRoutes);
+app.use('/storage', storageRoutes);
+app.use('/tables', tableRoutes);
 
 
 // server connection
