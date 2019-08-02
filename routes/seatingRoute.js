@@ -18,22 +18,10 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
-    seatingList.findById(req.params.id, (err, seatingShowPage) => {
-        if (err) {
-            console.log(`Error: ${err}`)
-        } else {
-            res.render("pages/productShowPage", {
-                show: seatingShowPage
-            });
-        }
-    })
-});
-
 // newer filter route
 router.get("/newest", (req, res) => {
     seatingList
-        .find()
+        .find({})
         .sort({
             created_on: -1
         })
@@ -84,5 +72,18 @@ router.get("/high-price", (req, res) => {
             }
         });
 });
+
+router.get("/:id", (req, res) => {
+    seatingList.findById(req.params.id, (err, seatingShowPage) => {
+        if (err) {
+            console.log(`Error: ${err}`)
+        } else {
+            res.render("pages/productShowPage", {
+                show: seatingShowPage
+            });
+        }
+    })
+});
+
 
 module.exports = router;

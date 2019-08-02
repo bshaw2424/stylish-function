@@ -18,18 +18,6 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
-    storageList.findById(req.params.id, (err, showing) => {
-        if (err) {
-            console.log(`Error: ${err}`)
-        } else {
-            res.render("pages/productShowPage", {
-                show: showing
-            });
-        }
-    })
-});
-
 // newer filter route
 router.get("/newest", (req, res) => {
     storageList
@@ -42,7 +30,7 @@ router.get("/newest", (req, res) => {
                 console.log(err)
             } else {
                 res.render("pages/storageNewest", {
-                    newest_seats: newestProducts
+                    storage_newest: newestProducts
                 });
             }
         });
@@ -60,7 +48,7 @@ router.get("/low-price", (req, res) => {
                 console.log(err)
             } else {
                 res.render("pages/storageLowPrice", {
-                    lowPricing: low_price,
+                    storage_LowPrice: low_price,
                     sortBy: req.query.lowPrice
                 })
             }
@@ -79,10 +67,21 @@ router.get("/high-price", (req, res) => {
                 console.log(err)
             } else {
                 res.render("pages/storageHighPrice", {
-                    highPricing: high_price
+                    storage_highPrice: high_price
                 })
             }
         });
 });
 
+router.get("/:id", (req, res) => {
+    storageList.findById(req.params.id, (err, showing) => {
+        if (err) {
+            console.log(`Error: ${err}`)
+        } else {
+            res.render("pages/productShowPage", {
+                show: showing
+            });
+        }
+    })
+});
 module.exports = router;

@@ -56,10 +56,21 @@ a,
 	font-family: var(--heading-font-family);
 }
 
+/* article section */
+.about-info {
+	margin: 1.5rem auto;
+	text-align: center;
+}
+
 article,
 p {
 	font-family: var(--content-font-family);
-	margin: 0 0 1rem 0;
+	font-size: 1.2rem;
+}
+
+article .disclaimer-paragraph {
+	font-size: 1.1rem;
+	text-decoration: underline;
 }
 
 .large-sub-pictures img,
@@ -77,9 +88,8 @@ p {
 	display: block;
 }
 
-#product-features,
-#featured {
-	background: var(--product-bgColor);
+#product-features {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #product-features {
@@ -173,7 +183,7 @@ nav {
 }
 
 .desktop-nav a {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 }
 
 #navigation,
@@ -270,6 +280,7 @@ nav {
 	justify-content: space-evenly;
 	align-items: center;
 	margin-bottom: 1.3rem;
+	display: none;
 }
 
 .description-info>div span {
@@ -285,6 +296,7 @@ nav {
 .description-info>div span img {
 	display: inline-block;
 	height: 80px;
+
 }
 
 .header-info div {

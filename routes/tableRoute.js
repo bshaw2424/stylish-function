@@ -18,18 +18,6 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
-    tableList.findById(req.params.id, (err, showing) => {
-        if (err) {
-            console.log(`Error: ${err}`)
-        } else {
-            res.render("pages/productShowPage", {
-                show: showing
-            });
-        }
-    })
-});
-
 // newer filter route
 router.get("/newest", (req, res) => {
     tableList
@@ -42,7 +30,7 @@ router.get("/newest", (req, res) => {
                 console.log(err)
             } else {
                 res.render("pages/tableNewest", {
-                    newest_seats: newestProducts
+                    newest_Table: newestProducts
                 });
             }
         });
@@ -60,7 +48,7 @@ router.get("/low-price", (req, res) => {
                 console.log(err)
             } else {
                 res.render("pages/tableLowPrice", {
-                    lowPricing: low_price,
+                    table_LowPrice: low_price,
                     sortBy: req.query.lowPrice
                 })
             }
@@ -79,10 +67,22 @@ router.get("/high-price", (req, res) => {
                 console.log(err)
             } else {
                 res.render("pages/tableHighPrice", {
-                    highPricing: high_price
+                    table_HighPrice: high_price
                 })
             }
         });
+});
+
+router.get("/:id", (req, res) => {
+    tableList.findById(req.params.id, (err, showing) => {
+        if (err) {
+            console.log(`Error: ${err}`)
+        } else {
+            res.render("pages/productShowPage", {
+                show: showing
+            });
+        }
+    })
 });
 
 module.exports = router;

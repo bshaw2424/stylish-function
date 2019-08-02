@@ -1,19 +1,10 @@
 <% include ../partials/header %>
-
 <% include ../partials/nav %>
 
 <!-- page intro-description section -->
 <section class="page-intro">
   <div class="container">
     <h3>Table</h3>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem vel minus atque dignissimos eum aliquam labore
-      reiciendis! Minus eligendi voluptas ipsam dolorem aut quia blanditiis facilis iste repellat quidem dolores nisi
-      veritatis necessitatibus architecto animi in tempore consequuntur, doloremque accusamus, deleniti reprehenderit
-      exercitationem! Natus dolor vero magnam reprehenderit reiciendis quidem eaque, aspernatur, unde earum, aperiam
-      recusandae autem libero voluptates? Itaque cupiditate aperiam veniam? Saepe aperiam blanditiis itaque error dolore
-      ratione incidunt officiis dolorem, autem illo expedita quis ullam nulla facere possimus voluptas consequatur
-      consequuntur rerum ex pariatur accusamus voluptate, perspiciatis nam eos. Eum sapiente ea esse blanditiis!
-      Doloribus, sint excepturi.</p>
   </div>
 </section>
 <!-- Page filter section with a search bar and select menu -->
@@ -22,9 +13,9 @@
     <div class="price-filter filter">
       <span class="category-title">Sort By:</span>
       <ul class="inActive">
-        <li><a href="">newest</a></li>
-        <li><a href="">low to high</a></li>
-        <li><a href="">high to low</a></li>
+        <li><a href="tables/newest">newest</a></li>
+        <li><a href="tables/low-price">low to high</a></li>
+        <li><a href="tables/high-price">high to low</a></li>
       </ul>
     </div>
   </div>
@@ -36,13 +27,13 @@
       <aside id="aside-filter" class="product-aside">
         <p> filter </p>
         <ul>
-          <a href="/seating">
+          <a href="tables/newest">
             <li>Newest</li>
           </a>
-          <a href="/storage">
+          <a href="tables/low-price">
             <li>Low - High</li>
           </a>
-          <a href="/table">
+          <a href="tables/high-price">
             <li>High - Low</li>
           </a>
         </ul>
@@ -55,9 +46,11 @@
             </a>
           </div>
           <div class="purchase-information">
-            <p class="card-title"> <a href="tables/<%= tableProducts._id %>" target="_blank"><%= tableProducts.title %>
+            <p class="card-title">
+              <a href="tables/<%= tableProducts._id %>" target="_blank">
+                <%= tableProducts.title %>
+              </a>
             </p>
-            </a>
             <p class="card-price"><%= `$${tableProducts.price}` %></p>
           </div>
         </div>
@@ -66,14 +59,6 @@
     </div>
   </div>
 </main>
-<ul class="pagination center white s12">
-  <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-  <li class="active"><a href="#!">1</a></li>
-  <li class="waves-effect"><a href="#!">2</a></li>
-  <li class="waves-effect"><a href="#!">3</a></li>
-  <li class="waves-effect"><a href="#!">4</a></li>
-  <li class="waves-effect"><a href="#!">5</a></li>
-  <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-</ul>
 
+<% include ../partials/pagination %>
 <% include ../partials/footer %>
