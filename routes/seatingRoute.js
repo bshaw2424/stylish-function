@@ -56,8 +56,8 @@ router.get("/low-price", (req, res) => {
 });
 
 // high price filter route
-router.get("/high-price", (req, res) => {
-    seating
+router.get("seating/high-price", (req, res) => {
+    seatingList
         .find()
         .sort({
             price: -1

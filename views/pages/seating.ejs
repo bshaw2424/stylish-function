@@ -12,7 +12,6 @@
     </div>
   </div>
 </section>
-
 <!-- Page filter section with a search bar and select menu -->
 <section id="filter-section">
   <div class="container">
@@ -30,18 +29,19 @@
   <div class="container">
     <div class="row">
       <% seating.forEach(seats => { %>
+      <!-- desktop filter section -->
       <aside id="aside-filter" class="product-aside">
         <p> filter </p>
         <ul>
-          <a href="seating/newest">
-            <li>Newest</li>
-          </a>
-          <a href="seating/low-price">
-            <li>Low - High</li>
-          </a>
-          <a href="seating/high-price">
-            <li>High - Low</li>
-          </a>
+          <li>
+            <a href="seating/newest">Newest</a>
+          </li>
+          <li>
+            <a href="seating/low-price">Low - High</a>
+          </li>
+          <li>
+            <a href="seating/high-price">High - Low</a>
+          </li>
         </ul>
       </aside>
       <div class="product-card col s12 m6 l4">
