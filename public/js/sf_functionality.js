@@ -12,6 +12,7 @@ function switchMainProductPicture(e) {
     main_image.src = e.target.src;
 }
 
+
 // filter category
 (function () {
     const filterMenus = document.querySelector(".price-filter");

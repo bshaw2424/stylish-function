@@ -17,9 +17,9 @@
     <div class="price-filter filter">
       <span class="category-title">Sort By:</span>
       <ul class="inActive">
-        <li><a href="/newest">newest</a></li>
-        <li><a href="/low-price">low to high</a></li>
-        <li><a href="/high-price">high to low</a></li>
+        <li><a href="/seating/newest">newest</a></li>
+        <li><a href="/seating/low-price">low to high</a></li>
+        <li><a href="/seating/high-price">high to low</a></li>
       </ul>
     </div>
   </div>
@@ -33,26 +33,26 @@
         <p> filter </p>
         <ul>
           <li>
-            <a href="/newest">Newest</a>
+            <a href="/seating/newest">Newest</a>
           </li>
           <li>
-            <a href="/low-price">Low - High</a>
+            <a href="/seating/low-price">Low - High</a>
           </li>
           <li>
-            <a href="/high-price">High - Low</a>
+            <a href="/seating/high-price">High - Low</a>
           </li>
         </ul>
       </aside>
       <div class="product-card col s12 m6 l4">
         <div class="card">
           <div class="card-image">
-            <a href="seating/<%= seating_lowPrice_products._id %>" target="_blank">
+            <a href="/seating/<%= seating_lowPrice_products._id %>" target="_blank">
               <img src="<%= seating_lowPrice_products.main_image %>" alt="<%= seating_lowPrice_products.title %>" />
             </a>
           </div>
           <div class="purchase-information">
             <p class="card-title">
-              <a href="seating/<%= seating_lowPrice_products._id %>" target="_blank">
+              <a href="/seating/<%= seating_lowPrice_products._id %>" target="_blank">
                 <%= seating_lowPrice_products.title %>
               </a>
             </p>

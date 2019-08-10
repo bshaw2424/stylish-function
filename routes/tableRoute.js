@@ -48,8 +48,7 @@ router.get("/low-price", (req, res) => {
                 console.log(err)
             } else {
                 res.render("pages/tableLowPrice", {
-                    table_LowPrice: low_price,
-                    sortBy: req.query.lowPrice
+                    table_LowPrice: low_price
                 })
             }
         });

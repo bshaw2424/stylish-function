@@ -1,15 +1,14 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router({
     mergeParams: true
 });
-const mongoose = require('mongoose');
-const seatingList = require('../models/seatingModel');
-
+const mongoose = require("mongoose");
+const seatingList = require("../models/seatingModel");
 
 router.get("/", (req, res) => {
     seatingList.find({}, (err, seating) => {
         if (err) {
-            console.log(`Error: ${err}`)
+            console.log(`Error: ${err}`);
         } else {
             res.render("pages/seating", {
                 seating
@@ -27,10 +26,10 @@ router.get("/newest", (req, res) => {
         })
         .exec((err, newestProducts) => {
             if (err) {
-                console.log(err)
+                console.log(err);
             } else {
-                res.render("pages/seatingNewest", {
-                    newest_seats: newestProducts
+                res.render("pages/seating", {
+                    seating: newestProducts
                 });
             }
         });
@@ -45,18 +44,17 @@ router.get("/low-price", (req, res) => {
         })
         .exec((err, low_price) => {
             if (err) {
-                console.log(err)
+                console.log(err);
             } else {
-                res.render("pages/seatingLowPrice", {
-                    lowPricing: low_price,
-                    sortBy: req.query.lowPrice
-                })
+                res.render("pages/seating", {
+                    seating: low_price,
+                });
             }
         });
 });
 
 // high price filter route
-router.get("seating/high-price", (req, res) => {
+router.get("/high-price", (req, res) => {
     seatingList
         .find()
         .sort({
@@ -64,11 +62,11 @@ router.get("seating/high-price", (req, res) => {
         })
         .exec((err, high_price) => {
             if (err) {
-                console.log(err)
+                console.log(err);
             } else {
                 res.render("pages/seatingHighPrice", {
                     highPricing: high_price
-                })
+                });
             }
         });
 });
@@ -76,14 +74,13 @@ router.get("seating/high-price", (req, res) => {
 router.get("/:id", (req, res) => {
     seatingList.findById(req.params.id, (err, seatingShowPage) => {
         if (err) {
-            console.log(`Error: ${err}`)
+            console.log(`Error: ${err}`);
         } else {
             res.render("pages/productShowPage", {
                 show: seatingShowPage
             });
         }
-    })
+    });
 });
-
 
 module.exports = router;

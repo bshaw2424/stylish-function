@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
             console.log(`Error: ${err}`)
         } else {
             res.render("pages/storage", {
-                storage: storage
+                storage
             });
         }
     });
@@ -49,7 +49,6 @@ router.get("/low-price", (req, res) => {
             } else {
                 res.render("pages/storageLowPrice", {
                     storage_LowPrice: low_price,
-                    sortBy: req.query.lowPrice
                 })
             }
         });
