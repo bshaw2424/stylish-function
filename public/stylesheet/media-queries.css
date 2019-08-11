@@ -98,11 +98,10 @@
 
     #display-header,
     .header-info {
-        height: 27vh;
+        height: 25vh;
     }
 
     .header-info {
-        height: 22vh;
         max-width: 100%;
         margin: 0 auto;
     }
@@ -131,7 +130,6 @@
     }
 
     #filter-section div {
-        justify-content: space-evenly;
         align-items: center;
     }
 
@@ -171,6 +169,10 @@
     .purchase-information .card-title {
         font-size: 1.5rem;
     }
+
+    .footer-nav ul {
+        max-width: 70%;
+    }
 }
 
 /* media queries */
@@ -181,7 +183,7 @@
 
     #display-header,
     .header-info {
-        height: 34vh;
+        height: 25vh;
     }
 
     #navigation {
@@ -203,8 +205,9 @@
     }
 
 
-    .desktop-nav a {
-        font-size: 1.2rem;
+    .desktop-nav li a {
+        font-size: 1.6rem;
+        padding: 0 1.4rem;
     }
 
     .header-info div {
@@ -246,8 +249,9 @@
 
     #filter-section div {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     .filter {
@@ -267,8 +271,11 @@
     }
 
     .page-intro {
-        padding: 1rem 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .footer-nav ul {
+        max-width: 70%;
     }
 
 }
@@ -282,7 +289,7 @@
 
     #display-header,
     .header-info {
-        height: 40vh;
+        height: 35vh;
     }
 
     #navigation {
@@ -303,7 +310,8 @@
     }
 
     .desktop-nav li a {
-        font-size: 1rem;
+        font-size: 1.3rem;
+        padding: 0 1rem;
     }
 
     .header-info {
@@ -326,7 +334,7 @@
 
     #filter-section {
         border-top: none;
-        max-width: 70%;
+        max-width: 100%;
         margin: 1rem auto;
         display: flex;
         flex-direction: column;
@@ -339,8 +347,9 @@
     }
 
     .filter ul {
+        min-width: 100%;
         top: 100%;
-        display: none;
+        left: 0;
     }
 
     .category-filter {
@@ -352,18 +361,21 @@
         margin-top: 1rem;
     }
 
+
     article p,
     .content-text {
         text-align: center;
+    }
+
+    .disclaimer-paragraph {
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     .page-intro {
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
 
-    .description-info .icons {
-        display: none;
-    }
 
     #featured .card-title {
         font-size: 1.7rem;
@@ -395,7 +407,7 @@
     }
 
     .footer-nav ul {
-        width: 100%;
+        max-width: 100%;
         margin: 0 auto;
         padding: 15px 0;
         display: flex;
@@ -419,9 +431,6 @@
         text-decoration: underline;
     }
 
-    .desk-top-purchase-button {
-        display: none;
-    }
 
     .mobile-purchase-button {
         display: block;
@@ -457,13 +466,17 @@
         margin: 0 auto;
     }
 
+    .page-intro h3 {
+        text-align: center
+    }
+
     .desktop-nav {
         height: 100%;
     }
 
     .desktop-nav li a {
-        font-size: 1rem;
-        padding: 0 9px;
+        font-size: 1.3rem;
+        padding: 0 1rem;
     }
 
     #filter-section {
@@ -477,9 +490,9 @@
 
     .filter {
         margin: 0;
-        min-width: 70%;
+        min-width: 90%;
+        cursor: pointer;
     }
-
 
     .categories,
     .price {
@@ -487,9 +500,10 @@
     }
 
     .filter ul {
-        min-width: 100%;
+        max-width: 100%;
         top: 100%;
         left: 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     #filter-section div {
@@ -506,10 +520,6 @@
     .purchase-information .card-title,
     .purchase-information .card-price {
         padding: 0;
-    }
-
-    .desk-top-purchase-button {
-        display: none;
     }
 
     .mobile-purchase-button {

@@ -13,8 +13,8 @@
 	--header-footer-color: #89afce;
 }
 
-html {
-	overflow: auto;
+body {
+	overflow: scroll;
 }
 
 .secondary-nav {
@@ -113,8 +113,10 @@ h3 {
 	article section 
 **********************/
 .about-info {
-	margin: 1.5rem auto;
+	margin: 0 auto;
+	padding: 2rem 0;
 	text-align: center;
+	background: #f4f4f4;
 }
 
 .about-info,
@@ -125,6 +127,7 @@ p {
 
 .about-info .disclaimer-paragraph {
 	font-size: 1.1rem;
+	padding-top: 1rem;
 	text-decoration: underline;
 }
 
@@ -183,6 +186,13 @@ article h3,
 	margin: auto;
 }
 
+.page-intro h3,
+.page-intro .secondary-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /********************* 
 	main navigation 
 **********************/
@@ -193,7 +203,7 @@ article h3,
 	z-index: 3;
 }
 
-#navigation > div {
+#navigation>div {
 	display: flex;
 	justify-content: space-between;
 	max-width: 90%;
@@ -291,7 +301,7 @@ article h3,
 	text-transform: var(--text-capitalized);
 }
 
-#featured > div {
+#featured>div {
 	max-width: 90%;
 	margin-bottom: 0;
 }
@@ -328,7 +338,7 @@ mobile filter section
 	position: relative;
 }
 
-.filter > ul {
+.filter>ul {
 	position: absolute;
 	min-width: 100%;
 	z-index: 1;
@@ -384,7 +394,7 @@ desk top filter section
 	padding: 0.5rem 0;
 }
 
-.product-aside > ul {
+.product-aside>ul {
 	background: #fff;
 	width: 100%;
 	height: 100%;
@@ -393,9 +403,11 @@ desk top filter section
 	justify-content: center;
 	align-items: center;
 }
+
 .product-aside li {
 	width: 100%;
 }
+
 .product-aside a {
 	display: inline-block;
 	padding: 0.3rem;
@@ -440,7 +452,7 @@ desk top filter section
  footer section
 ****************/
 .footer-nav ul {
-	max-width: 50%;
+	max-width: 45%;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
