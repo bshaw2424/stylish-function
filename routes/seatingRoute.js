@@ -2,56 +2,26 @@ const express = require("express");
 const router = express.Router({
     mergeParams: true
 });
-const newest_filter = require("./seatingFilterRoutes");
-const low_price_seating_filter = require("./seatingFilterRoutes");
+// seating routes
+const seating_index_route = require("./seatingFilterRoutes");
+const seating_newest_filter_route = require("./seatingFilterRoutes");
+const seating_high_price_filter_route = require("./seatingFilterRoutes");
+const seating_low_price_seating_filter_route = require("./seatingFilterRoutes");
+const seating_find_by_id_route = require("./seatingFilterRoutes");
 
 const seatingList = require("../models/seatingModel");
 
-router.get("/", async (req, res) => {
-    const seating = await seatingList.find({}).exec();
-    try {
-        res.render("pages/seating", {
-            seating
-        });
-    } catch (error) {
-        console.log(`Error: ${error}`);
-    }
-});
+router.get("/", seating_index_route);
 
 // newer filter route
-router.get("/newest", newest_filter);
+router.get("/newest", seating_newest_filter_route);
 
 // low price filter route
-router.get("/low-price", low_price_seating_filter);
+router.get("/low-price", seating_low_price_seating_filter_route);
 
 // high price filter route
-router.get("/high-price", (req, res) => {
-    seatingList
-        .find()
-        .sort({
-            price: -1
-        })
-        .exec((err, high_price) => {
-            if (err) {
-                console.log(err);
-            } else {
-                res.render("pages/seatingHighPrice", {
-                    highPricing: high_price
-                });
-            }
-        });
-});
+router.get("/high-price", seating_high_price_filter_route);
 
-router.get("/:id", (req, res) => {
-    seatingList.findById(req.params.id, (err, seatingShowPage) => {
-        if (err) {
-            console.log(`Error: ${err}`);
-        } else {
-            res.render("pages/productShowPage", {
-                show: seatingShowPage
-            });
-        }
-    });
-});
+router.get("/:id", seating_find_by_id_route);
 
 module.exports = router;
