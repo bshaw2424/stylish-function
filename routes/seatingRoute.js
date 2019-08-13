@@ -2,56 +2,27 @@ const express = require("express");
 const router = express.Router({
     mergeParams: true
 });
-const mongoose = require("mongoose");
+const newest_filter = require("./seatingFilterRoutes");
+const low_price_seating_filter = require("./seatingFilterRoutes");
+
 const seatingList = require("../models/seatingModel");
 
-router.get("/", (req, res) => {
-    seatingList.find({}, (err, seating) => {
-        if (err) {
-            console.log(`Error: ${err}`);
-        } else {
-            res.render("pages/seating", {
-                seating
-            });
-        }
-    });
+router.get("/", async (req, res) => {
+    const seating = await seatingList.find({}).exec();
+    try {
+        res.render("pages/seating", {
+            seating
+        });
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
 });
 
 // newer filter route
-router.get("/newest", (req, res) => {
-    seatingList
-        .find({})
-        .sort({
-            created_on: -1
-        })
-        .exec((err, newestProducts) => {
-            if (err) {
-                console.log(err);
-            } else {
-                res.render("pages/seating", {
-                    seating: newestProducts
-                });
-            }
-        });
-});
+router.get("/newest", newest_filter);
 
 // low price filter route
-router.get("/low-price", (req, res) => {
-    seatingList
-        .find()
-        .sort({
-            price: 1
-        })
-        .exec((err, low_price) => {
-            if (err) {
-                console.log(err);
-            } else {
-                res.render("pages/seating", {
-                    seating: low_price,
-                });
-            }
-        });
-});
+router.get("/low-price", low_price_seating_filter);
 
 // high price filter route
 router.get("/high-price", (req, res) => {

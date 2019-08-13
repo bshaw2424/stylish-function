@@ -29,7 +29,3 @@ function switchMainProductPicture(e) {
         }
     }
 })();
-
-let pagination = document.querySelector('.pagination');
-
-pagination.style.display = "block";
