@@ -2,26 +2,88 @@ const express = require("express");
 const router = express.Router({
     mergeParams: true
 });
-// seating routes
-const seating_index_route = require("./seatingFilterRoutes");
-const seating_newest_filter_route = require("./seatingFilterRoutes");
-const seating_high_price_filter_route = require("./seatingFilterRoutes");
-const seating_low_price_seating_filter_route = require("./seatingFilterRoutes");
-const seating_find_by_id_route = require("./seatingFilterRoutes");
 
-const seatingList = require("../models/seatingModel");
+const seatingList = require('../models/seatingModel');
 
-router.get("/", seating_index_route);
+// routes
+router.get("/", async (req, res) => {
+    const seating = await seatingList
+        .find()
+        .exec()
+    try {
+        res.render("pages/seating", {
+            seating
+        });
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+});
 
 // newer filter route
-router.get("/newest", seating_newest_filter_route);
+router.get("/newest", async (req, res) => {
+    const seatingRecentProducts = await seatingList
+        .find()
+        .sort({
+            created_on: -1
+        })
+        .exec()
+    try {
+        res.render("pages/seatingNewest", {
+            seatingRecentProducts
+        })
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+});
 
 // low price filter route
-router.get("/low-price", seating_low_price_seating_filter_route);
+router.get("/low-price", async (req, res) => {
+    const seatingLowPriceProducts = await seatingList
+        .find()
+        .sort({
+            price: 1
+        })
+        .exec()
+    try {
+        res.render("pages/seatingLowPrice", {
+            seatingLowPriceProducts
+        })
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+});
 
 // high price filter route
-router.get("/high-price", seating_high_price_filter_route);
+router.get("/high-price", async (req, res) => {
+    const seatingHighPriceProducts = await seatingList
+        .find()
+        .sort({
+            price: -1
+        })
+        .exec()
+    try {
+        res.render("pages/seatingHighPrice", {
+            seatingHighPriceProducts
+        })
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+});
 
-router.get("/:id", seating_find_by_id_route);
+
+
+// show page
+router.get("/:id", async (req, res) => {
+    const seating = await seatingList
+        .findById(req.params.id)
+        .exec()
+    try {
+        res.render("pages/productShowPage", {
+            show
+        })
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+});
 
 module.exports = router;

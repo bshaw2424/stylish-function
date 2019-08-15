@@ -2,85 +2,83 @@ const express = require('express');
 const router = express.Router({
     mergeParams: true
 });
-const mongoose = require('mongoose');
+
 const storageList = require('../models/storageModel');
 
-
-router.get("/", (req, res) => {
-    storageList.find({}, (err, storage) => {
-        if (err) {
-            console.log(`Error: ${err}`)
-        } else {
-            res.render("pages/storage", {
-                storage
-            });
-        }
-    });
+router.get("/", async (req, res) => {
+    const storage = await storageList
+        .find();
+    try {
+        res.render("pages/storage", {
+            storage
+        });
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
 });
 
 // newer filter route
-router.get("/newest", (req, res) => {
-    storageList
+router.get("/newest", async (req, res) => {
+    const recentStorageProducts = await storageList
         .find()
         .sort({
             created_on: -1
         })
-        .exec((err, newestProducts) => {
-            if (err) {
-                console.log(err)
-            } else {
-                res.render("pages/storageNewest", {
-                    storage_newest: newestProducts
-                });
-            }
-        });
+        .exec()
+    try {
+        res.render("pages/storageNewest", {
+            recentStorageProducts
+        })
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
 });
 
 // low price filter route
-router.get("/low-price", (req, res) => {
-    storageList
+router.get("/low-price", async (req, res) => {
+    const storageLowPriceProducts = await storageList
         .find()
         .sort({
             price: 1
         })
-        .exec((err, low_price) => {
-            if (err) {
-                console.log(err)
-            } else {
-                res.render("pages/storageLowPrice", {
-                    storage_LowPrice: low_price,
-                })
-            }
-        });
+        .exec()
+    try {
+        res.render("pages/storageLowPrice", {
+            storageLowPriceProducts
+        })
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
 });
 
 // high price filter route
-router.get("/high-price", (req, res) => {
-    storageList
+router.get("/high-price", async (req, res) => {
+    const storageHighPriceProducts = await storageList
         .find()
         .sort({
             price: -1
         })
-        .exec((err, high_price) => {
-            if (err) {
-                console.log(err)
-            } else {
-                res.render("pages/storageHighPrice", {
-                    storage_highPrice: high_price
-                })
-            }
-        });
+        .exec()
+    try {
+        res.render("pages/storageHighPrice", {
+            storageHighPriceProducts
+        })
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
 });
 
-router.get("/:id", (req, res) => {
-    storageList.findById(req.params.id, (err, showing) => {
-        if (err) {
-            console.log(`Error: ${err}`)
-        } else {
-            res.render("pages/productShowPage", {
-                show: showing
-            });
-        }
-    })
+router.get("/:id", async (req, res) => {
+    const show = await storageList
+        .findById(req.params.id)
+        .exec()
+    try {
+        res.render("pages/productShowPage", {
+            show
+        })
+    } catch (error) {
+        console.log(error);
+    }
 });
+
 module.exports = router;
