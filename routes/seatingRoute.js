@@ -74,7 +74,7 @@ router.get("/high-price", async (req, res) => {
 
 // show page
 router.get("/:id", async (req, res) => {
-    const seating = await seatingList
+    const show = await seatingList
         .findById(req.params.id)
         .exec()
     try {
