@@ -4,16 +4,24 @@
 <section id="contact-page">
   <div class="container">
     <h1 class="contact-form-title">Contact Us</h1>
-    <form action="" class="contact-form">
+    <p>Contact us about any issues, commments, or business opportunities you may have.
+      We look forward to your message.
+    </p>
+    <form action="/contact-us" method="POST" class="contact-forms">
       <label for="form-nameInput">Name</label>
-      <input type="text" name="form-name" class="form-nameInput browser-default" id="form-nameInput">
+      <input type="text" name="form[name]" class="contact-form-field form-nameInput browser-default" id="form-nameInput"
+        required />
       <label for="form-subjectInput">Subject</label>
-      <input type="text" name="form-subject" class="form-subject browser-default" id="form-subjectInput">
+      <input type="text" name="form[subject]" class=" contact-form-field form-subject browser-default"
+        id="form-subjectInput" required />
+      <label for="form-emailInput">Email</label>
+      <input type="email" name="form[email]" class=" contact-form-field form-email browser-default" id="form-emailInput"
+        required />
       <label for="form-messageTextArea">Message</label>
-      <textarea name="form-textArea" class="form-messageTextArea browser-default" placeholder="Message"></textarea>
+      <textarea name="form[textArea]" id="form-messageTextArea" class="contact-form-field form-TextArea browser-default"
+        placeholder="Message" required rows="10" cols="40"></textarea>
       <div class="form-buttons">
-        <button type="submit" class="form-submitButton">Submit</button>
-        <button type="reset" class="form-resetButton">Reset</button>
+        <button type="submit" class="btn form-submitButton">Submit</button>
       </div>
     </form>
   </div>

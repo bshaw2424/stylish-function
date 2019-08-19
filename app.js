@@ -12,8 +12,7 @@ const storageRoutes = require('./routes/storageRoute');
 const tableRoutes = require('./routes/tableRoute');
 const index = require('./routes/indexRoute');
 const staticRoute = require('./routes/staticRoutes');
-// const staticRoutes = require('./routes/staticRoutes');
-// const indexRoute   = require('./routes/index');
+
 
 // middleware
 app.set("view engine", "ejs");
