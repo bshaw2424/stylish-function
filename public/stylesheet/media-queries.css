@@ -31,6 +31,15 @@
         width: 100%;
     }
 
+    .header-info h2 {
+        border-bottom: 1px solid #fff;
+    }
+
+    .header-info p {
+        color: #fff;
+        font-size: 1.3rem;
+    }
+
     .purchase-information {
         display: flex;
         flex-direction: column;
@@ -53,7 +62,18 @@
     }
 
     .card .card-content {
-        padding: 12px;
+        padding: 0;
+    }
+
+    .card .card-content .card-title {
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+
+    .about-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #filter-section,
@@ -83,6 +103,9 @@
         display: block;
     }
 
+    .footer-nav ul {
+        max-width: 50%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -185,12 +208,12 @@
     }
 
     .footer-nav ul {
-        max-width: 70%;
+        width: 10%;
     }
 }
 
 /* media queries */
-@media screen and (min-width: 601px) and (max-width: 990px) {
+@media screen and (min-width: 601px) and (max-width: 1000px) {
     #display-header {
         background: url("../images/functionalSpace.jpeg") no-repeat center center;
         height: 65vh;
@@ -232,7 +255,7 @@
 
     .header-info h2 {
         font-size: 2rem;
-        max-width: 100%;
+        max-width: 80%;
         border-bottom: 1px solid #fff;
     }
 
@@ -314,12 +337,16 @@
     }
 
     .footer-nav ul {
-        max-width: 70%;
+        width: 70%;
     }
 
 }
 
 @media screen and (max-width: 600px) {
+    .row .col.l3 {
+        width: 100%;
+    }
+
     #display-header {
         background: url("../images/functionalSpace.jpeg") no-repeat center center;
         width: 100%;
@@ -373,7 +400,7 @@
     }
 
     .header-info p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         width: 80%;
         line-height: 1.6rem;
         margin: auto;
@@ -428,7 +455,7 @@
     }
 
     .disclaimer-paragraph {
-        max-width: 100%;
+        max-width: 90%;
         padding-right: 0;
     }
 

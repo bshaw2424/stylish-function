@@ -94,7 +94,7 @@ a,
 }
 
 h3 {
-	margin: 1rem 0;
+	margin: 0;
 }
 
 .header-info h2,
@@ -112,6 +112,7 @@ h3 {
 	box-shadow: none;
 	outline: none;
 	border: none;
+
 }
 
 /* .card-title a {
@@ -124,7 +125,7 @@ h3 {
 
 .card-content p {
 	font-size: 1.1rem;
-	text-align: center;
+	padding: 0 8px;
 }
 
 .logo {
@@ -154,6 +155,10 @@ h3 {
 	font-family: var(--content-font-family);
 	font-size: 1.2rem;
 	text-transform: none;
+}
+
+.about-info .disclaimer-paragraph {
+	padding-right: 10px;
 }
 
 .about-info .disclaimer-paragraph,
@@ -196,7 +201,11 @@ h3 {
 .page-intro {
 	margin: auto;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 1.5rem 0;
+	padding-top: 1rem;
+}
+
+.storage-title {
+	padding-bottom: 1rem;
 }
 
 .page-intro aside {
@@ -254,6 +263,10 @@ h3 {
 #navigation,
 .footer-nav {
 	background: var(--header-footer-color);
+}
+
+.footer-nav {
+	margin-top: 1.6rem;
 }
 
 /********************* 
@@ -327,6 +340,7 @@ h3 {
 	padding: 1rem 0;
 	margin: 0;
 	font-size: 3rem;
+	text-align: center;
 	color: var(--header-footer-color);
 	text-shadow: 1px 1px .5px black;
 	text-transform: var(--text-capitalized);
@@ -358,7 +372,7 @@ h3 {
 }
 
 #featured .card-title {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 }
 
 /********************* 
@@ -552,7 +566,6 @@ textarea {
  footer section
 ****************/
 .footer-nav ul {
-	max-width: 45%;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
