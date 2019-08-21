@@ -141,28 +141,27 @@ h3 {
 	article section 
 **********************/
 .about-info {
-	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 2rem 0;
 	text-align: center;
-	background: #f4f4f4;
-}
-
-.about-info h1 {
-	font-size: 1.6rem;
-	max-width: 80%;
-	margin: 0 auto;
+	background: #333;
 }
 
 .about-info,
-p {
+.about-info p {
 	font-family: var(--content-font-family);
 	font-size: 1.2rem;
 	text-transform: none;
 }
 
-.about-info .disclaimer-paragraph {
-	font-size: 1.1rem;
-	padding-top: 1rem;
+.about-info .disclaimer-paragraph,
+.about-info a {
+	color: #fff;
+}
+
+.about-info a:hover {
 	text-decoration: underline;
 }
 
@@ -261,7 +260,7 @@ p {
 	header section
 **********************/
 #display-header {
-	height: 40vh;
+	height: 75vh;
 	width: 100%;
 	object-fit: fill;
 	position: relative;
@@ -324,9 +323,9 @@ p {
 	featured section
 **********************/
 #featured h1 {
-	width: 94%;
+	width: 100%;
 	padding: 1rem 0;
-	margin: 0 0 0 6%;
+	margin: 0;
 	font-size: 3rem;
 	color: var(--header-footer-color);
 	text-shadow: 1px 1px .5px black;
@@ -486,7 +485,7 @@ desk top filter section
 #contact-page form {
 	display: flex;
 	flex-direction: column;
-	max-width: 50%;
+	width: 50%;
 	margin: 0 auto 3rem auto;
 	padding: 2rem;
 	border-radius: 10px;
@@ -495,7 +494,7 @@ desk top filter section
 
 #contact-page p {
 	margin: 1rem auto;
-	max-width: 60%;
+	width: 60%;
 	text-align: center;
 }
 
@@ -516,6 +515,10 @@ input[type="email"],
 	margin-bottom: 1rem;
 	border-radius: 10px;
 	outline: 0;
+}
+
+.contact-form-field:focus {
+	border-color: rgba(0, 0, 255, 0.7);
 }
 
 #contact-page form label {
@@ -541,8 +544,8 @@ textarea {
 
 .form-submitButton {
 	display: inline-block;
-	margin-right: 1rem;
-	width: 50%;
+	width: 100%;
+	border-radius: 10px;
 }
 
 /*************** 
@@ -561,6 +564,26 @@ textarea {
 	font-size: 1.1rem;
 	display: inline-block;
 	padding: 1rem 0.5rem;
+}
+
+.services h2,
+.footer-heading {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding-bottom: 4px;
+	text-transform: var(--text-capitalized);
+}
+
+.services {
+	margin-bottom: 3rem;
+}
+
+.footer-heading {
+	text-align: center;
+	font-size: 3.5rem;
+}
+
+.services h2 {
+	font-size: 2rem;
 }
 
 .copyright {
