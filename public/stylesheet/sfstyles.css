@@ -321,7 +321,7 @@ h3 {
 	margin: 0 auto;
 	width: 100%;
 	padding: 8px;
-	font-size: 2.2rem;
+	font-size: 3rem;
 	text-align: center;
 	text-shadow: 2px 2px #000;
 	border: none;
@@ -332,6 +332,10 @@ h3 {
 	color: rgb(211, 211, 17);
 }
 
+.header-info p {
+	font-size: 2rem;
+}
+
 /********************* 
 	featured section
 **********************/
@@ -339,7 +343,7 @@ h3 {
 	width: 100%;
 	padding: 1rem 0;
 	margin: 0;
-	font-size: 3rem;
+	font-size: 3.2rem;
 	text-align: center;
 	color: var(--header-footer-color);
 	text-shadow: 1px 1px .5px black;
@@ -499,7 +503,6 @@ desk top filter section
 #contact-page form {
 	display: flex;
 	flex-direction: column;
-	width: 50%;
 	margin: 0 auto 3rem auto;
 	padding: 2rem;
 	border-radius: 10px;
@@ -507,8 +510,7 @@ desk top filter section
 }
 
 #contact-page p {
-	margin: 1rem auto;
-	width: 60%;
+	margin: 0 auto;
 	text-align: center;
 }
 
