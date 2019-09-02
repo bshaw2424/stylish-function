@@ -7,9 +7,13 @@ const router = express.Router({
 const dbConnect = require('./mongodb_connect');
 const app = express();
 const PORT = process.env.PORT || 8080;
-const seatingRoutes = require('./routes/seatingController');
-const storageRoutes = require('./routes/storageController');
-const tableRoutes = require('./routes/tableController');
+const {
+    seatingRoutes,
+    storageRoutes,
+    tableRoutes
+} = require('../controllers/mainController');
+// const storageRoutes = require('./routes/storageController');
+// const tableRoutes = require('./routes/tableController');
 const index = require('./routes/indexRoute');
 const staticRoute = require('./routes/staticRoutes');
 

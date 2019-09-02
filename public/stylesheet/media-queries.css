@@ -98,6 +98,19 @@
         font-size: 1.2rem;
     }
 
+    #contact-page form,
+    #contact-page p {
+        width: 70%;
+    }
+
+    #contact-page p {
+        margin-bottom: 1rem;
+    }
+
+    .form-submitButton{
+        width: 50%;
+    }
+    
     #aside-filter,
     #aside-categories {
         display: block;
@@ -199,6 +212,11 @@
         padding: 6px 0;
     }
 
+    #contact-page form {
+        width: 60%;
+
+    }
+
     .card {
         padding: 0;
     }
@@ -242,12 +260,13 @@
     }
 
     #contact-page p {
-margin-bottom: 1rem;    
+        margin-bottom: 1rem;
     }
 
-    #contact-page form{
+    #contact-page form {
         max-width: 70%;
     }
+
     .desktop-nav li a {
         font-size: 1.6rem;
         padding: 0 1.4rem;
@@ -305,6 +324,11 @@ margin-bottom: 1rem;
 
     .product-aside {
         display: none;
+    }
+
+    #contact-page form {
+        width: 80%;
+        margin: auto;
     }
 
     #filter-section {
@@ -497,6 +521,10 @@ margin-bottom: 1rem;
 
     .product-aside {
         display: none;
+    }
+
+    #contact-page form {
+        width: 100%;
     }
 
     .footer-nav ul {

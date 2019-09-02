@@ -8,16 +8,19 @@
       We look forward to your message.
     </p>
     <form class="contact-forms" action="/contact-us" method="POST">
+      <!-- name input field -->
       <label for="form-nameInput">Name</label>
       <input type="text" name="form[name]" class="contact-form-field form-nameInput browser-default" id="form-nameInput"
-        required />
-      <span class=".input-name"></span>
+        placeholder="Name" required />
+      <!-- subject input field -->
       <label for="form-subjectInput">Subject</label>
       <input type="text" name="form[subject]" class=" contact-form-field form-subject browser-default"
-        id="form-subjectInput" required />
+        id="form-subjectInput" placeholder="Subject" required />
+      <!-- email input field -->
       <label for="form-emailInput">Email</label>
       <input type="email" name="form[email]" class=" contact-form-field form-email browser-default" id="form-emailInput"
-        required />
+        placeholder="Email" required />
+      <!-- textarea message field -->
       <label for="form-messageTextArea">Message</label>
       <textarea name="form[textArea]" id="form-messageTextArea" class="contact-form-field form-TextArea browser-default"
         placeholder="Message" required rows="10" cols="40"></textarea>

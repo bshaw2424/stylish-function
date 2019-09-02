@@ -2,11 +2,13 @@ const express = require("express");
 const router = express.Router({
     mergeParams: true
 });
-
 const seatingList = require('../models/seatingModel');
-const errormessage = require('./errorRoute');
 
-    router.get("/", async (req, res) => {
+
+
+
+    // router.get("/",
+     module.exports.seatingIndexProductRoute = async (req, res) => {
         const seating = await seatingList
             .find()
             .exec()
@@ -17,10 +19,11 @@ const errormessage = require('./errorRoute');
         } catch (error) {
             console.log(`Error: ${error}`);
         }
-    });
+    };
 
     // newer filter route
-    router.get("/newest", async (req, res) => {
+    // router.get("/newest", 
+    module.exports.seatingNewestProducts = async (req, res) => {
         const seatingRecentProducts = await seatingList
             .find()
             .sort({
@@ -34,10 +37,11 @@ const errormessage = require('./errorRoute');
         } catch (error) {
             console.log(`Error: ${error}`);
         }
-    });
+    };
 
     // low price filter route
-    router.get("/low-price", async (req, res) => {
+    // router.get("/low-price", 
+    module.exports.seatingLowPriceProducts = async (req, res) => {
         const seatingLowPriceProducts = await seatingList
             .find()
             .sort({
@@ -51,10 +55,11 @@ const errormessage = require('./errorRoute');
         } catch (error) {
             console.log(`Error: ${error}`);
         }
-    });
+    };
 
     // high price filter route
-    router.get("/high-price", async (req, res) => {
+    // router.get("/high-price", 
+    module.exports.seatingHighPriceProducts = async (req, res) => {
         const seatingHighPriceProducts = await seatingList
             .find()
             .sort({
@@ -68,14 +73,17 @@ const errormessage = require('./errorRoute');
         } catch (error) {
             console.log(`Error: ${error}`);
         }
-    });
+    };
 
 
 
-    // show page
-    router.get("/:id", async (req, res) => {
+    //  seating show page
+    module.exports.seatingShowPage = async (req, res) => {
+        const {
+            params
+        } = req;
         const show = await seatingList
-            .findById(req.params.id)
+            .findById(params.id)
             .exec()
         try {
             res.render("pages/productShowPage", {
@@ -84,10 +92,7 @@ const errormessage = require('./errorRoute');
         } catch (error) {
             console.log(`Error: ${error}`);
         }
-    });
+    };
 
-    router.get("*", (req,res) =>{
-        res.send("this is a catach all route")
-    });
 
-    module.exports = router;
+
