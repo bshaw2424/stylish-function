@@ -11,9 +11,7 @@ const {
     seatingRoutes,
     storageRoutes,
     tableRoutes
-} = require('../controllers/mainController');
-// const storageRoutes = require('./routes/storageController');
-// const tableRoutes = require('./routes/tableController');
+} = require('./routes/mainRoutes');
 const index = require('./routes/indexRoute');
 const staticRoute = require('./routes/staticRoutes');
 

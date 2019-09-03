@@ -1,13 +1,6 @@
-const express = require("express");
-const router = express.Router({
-    mergeParams: true
-});
 const seatingList = require('../models/seatingModel');
 
-
-
-
-    // router.get("/",
+// router.get("/",
      module.exports.seatingIndexProductRoute = async (req, res) => {
         const seating = await seatingList
             .find()
@@ -21,7 +14,7 @@ const seatingList = require('../models/seatingModel');
         }
     };
 
-    // newer filter route
+
     // router.get("/newest", 
     module.exports.seatingNewestProducts = async (req, res) => {
         const seatingRecentProducts = await seatingList

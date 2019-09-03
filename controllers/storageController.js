@@ -1,11 +1,7 @@
-const express = require('express');
-const router = express.Router({
-    mergeParams: true
-});
-
 const storageList = require('../models/storageModel');
 
-router.get("/", async (req, res) => {
+// router.get("/",
+module.exports.storageIndexProductRoute = async (req, res) => {
     const storage = await storageList
         .find();
     try {
@@ -15,7 +11,7 @@ router.get("/", async (req, res) => {
     } catch (error) {
         console.log(`Error: ${error}`);
     }
-});
+};
 
 // newer filter route
 router.get("/newest", async (req, res) => {
@@ -35,7 +31,8 @@ router.get("/newest", async (req, res) => {
 });
 
 // low price filter route
-router.get("/low-price", async (req, res) => {
+// router.get("/low-price", 
+module.exports.storageLowPriceProductsRoute = async (req, res) => {
     const storageLowPriceProducts = await storageList
         .find()
         .sort({
@@ -49,10 +46,11 @@ router.get("/low-price", async (req, res) => {
     } catch (error) {
         console.log(`Error: ${error}`);
     }
-});
+};
 
 // high price filter route
-router.get("/high-price", async (req, res) => {
+// router.get("/high-price", 
+module.exports.storageHighPriceProductsRoute = async (req, res) => {
     const storageHighPriceProducts = await storageList
         .find()
         .sort({
@@ -66,9 +64,10 @@ router.get("/high-price", async (req, res) => {
     } catch (error) {
         console.log(`Error: ${error}`);
     }
-});
+};
 
-router.get("/:id", async (req, res) => {
+// router.get("/:id", 
+module.exports.storageShowPageRoute = async (req, res) => {
     const show = await storageList
         .findById(req.params.id)
         .exec()
@@ -79,6 +78,4 @@ router.get("/:id", async (req, res) => {
     } catch (error) {
         console.log(error);
     }
-});
-
-module.exports = router;
+};
