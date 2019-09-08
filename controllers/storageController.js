@@ -1,51 +1,42 @@
-const storageList = require('../models/storageModel');
+const storageRoutes = require('../routes/storage');
 
-// router.get("/",
-module.exports.storageIndexProductRoute = async (req, res) => {
-    const storage = await storageList
-        .find();
+class storageRoutes {
+
+    constructor() {
+        this.storage = storageRoutes;
+    }
+
+async storageIndexProductRoute(req, res) {
     try {
+        const storage = await this.storage.storageIndexProductRoute({});
         res.render("pages/storage", {
             storage
         });
     } catch (error) {
-        console.log(`Error: ${error}`);
+        console.log(res.status(404), `Error: ${error}`);
     }
-};
+}
 
-// newer filter route
-router.get("/newest", async (req, res) => {
-    const recentStorageProducts = await storageList
-        .find()
-        .sort({
-            created_on: -1
-        })
-        .exec()
+
+async storageNewestProductRoute(req, res) {
     try {
+        const recentStorageProducts = await this.storage.storageNewestProducts({});
         res.render("pages/storageNewest", {
             recentStorageProducts
         })
     } catch (error) {
-        console.log(`Error: ${error}`);
+        console.log(`res.status(404),Error: ${error}`);
     }
-});
+}
 
-// low price filter route
-// router.get("/low-price", 
-module.exports.storageLowPriceProductsRoute = async (req, res) => {
-    const storageLowPriceProducts = await storageList
-        .find()
-        .sort({
-            price: 1
-        })
-        .exec()
-    try {
-        res.render("pages/storageLowPrice", {
-            storageLowPriceProducts
-        })
-    } catch (error) {
-        console.log(`Error: ${error}`);
-    }
+
+async storageLowPriceProductsRoute(req, res) {
+        try {
+            const storageLowPriceProduct = await this.storage.storageLowPriceProducts({});
+            res.render("pages/storageLowPrice", { storageLowPriceProduct })
+        } catch (error) {
+            console.log(`res.status(404), Error: ${error}`);
+        }
 };
 
 // high price filter route
@@ -76,6 +67,9 @@ module.exports.storageShowPageRoute = async (req, res) => {
             show
         })
     } catch (error) {
-        console.log(error);
-    }
-};
+                console.log(`res.status(404, Error: ${error}`);
+            }
+}
+}
+
+module.exports = storageRoutes;
