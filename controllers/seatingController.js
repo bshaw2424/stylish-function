@@ -1,64 +1,39 @@
-const seatingList = require('../models/seatingModel');
+const seatRoutes = require('../routes/seating');
 
-// router.get("/",
-     module.exports.seatingIndexProductRoute = async (req, res) => {
-        const seating = await seatingList
-            .find()
-            .exec()
+
+class SeatingRoute {
+    constructor() {
+        this.seating = new seatRoutes()
+    }
+    async seatIndex(req, res) {
         try {
-            res.render("pages/seating", {
-                seating
+            const seat = await this.seating.seatingIndexProductRoute({});
+            return res.render("pages/seating", {
+                seat
             });
         } catch (error) {
-            console.log(`Error: ${error}`);
+            console.log(res.status(404), `Error: ${error}`);
         }
-    };
-
-
-    // router.get("/newest", 
-    module.exports.seatingNewestProducts = async (req, res) => {
-        const seatingRecentProducts = await seatingList
-            .find()
-            .sort({
-                created_on: -1
-            })
-            .exec()
+    }
+    async seatingNewProducts(req, res) {
         try {
-            res.render("pages/seatingNewest", {
+            const seatingRecentProducts = await this.seating.seatingNewestProducts({});
+            return res.render("pages/seatingNewest", {
                 seatingRecentProducts
-            })
+            });
         } catch (error) {
-            console.log(`Error: ${error}`);
+            console.log(res.status(404), `Error: ${error}`);
         }
-    };
-
-    // low price filter route
-    // router.get("/low-price", 
-    module.exports.seatingLowPriceProducts = async (req, res) => {
-        const seatingLowPriceProducts = await seatingList
-            .find()
-            .sort({
-                price: 1
-            })
-            .exec()
+    }
+    async seatingHighPriceProducts(req, res) {
         try {
-            res.render("pages/seatingLowPrice", {
-                seatingLowPriceProducts
-            })
+            const seatingHighPriceProducts = await this.seating.seatingHighPriceProducts({});
+            return res.render("pages/seatingHighPrice", { seatingHighPriceProducts })
         } catch (error) {
-            console.log(`Error: ${error}`);
+            console.log(res.status(404), `Error: ${error}`);
         }
-    };
-
-    // high price filter route
-    // router.get("/high-price", 
-    module.exports.seatingHighPriceProducts = async (req, res) => {
-        const seatingHighPriceProducts = await seatingList
-            .find()
-            .sort({
-                price: -1
-            })
-            .exec()
+    }
+    async seatingLowPriceProducts(req, res) {
         try {
             res.render("pages/seatingHighPrice", {
                 seatingHighPriceProducts
@@ -66,26 +41,21 @@ const seatingList = require('../models/seatingModel');
         } catch (error) {
             console.log(`Error: ${error}`);
         }
-    };
-
-
-
-    //  seating show page
-    module.exports.seatingShowPage = async (req, res) => {
-        const {
-            params
-        } = req;
-        const show = await seatingList
-            .findById(params.id)
-            .exec()
+    }
+   async seatingShowPage(req, res) {
+       const { params } = req;
         try {
             res.render("pages/productShowPage", {
                 show
             })
         } catch (error) {
-            console.log(`Error: ${error}`);
+            console.log(res.status(404), `Error: ${error}`);
         }
+    }       
+}
     };
 
 
 
+
+module.exports = SeatingRoute;

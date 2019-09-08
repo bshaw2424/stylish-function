@@ -13,6 +13,7 @@ const {
     tableRoutes
 } = require('./routes/mainRoutes');
 const index = require('./routes/indexRoute');
+const routes = require('./routes/mainRoutes');
 const staticRoute = require('./routes/staticRoutes');
 
 
