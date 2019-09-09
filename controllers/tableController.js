@@ -1,79 +1,70 @@
-const tableList = require('../models/tableModel');
+const tables = require('../routes/tables');
 
+class TableRoutes {
+    constructor() {
+        this.tables = new tables();
+    }
+    async tableIndexProductRoute(req, res) {
+        try {
+            const table = await this.tables.tableIndexProductRoute({});
+            res.render("pages/table", {
+                table
+            });
+            return table;
+        } catch (error) {
+            console.log(`Error: ${error}`)
+        }
+    }
 
-module.exports.tableIndexProductRoute = async (req, res) => {
-    const table = await tableList
-        .find()
-        .exec()
-    try {
-        res.render("pages/table", {
-            table
-        });
-    } catch (error) {
-        console.log(`Error: ${error}`)
+    async tableNewestProductsRoute(req, res) {
+        try {
+            const newestTableProducts = await this.tables.tableNewestProductsRoute({});
+            res.render("pages/tableNewest", {
+                newestTableProducts
+            })
+            return newestTableProducts;
+        } catch (error) {
+            console.log(res.status(404), `Error: ${error}`)
+        }
+    }
+
+    async tableLowPriceProductsRoute(req, res) {
+        try {
+            const lowPriceTableProduct = await this.tables.tableLowPriceProductsRoute({});
+            res.render("pages/tableLowPrice", {
+                lowPriceTableProduct
+            })
+            return lowPriceTableProduct;
+        } catch (error) {
+            console.log(res.status(404), `Error: ${error}`)
+        }
+    }
+
+    async tableHighPriceProductsRoute(req, res) {
+        try {
+            const highPriceTableProducts = await this.tables.tableHighPriceProductsRoute({});
+            res.render("pages/tableHighPrice", {
+                highPriceTableProducts
+            })
+            return highPriceTableProducts;
+        } catch (error) {
+            console.log(res.status(404), `Error: ${error}`)
+        }
+    }
+
+    async tableShowPageRoute(req, res) {
+        const {
+            params
+        } = req;
+        try {
+            const showing = await this.tables.tableShowPageRoute(params.id);
+            res.render("pages/productShowPage", {
+                show: showing
+            })
+            return showing;
+        } catch (error) {
+            console.log(res.status(404), `Error: ${error}`)
+        }
     }
 };
-
-module.exports.tableNewestProductsRoute = async (req, res) => {
-    const newestProducts = await tableList
-        .find()
-        .sort({
-            created_on: -1
-        })
-        .exec()
-    try {
-        res.render("pages/tableNewest", {
-            newest_Table: newestProducts
-        });
-    } catch (error) {
-        console.log(`Error: ${error}`)
-    }
-};
-
-module.exports.tableLowPriceProductsRoute = async (req, res) => {
-    const low_price = await tableList
-        .find()
-        .sort({
-            price: 1
-        })
-        .exec()
-    try {
-        res.render("pages/tableLowPrice", {
-            table_LowPrice: low_price
-        })
-    } catch (error) {
-        console.log(`Error: ${error}`)
-    }
-};
-
-module.exports.tableHighPriceProductsRoute = async (req, res) => {
-    const high_price = await tableList
-        .find()
-        .sort({
-            price: -1
-        })
-        .exec()
-    try {
-        res.render("pages/tableHighPrice", {
-            table_HighPrice: high_price
-        })
-    } catch (error) {
-        console.log(`Error: ${error}`)
-    }
-};
-
-module.exports.tableShowPageRoute = async (req, res) => {
-    const {
-        params
-    } = req;
-    const showing = await tableList
-        .findById(params.id)
-        .exec()
-    try {
-        res.render("pages/productShowPage", {
-            show: showing
-        })
-    } catch (error) {
-        console.log(`Error: ${error}`);
-    }
-};
+module.exports = TableRoutes;
