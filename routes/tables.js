@@ -14,9 +14,7 @@ class TableProducts {
         try {
             const tableRecent = await tableList
                 .find(query)
-                .sort({
-                    created_on: -1
-                })
+                .sort({ created_on: -1 })
                 .exec()
             return tableRecent;
         } catch (error) {

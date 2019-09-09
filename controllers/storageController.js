@@ -2,7 +2,7 @@ const storageRoutes = require('../routes/storage');
 
 class storageRoutes {
 
-    constructor() {
+constructor() {
         this.storage = storageRoutes;
     }
 
@@ -16,8 +16,6 @@ async storageIndexProductRoute(req, res) {
         console.log(res.status(404), `Error: ${error}`);
     }
 }
-
-
 async storageNewestProductRoute(req, res) {
     try {
         const recentStorageProducts = await this.storage.storageNewestProducts({});
@@ -28,8 +26,6 @@ async storageNewestProductRoute(req, res) {
         console.log(`res.status(404),Error: ${error}`);
     }
 }
-
-
 async storageLowPriceProductsRoute(req, res) {
         try {
             const storageLowPriceProduct = await this.storage.storageLowPriceProducts({});
@@ -37,36 +33,21 @@ async storageLowPriceProductsRoute(req, res) {
         } catch (error) {
             console.log(`res.status(404), Error: ${error}`);
         }
-};
-
-// high price filter route
-// router.get("/high-price", 
-module.exports.storageHighPriceProductsRoute = async (req, res) => {
-    const storageHighPriceProducts = await storageList
-        .find()
-        .sort({
-            price: -1
-        })
-        .exec()
-    try {
-        res.render("pages/storageHighPrice", {
-            storageHighPriceProducts
-        })
-    } catch (error) {
-        console.log(`Error: ${error}`);
-    }
-};
-
-// router.get("/:id", 
-module.exports.storageShowPageRoute = async (req, res) => {
-    const show = await storageList
-        .findById(req.params.id)
-        .exec()
-    try {
-        res.render("pages/productShowPage", {
-            show
-        })
-    } catch (error) {
+}
+async storageHighPriceProductsRoute(req, res) {
+        try {
+            const storageHighPriceProducts = await this.storage.storageHighPriceProducts({});
+                res.render("pages/storageHighPrice", { storageHighPriceProducts })
+            } catch (error) {
+                console.log(`res.status(404E, rror: ${error}`);
+            }
+}
+async storageShowPageRoute(req, res) {
+            const { params } = req;
+           try {
+                const show = await this.storage.storageShowPage(params.id);
+                res.render("pages/productShowPage", { show })
+            } catch (error) {
                 console.log(`res.status(404, Error: ${error}`);
             }
 }

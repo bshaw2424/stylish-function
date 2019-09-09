@@ -4,7 +4,8 @@
   "description": "Style Function Modular and Stylish furniture site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js",
+    "build": "babel routes -d lib"
   },
   "author": "Bishop Shaw III",
   "license": "ISC",
@@ -15,5 +16,9 @@
     "express": "^4.16.4",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5"
   }
 }

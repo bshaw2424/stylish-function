@@ -8,9 +8,7 @@ class SeatingRoute {
     async seatIndex(req, res) {
         try {
             const seat = await this.seating.seatingIndexProductRoute({});
-            return res.render("pages/seating", {
-                seat
-            });
+            return res.render("pages/seating", { seat });
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
         }
@@ -28,34 +26,36 @@ class SeatingRoute {
     async seatingHighPriceProducts(req, res) {
         try {
             const seatingHighPriceProducts = await this.seating.seatingHighPriceProducts({});
-            return res.render("pages/seatingHighPrice", { seatingHighPriceProducts })
+            return res.render("pages/seatingHighPrice", {
+                seatingHighPriceProducts
+            })
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
         }
     }
     async seatingLowPriceProducts(req, res) {
         try {
-            res.render("pages/seatingHighPrice", {
-                seatingHighPriceProducts
-            })
-        } catch (error) {
-            console.log(`Error: ${error}`);
-        }
-    }
-   async seatingShowPage(req, res) {
-       const { params } = req;
-        try {
-            res.render("pages/productShowPage", {
-                show
-            })
+            const seatingLowPrice = await this.seating.seatingLowPriceProducts({});
+            return res.render("pages/seatingLowPrice", {
+                seatingLowPrice
+            });
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
         }
-    }       
+    }
+    async seatingShowPage(req, res) {
+        const {
+            params
+        } = req;
+        try {
+            const show = await this.seating.seatingShowPage(params.id);
+            return res.render("pages/productShowPage", {
+                show
+            });
+        } catch (error) {
+            console.log(res.status(404), `Error: ${error}`);
+        }
+    }
 }
-    };
-
-
-
 
 module.exports = SeatingRoute;
