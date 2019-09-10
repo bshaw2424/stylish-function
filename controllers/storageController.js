@@ -8,11 +8,11 @@ constructor() {
 
 async storageIndexProductRoute(req, res) {
     try {
-        const storage = await this.storage.storageIndexProductRoute({});
+        const storageProductIndex = await this.storage.storageIndexProductRoute({});
         res.render("pages/storage", {
-            storage
+            storageProductIndex
         });
-        return storage;
+        return storageProductIndex;
     } catch (error) {
         console.log(res.status(404), `Error: ${error}`);
     }

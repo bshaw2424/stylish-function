@@ -6,11 +6,11 @@ class TableRoutes {
     }
     async tableIndexProductRoute(req, res) {
         try {
-            const table = await this.tables.tableIndexProductRoute({});
+            const tableProductIndex = await this.tables.tableIndexProductRoute({});
             res.render("pages/table", {
-                table
+                tableProductIndex
             });
-            return table;
+            return tableProductIndex;
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`)
         }
