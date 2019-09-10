@@ -1,14 +1,15 @@
-const seatRoutes = require('../routes/seating');
+const SeatProductRoutes = require('../routes/seating');
 
 
 class SeatingRoute {
     constructor() {
-        this.seating = new seatRoutes()
+        this.seating = new SeatProductRoutes()
     }
     async seatIndex(req, res) {
         try {
-            const seat = await this.seating.seatingIndexProductRoute({});
-            return res.render("pages/seating", { seat });
+            const seatingProductIndex = await this.seating.seatingIndexProductRoute({});
+            res.render("pages/seating", { seatingProductIndex });
+            return seatingProductIndex;
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
         }
@@ -16,9 +17,10 @@ class SeatingRoute {
     async seatingNewProducts(req, res) {
         try {
             const seatingRecentProducts = await this.seating.seatingNewestProducts({});
-            return res.render("pages/seatingNewest", {
+            res.render("pages/seatingNewest", {
                 seatingRecentProducts
-            });
+            })
+            return seatingRecentProducts;
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
         }
@@ -26,32 +28,33 @@ class SeatingRoute {
     async seatingHighPriceProducts(req, res) {
         try {
             const seatingHighPriceProducts = await this.seating.seatingHighPriceProducts({});
-            return res.render("pages/seatingHighPrice", {
+            res.render("pages/seatingHighPrice", {
                 seatingHighPriceProducts
             })
+            return seatingHighPriceProducts; 
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
         }
     }
     async seatingLowPriceProducts(req, res) {
         try {
-            const seatingLowPrice = await this.seating.seatingLowPriceProducts({});
-            return res.render("pages/seatingLowPrice", {
-                seatingLowPrice
+            const seatingLowPriceProducts = await this.seating.seatingLowPriceProducts({});
+           res.render("pages/seatingLowPrice", {
+            seatingLowPriceProducts
             });
+            return seatingLowPriceProducts;
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
         }
     }
     async seatingShowPage(req, res) {
-        const {
-            params
-        } = req;
         try {
+            const { params } = req;
             const show = await this.seating.seatingShowPage(params.id);
-            return res.render("pages/productShowPage", {
+            res.render("pages/productShowPage", {
                 show
-            });
+            })
+            return show;
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
         }
