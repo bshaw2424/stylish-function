@@ -1,8 +1,8 @@
-const tables = require('../routes/tables');
+const TableProductRoutes = require('../routes/tables');
 
 class TableRoutes {
     constructor() {
-        this.tables = new tables();
+        this.tables = new TableProductRoutes();
     }
     async tableIndexProductRoute(req, res) {
         try {
@@ -12,7 +12,7 @@ class TableRoutes {
             });
             return table;
         } catch (error) {
-            console.log(`Error: ${error}`)
+            console.log(res.status(404), `Error: ${error}`)
         }
     }
 
@@ -53,10 +53,8 @@ class TableRoutes {
     }
 
     async tableShowPageRoute(req, res) {
-        const {
-            params
-        } = req;
         try {
+            const { params } = req;
             const showing = await this.tables.tableShowPageRoute(params.id);
             res.render("pages/productShowPage", {
                 show: showing
