@@ -8,7 +8,9 @@ class SeatingRoute {
     async seatingProductIndexRoute(req, res) {
         try {
             const seatingProductIndex = await this.seating.seatingIndexProductRoute({});
-            res.render("pages/seating", { seatingProductIndex });
+            res.render("pages/seating", {
+                seatingProductIndex
+            });
             return seatingProductIndex;
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
@@ -31,7 +33,7 @@ class SeatingRoute {
             res.render("pages/seatingHighPrice", {
                 seatingHighPriceProducts
             })
-            return seatingHighPriceProducts; 
+            return seatingHighPriceProducts;
         } catch (error) {
             console.log(res.status(404), `Error: ${error}`);
         }
@@ -39,8 +41,8 @@ class SeatingRoute {
     async seatingLowPriceProductsRoute(req, res) {
         try {
             const seatingLowPriceProducts = await this.seating.seatingLowPriceProducts({});
-           res.render("pages/seatingLowPrice", {
-            seatingLowPriceProducts
+            res.render("pages/seatingLowPrice", {
+                seatingLowPriceProducts
             });
             return seatingLowPriceProducts;
         } catch (error) {
@@ -49,7 +51,9 @@ class SeatingRoute {
     }
     async seatingShowPageRoute(req, res) {
         try {
-            const { params } = req;
+            const {
+                params
+            } = req;
             const show = await this.seating.seatingShowPage(params.id);
             res.render("pages/productShowPage", {
                 show
