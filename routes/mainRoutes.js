@@ -14,25 +14,25 @@ const storageRoute = new storageRoutes();
 const tableRoute = new tableRoutes();
 
 // seating routes
-router.get("/seating", seatingRoute)
-router.get("/seating/newest", seatingRoute);
-router.get("/seating/low-price", seatingRoute);
-router.get("/seating/high-price", seatingRoute);
-router.get("/seating/:id", seatingRoute);
+router.get("/seating", seatingRoute.seatingProductIndexRoute)
+router.get("/seating/newest", seatingRoute.seatingNewProductsRoute);
+router.get("/seating/low-price", seatingRoute.seatingLowPriceProductsRoute);
+router.get("/seating/high-price", seatingRoute.seatingHighPriceProductsRoute);
+router.get("/seating/:id", seatingRoute.seatingShowPageRoute);
 
 // storage routes
-router.get("/storage", storageRoute);
-router.get("/storage/newest", storageRoute);
-router.get("/storage/low-price", storageRoute);
-router.get("/storage/high-price", storageRoute);
-router.get("/storage/:id", storageRoute);
+router.get("/storage", storageRoute.storageIndexProductRoute);
+router.get("/storage/newest", storageRoute.storageNewestProductRoute);
+router.get("/storage/low-price", storageRoute.storageLowPriceProductsRoute);
+router.get("/storage/high-price", storageRoute.storageHighPriceProductsRoute);
+router.get("/storage/:id", storageRoute.storageShowPageRoute);
 
 // table routes
-router.get("/tables", tableRoute);
-router.get("/tables/newest", tableRoute);
-router.get("/tables/tables/low-price", tableRoute);
-router.get("/tables/high-price", tableRoute);
-router.get("/tables/:id", tableRoute);
+router.get("/tables", tableRoute.tableIndexProductRoute);
+router.get("/tables/newest", tableRoute.tableNewestProductsRoute);
+router.get("/tables/low-price", tableRoute.tableLowPriceProductsRoute);
+router.get("/tables/high-price", tableRoute.tableHighPriceProductsRoute);
+router.get("/tables/:id", tableRoute.tableShowPageRoute);
 
 
 module.exports = router;

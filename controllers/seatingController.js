@@ -5,7 +5,7 @@ class SeatingRoute {
     constructor() {
         this.seating = new SeatProductRoutes()
     }
-    async seatIndex(req, res) {
+    async seatingProductIndexRoute(req, res) {
         try {
             const seatingProductIndex = await this.seating.seatingIndexProductRoute({});
             res.render("pages/seating", { seatingProductIndex });
@@ -14,7 +14,7 @@ class SeatingRoute {
             console.log(res.status(404), `Error: ${error}`);
         }
     }
-    async seatingNewProducts(req, res) {
+    async seatingNewProductsRoute(req, res) {
         try {
             const seatingRecentProducts = await this.seating.seatingNewestProducts({});
             res.render("pages/seatingNewest", {
@@ -25,7 +25,7 @@ class SeatingRoute {
             console.log(res.status(404), `Error: ${error}`);
         }
     }
-    async seatingHighPriceProducts(req, res) {
+    async seatingHighPriceProductsRoute(req, res) {
         try {
             const seatingHighPriceProducts = await this.seating.seatingHighPriceProducts({});
             res.render("pages/seatingHighPrice", {
@@ -36,7 +36,7 @@ class SeatingRoute {
             console.log(res.status(404), `Error: ${error}`);
         }
     }
-    async seatingLowPriceProducts(req, res) {
+    async seatingLowPriceProductsRoute(req, res) {
         try {
             const seatingLowPriceProducts = await this.seating.seatingLowPriceProducts({});
            res.render("pages/seatingLowPrice", {
@@ -47,7 +47,7 @@ class SeatingRoute {
             console.log(res.status(404), `Error: ${error}`);
         }
     }
-    async seatingShowPage(req, res) {
+    async seatingShowPageRoute(req, res) {
         try {
             const { params } = req;
             const show = await this.seating.seatingShowPage(params.id);
