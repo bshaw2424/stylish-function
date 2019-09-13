@@ -1,61 +1,94 @@
-const StorageProductRoutes = require('../routes/storage');
+const storageList = require('../models/storageModel');
 
 class StorageRoutes {
 
-constructor() {
-        this.storage = new StorageProductRoutes();
+   storageIndexProductRoute(req, res) {
+
+        storageList
+            .find({})
+            .exec((err, storageProductIndex) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/storage", {
+                        storageProductIndex
+                    });
+                }
+            })
     }
 
-async storageIndexProductRoute(req, res) {
-    try {
-        const storageProductIndex = await this.storage.storageIndexProductRoute({});
-        res.render("pages/storage", {
-            storageProductIndex
-        });
-        return storageProductIndex;
-    } catch (error) {
-        console.log(res.status(404), `Error: ${error}`);
+    storageNewestProductRoute(req, res) {
+
+        storageList
+            .find({})
+            .sort({
+                created_on: -1
+            })
+            .exec((err, recentStorageProducts) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/storageNewest", {
+                        recentStorageProducts
+                    })
+                }
+            })
     }
-}
-async storageNewestProductRoute(req, res) {
-    try {
-        const recentStorageProducts = await this.storage.storageNewestProducts({});
-        res.render("pages/storageNewest", {
-            recentStorageProducts
-        })
-        return recentStorageProducts;
-    } catch (error) {
-        console.log(res.status(404), `Error: ${error}`);
+
+    storageLowPriceProductsRoute(req, res) {
+
+        storageList
+            .find({})
+            .sort({
+                price: 1
+            })
+            .exec((err, storageLowPriceProduct) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/storageLowPrice", {
+                        storageLowPriceProduct
+                    })
+                }
+            })
     }
-}
-async storageLowPriceProductsRoute(req, res) {
-        try {
-            const storageLowPriceProduct = await this.storage.storageLowPriceProducts({});
-            res.render("pages/storageLowPrice", { storageLowPriceProduct })
-            return storageLowPriceProduct;
-        } catch (error) {
-            console.log(res.status(404), `Error: ${error}`);
-        }
-}
-async storageHighPriceProductsRoute(req, res) {
-        try {
-            const storageHighPriceProducts = await this.storage.storageHighPriceProducts({});
-                res.render("pages/storageHighPrice", { storageHighPriceProducts })
-                return storageHighPriceProducts;
-            } catch (error) {
-                console.log(res.status(404), `Error: ${error}`);
-            }
-}
-async storageShowPageRoute(req, res) {
-           try {
-                const { params } = req;               
-                const show = await this.storage.storageShowPage(params.id);
-                res.render("pages/productShowPage", { show })
-                return show;
-            } catch (error) {
-                console.log(res.status(404), `Error: ${error}`);
-            }
-}
+
+   storageHighPriceProductsRoute(req, res) {
+           storageList
+                .find({})
+                .sort({
+                    price: -1
+                })
+                .exec((err, storageHighPriceProducts) => {
+                    if (err) {
+                        console.log(err)
+                    } else {
+                        res.render("pages/storageHighPrice", {
+                            storageHighPriceProducts
+                        })
+                    }
+                })
+ 
+    }
+
+    storageShowPageRoute(req, res) {
+
+        const {
+            params
+        } = req;
+        storageList
+            .find(params.id)
+            .exec((err, show) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/productShowPage", {
+                        show
+                    })
+                }
+            })
+    }
+
 }
 
 module.exports = StorageRoutes;

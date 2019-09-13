@@ -1,67 +1,88 @@
-const SeatProductRoutes = require('../routes/seating');
+const seatingList = require('../models/seatingModel');
 
 
 class SeatingRoute {
-    constructor() {
-        this.seating = new SeatProductRoutes()
-    }
-    async seatingProductIndexRoute(req, res) {
-        try {
-            const seatingProductIndex = await this.seating.seatingIndexProductRoute({});
-            res.render("pages/seating", {
-                seatingProductIndex
-            });
-            return seatingProductIndex;
-        } catch (error) {
-            console.log(res.status(404), `Error: ${error}`);
-        }
-    }
-    async seatingNewProductsRoute(req, res) {
-        try {
-            const seatingRecentProducts = await this.seating.seatingNewestProducts({});
-            res.render("pages/seatingNewest", {
-                seatingRecentProducts
+
+    seatingProductIndexRoute(req, res) {
+        seatingList.find({})
+            .exec((err, seatingProductIndex) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/seating", {
+                        seatingProductIndex
+                    });
+                }
             })
-            return seatingRecentProducts;
-        } catch (error) {
-            console.log(res.status(404), `Error: ${error}`);
-        }
     }
-    async seatingHighPriceProductsRoute(req, res) {
-        try {
-            const seatingHighPriceProducts = await this.seating.seatingHighPriceProducts({});
-            res.render("pages/seatingHighPrice", {
-                seatingHighPriceProducts
+
+    seatingNewProductsRoute(req, res) {
+        seatingList.find({})
+            .sort({
+                created_on: -1
             })
-            return seatingHighPriceProducts;
-        } catch (error) {
-            console.log(res.status(404), `Error: ${error}`);
-        }
-    }
-    async seatingLowPriceProductsRoute(req, res) {
-        try {
-            const seatingLowPriceProducts = await this.seating.seatingLowPriceProducts({});
-            res.render("pages/seatingLowPrice", {
-                seatingLowPriceProducts
-            });
-            return seatingLowPriceProducts;
-        } catch (error) {
-            console.log(res.status(404), `Error: ${error}`);
-        }
-    }
-    async seatingShowPageRoute(req, res) {
-        try {
-            const {
-                params
-            } = req;
-            const show = await this.seating.seatingShowPage(params.id);
-            res.render("pages/productShowPage", {
-                show
+            .exec((err, seatingRecentProducts) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/seatingNewest", {
+                        seatingRecentProducts
+                    })
+                }
             })
-            return show;
-        } catch (error) {
-            console.log(res.status(404), `Error: ${error}`);
-        }
+    }
+
+    seatingHighPriceProductsRoute(req, res) {
+
+        seatingList.find({})
+            .sort({
+                price: -1
+            })
+            .exec((err, seatingHighPriceProducts) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/seatingHighPrice", {
+                        seatingHighPriceProducts
+                    })
+                }
+            })
+
+    }
+
+    seatingLowPriceProductsRoute(req, res) {
+
+        seatingList.find({})
+            .sort({
+                price: 1
+            })
+            .exec((err, seatingLowPriceProducts) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/seatingLowPrice", {
+                        seatingLowPriceProducts
+                    })
+                }
+            })
+    }
+
+    seatingShowPageRoute(req, res) {
+
+        seatingList.findById(params.id)
+        const {
+            params
+        } = req;
+        seatingList
+            .exec((err, show) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/productShowPage", {
+                        show
+                    })
+                }
+            })
     }
 }
 

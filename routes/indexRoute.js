@@ -1,8 +1,8 @@
 const express = require('express');
-const router = express.Router({mergeParams: true});
+const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", function (req, res) {
   res.render("pages/index")
-});
+})
 
 module.exports = router;

@@ -4,14 +4,18 @@ const router = express.Router({
 });
 
 // imported routes
-const seatRoutes = require('./seating');
+const indexRoute = require('./indexRoute');
 const seatingRoutes = require('../controllers/seatingController');
 const storageRoutes = require('../controllers/storageController');
 const tableRoutes = require('../controllers/tableController');
 
+const indexPage = new indexRoute();
 const seatingRoute = new seatingRoutes();
 const storageRoute = new storageRoutes();
 const tableRoute = new tableRoutes();
+
+//index route
+router.get("/", indexPage.indexPageRoute);
 
 // seating routes
 router.get("/seating", seatingRoute.seatingProductIndexRoute)
