@@ -3,19 +3,19 @@ const router = express.Router({
     mergeParams: true
 });
 
+
 // imported routes
-const indexRoute = require('./indexRoute');
 const seatingRoutes = require('../controllers/seatingController');
 const storageRoutes = require('../controllers/storageController');
 const tableRoutes = require('../controllers/tableController');
 
-const indexPage = new indexRoute();
+
 const seatingRoute = new seatingRoutes();
 const storageRoute = new storageRoutes();
 const tableRoute = new tableRoutes();
 
-//index route
-router.get("/", indexPage.indexPageRoute);
+
+
 
 // seating routes
 router.get("/seating", seatingRoute.seatingProductIndexRoute)
@@ -37,6 +37,5 @@ router.get("/tables/newest", tableRoute.tableNewestProductsRoute);
 router.get("/tables/low-price", tableRoute.tableLowPriceProductsRoute);
 router.get("/tables/high-price", tableRoute.tableHighPriceProductsRoute);
 router.get("/tables/:id", tableRoute.tableShowPageRoute);
-
 
 module.exports = router;

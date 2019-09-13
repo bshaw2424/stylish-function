@@ -1,10 +1,8 @@
 const express = require('express');
-const router = express.Router({
-    mergeParams: true
-});
-const mongoose = require('mongoose');
-// const productList = require('../models/productModel');
+const router = express.Router();
 
-module.exports = (req, res) => {
-    res.render("pages/error")
-};
+router.get("*", (req, res) => {
+    res.render('pages/error');
+})
+
+module.exports = router;

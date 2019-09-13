@@ -1,6 +1,5 @@
 const seatingList = require('../models/seatingModel');
 
-
 class SeatingRoute {
 
     seatingProductIndexRoute(req, res) {

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
-    "build": "babel routes -d lib"
+    "build": "babel routes controllers -d lib"
   },
   "author": "Bishop Shaw III",
   "license": "ISC",
@@ -15,7 +15,8 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongodb": "^3.1.13",
-    "mongoose": "^5.4.16"
+    "mongoose": "^5.4.16",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

@@ -31,10 +31,8 @@ class TableRoutes {
                     res.render("pages/tableNewest", {
                         newestTableProducts
                     })
-            return newestTableProducts;
-        } catch (error) {
-            console.log(res.status(404), `Error: ${error}`)
-        }
+                }
+            })
     }
 
     tableLowPriceProductsRoute(req, res) {
@@ -51,10 +49,9 @@ class TableRoutes {
                     res.render("pages/tableLowPrice", {
                         lowPriceTableProduct
                     })
-            return lowPriceTableProduct;
-        } catch (error) {
-            console.log(res.status(404), `Error: ${error}`)
-        }
+                }
+            })
+
     }
 
     tableHighPriceProductsRoute(req, res) {
@@ -90,12 +87,9 @@ class TableRoutes {
                     res.render("pages/productShowPage", {
                         show: showing
                     })
-            return showing;
-        } catch (error) {
-            console.log(res.status(404), `Error: ${error}`)
-        }
+                }
+            })
     }
 };
-
 
 module.exports = TableRoutes;
