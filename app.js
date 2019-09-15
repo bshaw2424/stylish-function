@@ -15,13 +15,15 @@ const staticRoute = require('./routes/staticRoutes');
 
 // middleware
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use('/', index, staticRoute);
-app.use('/category', routes);
-app.use('/', error);
+app.use('/seating', routes.seatRouter);
+app.use('/storage', routes.storageRouter);
+app.use('/tables', routes.tableRouter)
+// app.use('/', error);
 
 // server connection
 app.listen(PORT, () => {

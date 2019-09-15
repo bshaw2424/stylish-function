@@ -67,12 +67,10 @@ class SeatingRoute {
     }
 
     seatingShowPageRoute(req, res) {
-
-        seatingList.findById(params.id)
         const {
             params
         } = req;
-        seatingList
+        seatingList.findById(params.id)
             .exec((err, show) => {
                 if (err) {
                     console.log(err)

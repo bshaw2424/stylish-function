@@ -77,7 +77,7 @@ class StorageRoutes {
             params
         } = req;
         storageList
-            .find(params.id)
+            .findById(params.id)
             .exec((err, show) => {
                 if (err) {
                     console.log(err)

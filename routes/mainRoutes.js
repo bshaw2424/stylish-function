@@ -1,8 +1,7 @@
 const express = require('express');
-const router = express.Router({
-    mergeParams: true
-});
-
+const seatRouter = express.Router();
+const storageRouter = express.Router();
+const tableRouter = express.Router();
 
 // imported routes
 const seatingRoutes = require('../controllers/seatingController');
@@ -18,24 +17,27 @@ const tableRoute = new tableRoutes();
 
 
 // seating routes
-router.get("/seating", seatingRoute.seatingProductIndexRoute)
-router.get("/seating/newest", seatingRoute.seatingNewProductsRoute);
-router.get("/seating/low-price", seatingRoute.seatingLowPriceProductsRoute);
-router.get("/seating/high-price", seatingRoute.seatingHighPriceProductsRoute);
-router.get("/seating/:id", seatingRoute.seatingShowPageRoute);
+seatRouter.get("/", seatingRoute.seatingProductIndexRoute)
+seatRouter.get("/newest", seatingRoute.seatingNewProductsRoute);
+seatRouter.get("/low-price", seatingRoute.seatingLowPriceProductsRoute);
+seatRouter.get("/high-price", seatingRoute.seatingHighPriceProductsRoute);
+seatRouter.get("/:id", seatingRoute.seatingShowPageRoute);
 
 // storage routes
-router.get("/storage", storageRoute.storageIndexProductRoute);
-router.get("/storage/newest", storageRoute.storageNewestProductRoute);
-router.get("/storage/low-price", storageRoute.storageLowPriceProductsRoute);
-router.get("/storage/high-price", storageRoute.storageHighPriceProductsRoute);
-router.get("/storage/:id", storageRoute.storageShowPageRoute);
+storageRouter.get("/", storageRoute.storageIndexProductRoute);
+storageRouter.get("/newest", storageRoute.storageNewestProductRoute);
+storageRouter.get("/low-price", storageRoute.storageLowPriceProductsRoute);
+storageRouter.get("/:id", storageRoute.storageShowPageRoute);
 
 // table routes
-router.get("/tables", tableRoute.tableIndexProductRoute);
-router.get("/tables/newest", tableRoute.tableNewestProductsRoute);
-router.get("/tables/low-price", tableRoute.tableLowPriceProductsRoute);
-router.get("/tables/high-price", tableRoute.tableHighPriceProductsRoute);
-router.get("/tables/:id", tableRoute.tableShowPageRoute);
+tableRouter.get("/", tableRoute.tableIndexProductRoute);
+tableRouter.get("/newest", tableRoute.tableNewestProductsRoute);
+tableRouter.get("/low-price", tableRoute.tableLowPriceProductsRoute);
+tableRouter.get("/high-price", tableRoute.tableHighPriceProductsRoute);
+tableRouter.get("/:id", tableRoute.tableShowPageRoute);
 
-module.exports = router;
+module.exports = {
+    seatRouter,
+    storageRouter,
+    tableRouter
+};

@@ -79,13 +79,13 @@ class TableRoutes {
             params
         } = req;
         tableList
-            .find(params.id)
+            .findById(params.id)
             .exec((err, show) => {
                 if (err) {
                     console.log(err)
                 } else {
                     res.render("pages/productShowPage", {
-                        show: showing
+                        show
                     })
                 }
             })
