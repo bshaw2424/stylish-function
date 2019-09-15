@@ -27,6 +27,7 @@ seatRouter.get("/:id", seatingRoute.seatingShowPageRoute);
 storageRouter.get("/", storageRoute.storageIndexProductRoute);
 storageRouter.get("/newest", storageRoute.storageNewestProductRoute);
 storageRouter.get("/low-price", storageRoute.storageLowPriceProductsRoute);
+storageRouter.get("/high-price", storageRoute.storageHighPriceProductsRoute);
 storageRouter.get("/:id", storageRoute.storageShowPageRoute);
 
 // table routes
