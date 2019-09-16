@@ -5,24 +5,21 @@ const seatRouter = express.Router();
 const storageRouter = express.Router();
 const tableRouter = express.Router();
 const errorRouter = express.Router();
-const indexRouter = express.Router();
+
 
 // imported class routes
 const seatingRoutes = require('../controllers/seatingController');
 const storageRoutes = require('../controllers/storageController');
 const tableRoutes = require('../controllers/tableController');
 const errorRoutes = require('../routes/errorRoute');
-const indexRoutes = require('../routes/indexRoute');
+
 
 // instaniate class routes
 const seatingRoute = new seatingRoutes();
 const storageRoute = new storageRoutes();
 const tableRoute = new tableRoutes();
 const errorRoute = new errorRoutes();
-const indexRoute = new indexRoutes();
 
-// main index page for site
-indexRouter.get("/", indexRoute.mainIndexPageRoute);
 
 // seating routes
 seatRouter.get("/", seatingRoute.seatingProductIndexRoute)
@@ -50,7 +47,6 @@ errorRouter.get("*", errorRoute.catchAllRoute);
 
 module.exports = {
 
-    indexRouter,
     seatRouter,
     storageRouter,
     tableRouter,

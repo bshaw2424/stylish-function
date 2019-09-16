@@ -8,6 +8,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8080;
 const routes = require('./routes/mainRoutes');
+const mainIndexRoute = require('./routes/indexRoute');
 
 // middleware
 app.set("view engine", "ejs");
@@ -16,7 +17,7 @@ app.use(bodyParser.json);
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use('/', routes.indexRouter);
+app.use('/', mainIndexRoute);
 app.use('/seating', routes.seatRouter);
 app.use('/storage', routes.storageRouter);
 app.use('/tables', routes.tableRouter)
