@@ -1,8 +1,8 @@
-const express = require('express');
-const router = express.Router();
 
-router.get("/", function (req, res) {
-  res.render("pages/index")
-})
+class IndexRoute{
+  mainIndexPageRoute(req, res){
+    res.render("pages/index")
+  }
+}
 
-module.exports = router;
+module.exports = IndexRoute;

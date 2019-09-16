@@ -1,8 +1,9 @@
 const express = require('express');
-const router = express.Router();
 
-router.get("*", (req, res) => {
-    res.render('pages/error');
-})
+class ErrorRoute{
+    catchAllRoute(req, res){
+        res.render("pages/error")
+    }
+}
 
-module.exports = router;
+module.exports = ErrorRoute;
