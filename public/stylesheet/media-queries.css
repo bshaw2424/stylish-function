@@ -19,7 +19,7 @@
 
 @media screen and (min-width: 1025px) {
     #display-header {
-        background: url("../images/functionalSpace.jpeg") no-repeat center/cover;
+        background: url("../images/blue-sofa-header.jpg") no-repeat center/cover;
     }
 
     #display-header,
@@ -107,10 +107,10 @@
         margin-bottom: 1rem;
     }
 
-    .form-submitButton{
+    .form-submitButton {
         width: 50%;
     }
-    
+
     #aside-filter,
     #aside-categories {
         display: block;
@@ -123,7 +123,7 @@
 
 @media screen and (max-width: 1024px) {
     #display-header {
-        background: url("../images/functionalSpace.jpeg") no-repeat center center;
+        background: url("../images/blue-sofa-header.jpg") no-repeat center center;
     }
 
     #display-header,
@@ -159,16 +159,17 @@
     }
 
     #filter-section {
-        max-width: 70%;
+        max-width: 100%;
         margin: 0 auto;
     }
 
     .filter {
-        width: 30%;
+        max-width: 100%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         margin: 1rem 0;
+        padding: 0;
     }
 
     #filter-section div {
@@ -188,8 +189,9 @@
     }
 
     .category-title {
-        padding: .3rem;
-        font-size: 1.2rem;
+        padding: .75rem .3rem;
+        font-size: 1.4rem;
+
     }
 
     .card .card-content {
@@ -233,7 +235,7 @@
 /* media queries */
 @media screen and (min-width: 601px) and (max-width: 1000px) {
     #display-header {
-        background: url("../images/functionalSpace.jpeg") no-repeat center center;
+        background: url("../images/blue-sofa-header.jpg") no-repeat center center;
         height: 65vh;
     }
 
@@ -342,11 +344,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+
     }
 
     .filter {
-        width: 30%;
+        width: 90%;
     }
 
     .filter ul {
@@ -378,7 +380,7 @@
     }
 
     #display-header {
-        background: url("../images/functionalSpace.jpeg") no-repeat center center;
+        background: url("../images/header-pic.jpg") no-repeat center center;
         width: 100%;
         object-fit: cover;
     }
@@ -422,19 +424,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 2rem;
-        max-width: 80%;
+        font-size: 1.8rem;
+        max-width: 100%;
         margin: 0 auto;
         letter-spacing: 1px;
-        border-bottom: 1px solid white;
+        border-bottom: none;
     }
 
     .header-info p {
-        font-size: 1.2rem;
-        width: 80%;
-        line-height: 1.6rem;
-        margin: auto;
-        color: #fff;
+        display: none;
     }
 
     #featured h1 {
@@ -478,6 +476,10 @@
         margin-top: 1rem;
     }
 
+    .about-info {
+        display: flex;
+        flex-direction: column;
+    }
 
     article p,
     .content-text {
@@ -558,99 +560,3 @@
     }
 
 }
-
-/*@media screen and (max-width: 600px) {
-    #display-header {
-        height: 49vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #navigation>div {
-        height: 100%;
-        width: 100%;
-    }
-
-    .header-info {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-    }
-
-    .page-intro h3 {
-        text-align: center
-    }
-
-    .desktop-nav {
-        height: 100%;
-    }
-
-    .desktop-nav li a {
-        font-size: 1.3rem;
-        padding: 0 1rem;
-    }
-
-    #filter-section {
-        margin: 1rem auto;
-        max-width: 100%;
-    }
-
-    .category-filter {
-        margin-bottom: 1rem;
-    }
-
-    .filter {
-        margin: 0;
-        min-width: 90%;
-        cursor: pointer;
-    }
-
-    .categories,
-    .price {
-        margin-top: 1rem;
-    }
-
-    .filter ul {
-        width: 100%;
-        top: 100%;
-        left: 0;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    #filter-section div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .category-title {
-        width: 100%;
-    }
-
-    .purchase-information .card-title,
-    .purchase-information .card-price {
-        padding: 0;
-    }
-
-    .mobile-purchase-button {
-        display: block;
-    }
-
-    #contact-page form,
-    #contact-page p {
-        width: 100%;
-    }
-
-    .contact-form-title {
-        font-size: 3rem;
-    }
-
-    .about-info {
-        display: flex;
-        flex-direction: column;
-    }
-}*/
