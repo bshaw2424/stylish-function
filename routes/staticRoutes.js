@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const StaticRoutes = require('../controllers/staticController');
 
-const staticRoute = new StaticRoutes();
-
+const staticRoutes = require('../controllers/staticController');
+const staticRoute = new staticRoutes();
 
 router.get("/about-us", staticRoute.aboutUsRoute);
 

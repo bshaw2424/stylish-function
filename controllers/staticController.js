@@ -1,27 +1,22 @@
 
 
-class StaticRoutes{
-
+class StaticRoutes {
     aboutUsRoute(req, res) {
-     res.render("pages/about-us")
+        res.render("pages/about-us")
     }
-
-    affiliateDisclaimerRoute(req, res){
+    affiliateDisclaimerRoute(req, res) {
         res.render("pages/affiliate-disclaimer")
     }
-
-    contactUsRoute(req, res){
-        res.render("pages/contact-us")
+    contactUsRoute(req, res) {
+        res.render("pages/contact-us");
     }
-
-    privacyDisclaimerRoute(req, res){
+    privacyDisclaimerRoute(req, res) {
         res.render("pages/privacy")
     }
-
-    termsOfServiceRoute(req, res){
+    termsOfServiceRoute(req, res) {
         res.render("pages/TOS")
     }
-
 }
+
 
 module.exports = StaticRoutes;

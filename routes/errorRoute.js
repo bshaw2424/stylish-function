@@ -1,8 +1,8 @@
 const express = require('express');
 
-class ErrorRoute{
-    catchAllRoute(req, res){
-        res.render("pages/error")
+class ErrorRoute {
+    error404Route(req, res) {
+        res.status(404).render("pages/error404Page")
     }
 }
 
