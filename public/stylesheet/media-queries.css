@@ -19,12 +19,8 @@
 
 @media screen and (min-width: 1025px) {
     #display-header {
-        background: url("../images/blue-sofa-header.jpg") no-repeat center/cover;
-    }
+        background: url("../images/xlrg-dual-combo.jpg") no-repeat center/cover;
 
-    #display-header,
-    .header-info {
-        min-height: 10vh;
     }
 
     .header-info {
@@ -123,7 +119,7 @@
 
 @media screen and (max-width: 1024px) {
     #display-header {
-        background: url("../images/blue-sofa-header.jpg") no-repeat center center;
+        background: url("../images/lrg-dual-combo.jpg") no-repeat center center;
     }
 
     #display-header,
@@ -235,8 +231,9 @@
 /* media queries */
 @media screen and (min-width: 601px) and (max-width: 1000px) {
     #display-header {
-        background: url("../images/blue-sofa-header.jpg") no-repeat center center;
-        height: 65vh;
+        background: url("../images/med-dual-combo.jpg") no-repeat center center;
+        height: 52vh;
+        min-width: 100%;
     }
 
     .header-info {
@@ -374,20 +371,25 @@
 
 }
 
+/***********************************
+  600px and smaller media query
+***********************************/
 @media screen and (max-width: 600px) {
     .row .col.l3 {
         width: 100%;
     }
 
     #display-header {
-        background: url("../images/header-pic.jpg") no-repeat center center;
-        width: 100%;
-        object-fit: cover;
+        background: url("../images/sm-dual-combo.jpg") no-repeat center center;
+        min-width: 100%;
+        object-fit: fill;
+
     }
 
     #display-header,
     .header-info {
         height: 30vh;
+        min-width: 100%;
     }
 
     #navigation {
@@ -559,4 +561,9 @@
         display: block;
     }
 
+}
+@media screen and (max-width: 414px){
+    #display-header{
+        background: ur("../images/iphone-414.jpg")
+    }
 }

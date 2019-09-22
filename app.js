@@ -23,6 +23,7 @@ app.use('/', routes.indexRouter, static);
 app.use('/seating', routes.seatRouter);
 app.use('/storage', routes.storageRouter);
 app.use('/tables', routes.tableRouter);
+app.use('/trends', routes.trendRouter);
 app.use(errorRoute.error404Route);
 
 // server connection
