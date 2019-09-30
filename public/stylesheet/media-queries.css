@@ -17,6 +17,9 @@
     }
 }
 
+/***********************************
+  1025px and up media query
+***********************************/
 @media screen and (min-width: 1025px) {
     #display-header {
         background: url("../images/xlrg-dual-combo.jpg") no-repeat center/cover;
@@ -117,6 +120,9 @@
     }
 }
 
+/***********************************
+  1024px and smaller media query
+***********************************/
 @media screen and (max-width: 1024px) {
     #display-header {
         background: url("../images/lrg-dual-combo.jpg") no-repeat center center;
@@ -228,7 +234,9 @@
     }
 }
 
-/* media queries */
+/***********************************
+  601px to 1000px media query
+***********************************/
 @media screen and (min-width: 601px) and (max-width: 1000px) {
     #display-header {
         background: url("../images/med-dual-combo.jpg") no-repeat center center;
@@ -562,8 +570,9 @@
     }
 
 }
-@media screen and (max-width: 414px){
-    #display-header{
+
+@media screen and (max-width: 414px) {
+    #display-header {
         background: ur("../images/iphone-414.jpg")
     }
 }

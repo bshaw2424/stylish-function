@@ -1,6 +1,6 @@
 const bodyParser = require('body-parser');
 const express = require('express');
-const databasBaseConnection = require('./mongodb_connect');
+const dataBaseConnection = require('./mongodb_connect');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,7 +23,7 @@ app.use('/', routes.indexRouter, static);
 app.use('/seating', routes.seatRouter);
 app.use('/storage', routes.storageRouter);
 app.use('/tables', routes.tableRouter);
-app.use('/trends', routes.trendRouter);
+app.use('/featured', routes.featuredRouter);
 app.use(errorRoute.error404Route);
 
 // server connection

@@ -4,8 +4,8 @@ class IndexRoute{
   mainIndexRoute(req, res){
     res.render("pages/index")
   }
-  trendingRoute(req, res){
-    res.render("pages/trends")
+  featuredRoute(req, res){
+    res.render("pages/featured")
   }
 }
 
