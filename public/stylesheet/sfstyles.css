@@ -337,6 +337,40 @@ h3 {
 }
 
 /********************* 
+	trending  section
+**********************/
+#trending-section {
+	max-width: 90%;
+	margin:  auto;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.trending-section-title {
+	margin: 1.5rem 0;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.trending-section-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	padding-left: 3.5rem;
+	margin-bottom: 1rem;
+
+}
+
+.trending-section-article {
+	padding-bottom: 1rem;
+	font-size: 1.2rem;
+}
+
+.trending-section-article:last-child {
+	padding-bottom: 0;
+}
+
+/********************* 
 	featured section
 **********************/
 #featured h1 {
