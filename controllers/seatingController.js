@@ -15,6 +15,39 @@ class SeatingRoute {
             })
     }
 
+    seatingModularSubRoute(req, res) {
+        seatingList.find({category: modular})
+            .exec((err, modularSeating) => {
+                if(err){
+                    console.log(err)
+                } else {
+                    res.render("pages/modularSeating", { modularSeating })
+                }
+            })
+    }
+    
+    seatingAlternativeSubRoute(req, res) {
+        seatingList.find({category: alternative})
+            .exec((err, alternativeSeating) => {
+                if(err){
+                    console.log(err)
+                } else {
+                    res.render("pages/alternativeSeating", { alternativeSeating })
+                }
+            })
+    }
+
+    seatingLoungeSubRoute(req, res) {
+        seatingList.find({category: lounge})
+            .exec((err, loungeSeating) => {
+                if(err){
+                    console.log(err)
+                } else {
+                    res.render("pages/loungeSeating", { loungeSeating })
+                }
+            })
+    } 
+
     seatingNewProductsRoute(req, res) {
         seatingList.find({})
             .sort({

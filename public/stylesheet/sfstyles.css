@@ -353,22 +353,24 @@ h3 {
 
 .trending-section-container {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	margin: auto;
-	padding-left: 3.5rem;
 	margin-bottom: 1rem;
-
 }
 
 .trending-section-article {
-	padding-bottom: 1rem;
+	padding: 1rem;
+	text-align: center;
+	height: 100%;
 	font-size: 1.2rem;
+	border-right: 1px solid rgba(0,0,0,0.1);
+}
+.trending-section-article:last-child {
+	border-right: none;
+}
+.trending-section-article::first-letter {
+	text-transform: capitalize;
 }
 
-.trending-section-article:last-child {
-	padding-bottom: 0;
-}
 
 /********************* 
 	featured section
