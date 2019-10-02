@@ -42,7 +42,21 @@ class TableRoutes {
                 });
             }
         });
-    }     
+    }
+    
+    stylishTableProductRoute(req, res) {
+        tableList
+        .find({category: "stylish-tables"})
+        .exec((err, tableProducts) => {
+            if (err) {
+                console.log(err)
+            } else {
+                res.render("pages/table", {
+                    tableProducts
+                });
+            }
+        });
+    }    
 
     tableShowPageRoute(req, res) {
         const {
