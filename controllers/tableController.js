@@ -3,92 +3,62 @@ const tableList = require('../models/tableModel');
 class TableRoutes {
 
     tableIndexProductRoute(req, res) {
-
         tableList
-            .find({})
-            .exec((err, tableProductIndex) => {
-                if (err) {
-                    console.log(err)
-                } else {
-                    res.render("pages/table", {
-                        tableProductIndex
-                    });
-                }
-            })
-    }
-
-    tableNewestProductsRoute(req, res) {
-
-        tableList
-            .find({})
-            .sort({
-                created_on: -1
-            })
-            .exec((err, newestTableProducts) => {
-                if (err) {
-                    console.log(err)
-                } else {
-                    res.render("pages/tableNewest", {
-                        newestTableProducts
-                    })
-                }
-            })
-    }
-
-    tableLowPriceProductsRoute(req, res) {
-
-        tableList
-            .find({})
-            .sort({
-                price: 1
-            })
-            .exec((err, lowPriceTableProduct) => {
-                if (err) {
-                    console.log(err)
-                } else {
-                    res.render("pages/tableLowPrice", {
-                        lowPriceTableProduct
-                    })
-                }
-            })
-
-    }
-
-    tableHighPriceProductsRoute(req, res) {
-
-        tableList
-            .find({})
-            .sort({
-                price: -1
-            }).
-        exec((err, highPriceTableProducts) => {
+        .find({})
+        .exec((err, tableProducts) => {
             if (err) {
                 console.log(err)
             } else {
-                res.render("pages/tableHighPrice", {
-                    highPriceTableProducts
-                })
+                res.render("pages/table", {
+                    tableProducts
+                });
             }
-        })
-
+        });
     }
 
-    tableShowPageRoute(req, res) {
+    coffeeTableComboProductRoute(req, res) {
+        tableList
+        .find({category: "coffee-table-combo"})
+        .exec((err, tableProducts) => {
+            if (err) {
+                console.log(err)
+            } else {
+                res.render("pages/table", {
+                    tableProducts
+                });
+            }
+        });
+    } 
+    
+    extendableDiningTableProductRoute(req, res) {
+        tableList
+        .find({category: "extendable-dining-tables"})
+        .exec((err, tableProducts) => {
+            if (err) {
+                console.log(err)
+            } else {
+                res.render("pages/table", {
+                    tableProducts
+                });
+            }
+        });
+    }     
 
+    tableShowPageRoute(req, res) {
         const {
             params
         } = req;
         tableList
-            .findById(params.id)
-            .exec((err, show) => {
-                if (err) {
-                    console.log(err)
-                } else {
-                    res.render("pages/productShowPage", {
-                        show
-                    })
-                }
-            })
+        .findById(params.id)
+        .exec((err, showProductDeatils) => {
+            if (err) {
+                console.log(err)
+            } else {
+                res.render("pages/productShowPage", {
+                    showProductDetails
+                })
+            }
+        });
     }
 };
 

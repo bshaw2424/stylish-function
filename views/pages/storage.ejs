@@ -6,7 +6,7 @@
   <div class="container">
     <h3 class="storage-title">Storage</h3>
     <div class="secondary-nav">
-      <a href="/storage/modular-sstorage">modular storage</a>
+      <a href="/storage/modular-storage">modular storage</a>
       <a href="/storage/ottoman-storage">ottoman storage</a>
     </div>
   </div>
@@ -27,7 +27,7 @@
 <main id="product-features">
   <div class="container">
     <div class="row">
-      <% storageProductIndex.forEach(storageProducts => { %>
+      <% storageProducts.forEach(storageProduct => { %>
       <aside id="aside-filter" class="product-aside">
         <p> filter </p>
         <ul>
@@ -45,16 +45,15 @@
       <div class="product-card col s12 m6 l4">
         <div class="card">
           <div class="card-image">
-            <a href="/storage/<%= storageProducts._id %>">
-              <img src="<%= storageProducts.main_image %>" alt="<%= storageProducts.title %>" />
+            <a href="/storage/<%= storageProduct._id %>">
+              <img src="<%= storageProduct.main_image %>" alt="<%= storageProduct.title %>" />
             </a>
           </div>
           <div class="purchase-information">
             <p class="card-title">
-              <a href="/storage/<%= storageProducts._id %>"><%= storageProducts.title %>
+              <a href="/storage/<%= storageProduct._id %>"><%= storageProduct.title %></a>
             </p>
-            </a>
-            <p class="card-price"><%= `$${storageProducts.price}` %></p>
+            <p class="card-price"><%= `$${storageProduct.price}` %></p>
           </div>
         </div>
       </div>

@@ -2,25 +2,25 @@
 <% include ../partials/nav %>
 
 <main class="container">
-  <p class="content-title"><%= show.title %></p>
+  <p class="content-title"><%= showProductDetails.title %></p>
   <section id="main-section">
     <div class="image-section">
-      <img src="<%= show.main_image %>" alt="main-image" />
+      <img src="<%=showProductDetails.main_image %>" alt="main-image" />
     </div>
     <section class="sub-images mobile-sub-pictures">
-      <% show.sub_image.forEach(img =>{ %>
+      <% showProductDetails.sub_image.forEach(img =>{ %>
       <img src="<%= img %>" alt="<%= img.title %>">
       <% }) %>
     </section>
     <div class="container">
       <div class="content-body">
-        <p class="content-desc"><%= show.description %></p>
-        <p class="content-price deskTop-price"><strong>$<%= show.price %></strong></p>
+        <p class="content-desc"><%= showProductDetails.description %></p>
+        <p class="content-price deskTop-price"><strong>$<%= showProductDetails.price %></strong></p>
       </div>
     </div>
   </section>
   <section class="sub-images large-sub-pictures">
-    <% show.sub_image.forEach(img =>{ %>
+    <% showProductDetails.sub_image.forEach(img =>{ %>
     <img src="<%= img %>" alt="">
     <% }) %>
   </section>

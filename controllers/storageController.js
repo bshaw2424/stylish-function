@@ -2,91 +2,68 @@ const storageList = require('../models/storageModel');
 
 class StorageRoutes {
 
-   storageIndexProductRoute(req, res) {
+    storageIndexProductRoute(req, res) {
 
         storageList
             .find({})
-            .exec((err, storageProductIndex) => {
+            .exec((err, storageProducts) => {
                 if (err) {
                     console.log(err)
                 } else {
                     res.render("pages/storage", {
-                        storageProductIndex
+                        storageProducts
                     });
                 }
             })
     }
 
-    storageNewestProductRoute(req, res) {
-
+    storageModularProductRoute(req, res) {
         storageList
-            .find({})
-            .sort({
-                created_on: -1
+            .find({
+                category: "modular"
             })
-            .exec((err, recentStorageProducts) => {
+            .exec((err, storageProducts) => {
                 if (err) {
                     console.log(err)
                 } else {
-                    res.render("pages/storageNewest", {
-                        recentStorageProducts
-                    })
+                    res.render("pages/storage", {
+                        storageProducts
+                    });
                 }
             })
     }
 
-    storageLowPriceProductsRoute(req, res) {
-
+    storageOttomanProductRoute(req, res) {
         storageList
-            .find({})
-            .sort({
-                price: 1
+            .find({
+                category: "ottoman"
             })
-            .exec((err, storageLowPriceProduct) => {
+            .exec((err, storageProducts) => {
                 if (err) {
                     console.log(err)
                 } else {
-                    res.render("pages/storageLowPrice", {
-                        storageLowPriceProduct
-                    })
+                    res.render("pages/storage", {
+                        storageProducts
+                    });
                 }
-            })
-    }
-
-   storageHighPriceProductsRoute(req, res) {
-           storageList
-                .find({})
-                .sort({
-                    price: -1
-                })
-                .exec((err, storageHighPriceProducts) => {
-                    if (err) {
-                        console.log(err)
-                    } else {
-                        res.render("pages/storageHighPrice", {
-                            storageHighPriceProducts
-                        })
-                    }
-                })
- 
+            });
     }
 
     storageShowPageRoute(req, res) {
-
         const {
             params
         } = req;
         storageList
             .findById(params.id)
-            .exec((err, show) => {
+            .exec((err, showProductDetails) => {
                 if (err) {
                     console.log(err)
                 } else {
                     res.render("pages/productShowPage", {
-                        show
+                        showProductDetails
                     })
                 }
-            })
+            });
     }
 
 }
