@@ -11,7 +11,7 @@ class TableRoutes {
             } else {
                 res.render("pages/table", {
                     tableProducts
-                });
+                })
             }
         });
     }
@@ -25,7 +25,7 @@ class TableRoutes {
             } else {
                 res.render("pages/table", {
                     tableProducts
-                });
+                })
             }
         });
     } 
@@ -39,7 +39,7 @@ class TableRoutes {
             } else {
                 res.render("pages/table", {
                     tableProducts
-                });
+                })
             }
         });
     }

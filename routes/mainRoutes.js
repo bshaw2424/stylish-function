@@ -54,7 +54,7 @@ storageRouter.get("/:id", storageRoute.storageShowPageRoute);
 // table routes
 tableRouter.get("/", tableRoute.tableIndexProductRoute);
 tableRouter.get("/coffee-table-combo", tableRoute.coffeeTableComboProductRoute);
-tableRouter.get("/stylish-table", tableRoute.stylishTableProductRoute);
+tableRouter.get("/stylish-tables", tableRoute.stylishTableProductRoute);
 tableRouter.get("/extendable-dining-tables", tableRoute.extendableDiningTableProductRoute);
 tableRouter.get("/newest", tableFilterRoute.tableNewestProductsRoute);
 tableRouter.get("/low-price", tableFilterRoute.tableLowPriceProductsRoute);
