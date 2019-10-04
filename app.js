@@ -5,6 +5,9 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const routes = require('./routes/mainRoutes');
+const seatingRoutes = require('./routes/seatingRoutes');
+const storageRoutes = require('./routes/storageRoutes');
+const tableRoutes = require('./routes/tableRoutes');
 const static = require('./routes/staticRoutes');
 const errorRoutes = require('./routes/errorRoute');
 
@@ -19,11 +22,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
 // route middleware
-app.use('/', routes.indexRouter, static);
-app.use('/seating', routes.seatRouter);
-app.use('/storage', routes.storageRouter);
-app.use('/tables', routes.tableRouter);
-app.use('/featured', routes.featuredRouter);
+app.use('/', routes, static);
+app.use('/seating', seatingRoutes);
+app.use('/storage', storageRoutes);
+app.use('/tables', tableRoutes);
 app.use(errorRoute.error404Route);
 
 // server connection
