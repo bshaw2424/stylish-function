@@ -1,35 +1,33 @@
 <% include ../partials/header %>
 <% include ../partials/nav %>
 
-<main class="container">
-  <p class="content-title"><%= showProductDetails.title %></p>
-  <section id="main-section">
-    <div class="image-section">
+<main classs="product-show-page">
+  <h1 class="product-show-page-title"><%= showProductDetails.title %></h1>
+  <section class="main-section">
+    <div class="main-image-section">
       <img src="<%= showProductDetails.main_image %>" alt="main-image" />
     </div>
-    <section class="sub-images mobile-sub-pictures">
+    <section class="sub-images main-section-sub-images">
       <% showProductDetails.sub_image.forEach(img =>{ %>
       <img src="<%= img %>" alt="<%= img.title %>">
       <% }) %>
     </section>
-    <div class="container">
-      <div class="content-body">
-        <p class="content-desc"><%= showProductDetails.description %></p>
-        <p class="content-price deskTop-price"><strong>$<%= showProductDetails.price %></strong></p>
-      </div>
-    </div>
   </section>
-  <section class="sub-images large-sub-pictures">
+  <section class="sub-images mobile-sub-images">
     <% showProductDetails.sub_image.forEach(img =>{ %>
     <img src="<%= img %>" alt="">
     <% }) %>
   </section>
-  </div>
-  <section class="button-container">
-    <div>
-      <a class="btn btn-small show-page-btn mobile-purchase-button" href="https://bit.ly/2OxIBgU" target="_blank">more
-        info</a>
+  <section class="product-description">
+    <div class="product-description-body">
+      <p class="product-price product-details"><strong>$<%= showProductDetails.price %></strong></p>
+      <p class="product-description-info product-details"><%= showProductDetails.description %></p>
     </div>
+  </section>
+  <section class="product-show-page-button-container">
+    <button class="btn btn-small product-show-page-button" href="https://bit.ly/2OxIBgU" target="_blank">
+      more info
+    </button>
   </section>
 </main>
 

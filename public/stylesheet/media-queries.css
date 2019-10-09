@@ -1,18 +1,18 @@
 /* landscape media query */
 @media screen and (orientation: landscape) {
 
-    #about-section .row {
+    .about-section .row {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    #about-section .info-box {
+    .about-section .info-box {
         margin-top: 2rem;
     }
 
-    #about-section ul li {
+    .about-section ul li {
         text-align: justify;
     }
 }
@@ -21,20 +21,20 @@
   1025px and up media query
 ***********************************/
 @media screen and (min-width: 1025px) {
-    #display-header {
+    .display-header {
         background: url("../images/xlrg-dual-combo.jpg") no-repeat center/cover;
 
     }
 
-    .header-info {
+    .display-header-container {
         width: 100%;
     }
 
-    .header-info h2 {
+    .display-header-title {
         border-bottom: 1px solid #fff;
     }
 
-    .header-info p {
+    .display-header-container p {
         color: #fff;
         font-size: 1.3rem;
     }
@@ -75,12 +75,12 @@
         align-items: center;
     }
 
-    #filter-section,
+    .filter-section,
     .filter {
         display: none;
     }
 
-    #product-features {
+    .product-features {
         padding-top: 1rem;
     }
 
@@ -97,22 +97,17 @@
         font-size: 1.2rem;
     }
 
-    #contact-page form,
-    #contact-page p {
+    .contact-form,
+    .contact-page p {
         width: 70%;
     }
 
-    #contact-page p {
+    .contact-page p {
         margin-bottom: 1rem;
     }
 
     .form-submitButton {
         width: 50%;
-    }
-
-    #aside-filter,
-    #aside-categories {
-        display: block;
     }
 
     .footer-nav ul {
@@ -124,35 +119,35 @@
   1024px and smaller media query
 ***********************************/
 @media screen and (max-width: 1024px) {
-    #display-header {
+    .display-header {
         background: url("../images/lrg-dual-combo.jpg") no-repeat center center;
     }
 
-    #display-header,
-    .header-info {
+    .display-header,
+    .display-header-container {
         height: 33.5vh;
     }
 
-    .header-info {
+    .display-header-container {
         max-width: 100%;
         margin: 0 auto;
     }
 
-    .header-info h2 {
+    .display-header-title {
         text-align: center;
         font-size: 2.5rem;
         max-width: 100%;
         border-bottom: 1px solid #fff;
     }
 
-    .header-info p {
+    .display-header-container p {
         color: #fff;
         font-size: 1.4rem;
         max-width: 60%;
         margin: auto;
     }
 
-    #featured h1 {
+    .featured-title {
         text-align: center;
     }
 
@@ -160,7 +155,7 @@
         display: none;
     }
 
-    #filter-section {
+    .filter-section {
         max-width: 100%;
         margin: 0 auto;
     }
@@ -174,7 +169,7 @@
         padding: 0;
     }
 
-    #filter-section div {
+    .filter-section div {
         align-items: center;
     }
 
@@ -216,7 +211,7 @@
         padding: 6px 0;
     }
 
-    #contact-page form {
+    .contact-form {
         width: 60%;
 
     }
@@ -238,13 +233,13 @@
   601px to 1000px media query
 ***********************************/
 @media screen and (min-width: 601px) and (max-width: 1000px) {
-    #display-header {
+    .display-header {
         background: url("../images/med-dual-combo.jpg") no-repeat center center;
         height: 52vh;
         min-width: 100%;
     }
 
-    .header-info {
+    .display-header-container {
         height: auto;
     }
 
@@ -266,11 +261,11 @@
         text-align: center;
     }
 
-    #contact-page p {
+    .contact-page p {
         margin-bottom: 1rem;
     }
 
-    #contact-page form {
+    .contact-form {
         max-width: 70%;
     }
 
@@ -279,19 +274,19 @@
         padding: 0 1.4rem;
     }
 
-    .header-info {
+    .display-header-container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .header-info h2 {
+    .dislay-header-title {
         font-size: 2rem;
         max-width: 80%;
         border-bottom: 1px solid #fff;
     }
 
-    .header-info p {
+    .display-header-container p {
         font-size: 1.3rem;
         max-width: 70%;
         line-height: 1.6rem;
@@ -333,19 +328,19 @@
         display: none;
     }
 
-    #contact-page form {
+    .contact-form {
         width: 80%;
         margin: auto;
     }
 
-    #filter-section {
+    .filter-section {
         max-width: 100%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
 
-    #filter-section div {
+    .filter-section div {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -360,7 +355,7 @@
         top: 100%;
     }
 
-    #featured h1 {
+    .featured-title {
         padding-top: 1rem;
         text-align: center;
     }
@@ -387,15 +382,15 @@
         width: 100%;
     }
 
-    #display-header {
+    .display-header {
         background: url("../images/sm-dual-combo.jpg") no-repeat center center;
         min-width: 100%;
         object-fit: fill;
 
     }
 
-    #display-header,
-    .header-info {
+    .display-header,
+    .display-header-container {
         height: 30vh;
         min-width: 100%;
     }
@@ -422,7 +417,7 @@
         padding: 0 1rem;
     }
 
-    .header-info {
+    .display-header-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -430,7 +425,7 @@
         width: 100%;
     }
 
-    .header-info h2 {
+    .dislay-header-title {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -441,15 +436,15 @@
         border-bottom: none;
     }
 
-    .header-info p {
+    .display-header-container p {
         display: none;
     }
 
-    #featured h1 {
+    .featured-title {
         text-align: center;
     }
 
-    #filter-section {
+    .filter-section {
         border-top: none;
         max-width: 100%;
         margin: 1rem auto;
@@ -506,15 +501,15 @@
     }
 
 
-    #featured .card-title {
+    .featured .card-title {
         font-size: 1.7rem;
     }
 
-    #main-section .sub-images {
+    .main-section .sub-images {
         margin-top: .5rem;
     }
 
-    #main-section .sub-images img:first-child {
+    .main-section .sub-images img:first-child {
         margin-left: 0;
     }
 
@@ -535,7 +530,7 @@
         display: none;
     }
 
-    #contact-page form {
+    .contact-form {
         width: 100%;
     }
 
@@ -564,15 +559,4 @@
         text-decoration: underline;
     }
 
-
-    .mobile-purchase-button {
-        display: block;
-    }
-
-}
-
-@media screen and (max-width: 414px) {
-    #display-header {
-        background: ur("../images/iphone-414.jpg")
-    }
 }

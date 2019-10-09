@@ -1,4 +1,4 @@
-let main_image = document.querySelector(".image-section > img"),
+let main_image = document.querySelector(".main-image-section > img"),
     grouped_images = document.querySelectorAll(".sub-images"),
     sorted_options = document.getElementById("sorted-options"),
     lead = document.querySelector(".sub-nav"),
@@ -10,6 +10,7 @@ grouped_images.forEach(img =>
 
 function switchMainProductPicture(e) {
     main_image.src = e.target.src;
+    e.target.style.border = '1px solid black';
 }
 
 

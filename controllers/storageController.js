@@ -4,32 +4,32 @@ class StorageRoutes {
 
     storageIndexProductRoute(req, res) {
         storageList
-        .find({})
-        .exec((err, storageProducts) => {
-            if (err) {
-                console.log(err)
-            } else {
-                res.render("pages/storage", {
-                    storageProducts
-                })
-            }
-        });
+            .find({})
+            .exec((err, storageProducts) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/storage", {
+                        storageProducts
+                    })
+                }
+            });
     }
 
     storageModularProductRoute(req, res) {
         storageList
-        .find({
-            category: "modular"
-        })
-        .exec((err, storageProducts) => {
-            if (err) {
-                console.log(err)
-            } else {
-                res.render("pages/storage", {
-                    storageProducts
-                })
-            }
-        });
+            .find({
+                category: "modular"
+            })
+            .exec((err, storageProducts) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/storage", {
+                        storageProducts
+                    })
+                }
+            });
     }
 
     storageOttomanProductRoute(req, res) {
@@ -53,16 +53,16 @@ class StorageRoutes {
             params
         } = req;
         storageList
-        .findById(params.id)
-        .exec((err, showProductDetails) => {
-            if (err) {
-                console.log(err)
-            } else {
-                res.render("pages/productShowPage", {
-                    showProductDetails
-                })
-            }
-        });
+            .findById(params.id)
+            .exec((err, showProductDetails) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    res.render("pages/productShowPage", {
+                        showProductDetails
+                    })
+                }
+            });
     }
 
 }

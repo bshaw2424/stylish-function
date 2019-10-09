@@ -13,6 +13,12 @@
 	--header-footer-color: #89afce;
 }
 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
 	overflow: scroll;
 }
@@ -36,12 +42,6 @@ body {
 .secondary-nav a:last-child {
 	border-right: 0;
 	padding-right: 0;
-}
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
 }
 
 li {
@@ -105,23 +105,14 @@ h3 {
 .category-title,
 .footer-nav a,
 .copyright {
-	color: #fff;
+	color: var(--white);
 }
 
 .card {
 	box-shadow: none;
 	outline: none;
 	border: none;
-
 }
-
-/* .card-title a {
-	font-size: 2rem;
-}
-
-.card-price {
-	font-size: 1.5rem;
-} */
 
 .card-content p {
 	font-size: 1.1rem;
@@ -131,11 +122,6 @@ h3 {
 .logo {
 	font-size: 2.5rem;
 	font-family: var(--heading-font);
-}
-
-.large-sub-pictures img,
-.mobile-sub-pictures img {
-	width: 11%;
 }
 
 /********************* 
@@ -151,19 +137,19 @@ h3 {
 }
 
 .about-info,
-.about-info p {
+.disclaimer-paragraph {
 	font-family: var(--content-font-family);
 	font-size: 1.2rem;
 	text-transform: none;
 }
 
-.about-info .disclaimer-paragraph {
+.disclaimer-paragraph {
 	padding-right: 10px;
 }
 
-.about-info .disclaimer-paragraph,
+.disclaimer-paragraph,
 .about-info a {
-	color: #fff;
+	color: var(--white);
 }
 
 .about-info a:hover {
@@ -173,26 +159,22 @@ h3 {
 /********************* 
 	product features 
 **********************/
-#product-features {
+.product-features {
+	position: relative;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#product-features {
-	position: relative;
-}
-
-#product-features .card-image {
+.product-features .card-image {
 	opacity: 0.8;
 	transition: opacity 0.3s ease-in;
 }
 
-#product-features .card-image:hover {
-	opacity: 1;
-}
-
-
 .product-card {
 	position: relative;
+}
+
+.product-features .card-image:hover {
+	opacity: 1;
 }
 
 /********************* 
@@ -272,14 +254,14 @@ h3 {
 /********************* 
 	header section
 **********************/
-#display-header {
+.display-banner {
 	height: 75vh;
 	width: 100%;
 	object-fit: fill;
 	position: relative;
 }
 
-#display-header::after {
+.display-banner::after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -301,7 +283,7 @@ h3 {
 	z-index: 2;
 }
 
-.header-info {
+.display-header-container {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -317,7 +299,7 @@ h3 {
 	justify-content: center;
 }
 
-.header-info h2 {
+.display-header-title {
 	margin: 0 auto;
 	width: 100%;
 	padding: 8px;
@@ -328,11 +310,11 @@ h3 {
 	text-transform: uppercase;
 }
 
-.header-info h2 span {
+.display-header-title span {
 	color: rgb(211, 211, 17);
 }
 
-.header-info p {
+.display-header-container p {
 	font-size: 2rem;
 }
 
@@ -377,7 +359,7 @@ h3 {
 /********************* 
 	featured section
 **********************/
-#featured h1 {
+.featured-title {
 	width: 100%;
 	padding: 1rem 0;
 	margin: 0;
@@ -388,60 +370,94 @@ h3 {
 	text-transform: var(--text-capitalized);
 }
 
-#featured>div {
+.featured>.row {
 	max-width: 90%;
 	margin-bottom: 0;
 }
 
-#featured .card {
+.featured .card {
 	border: none;
 }
 
-#featured .card-image {
+.featured .card-image {
 	height: 18rem;
 }
 
-#featured .card-image img {
+.featured .card-image img {
 	height: 100%;
 	object-fit: cover;
 	opacity: 0.8;
 	transition: opacity 0.7s ease-in-out;
 }
 
-#featured .card-image img:hover {
+.featured .card-image img:hover {
 	opacity: 1;
 	cursor: pointer;
 }
 
-#featured .card-title {
+.featured .card-title {
 	font-size: 1.5rem;
 }
 
 /********************* 
 	trending section
 **********************/
-.article1 .card {
-	background:green;
-	outline: 1px solid white;
-	outline-offset: -6px ;
+
+.index-trending-section {
+	background: #f4f4f4;
 }
 
-#index-trending-section {
-	background: #f4f4f4;
+.index-trending-title {
+	margin: 0 0 0 5%;
 	padding: 1rem 0;
 }
 
-#index-trending-section .row {
+.index-trending-section .row {
 	margin-bottom: 0;
+}
+
+.article-down {
+	width: 50%;
+}
+
+.index-trending-container {
+	display: flex;
+	width: 90%;
+	margin: 1rem 5% 0 5%;
+}
+
+.index-trending-article .card .card-image {
+	width: 50%;
+	height: auto;
+}
+
+.one {
+	width: 50%;
+}
+
+.index-trending-article .card {
+	display: flex;
+	margin: 0;
+	padding: 1rem 0;
+	border-bottom: 1px solid black;
 }
 
 .index-trending-title {
 	font-size: 3.2rem;
 	padding: 1rem 6%;
 	color: #333;
-	text-shadow: 1px 1px 0.5px black;
 	margin: 0;
 	text-align: center;
+}
+
+.index-trending-article .card {
+	background: none;
+}
+
+.index-trending-article .card-title {
+	margin: 0;
+	padding: 1rem .5rem 0;
+	word-wrap: break-word;
 }
 
 .index-trending-article .card .card-content {
@@ -561,16 +577,10 @@ desk top filter section
 	font-size: 1.4rem;
 }
 
-.main-display-btn {
-	display: block;
-	width: 90%;
-	margin: 0.75rem auto;
-}
-
 /*************** 
  contact page section
 ****************/
-#contact-page form {
+.contact-form {
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto 3rem auto;
@@ -579,7 +589,7 @@ desk top filter section
 	background: var(--sub-background-color);
 }
 
-#contact-page p {
+.contact-page p {
 	margin: 0 auto;
 	text-align: center;
 }
@@ -592,7 +602,7 @@ desk top filter section
 
 input[type="text"],
 input[type="email"],
-#contact-page form textarea {
+.contact-form textarea {
 	padding: .75rem 1rem;
 }
 
@@ -607,7 +617,7 @@ input[type="email"],
 	border-color: rgba(0, 0, 255, 0.7);
 }
 
-#contact-page form label {
+.contact-form label {
 	font-size: 1rem;
 	padding-bottom: 6px;
 	color: #000;
@@ -653,26 +663,6 @@ textarea {
 	font-size: 1.1rem;
 	display: inline-block;
 	padding: 1rem 0.5rem;
-}
-
-.services h2,
-.footer-heading {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	padding-bottom: 4px;
-	text-transform: var(--text-capitalized);
-}
-
-.services {
-	margin-bottom: 3rem;
-}
-
-.footer-heading {
-	text-align: center;
-	font-size: 3.5rem;
-}
-
-.services h2 {
-	font-size: 2rem;
 }
 
 .copyright {
