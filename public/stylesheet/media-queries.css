@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Slabo+27px");
+
+:root {
+	--white: #fff;
+	--text-color: #333;
+	--background: #f9f4d9;
+	--text-capitalized: capitalize;
+	--heading-font-family: "Slabo 27px", serif;
+	--content-font-famly: "Montserrat", sans-serif;
+	--product-bgColor: #f4f4f4;
+	--sub-background-color: #cea889;
+	/* header and footer = #89afce || rgb(137, 175, 206) */
+	--header-footer-color: #89afce;
+}
+
 /* landscape media query */
 @media screen and (orientation: landscape) {
 
@@ -23,15 +38,21 @@
 @media screen and (min-width: 1025px) {
     .display-header {
         background: url("../images/xlrg-dual-combo.jpg") no-repeat center/cover;
-
+        height: 75vh;
+        outline: 4px red solid;
     }
 
     .display-header-container {
         width: 100%;
+        height: 100%;
+        ;
+
     }
+
 
     .display-header-title {
         border-bottom: 1px solid #fff;
+        color: #fff;
     }
 
     .display-header-container p {
@@ -135,7 +156,7 @@
 
     .display-header-title {
         text-align: center;
-        font-size: 2.5rem;
+
         max-width: 100%;
         border-bottom: 1px solid #fff;
     }
@@ -230,12 +251,13 @@
 }
 
 /***********************************
-  601px to 1000px media query
+ 1000px media query
 ***********************************/
-@media screen and (min-width: 601px) and (max-width: 1000px) {
+@media screen  and (max-width: 1000px) {
+    /* display header */
     .display-header {
         background: url("../images/med-dual-combo.jpg") no-repeat center center;
-        height: 52vh;
+        height: 50vh;
         min-width: 100%;
     }
 
@@ -243,6 +265,56 @@
         height: auto;
     }
 
+    .display-header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .display-header-container >div {
+        max-width: 80%;
+    }
+
+    .display-header-title {
+        font-size: 2.5em;
+        border-bottom: 1px solid #fff;
+    }
+
+    .display-header-container p {
+        font-size: 1.3rem;
+        max-width: 75%;
+        line-height: 1.6rem;
+        margin: auto;
+        color: #fff;
+        padding-top: .5rem;
+    }
+
+    .article1 .card,
+    .article2 .card {
+        justify-content: space-evenly;
+    }
+
+    .article1 .card {
+        padding-bottom: none;
+    }
+
+    .article2 .card {
+        padding-top: none;
+    }
+
+    .index-trending-article .card .card-image, 
+    .index-trending-article .card .card-title {
+        width: 100%;
+    }
+
+    .index-trending-title {
+        font-size: 2.8rem;
+    }
+
+    .index-trending-article .card .card-title {
+        padding: 1rem;
+    }
+    /* navigation */
     #navigation {
         height: 128px;
     }
@@ -261,6 +333,51 @@
         text-align: center;
     }
 
+    .nav-link-container li a {
+        font-size: 1.6rem;
+        padding: 0 1.4rem;
+    }
+    /* about description info section */
+    
+    .index-info-title {
+        margin: 1rem 0 0 0;
+        padding-bottom: 1rem;
+        line-height: 2.5rem;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .index-info-article {
+        border-right: none;
+    }
+/* trending section */
+    .index-trending-section {
+        display: flex;
+        max-width: 90%;
+        margin: 0 5% 1rem 5%;
+    }
+    .index-trending-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid rgba(0,0,0, 0.1);
+        border-left: none;
+        padding: 1rem;
+    }
+    .index-trending-article h4 {
+        margin: 0 0 2rem 0;
+        font-size: 1.5rem;
+    }
+
+    .index-trending-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background: #727272;
+       color: #fff;
+    }
+
+
     .contact-page p {
         margin-bottom: 1rem;
     }
@@ -269,35 +386,9 @@
         max-width: 70%;
     }
 
-    .desktop-nav li a {
-        font-size: 1.6rem;
-        padding: 0 1.4rem;
-    }
-
-    .display-header-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .dislay-header-title {
-        font-size: 2rem;
-        max-width: 80%;
-        border-bottom: 1px solid #fff;
-    }
-
-    .display-header-container p {
-        font-size: 1.3rem;
-        max-width: 70%;
-        line-height: 1.6rem;
-        margin: auto;
-        color: #fff;
-        padding-top: .5rem;
-    }
-
     .disclaimer-paragraph {
         max-width: 100%;
-        padding-right: 1rem;
+        padding: 1rem;
     }
 
     .card .card-content {
@@ -360,10 +451,6 @@
         text-align: center;
     }
 
-    .desk-top-purchase-button {
-        display: none;
-    }
-
     .page-intro {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
@@ -377,24 +464,38 @@
 /***********************************
   600px and smaller media query
 ***********************************/
-@media screen and (max-width: 600px) {
+ @media screen and (max-width: 600px) {
+     /* index page */
     .row .col.l3 {
         width: 100%;
+        padding: 0;
     }
 
     .display-header {
         background: url("../images/sm-dual-combo.jpg") no-repeat center center;
-        min-width: 100%;
-        object-fit: fill;
-
     }
 
     .display-header,
     .display-header-container {
-        height: 30vh;
-        min-width: 100%;
+        height: 40vh;
+        max-width: 100%;
+    }
+    
+    .display-header-title {
+        display: flex;
+        font-size: 1.9rem;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 auto;
+        letter-spacing: 1px;
+        border-bottom: none;
     }
 
+    .display-header-container p {
+        display: none;
+    }
+    /* naviagtion */
     #navigation {
         height: 112px;
     }
@@ -411,33 +512,86 @@
         font-size: 2rem;
         text-align: center;
     }
-
-    .desktop-nav li a {
+    
+    .nav-link-container a {
         font-size: 1.3rem;
         padding: 0 1rem;
     }
+/* description  */
+    .index-info-title, 
+    .index-trending-title {
+      font-size: 2rem;  
+    }
 
-    .display-header-container {
+    .index-info-title {
+        margin: 1rem 0 0 0;
+        padding-bottom: 1rem;
+        line-height: 2.5rem;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .index-info-article-container  {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        padding-top: 1rem;
+    }
+
+    /* trending section   */
+    .index-trending-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .index-trending-container {
+        width: 90%;
+    }
+
+    .index-trending-title {
+        border-top: 1px solid rgba(0,0,0,0.1);
+        width: 90%;
+        margin: auto;
+        font-size: 2rem;
+        color: #333;
+    }
+
+    .index-trending-article-container, 
+    .index-trending-article .card {
+        display: flex;
+    }
+
+    .index-trending-article-container {
+        flex-wrap: wrap;
+    }
+
+    .index-info-article-container > .index-info-article, 
+    .index-trending-container {
+        margin-top: 0;
+    }
+
+
+    .index-trending-article .card {
+        display: flex;
+        margin-bottom: 1rem;
+        flex-direction: column ;
+        flex-wrap: wrap;
+        width: 100%;
+        background: #fff;
+        padding: 0;
+        border-bottom: 0;
+    }
+    
+    .index-trending-article .card .card-image {
         width: 100%;
     }
 
-    .dislay-header-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 1.8rem;
-        max-width: 100%;
-        margin: 0 auto;
-        letter-spacing: 1px;
-        border-bottom: none;
+    .index-trending-article .card h4 {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
     }
 
-    .display-header-container p {
-        display: none;
+    .index-info-article {
+        border-right: none;
     }
 
     .featured-title {
@@ -493,6 +647,7 @@
 
     .disclaimer-paragraph {
         max-width: 90%;
+        font-size: 1rem;
         padding-right: 0;
     }
 
@@ -559,4 +714,4 @@
         text-decoration: underline;
     }
 
-}
+} 

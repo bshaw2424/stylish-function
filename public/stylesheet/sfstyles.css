@@ -2,7 +2,7 @@
 
 :root {
 	--white: #fff;
-	--black: #000;
+	--text-color: #333;
 	--background: #f9f4d9;
 	--text-capitalized: capitalize;
 	--heading-font-family: "Slabo 27px", serif;
@@ -22,7 +22,7 @@
 body {
 	overflow: scroll;
 }
-
+/* 
 .secondary-nav {
 	display: flex;
 	align-items: center;
@@ -97,7 +97,7 @@ h3 {
 	margin: 0;
 }
 
-.header-info h2,
+.display-header-title,
 .display-title a,
 .page-intro aside h6,
 .product-aside p,
@@ -131,7 +131,7 @@ h3 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 2rem 0;
+	padding: .5rem 0;
 	text-align: center;
 	background: #333;
 }
@@ -254,14 +254,14 @@ h3 {
 /********************* 
 	header section
 **********************/
-.display-banner {
+.display-header {
 	height: 75vh;
 	width: 100%;
 	object-fit: fill;
 	position: relative;
 }
 
-.display-banner::after {
+.display-header::after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -365,8 +365,7 @@ h3 {
 	margin: 0;
 	font-size: 3.2rem;
 	text-align: center;
-	color: var(--header-footer-color);
-	text-shadow: 1px 1px .5px black;
+	color: var(--text-color);
 	text-transform: var(--text-capitalized);
 }
 
@@ -403,48 +402,31 @@ h3 {
 	trending section
 **********************/
 
-.index-trending-section {
-	background: #f4f4f4;
-}
-
-.index-trending-title {
-	margin: 0 0 0 5%;
-	padding: 1rem 0;
-}
 
 .index-trending-section .row {
 	margin-bottom: 0;
 }
 
-.article-down {
-	width: 50%;
-}
 
 .index-trending-container {
 	display: flex;
 	width: 90%;
-	margin: 1rem 5% 0 5%;
+	padding: 0 0 0 1rem;
 }
 
 .index-trending-article .card .card-image {
-	width: 50%;
+	width: 100%;
 	height: auto;
-}
-
-.one {
-	width: 50%;
 }
 
 .index-trending-article .card {
 	display: flex;
 	margin: 0;
-	padding: 1rem 0;
-	border-bottom: 1px solid black;
 }
 
 .index-trending-title {
 	font-size: 3.2rem;
-	padding: 1rem 6%;
+	padding: 1rem 0;
 	color: #333;
 	margin: 0;
 	text-align: center;
@@ -456,7 +438,6 @@ h3 {
 
 .index-trending-article .card-title {
 	margin: 0;
-	padding: 1rem .5rem 0;
 	word-wrap: break-word;
 }
 
@@ -668,4 +649,4 @@ textarea {
 .copyright {
 	padding: 1rem;
 	background: #333;
-}
+} */
