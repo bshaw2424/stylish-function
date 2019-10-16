@@ -407,13 +407,6 @@ h3 {
 	margin-bottom: 0;
 }
 
-
-.index-trending-container {
-	display: flex;
-	width: 90%;
-	padding: 0 0 0 1rem;
-}
-
 .index-trending-article .card .card-image {
 	width: 100%;
 	height: auto;
