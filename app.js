@@ -6,7 +6,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const routes = require('./routes/mainRoutes');
 const seatingRoutes = require('./routes/seatingRoutes');
-const storageRoutes = require('./routes/storageRoutes');
 const tableRoutes = require('./routes/tableRoutes');
 const static = require('./routes/staticRoutes');
 const errorRoutes = require('./routes/errorRoute');
@@ -24,7 +23,6 @@ app.use(express.static('public'));
 // route middleware
 app.use('/', routes, static);
 app.use('/seating', seatingRoutes);
-app.use('/storage', storageRoutes);
 app.use('/tables', tableRoutes);
 app.use(errorRoute.error404Route);
 
