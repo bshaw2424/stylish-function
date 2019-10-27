@@ -4,8 +4,7 @@
   "description": "Style Function Modular and Stylish furniture site",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "build": "babel routes -d lib"
+    "start": "nodemon app.js"
   },
   "author": "Bishop Shaw III",
   "license": "ISC",
@@ -19,7 +18,6 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5"
+   
   }
 }
