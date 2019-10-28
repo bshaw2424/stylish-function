@@ -9,8 +9,9 @@ const password = process.env.DB_PASSWORD;
 const MONGODB_URL = `mongodb://${user}:${password}@ds145694.mlab.com:45694/affiliate_products`;
 
 // mlab database connection promise call
-const db = mongoose.connect(MONGODB_URL, { useNewUrlParser: true })
-   .then( () => console.log("Database connected"))
-   .catch( err => console.log(`Error: ${err}`));
+const db = mongoose
+	.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+	.then(() => console.log("Database connected"))
+	.catch(err => console.log(`Error: ${err}`));
 
 module.exports = db;
