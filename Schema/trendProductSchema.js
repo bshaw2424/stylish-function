@@ -10,7 +10,6 @@ const trendingProducts = new Schema({
     type: String,
     required: true
   },
-  sub_image: [String],
   price: {
     type: String,
     required: true

@@ -6,7 +6,6 @@ const trendingModel = model('trend', trendingSchema);
 const trendingProducts = new trendingModel({
 	title: "trending product test",
 	main_image: "https://bit.ly/2phYaBh",
-	sub_image: ["https://bit.ly/2phYaBh", "https://bit.ly/2phYaBh"],
 	price: 40054
 });
 
