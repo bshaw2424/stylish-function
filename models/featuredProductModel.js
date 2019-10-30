@@ -9,13 +9,13 @@ const featuredProducts = new featureModel({
 	price: 4234,
 });
 
-featuredProducts.save( async(err, feature) =>{
-  try {
-    const data = await feature;
-    console.log(data)
-  } catch (error) {
-    console.log(error)
-  }
-});
+// featuredProducts.save( async(err, feature) =>{
+//   try {
+//     const data = await feature;
+//     console.log(data)
+//   } catch (error) {
+//     console.log(error)
+//   }
+// });
 
 module.exports = featureModel;

@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
 // route middleware
-
+app.use("/", routes);
 app.use(errorRoute.error404Route);
 
 // server connection
