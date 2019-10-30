@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI;AACJ,IAAI;AACJ,EAAE,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,CAAC,CAAC;EACA,eAAe,EAAE,IAAI;CACtB;;AAED,AAAA,EAAE,CAAC,EAAE,CAAC;EACJ,UAAU,EAAE,IACd;CAAC;;ADXD,AAAA,eAAe,CAAC;EACd,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "sfstyles.scss",
+        "_reset.scss"
+    ],
+    "names": [],
+    "file": "sfstyles.css"
+}
