@@ -1,6 +1,125 @@
+@import "variables";
 @import "reset";
+@mixin border($width){
+	border: $width solid rgba(0,0,0, 0.1);
+}
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
 
-.display-header {
-  height: 50vh;
-  width: 100%;
+$break-small: 600px;
+#footer-section, .navigation {
+	background: #90ee90;
+}
+.copyright {
+	background: rgb(59, 64, 69);
+	color: #ddd;
+	padding: .75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer-navigation {
+	padding: 1rem;
+	a{
+		color: $nav-text;
+		font-size: 1rem;
+	}
+	li{
+		padding: 0 0 .75rem 0;
+		text-transform: capitalize;
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+@media screen and (max-width: $break-small) {
+	.navigation {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 112px;
+	}
+	.index-site-trend-section {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	.display-header {
+		background: url("../images/sm-dual-combo.jpg") center/100% 100% no-repeat;
+		height: 40vh;
+		max-width: 100%;
+		position: relative;
+	}
+	.display-header-container {
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		.display-header-title {
+			font-size: 2rem;
+			margin: 0;
+			width: 70%;
+			text-align: center;
+			color: #fff;
+			text-transform: capitalize;
+			span {
+				color: yellow;
+			}
+		}
+	}
+	.affiliate-disclaimer-section {
+		background: rgb(59, 64, 69);
+		.affiliate-disclaimer-container {
+			padding: 1rem 0;
+			margin: 0 5%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		p {
+			text-align: center;
+			color: #ddd;
+			margin: 0;
+		}
+		
+	}
+	.description-section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.description-article-container {
+		border-bottom: 1px solid rgba(0,0,0, 0.1);
+		.description-title {
+			margin: 1rem 0;
+			font-size: 2.5rem;
+			text-align: center;
+		}
+		.description-paragraph {
+			margin: 0;
+			padding: 0 0 1rem 0;
+			font-size: 1rem;
+			text-align: center;
+		}
+	}
+	.index-trending-section {
+		.index-trending-title {
+			padding: 1rem 0;
+			margin: 0;
+			font-size: 2.5rem;
+			text-align: center;
+		}
+	}
 }
