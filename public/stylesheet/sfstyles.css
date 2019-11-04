@@ -14,7 +14,8 @@ ul li {
   list-style: none;
 }
 
-#footer-section, .navigation {
+#footer-section,
+.navigation {
   background: #ed8a63;
 }
 
@@ -25,12 +26,12 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-navigation {
@@ -63,7 +64,18 @@ ul li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 112px;
+    height: 120px;
+  }
+  .navigation .navigation-logo {
+    font-size: 2.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: .5rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .navigation a {
+    font-size: 1.3rem;
   }
   .index-site-trend-section {
     max-width: 90%;
@@ -71,26 +83,26 @@ ul li {
   }
   .display-header {
     background: url("../images/sm-dual-combo.jpg") center/100% 100% no-repeat;
-    height: 40vh;
+    height: 35vh;
     max-width: 100%;
     position: relative;
   }
   .display-header-container {
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(204, 204, 204, 0.3);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
     top: 0;
     left: 0;
@@ -115,16 +127,16 @@ ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .affiliate-disclaimer-section p {
     text-align: center;
@@ -147,20 +159,23 @@ ul li {
   }
   .description-article-container .description-title {
     margin: 1rem 0;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     text-align: center;
   }
   .description-article-container .description-paragraph {
     margin: 0;
-    padding: 0 0 1rem 0;
+    padding: 0 1rem 1rem;
     font-size: 1rem;
     text-align: center;
   }
-  .index-trending-section .index-trending-title {
+  .index-title {
     padding: 1rem 0;
     margin: 0;
     font-size: 2.5rem;
     text-align: center;
+  }
+  .index-trending-section .index-trending-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
 /*# sourceMappingURL=sfstyles.css.map */
