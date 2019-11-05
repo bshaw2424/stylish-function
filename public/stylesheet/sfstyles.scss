@@ -13,6 +13,7 @@
 	flex-direction: column;
 }
 
+
 #footer-section, 
 .navigation {
 	background: $nav-background;
@@ -20,10 +21,241 @@
 .copyright {
 	background: $aside-background;
 	color: $aside-text;
+}
+
+@media screen and (max-width: $break-large){
+	.navigation{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 5%;
+		.navigation-logo {
+			font-size: 2.5rem;
+			padding-bottom: .5rem;
+			@include flex-center;
+		}
+		.navigation-link-container {
+			display: flex;
+		}
+		li {
+			height: auto;
+		}
+		a {
+			font-size: 1.4rem;
+		}
+	}
+
+	.index-site-trend-section {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+	.display-header {
+		background: url("../images/sm-dual-combo.jpg") center/100% 100% no-repeat;
+		height: 78vh;
+		max-width: 100%;
+		position: relative;
+	}
+
+	.display-header-container {
+		height: 100%;
+		min-width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		@include flex-center;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		left: 0;
+		.display-header-title {
+			font-size: 3rem;
+			text-align: $text-center;
+			margin: 0;
+			width: 70%;
+			color: $white;
+			span {
+				color: yellow;
+			}
+		}
+	}
+
+	.affiliate-disclaimer-section {
+		background: $aside-background;
+		.affiliate-disclaimer-container {
+				padding: 1rem 0;
+				margin: 0 5%;
+				@include flex-center;
+				flex-direction: column;
+			
+			p {
+				font-size: 1.4rem;
+				color: $aside-text;
+				margin: 0;
+			}
+		}
+	}
+	.index-site-trend-section {
+	display: flex;
+	@include border(1px);
+	}
+	.description-section{
+		width: 70%;
+	}
+	.description-article-container {
+		@include flex-center;
+		flex-direction: column;
+		.description-title {
+			margin: 1rem 0;
+			text-align: $text-center;
+			font-size: 2.5rem;
+		}
+		.description-paragraph {
+			margin: 0;
+			text-align: $text-center;
+			padding: 0 1rem 1rem;
+			font-size: 1rem;
+		}
+	}
+	.index-trending-section {
+		width: 30%;
+		.index-trending-title {
+			margin: 0;
+			padding: 1rem 0;
+			font-size: 2.5rem;
+			text-align: center;
+		}
+	}
+	
+	.index-featured-section {
+		width: 90%;
+		margin: 0 auto;
+		.index-featured-title {
+			text-align: $text-center;
+			margin: 0;
+			padding: 1rem 0;
+		}
+	}
+
+	.footer-navigation {
+	width: 70%;
+	margin: 0 auto;
+	a{
+		color: $nav-text;
+		font-size: 1rem;
+	}
+	ul {
+		@include flex-center;
+	}
+	li{
+		padding: 1rem;
+		text-transform: $text-capitalize;
+	 }
+	} 
+	.copyright {
 	padding: .75rem;
 	@include flex-center;
+ }
 }
-.footer-navigation {
+
+@media screen and (max-width: $break-medium){
+	.navigation {
+		@include flex-column;
+		align-items: center;
+		height: 138px;
+		.navigation-logo {
+			font-size: 3.0rem;
+			@include border(1px);
+			text-align: $text-center;
+			padding-bottom: .5rem;
+			width: 90%;
+			margin: 0 auto;
+		}
+		a {
+			font-size: 1.8rem;
+		}
+	}
+
+	.index-site-trend-section {
+		width: 30%;
+		margin: 0 auto;
+	}
+
+	.display-header {
+		background: url("../images/sm-dual-combo.jpg") center/100% 100% no-repeat;
+		height: 45vh;
+		max-width: 100%;
+		position: relative;
+	}
+	
+	.display-header-container {
+		height: 100%;
+		min-width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		@include flex-center;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		left: 0;
+		.display-header-title {
+			font-size: 3rem;
+			text-align: $text-center;
+			margin: 0;
+			width: 70%;
+			color: $white;
+			span {
+				color: yellow;
+			}
+		}
+	}
+
+	.affiliate-disclaimer-section {
+		background: $aside-background;
+		.affiliate-disclaimer-container {
+			padding: 1rem 0;
+			margin: 0 5%;
+			@include flex-center;
+			flex-direction: column;
+		}
+		p {
+			font-size: 1.4rem;
+			color: $aside-text;
+			margin: 0;
+		}
+	}
+
+	main {
+		@include flex-center;
+		flex-direction: column;
+	}
+
+	.description-article-container {
+		@include flex-center;
+		flex-direction: column;
+		@include border(1px);
+		.description-title {
+			margin: 1rem 0;
+			font-size: 2rem;
+		}
+		.description-paragraph {
+			margin: 0;
+			text-align: $text-center;
+			padding: 0 1rem 1rem;
+			font-size: 1rem;
+		}
+	}
+
+	.index-title {
+		padding: 1rem 0;
+		margin: 0;
+		font-size: 2.5rem;
+	}
+
+	.index-trending-section {
+		.index-trending-title {
+			@include border(1px);
+		}
+	}
+
+	.footer-navigation {
 	padding: 1rem;
 	a{
 		color: $nav-text;
@@ -32,12 +264,25 @@
 	li{
 		padding: 0 0 .75rem 0;
 		text-transform: $text-capitalize;
-		&:last-child {
-			padding-bottom: 0;
+			&:last-child {
+				padding-bottom: 0;
+			}
 		}
-	}
+ 	}
+ .copyright {
+	padding: .75rem;
+	@include flex-center;
+ }
 }
-@media screen and (max-width: $break-small) {
+
+@media screen and (max-width: $break-small){
+	.align {
+	text-align: $text-center;
+	}
+	.capitalize {
+		text-transform: $text-capitalize;
+	}
+	
 	.navigation {
 		@include flex-column;
 		align-items: center;
@@ -45,28 +290,31 @@
 		.navigation-logo {
 			font-size: 2.5rem;
 			@include border(1px);
+			@extend .align;
 			padding-bottom: .5rem;
 			width: 90%;
 			margin: 0 auto;
-			text-align: $text-center;
 		}
 		a {
 			font-size: 1.3rem;
 		}
 	}
+
 	.index-site-trend-section {
 		max-width: 90%;
 		margin: 0 auto;
 	}
+
 	.display-header {
 		background: url("../images/sm-dual-combo.jpg") center/100% 100% no-repeat;
 		height: 35vh;
 		max-width: 100%;
 		position: relative;
 	}
+	
 	.display-header-container {
 		height: 100%;
-		background: rgba(204, 204, 204, 0.3);
+		background: rgba(0, 0, 0, 0.5);
 		@include flex-center;
 		flex-direction: column;
 		position: absolute;
@@ -76,9 +324,9 @@
 			font-size: 2rem;
 			margin: 0;
 			width: 70%;
-			text-align: $text-center;
-			color: #fff;
-			text-transform: $text-capitalize;
+			@extend .align;
+			color: $white;
+			@extend .capitalize;
 			span {
 				color: yellow;
 			}
@@ -93,39 +341,64 @@
 			flex-direction: column;
 		}
 		p {
-			text-align: $text-center;
+			@extend .align;
 			color: $aside-text;
 			margin: 0;
 		}
-		
 	}
+
 	.description-section {
 		@include flex-center;
 	}
+
 	.description-article-container {
 		@include border(1px);
 		.description-title {
 			margin: 1rem 0;
 			font-size: 1.8rem;
-			text-align: $text-center;
+			@extend .align;
 		}
 		.description-paragraph {
 			margin: 0;
 			padding: 0 1rem 1rem;
 			font-size: 1rem;
-			text-align: $text-center;
+			@extend .align;
 		}
 	}
+
 	.index-title {
 		padding: 1rem 0;
 		margin: 0;
 		font-size: 2.5rem;
-		text-align: $text-center;
+		@extend .align;
 	}
+
 	.index-trending-section {
 		.index-trending-title {
 			@include border(1px);
 		}
 	}
-	
+
+	.footer-navigation {
+	padding: 1rem;
+	a{
+		color: $nav-text;
+		font-size: 1rem;
+	}
+	li{
+		padding: 0 0 .75rem 0;
+		text-transform: $text-capitalize;
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+ 	}
+ .copyright {
+	padding: .75rem;
+	@include flex-center;
+ }
+ 
 }
+
+
+
