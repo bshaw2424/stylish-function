@@ -1,7 +1,7 @@
 @import "variables";
 @import "reset";
-@mixin border($width){
-	border-bottom: $width solid rgba(0,0,0, 0.1);
+@mixin border($width) {
+	border-bottom: $width solid rgba(0, 0, 0, 0.1);
 }
 @mixin flex-center {
 	display: flex;
@@ -13,8 +13,7 @@
 	flex-direction: column;
 }
 
-
-#footer-section, 
+#footer-section,
 .navigation {
 	background: $nav-background;
 }
@@ -23,15 +22,147 @@
 	color: $aside-text;
 }
 
-@media screen and (max-width: $break-large){
-	.navigation{
+@media screen and (min-width: $break-xlarge) {
+	.navigation {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 5%;
 		.navigation-logo {
 			font-size: 2.5rem;
-			padding-bottom: .5rem;
+			padding-bottom: 0.5rem;
+			@include flex-center;
+		}
+		.navigation-link-container {
+			display: flex;
+		}
+		li {
+			height: auto;
+		}
+		a {
+			font-size: 1rem;
+		}
+	}
+
+	.index-main-section {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+	.display-header {
+		background: url("../images/lrg-dual-combo.jpg") center/100% 100% no-repeat;
+		height: 78vh;
+		object-fit: cover;
+		max-width: 100%;
+		position: relative;
+	}
+
+	.display-header-container {
+		height: 100%;
+		min-width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		@include flex-center;
+		flex-direction: column;
+		position: absolute;
+		top: 0;
+		left: 0;
+		.display-header-title {
+			font-size: 3rem;
+			text-align: $text-center;
+			margin: 0;
+			color: $white;
+			span {
+				color: yellow;
+			}
+		}
+	}
+
+	.affiliate-disclaimer-section {
+		background: $aside-background;
+		.affiliate-disclaimer-container {
+			padding: 1rem 0;
+			margin: 0 5%;
+			@include flex-center;
+
+			p {
+				font-size: 1.2rem;
+				color: $aside-text;
+				margin: 0;
+				padding-right: 1rem;
+			}
+			a {
+				font-size: 1rem;
+			}
+		}
+	}
+	.index-main-section {
+		@include flex-center;
+		flex-direction: column;
+		width: 80%;
+		margin: 0 10%;
+	}
+	.description-section {
+		color: $nav-text;
+	}
+	.description-article-container {
+		@include border(1px);
+		@include flex-center;
+		flex-direction: column;
+		.description-title {
+			margin: 1rem 0;
+			text-align: $text-center;
+			font-size: 3rem;
+		}
+		.description-paragraph {
+			margin: 0;
+			width: 70%;
+			text-align: $text-center;
+			padding: 0 1rem 1rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	.index-featured-section {
+		width: 90%;
+		margin: 0 auto;
+		.index-featured-title {
+			text-align: $text-center;
+			font-size: 3rem;
+			margin: 0;
+			padding: 1rem 0;
+		}
+	}
+
+	.footer-navigation {
+		width: 70%;
+		margin: 0 auto;
+		a {
+			color: $nav-text;
+			font-size: 1rem;
+		}
+		ul {
+			@include flex-center;
+		}
+		li {
+			padding: 1rem;
+			text-transform: $text-capitalize;
+		}
+	}
+	.copyright {
+		padding: 0.75rem;
+		@include flex-center;
+	}
+}
+
+@media screen and (max-width: $break-large) {
+	.navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 5%;
+		.navigation-logo {
+			font-size: 2.5rem;
+			padding-bottom: 0.5rem;
 			@include flex-center;
 		}
 		.navigation-link-container {
@@ -51,8 +182,9 @@
 	}
 
 	.display-header {
-		background: url("../images/sm-dual-combo.jpg") center/100% 100% no-repeat;
+		background: url("../images/lrg-dual-combo.jpg") center/100% 100% no-repeat;
 		height: 78vh;
+		object-fit: cover;
 		max-width: 100%;
 		position: relative;
 	}
@@ -81,11 +213,11 @@
 	.affiliate-disclaimer-section {
 		background: $aside-background;
 		.affiliate-disclaimer-container {
-				padding: 1rem 0;
-				margin: 0 5%;
-				@include flex-center;
-				flex-direction: column;
-			
+			padding: 1rem 0;
+			margin: 0 5%;
+			@include flex-center;
+			flex-direction: column;
+
 			p {
 				font-size: 1.4rem;
 				color: $aside-text;
@@ -93,14 +225,17 @@
 			}
 		}
 	}
-	.index-site-trend-section {
-	display: flex;
-	@include border(1px);
+	.index-main-section {
+		@include flex-center;
+		flex-direction: column;
+		width: 80%;
+		margin: 0 10%;
 	}
-	.description-section{
-		width: 70%;
+	.description-section {
+		color: $nav-text;
 	}
 	.description-article-container {
+		@include border(1px);
 		@include flex-center;
 		flex-direction: column;
 		.description-title {
@@ -110,21 +245,13 @@
 		}
 		.description-paragraph {
 			margin: 0;
+			width: 70%;
 			text-align: $text-center;
 			padding: 0 1rem 1rem;
 			font-size: 1rem;
 		}
 	}
-	.index-trending-section {
-		width: 30%;
-		.index-trending-title {
-			margin: 0;
-			padding: 1rem 0;
-			font-size: 2.5rem;
-			text-align: center;
-		}
-	}
-	
+
 	.index-featured-section {
 		width: 90%;
 		margin: 0 auto;
@@ -136,36 +263,36 @@
 	}
 
 	.footer-navigation {
-	width: 70%;
-	margin: 0 auto;
-	a{
-		color: $nav-text;
-		font-size: 1rem;
+		width: 70%;
+		margin: 0 auto;
+		a {
+			color: $nav-text;
+			font-size: 1rem;
+		}
+		ul {
+			@include flex-center;
+		}
+		li {
+			padding: 1rem;
+			text-transform: $text-capitalize;
+		}
 	}
-	ul {
+	.copyright {
+		padding: 0.75rem;
 		@include flex-center;
 	}
-	li{
-		padding: 1rem;
-		text-transform: $text-capitalize;
-	 }
-	} 
-	.copyright {
-	padding: .75rem;
-	@include flex-center;
- }
 }
 
-@media screen and (max-width: $break-medium){
+@media screen and (max-width: $break-medium) {
 	.navigation {
 		@include flex-column;
 		align-items: center;
 		height: 138px;
 		.navigation-logo {
-			font-size: 3.0rem;
+			font-size: 3rem;
 			@include border(1px);
 			text-align: $text-center;
-			padding-bottom: .5rem;
+			padding-bottom: 0.5rem;
 			width: 90%;
 			margin: 0 auto;
 		}
@@ -174,7 +301,7 @@
 		}
 	}
 
-	.index-site-trend-section {
+	.index-main-section {
 		width: 30%;
 		margin: 0 auto;
 	}
@@ -185,7 +312,7 @@
 		max-width: 100%;
 		position: relative;
 	}
-	
+
 	.display-header-container {
 		height: 100%;
 		min-width: 100%;
@@ -249,40 +376,34 @@
 		font-size: 2.5rem;
 	}
 
-	.index-trending-section {
-		.index-trending-title {
-			@include border(1px);
-		}
-	}
-
 	.footer-navigation {
-	padding: 1rem;
-	a{
-		color: $nav-text;
-		font-size: 1rem;
-	}
-	li{
-		padding: 0 0 .75rem 0;
-		text-transform: $text-capitalize;
+		padding: 1rem;
+		a {
+			color: $nav-text;
+			font-size: 1rem;
+		}
+		li {
+			padding: 0 0 0.75rem 0;
+			text-transform: $text-capitalize;
 			&:last-child {
 				padding-bottom: 0;
 			}
 		}
- 	}
- .copyright {
-	padding: .75rem;
-	@include flex-center;
- }
+	}
+	.copyright {
+		padding: 0.75rem;
+		@include flex-center;
+	}
 }
 
-@media screen and (max-width: $break-small){
+@media screen and (max-width: $break-small) {
 	.align {
-	text-align: $text-center;
+		text-align: $text-center;
 	}
 	.capitalize {
 		text-transform: $text-capitalize;
 	}
-	
+
 	.navigation {
 		@include flex-column;
 		align-items: center;
@@ -291,7 +412,7 @@
 			font-size: 2.5rem;
 			@include border(1px);
 			@extend .align;
-			padding-bottom: .5rem;
+			padding-bottom: 0.5rem;
 			width: 90%;
 			margin: 0 auto;
 		}
@@ -311,7 +432,7 @@
 		max-width: 100%;
 		position: relative;
 	}
-	
+
 	.display-header-container {
 		height: 100%;
 		background: rgba(0, 0, 0, 0.5);
@@ -373,32 +494,22 @@
 		@extend .align;
 	}
 
-	.index-trending-section {
-		.index-trending-title {
-			@include border(1px);
-		}
-	}
-
 	.footer-navigation {
-	padding: 1rem;
-	a{
-		color: $nav-text;
-		font-size: 1rem;
-	}
-	li{
-		padding: 0 0 .75rem 0;
-		text-transform: $text-capitalize;
+		padding: 1rem;
+		a {
+			color: $nav-text;
+			font-size: 1rem;
+		}
+		li {
+			padding: 0 0 0.75rem 0;
+			text-transform: $text-capitalize;
 			&:last-child {
 				padding-bottom: 0;
 			}
 		}
- 	}
- .copyright {
-	padding: .75rem;
-	@include flex-center;
- }
- 
+	}
+	.copyright {
+		padding: 0.75rem;
+		@include flex-center;
+	}
 }
-
-
-

@@ -7,9 +7,19 @@ ul {
 
 li a {
   text-decoration: none;
-  color: #333;
 }
 
 ul li {
   list-style: none
+}
+
+h1,h2,h3,h4,h5,h6, li a {
+  color: #333;
+}
+
+.display-header-title,
+.affiliate-disclaimer-container a, 
+.description-title, 
+.index-featured-title {
+  text-transform: $text-capitalize;
 }
