@@ -17,9 +17,15 @@ h1, h2, h3, h4, h5, h6, li a {
   color: #333;
 }
 
+.index-main-section {
+  width: 90%;
+  margin: 0 5%;
+}
+
 .display-header-title,
 .affiliate-disclaimer-container a,
 .description-title,
+.copyright,
 .index-featured-title {
   text-transform: capitalize;
 }
@@ -447,7 +453,7 @@ h1, h2, h3, h4, h5, h6, li a {
     height: 138px;
   }
   .navigation .navigation-logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
     padding-bottom: 0.5rem;
@@ -455,11 +461,7 @@ h1, h2, h3, h4, h5, h6, li a {
     margin: 0 auto;
   }
   .navigation a {
-    font-size: 1.8rem;
-  }
-  .index-main-section {
-    width: 30%;
-    margin: 0 auto;
+    font-size: 1.2rem;
   }
   .display-header {
     background: url("../images/sm-dual-combo.jpg") center/100% 100% no-repeat;
@@ -523,7 +525,8 @@ h1, h2, h3, h4, h5, h6, li a {
     color: #ddd;
     margin: 0;
   }
-  main {
+  .index-main-section {
+    width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -560,9 +563,51 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .description-article-container .description-paragraph {
     margin: 0;
+    display: none;
     text-align: center;
     padding: 0 1rem 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+  .description-items-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    border-radius: 8px;
+    padding: 1rem 0;
+    background: #333;
+  }
+  .description-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-right: 1px solid #ddd;
+    padding: 0 1rem;
+  }
+  .description-item:last-child {
+    border-right: none;
+  }
+  .description-item h5 {
+    margin: 0;
+    color: #ddd;
+  }
+  .description-item p {
+    margin: 0;
+    word-wrap: break-word;
+    text-align: center;
+    color: #ddd;
   }
   .index-title {
     padding: 1rem 0;
@@ -577,11 +622,8 @@ h1, h2, h3, h4, h5, h6, li a {
     font-size: 1rem;
   }
   .footer-navigation li {
-    padding: 0 0 0.75rem 0;
+    padding: 0 1rem 0 0;
     text-transform: capitalize;
-  }
-  .footer-navigation li:last-child {
-    padding-bottom: 0;
   }
   .copyright {
     padding: 0.75rem;
@@ -598,7 +640,7 @@ h1, h2, h3, h4, h5, h6, li a {
 }
 
 @media screen and (max-width: 600px) {
-  .align, .navigation .navigation-logo, .display-header-container .display-header-title, .affiliate-disclaimer-section p, .description-article-container .description-title, .description-article-container .description-paragraph, .index-title {
+  .align, .navigation .navigation-logo, .display-header-container .display-header-title, .affiliate-disclaimer-section .affiliate-disclaimer-container p, .description-article-container .description-title, .description-article-container .description-paragraph, .index-title {
     text-align: center;
   }
   .capitalize, .display-header-container .display-header-title {
@@ -627,8 +669,8 @@ h1, h2, h3, h4, h5, h6, li a {
   .navigation a {
     font-size: 1.3rem;
   }
-  .index-site-trend-section {
-    max-width: 90%;
+  .index-main-section {
+    width: 90%;
     margin: 0 auto;
   }
   .display-header {
@@ -686,9 +728,10 @@ h1, h2, h3, h4, h5, h6, li a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .affiliate-disclaimer-section p {
+  .affiliate-disclaimer-section .affiliate-disclaimer-container p {
     color: #ddd;
     margin: 0;
+    font-size: 1rem;
   }
   .description-section {
     display: -webkit-box;
@@ -700,6 +743,10 @@ h1, h2, h3, h4, h5, h6, li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .description-article-container {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -710,8 +757,43 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .description-article-container .description-paragraph {
     margin: 0;
+    width: 100%;
     padding: 0 1rem 1rem;
     font-size: 1rem;
+  }
+  .description-items-container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .description-items-container .description-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .description-items-container h5 {
+    padding: 1rem 0 .5rem;
+    margin: 0;
+  }
+  .description-items-container p {
+    text-align: center;
+    margin: 0;
   }
   .index-title {
     padding: 1rem 0;
@@ -720,10 +802,23 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .footer-navigation {
     padding: 1rem;
+    width: 100%;
   }
   .footer-navigation a {
     color: #333;
     font-size: 1rem;
+  }
+  .footer-navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .footer-navigation li {
     padding: 0 0 0.75rem 0;

@@ -289,7 +289,7 @@
 		align-items: center;
 		height: 138px;
 		.navigation-logo {
-			font-size: 3rem;
+			font-size: 2.5rem;
 			@include border(1px);
 			text-align: $text-center;
 			padding-bottom: 0.5rem;
@@ -297,13 +297,8 @@
 			margin: 0 auto;
 		}
 		a {
-			font-size: 1.8rem;
+			font-size: 1.2rem;
 		}
-	}
-
-	.index-main-section {
-		width: 30%;
-		margin: 0 auto;
 	}
 
 	.display-header {
@@ -349,7 +344,8 @@
 		}
 	}
 
-	main {
+	.index-main-section {
+		width: 80%;
 		@include flex-center;
 		flex-direction: column;
 	}
@@ -364,9 +360,38 @@
 		}
 		.description-paragraph {
 			margin: 0;
+		display: none;
 			text-align: $text-center;
 			padding: 0 1rem 1rem;
-			font-size: 1rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	.description-items-container {
+		display: flex;
+		justify-content: space-evenly;
+		border-radius: 8px;
+		padding: 1rem 0;
+		background: #333;
+	}
+
+	.description-item {
+		@include flex-center;
+		flex-direction: column;
+		border-right: 1px solid $aside-text;
+		padding: 0 1rem;
+		&:last-child {
+			border-right: none;
+		}
+		h5 {
+			margin: 0;
+			color: $aside-text;
+		}
+		p {
+			margin: 0;
+			word-wrap: break-word;
+			text-align: $text-center;
+			color: $aside-text;
 		}
 	}
 
@@ -383,11 +408,8 @@
 			font-size: 1rem;
 		}
 		li {
-			padding: 0 0 0.75rem 0;
+			padding: 0 1rem 0 0;
 			text-transform: $text-capitalize;
-			&:last-child {
-				padding-bottom: 0;
-			}
 		}
 	}
 	.copyright {
@@ -421,8 +443,8 @@
 		}
 	}
 
-	.index-site-trend-section {
-		max-width: 90%;
+	.index-main-section {
+		width: 90%;
 		margin: 0 auto;
 	}
 
@@ -460,16 +482,19 @@
 			margin: 0 5%;
 			@include flex-center;
 			flex-direction: column;
-		}
+			
 		p {
 			@extend .align;
 			color: $aside-text;
 			margin: 0;
+			font-size: 1rem;
+		}
 		}
 	}
 
 	.description-section {
 		@include flex-center;
+		flex-direction: column;
 	}
 
 	.description-article-container {
@@ -481,9 +506,28 @@
 		}
 		.description-paragraph {
 			margin: 0;
+			width: 100%;
 			padding: 0 1rem 1rem;
 			font-size: 1rem;
 			@extend .align;
+		}
+	}
+
+	.description-items-container{
+		@include border(1px);
+		@include flex-column;
+		padding-bottom: 1rem;
+		.description-item {
+			@include flex-center;
+			flex-direction: column;
+		}
+		h5 {
+			padding: 1rem 0 .5rem;
+			margin: 0;
+		}
+		p {
+			text-align: $text-center;
+			margin: 0;
 		}
 	}
 
@@ -496,9 +540,14 @@
 
 	.footer-navigation {
 		padding: 1rem;
+		width: 100%;
 		a {
 			color: $nav-text;
 			font-size: 1rem;
+		}
+		ul {
+			@include flex-column;
+			align-items: flex-start;
 		}
 		li {
 			padding: 0 0 0.75rem 0;

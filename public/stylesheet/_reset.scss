@@ -17,9 +17,15 @@ h1,h2,h3,h4,h5,h6, li a {
   color: #333;
 }
 
+.index-main-section {
+  width: 90%;
+  margin: 0 5%;
+}
+
 .display-header-title,
 .affiliate-disclaimer-container a, 
-.description-title, 
+.description-title,
+.copyright, 
 .index-featured-title {
   text-transform: $text-capitalize;
 }
