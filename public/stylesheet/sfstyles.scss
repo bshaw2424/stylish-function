@@ -337,8 +337,8 @@
 			@include flex-center;
 			flex-direction: column;
 		}
-		p {
-			font-size: 1.4rem;
+		.affiliate-disclaimer-paragraph {
+			font-size: 1.2rem;
 			color: $aside-text;
 			margin: 0;
 		}
