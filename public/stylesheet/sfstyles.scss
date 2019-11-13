@@ -102,6 +102,7 @@
 		width: 80%;
 		margin: 0 10%;
 	}
+
 	.description-section {
 		color: $nav-text;
 	}
@@ -226,15 +227,18 @@
 			}
 		}
 	}
+
 	.index-main-section {
 		@include flex-center;
 		flex-direction: column;
 		width: 80%;
 		margin: 0 10%;
 	}
+
 	.description-section {
 		color: $nav-text;
 	}
+
 	.description-article-container {
 		@include border(1px);
 		@include flex-center;
@@ -354,7 +358,6 @@
 	.description-article-container {
 		@include flex-center;
 		flex-direction: column;
-		@include border(1px);
 		.description-title {
 			margin: 1rem 0;
 			font-size: 2rem;
@@ -365,14 +368,6 @@
 			padding: 0 1rem 1rem;
 			font-size: 1.2rem;
 		}
-	}
-
-	.description-items-container {
-		display: flex;
-		justify-content: space-evenly;
-		border-radius: 8px;
-		padding: 1rem 0;
-		background: #333;
 	}
 
 	.description-item {
@@ -475,6 +470,7 @@
 			}
 		}
 	}
+
 	.affiliate-disclaimer-section {
 		background: $aside-background;
 		.affiliate-disclaimer-container {
@@ -482,13 +478,12 @@
 			margin: 0 5%;
 			@include flex-center;
 			flex-direction: column;
-			
-		p {
+			p {
 			@extend .align;
 			color: $aside-text;
 			margin: 0;
 			font-size: 1rem;
-		}
+		 }
 		}
 	}
 
@@ -498,7 +493,6 @@
 	}
 
 	.description-article-container {
-		@include border(1px);
 		.description-title {
 			margin: 1rem 0;
 			font-size: 1.8rem;
@@ -513,23 +507,32 @@
 		}
 	}
 
-	.description-items-container{
-		@include border(1px);
-		@include flex-column;
-		padding-bottom: 1rem;
-		.description-item {
-			@include flex-center;
-			flex-direction: column;
-		}
-		h5 {
-			padding: 1rem 0 .5rem;
+	.nav-badges {
+		margin: 0 0 1rem 0;
+		padding: .75rem 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		outline: 1px solid rgba(0,0,0,0.1);
+		article {
 			margin: 0;
+			width: 100%;
 		}
-		p {
-			text-align: $text-center;
+		article:first-child {
+			border-right: 1px solid rgba(0,0,0,0.1);
+		}
+		h2 {
 			margin: 0;
+			padding-bottom: .5rem;
+			font-size: 1.8rem;
+			text-transform: uppercase;
 		}
 	}
+
+	.row .col.s12 {
+		text-align: $text-center;
+	}
+	
 
 	.index-title {
 		padding: 1rem 0;

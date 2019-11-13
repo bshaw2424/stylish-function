@@ -555,7 +555,6 @@ h1, h2, h3, h4, h5, h6, li a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .description-article-container .description-title {
     margin: 1rem 0;
@@ -563,21 +562,9 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .description-article-container .description-paragraph {
     margin: 0;
-    display: none;
     text-align: center;
     padding: 0 1rem 1rem;
     font-size: 1.2rem;
-  }
-  .description-items-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    border-radius: 8px;
-    padding: 1rem 0;
-    background: #333;
   }
   .description-item {
     display: -webkit-box;
@@ -748,9 +735,6 @@ h1, h2, h3, h4, h5, h6, li a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .description-article-container {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
   .description-article-container .description-title {
     margin: 1rem 0;
     font-size: 1.8rem;
@@ -761,39 +745,33 @@ h1, h2, h3, h4, h5, h6, li a {
     padding: 0 1rem 1rem;
     font-size: 1rem;
   }
-  .description-items-container {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  .nav-badges {
+    margin: 0 0 1rem 0;
+    padding: .75rem 0;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-bottom: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
   }
-  .description-items-container .description-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .description-items-container h5 {
-    padding: 1rem 0 .5rem;
+  .nav-badges article {
     margin: 0;
+    width: 100%;
   }
-  .description-items-container p {
+  .nav-badges article:first-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .nav-badges h2 {
+    margin: 0;
+    padding-bottom: .5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  .row .col.s12 {
     text-align: center;
-    margin: 0;
   }
   .index-title {
     padding: 1rem 0;
