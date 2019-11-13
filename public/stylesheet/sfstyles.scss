@@ -95,6 +95,7 @@
 			}
 		}
 	}
+
 	.index-main-section {
 		@include flex-center;
 		flex-direction: column;
@@ -360,7 +361,6 @@
 		}
 		.description-paragraph {
 			margin: 0;
-		display: none;
 			text-align: $text-center;
 			padding: 0 1rem 1rem;
 			font-size: 1.2rem;
