@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6, li a {
 }
 
 .copyright {
-  background: #3b4045;
+  background: #ed8a63;
   color: #ddd;
 }
 
@@ -77,10 +77,6 @@ h1, h2, h3, h4, h5, h6, li a {
   .navigation a {
     font-size: 1rem;
   }
-  .index-main-section {
-    max-width: 90%;
-    margin: 0 auto;
-  }
   .display-header {
     background: url("../images/lrg-dual-combo.jpg") center/100% 100% no-repeat;
     height: 78vh;
@@ -120,7 +116,7 @@ h1, h2, h3, h4, h5, h6, li a {
     color: yellow;
   }
   .affiliate-disclaimer-section {
-    background: #3b4045;
+    background: #ed8a63;
   }
   .affiliate-disclaimer-section .affiliate-disclaimer-container {
     padding: 1rem 0;
@@ -276,22 +272,16 @@ h1, h2, h3, h4, h5, h6, li a {
   .navigation a {
     font-size: 1.4rem;
   }
-  .index-site-trend-section {
-    max-width: 90%;
-    margin: 0 auto;
-  }
   .display-header {
-    background: url("../images/lrg-dual-combo.jpg") center/100% 100% no-repeat;
-    height: 78vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    background: #00c2dc;
+    height: 40vh;
     max-width: 100%;
     position: relative;
   }
   .display-header-container {
     height: 100%;
     min-width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.1);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -317,10 +307,7 @@ h1, h2, h3, h4, h5, h6, li a {
     color: #fff;
   }
   .display-header-container .display-header-title span {
-    color: yellow;
-  }
-  .affiliate-disclaimer-section {
-    background: #3b4045;
+    color: #333;
   }
   .affiliate-disclaimer-section .affiliate-disclaimer-container {
     padding: 1rem 0;
@@ -334,14 +321,11 @@ h1, h2, h3, h4, h5, h6, li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .affiliate-disclaimer-section .affiliate-disclaimer-container p {
     font-size: 1.4rem;
-    color: #ddd;
+    color: #333;
+    padding-right: 1rem;
     margin: 0;
   }
   .index-main-section {
@@ -354,27 +338,23 @@ h1, h2, h3, h4, h5, h6, li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 80%;
-    margin: 0 10%;
+    width: 70%;
+    margin: 0 15%;
   }
   .description-section {
     color: #333;
-  }
-  .description-article-container {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .description-article-container {
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -454,6 +434,7 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .navigation .navigation-logo {
     font-size: 2.5rem;
+    color: #333;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
     padding-bottom: 0.5rem;
@@ -462,17 +443,18 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .navigation a {
     font-size: 1.2rem;
+    color: #333;
   }
   .display-header {
-    background: url("../images/sm-dual-combo.jpg") center/100% 100% no-repeat;
-    height: 45vh;
+    background: #00c2dc;
+    height: 38vh;
     max-width: 100%;
     position: relative;
   }
   .display-header-container {
     height: 100%;
     min-width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.1);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -498,10 +480,7 @@ h1, h2, h3, h4, h5, h6, li a {
     color: #fff;
   }
   .display-header-container .display-header-title span {
-    color: yellow;
-  }
-  .affiliate-disclaimer-section {
-    background: #3b4045;
+    color: #333;
   }
   .affiliate-disclaimer-section .affiliate-disclaimer-container {
     padding: 1rem 0;
@@ -521,27 +500,12 @@ h1, h2, h3, h4, h5, h6, li a {
             flex-direction: column;
   }
   .affiliate-disclaimer-section .affiliate-disclaimer-paragraph {
-    font-size: 1.2rem;
-    color: #ddd;
+    font-size: 1rem;
+    color: #333;
     margin: 0;
   }
-  .index-main-section {
-    width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   .description-article-container {
+    outline: 1px solid rgba(0, 0, 0, 0.1);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -596,6 +560,36 @@ h1, h2, h3, h4, h5, h6, li a {
     text-align: center;
     color: #ddd;
   }
+  .nav-badges {
+    margin-top: 1rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav-badges article {
+    margin-right: .5rem;
+    background: #333;
+    color: #ddd;
+    padding: .5rem 0;
+    width: 100%;
+  }
+  .nav-badges .row {
+    margin: 0;
+    margin: 0 .5rem 1rem 0;
+  }
+  .nav-badges h2 {
+    margin: 0;
+    padding-bottom: .5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  .nav-badges .index-nav-item {
+    display: block;
+  }
   .index-title {
     padding: 1rem 0;
     margin: 0;
@@ -648,6 +642,7 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .navigation .navigation-logo {
     font-size: 2.5rem;
+    color: #333;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 0.5rem;
     width: 90%;
@@ -655,20 +650,17 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .navigation a {
     font-size: 1.3rem;
-  }
-  .index-main-section {
-    width: 90%;
-    margin: 0 auto;
+    color: #333;
   }
   .display-header {
-    background: url("../images/sm-dual-combo.jpg") center/100% 100% no-repeat;
-    height: 35vh;
+    background: #00c2dc;
+    height: 30vh;
     max-width: 100%;
     position: relative;
   }
   .display-header-container {
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.1);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -693,13 +685,10 @@ h1, h2, h3, h4, h5, h6, li a {
     color: #fff;
   }
   .display-header-container .display-header-title span {
-    color: yellow;
-  }
-  .affiliate-disclaimer-section {
-    background: #3b4045;
+    color: #333;
   }
   .affiliate-disclaimer-section .affiliate-disclaimer-container {
-    padding: 1rem 0;
+    padding: .5rem 0;
     margin: 0 5%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -716,11 +705,12 @@ h1, h2, h3, h4, h5, h6, li a {
             flex-direction: column;
   }
   .affiliate-disclaimer-section .affiliate-disclaimer-container p {
-    color: #ddd;
+    color: #333;
     margin: 0;
     font-size: 1rem;
   }
   .description-section {
+    outline: 1px solid rgba(0, 0, 0, 0.1);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -736,8 +726,8 @@ h1, h2, h3, h4, h5, h6, li a {
             flex-direction: column;
   }
   .description-article-container .description-title {
-    margin: 1rem 0;
-    font-size: 1.8rem;
+    margin: 1rem .5rem .5rem;
+    font-size: 1.6rem;
   }
   .description-article-container .description-paragraph {
     margin: 0;
@@ -746,8 +736,7 @@ h1, h2, h3, h4, h5, h6, li a {
     font-size: 1rem;
   }
   .nav-badges {
-    margin: 0 0 1rem 0;
-    padding: .75rem 0;
+    margin-top: 1rem;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -755,14 +744,17 @@ h1, h2, h3, h4, h5, h6, li a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    outline: 1px solid rgba(0, 0, 0, 0.1);
   }
   .nav-badges article {
-    margin: 0;
+    margin-right: .5rem;
+    background: #333;
+    color: #ddd;
+    padding: .5rem 0;
     width: 100%;
   }
-  .nav-badges article:first-child {
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  .nav-badges .row {
+    margin: 0;
+    margin: 0 .5rem 1rem 0;
   }
   .nav-badges h2 {
     margin: 0;
