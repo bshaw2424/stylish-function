@@ -711,6 +711,9 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .description-section {
     outline: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background: #333;
+    color: #ddd;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -727,6 +730,7 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .description-article-container .description-title {
     margin: 1rem .5rem .5rem;
+    color: #ddd;
     font-size: 1.6rem;
   }
   .description-article-container .description-paragraph {
@@ -741,14 +745,15 @@ h1, h2, h3, h4, h5, h6, li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .nav-badges article {
     margin-right: .5rem;
-    background: #333;
-    color: #ddd;
+    background: #fff;
+    color: #333;
     padding: .5rem 0;
     width: 100%;
   }

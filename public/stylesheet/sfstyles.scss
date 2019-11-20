@@ -496,6 +496,9 @@
 
 	.description-section {
 		outline: 1px solid rgba(0,0,0,0.1);
+		width: 100%;
+		background: $nav-text;
+		color: $aside-text;
 		@include flex-center;
 		flex-direction: column;
 	}
@@ -503,6 +506,7 @@
 	.description-article-container {
 		.description-title {
 			margin: 1rem .5rem .5rem;
+			color: $aside-text;
 			font-size: 1.6rem;
 			@extend .align;
 		}
@@ -518,12 +522,11 @@
 	.nav-badges {
 		margin-top: 1rem;
 		width: 100%;
-		display: flex;
-		justify-content: space-between;
+		@include flex-column;
 		article {
 			margin-right: .5rem;
-			background: $nav-text;
-			color: $aside-text;
+			background: $white;
+			color: $nav-text;
 			padding: .5rem 0;
 			width: 100%;
 		}
