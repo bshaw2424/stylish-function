@@ -13,7 +13,9 @@ const routes = require('./routes/mainRoutes');
 const errorRoutes = require('./routes/errorRoute');
 
 const errorRoute = new errorRoutes();
-
+app.get("/login", function(req, res) {
+    res.render("admin/login")
+})
 // middleware
 app.use(bodyParser.urlencoded({
     extended: true

@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6, li a {
   }
   .display-header {
     background: url("../images/lrg-dual-combo.jpg") center/100% 100% no-repeat;
-    height: 78vh;
+    height: 90vh;
     -o-object-fit: cover;
        object-fit: cover;
     max-width: 100%;
