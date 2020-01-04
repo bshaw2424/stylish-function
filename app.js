@@ -7,15 +7,14 @@ const trending = require('./models/trendProductModel');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const routes = require('./routes/mainRoutes');
+const routes = require('./routes/adminProductRoutes');
+const indexRoutes = require('./routes/indexRoutes');
 
 // const static = require('./routes/staticRoutes');
 const errorRoutes = require('./routes/errorRoute');
 
 const errorRoute = new errorRoutes();
-app.get("/login", function(req, res) {
-    res.render("admin/login")
-})
+
 // middleware
 app.use(bodyParser.urlencoded({
     extended: true
@@ -25,7 +24,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
 // route middleware
-app.use("/", routes);
+app.use("/products", routes);
+app.use("/", indexRoutes);
 app.use(errorRoute.error404Route);
 
 // server connection
