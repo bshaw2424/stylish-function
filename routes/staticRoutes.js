@@ -1,17 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-const staticRoutes = require('../controllers/staticController');
-const staticRoute = new staticRoutes();
 
-router.get("/about-us", staticRoute.aboutUsRoute);
+router.get("/about-us", (req, res) => res.render("pages/about-us"));
 
-router.get("/affiliate-disclaimer", staticRoute.affiliateDisclaimerRoute);
+router.get("/affiliate-disclaimer", (req, res) => res.render("pages/affiliate-disclaimer"));
 
-router.get("/contact-us", staticRoute.contactUsRoute);
+router.get("/contact-us", (req, res) => res.render("pages/contact-us"));
 
-router.get("/privacy", staticRoute.privacyDisclaimerRoute);
+router.get("/privacy", (req, res) => res.render("pages/privacy"));
 
-router.get("/TOS", staticRoute.termsOfServiceRoute);
+router.get("/TOS", (req, res) => res.render("pages/TOS"));
 
 module.exports = router;
