@@ -8,12 +8,12 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const routes = require('./routes/adminProductRoutes');
-const indexRoutes = require('./routes/indexRoutes');
+const navRoutes = require('./routes/navRoutes');
 
-// const static = require('./routes/staticRoutes');
+const static = require('./routes/staticRoutes');
 const errorRoutes = require('./routes/errorRoute');
 
-const errorRoute = new errorRoutes();
+// const errorRoute = new errorRoutes();
 
 // middleware
 app.use(bodyParser.urlencoded({
@@ -25,8 +25,9 @@ app.use(express.static('public'));
 
 // route middleware
 app.use("/products", routes);
-app.use("/", indexRoutes);
-app.use(errorRoute.error404Route);
+app.use("/category", navRoutes);
+app.use("/", static);
+app.use(errorRoutes.errorMessage);
 
 // server connection
 app.listen(PORT, () => {
