@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+router.get("/", (req, res) => res.render("admin/admin-index"));
 
-router.get("/new", (req, res) =>{
-  res.send("create a new product route")
+router.get("/products", (req, res) => res.render("admin/products"))
+
+router.get("/add-product", (req, res) =>{
+  res.render("admin/products-form")
 });
 
 router.post("/", (req, res) =>{

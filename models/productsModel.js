@@ -12,13 +12,13 @@ const productList = new productModel ({
 	product_description: 'this is a example description'
 });
 
-productList.save((err, product) =>{
-  if(err){
-    console.log(err)
-  } else {
-    console.log('saved to database');
-    console.log(product)
-  }
-});
+// productList.save((err, product) =>{
+//   if(err){
+//     console.log(err)
+//   } else {
+//     console.log('saved to database');
+//     console.log(product)
+//   }
+// });
 
 module.exports = productModel;

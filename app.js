@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
 // route middleware
-app.use("/products", routes);
+app.use("/admin", routes);
 app.use("/category", navRoutes);
 app.use("/", static);
 app.use(errorRoutes.errorMessage);
