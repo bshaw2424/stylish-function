@@ -3,36 +3,41 @@ const router = express.Router();
 
 router.get("/", (req, res) => res.render("admin/admin-index"));
 
-router.get("/products", (req, res) => res.render("admin/products"))
-
-router.get("/add-product", (req, res) =>{
-  res.render("admin/products-form")
-});
-
-router.post("/", (req, res) =>{
-  res.send("this is the post router")
-});
-
 router.get("/login", (req, res) =>{
     res.render("admin/login")
 });
 
-router.get("/:id", (req, res) =>{
-  res.send(req.params.id)
+// index product route
+router.get("/products", (req, res) => res.render("admin/products"))
+
+// show new product form
+router.get("/products/new", (req, res) =>{
+  res.render("admin/products-form")
 });
 
-router.get("/:id/edit", (req, res) =>{
-  res.send(req.params.id + " this is the edit section")
-})
+// create a new product
+router.post("/products", (req, res) =>{
+  res.send("this is the post router")
+});
 
-router.put("/:id", (req, res) =>{
+// product show page
+router.get("/products/:id", (req, res) =>{
+  res.send(req.params.id + " show page")
+});
+
+// edit product form
+router.get("/products/:id/edit", (req, res) => {
+	res.send(req.params.id + " this is the edit section");
+});
+
+// update a product / redirect
+router.put("/products/:id", (req, res) =>{
   res.send("this is the put section")
 });
 
-router.delete("/:id", (req, res) =>{
+// delete a product / redirect
+router.delete("/products/:id", (req, res) =>{
   res.send("this is the delete section")
 });
-
-
 
 module.exports = router;
