@@ -1,10 +1,10 @@
 <section>
   <div class="form-container">
-    <h1 style="text-align: center;">Create a Product</h1>
-    <form action="/admin/products/" style="display: flex; flex-direction: column;">
+    <h1>Create a Product</h1>
+    <form action="/admin/products/" method="POST" style="display: flex; flex-direction: column;">
       <!-- product title -->
       <label for="product-title">Product Title</label>
-      <input id="product-title" class="product-input" type="text" name="product-title" />
+      <input id="product-title" class="product-input" type="text" name="title" />
       <!-- main category dropdown list -->
       <label for="main-category">Main Category</label>
       <select id="main-category">

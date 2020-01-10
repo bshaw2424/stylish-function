@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const productsModel = require('../models/productsModel');
 
 router.get("/", (req, res) => res.render("admin/admin-index"));
 
@@ -8,7 +9,10 @@ router.get("/login", (req, res) =>{
 });
 
 // index product route
-router.get("/products", (req, res) => res.render("admin/products"))
+router.get("/products", (req, res) =>{
+   
+  res.render("admin/products");
+})
 
 // show new product form
 router.get("/products/new", (req, res) =>{
@@ -17,7 +21,8 @@ router.get("/products/new", (req, res) =>{
 
 // create a new product
 router.post("/products", (req, res) =>{
-  res.send("this is the post router")
+  
+  res.render("admin/products", {});
 });
 
 // product show page
