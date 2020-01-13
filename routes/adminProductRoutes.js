@@ -9,10 +9,16 @@ router.get("/login", (req, res) =>{
 });
 
 // index product route
-router.get("/products", (req, res) =>{
-   
-  res.render("admin/products");
-})
+router.get("/products", async (req, res) =>{
+  try {
+    const indexProducts = await productsModel.find({}).exec();
+     res.render("admin/products-index", { indexProducts });
+  } catch (error) {
+  //  fix this to show a better error meassage
+     res.render("pages/error404Page")
+  }
+ 
+});
 
 // show new product form
 router.get("/products/new", (req, res) =>{
@@ -21,18 +27,33 @@ router.get("/products/new", (req, res) =>{
 
 // create a new product
 router.post("/products", (req, res) =>{
-  
-  res.render("admin/products", {});
+  const response = req.body.title
+  res.render("admin/products-index", {pick: response});
 });
 
 // product show page
-router.get("/products/:id", (req, res) =>{
-  res.send(req.params.id + " show page")
+router.get("/products/:id", async (req, res) =>{
+  try {
+    const product_show_page = await productsModel.findById(req.params.id).exec();
+    res.render("admin/productShowPage", { product_show_page })
+  } catch (error) {
+    res.send(error)
+    res.redirect("admin/product-index")
+  }
 });
 
 // edit product form
-router.get("/products/:id/edit", (req, res) => {
-	res.send(req.params.id + " this is the edit section");
+router.get("/products/:id", async (req, res) => {
+  try {
+    const product_edit_page = await productsModel
+					.findById(req.params.id)
+          .exec();
+    res.render("admin/product_edit", { product_edit_page });
+  } catch (error) {
+   res.send(error) 
+  }
+  
+  
 });
 
 // update a product / redirect

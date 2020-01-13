@@ -1,0 +1,50 @@
+<% include ../partials/header %>
+<h1>products</h1>
+
+    <form action="/admin/products/<%= product_edit_page._id %>/edit" method="POST" style="display: flex; flex-direction: column;">
+      <!-- product title -->
+      <label for="product-title">Product Title</label>
+      <input id="product-title" class="product-input" type="text" name="title" />
+      <!-- main category dropdown list -->
+      <label for="main-category">Main Category</label>
+      <select id="main-category">
+        <option>Select A Main Category</option>
+        <option value="sofa">Sofa</option>
+        <option value="table">Table</option>
+        <option value="featured">Featured</option>
+      </select>
+      <!-- sub category dropdown list -->
+      <label for="sofa-sub-category">Sofa Sub Category</label>
+      <select id="sofa-sub-category">
+        <option>Select Sofa Sub Category</option>
+        <option value="modular">Modular</option>
+        <option value="sleeper">Sleeper</option>
+        <option value="casual">Casual</option>
+      </select>
+      <!-- sub category dropdown list -->
+      <label for="table-sub-category">Table Sub Category</label>
+      <select id="table-sub-category">
+        <option>Select Table Sub Category</option>
+        <option value="extendable">Extendable</option>
+        <option value="coffee">Coffee</option>
+        <option value="casual">Casual</option>
+      </select>
+      <!-- product price -->
+      <label for="product-price">Price</label>
+      <input id="product-price" class="product-input" type="text" name="price" />
+      <!-- main image upload -->
+      <label for="main-image">Main Image</label>
+      <input id="main-image" type="file" />
+      <!-- sub image upload -->
+      <label for="sub-images">Sub Images</label>
+      <input id="sub-images" type="file" multiple />
+      <!-- product description -->
+      <label for="product-description">Product Description</label>
+      <textarea id="product-description" class="product-input" name="description" rows="6" cols="40"></textarea>
+      <div class="product-form-button-container">
+        <button type="submit" class="form-button submit">Submit</button>
+        <button type="reset" class="form-button reset">reset</button>
+      </div>
+    </form>
+
+<% include ../partials/footer %>
