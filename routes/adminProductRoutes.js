@@ -14,8 +14,9 @@ router.get("/products", async (req, res) =>{
     const indexProducts = await productsModel.find({}).exec();
      res.render("admin/products-index", { indexProducts });
   } catch (error) {
-  //  fix this to show a better error meassage
+    if(error){
      res.render("pages/error404Page")
+    }
   }
  
 });
@@ -26,9 +27,16 @@ router.get("/products/new", (req, res) =>{
 });
 
 // create a new product
-router.post("/products", (req, res) =>{
-  const response = req.body.title
-  res.render("admin/products-index", {pick: response});
+router.post("/products", async (req, res) =>{
+  try {
+    const added_product = await productsModel.create(req.body.product);
+    console.log(added_product)
+    res.redirect("/admin/products")
+  } catch (error) {
+    if(error){
+      res.render("pages/error404Page")
+    }
+  }
 });
 
 // product show page
@@ -37,28 +45,37 @@ router.get("/products/:id", async (req, res) =>{
     const product_show_page = await productsModel.findById(req.params.id).exec();
     res.render("admin/productShowPage", { product_show_page })
   } catch (error) {
-    res.send(error)
-    res.redirect("admin/product-index")
+    if(error){
+      res.redirect("/admin/product-index")
+    }
   }
 });
 
 // edit product form
-router.get("/products/:id", async (req, res) => {
+router.get("/products/:id/edit", async (req, res) => {
   try {
-    const product_edit_page = await productsModel
+    const product = await productsModel
 					.findById(req.params.id)
           .exec();
-    res.render("admin/product_edit", { product_edit_page });
+    res.render("admin/product_edit", { product });
   } catch (error) {
-   res.send(error) 
+    if(error){
+      res.render("pages/error404Page");
+    }
   }
-  
-  
 });
 
 // update a product / redirect
-router.put("/products/:id", (req, res) =>{
-  res.send("this is the put section")
+router.put("/products/:id", async (req, res) =>{
+  try {
+    const put_request = await productsModel.findByIdAndUpdate(req.params.id, req.body.product);
+    console.log(put_request)
+    res.redirect(`/admin/products`)
+  } catch (error) {
+    if(error){
+      res.render("pages/error404Page")
+    }
+  }
 });
 
 // delete a product / redirect

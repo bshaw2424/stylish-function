@@ -1,4 +1,5 @@
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 const express = require('express');
 const dataBaseConnection = require('./mongodb_connect');
 const product = require('./models/productsModel');
@@ -9,13 +10,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const routes = require('./routes/adminProductRoutes');
 const navRoutes = require('./routes/navRoutes');
-
 const static = require('./routes/staticRoutes');
 const errorRoutes = require('./routes/errorRoute');
 
-// const errorRoute = new errorRoutes();
 
 // middleware
+app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
