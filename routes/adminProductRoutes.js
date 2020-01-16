@@ -79,8 +79,16 @@ router.put("/products/:id", async (req, res) =>{
 });
 
 // delete a product / redirect
-router.delete("/products/:id", (req, res) =>{
-  res.send("this is the delete section")
+router.delete("/products/:id", async (req, res) =>{
+  try {
+     await productsModel.findByIdAndRemove(req.params.id);
+    console.log(`${req.params.id} was removed successfull!`);
+    res.redirect('/admin/products');
+  } catch (error) {
+    if(error){
+      res.render("pages/error404Page")
+    }
+  }
 });
 
 module.exports = router;

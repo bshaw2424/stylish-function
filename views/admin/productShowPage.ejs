@@ -3,5 +3,9 @@
 
    <img src="<%= product_show_page.main_image %>" />
    <p> <%= product_show_page._id %> </p>
+   <%= product_show_page.title %>
+   <form action="/admin/products/<%=product_show_page._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete<button>
+   </form>
  
 <% include ../partials/footer %>
