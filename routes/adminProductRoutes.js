@@ -34,6 +34,7 @@ router.post("/products", async (req, res) =>{
     res.redirect("/admin/products")
   } catch (error) {
     if(error){
+      console.log(error)
       res.render("pages/error404Page")
     }
   }
@@ -42,8 +43,8 @@ router.post("/products", async (req, res) =>{
 // product show page
 router.get("/products/:id", async (req, res) =>{
   try {
-    const product_show_page = await productsModel.findById(req.params.id).exec();
-    res.render("admin/productShowPage", { product_show_page })
+    const product = await productsModel.findById(req.params.id).exec();
+    res.render("admin/productShowPage", { product })
   } catch (error) {
     if(error){
       res.redirect("/admin/product-index")
@@ -70,7 +71,7 @@ router.put("/products/:id", async (req, res) =>{
   try {
     const put_request = await productsModel.findByIdAndUpdate(req.params.id, req.body.product);
     console.log(put_request)
-    res.redirect(`/admin/products`)
+    res.redirect(`/admin/products/${req.params.id}`)
   } catch (error) {
     if(error){
       res.render("pages/error404Page")

@@ -14,7 +14,7 @@ router.get("/seating", async (req, res) =>{
 
 router.get("/tables", async (req, res) =>{
   try {
-    const tableProducts = await tablesModel.find({main_category: "table"});
+    const tableProducts = await tablesModel.find({main_category: "Table"});
     res.render("pages/tables", { tableProducts })
   } catch (error) {
     console.log("Error " + error)

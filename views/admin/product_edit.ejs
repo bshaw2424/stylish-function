@@ -6,10 +6,10 @@
     <form action="/admin/products/<%= product._id %>?_method=PUT" method="POST" style="display: flex; flex-direction: column;">
       <!-- product title -->
       <label for="product-title">Product Title</label>
-      <input id="product-title" class="product-input" type="text" name="product[title]" value="<%= product.title %>" />
+      <input id="product-title" class="product-input browser-default" type="text" name="product[title]" value="<%= product.title %>" />
       <!-- main category  -->
       <label for="main-category">Main Category</label>
-      <input id="main-category" class="product-input" type="text" name="product[main_category]" value="<%= product.main_category %>" />
+      <input id="main-category" class="product-input browser-default" type="text" name="product[main_category]" value="<%= product.main_category %>" />
       <!-- sub category  -->
       <label for="sub-category">Sofa Sub Category</label>
       <input id="sofa-sub-category" class="product-input" type="text" name="product[sub_category]" value="<%= product.sub_category %>" />
