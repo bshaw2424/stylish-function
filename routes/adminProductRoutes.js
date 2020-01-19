@@ -2,17 +2,21 @@ const express = require('express');
 const router = express.Router();
 const productsModel = require('../models/productsModel');
 
-router.get("/", (req, res) => res.render("admin/admin-index"));
+router.get("/", (req, res) => res.render("admin/login"));
 
-router.get("/login", (req, res) =>{
-    res.render("admin/login")
+router.get("/index", (req, res) =>{
+    res.render("admin/admin-index")
 });
 
 // index product route
 router.get("/products", async (req, res) =>{
   try {
     const indexProducts = await productsModel.find({}).exec();
-     res.render("admin/products-index", { indexProducts });
+    const sofaProducts = await productsModel.find({main_category: "Sofa"}).exec();
+    const tableProducts = await productsModel.find({main_category: "Table"}).exec();
+    res.render("admin/products-index", { indexProducts, sofaProducts, tableProducts });
+    
+    
   } catch (error) {
     if(error){
      res.render("pages/error404Page")
