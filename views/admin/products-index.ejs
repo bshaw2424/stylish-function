@@ -1,6 +1,10 @@
 <% include ../partials/header %>
+<% include ../admin/admin-nav %>
 <h1>products</h1>
-<h3>Product currently - <%= indexProducts.length %></h3>
+<div><input class="browser-default" type="text" /></div>
+<div style="display: flex; justify-content: space-between">
+<section style="min-width: 700px">
+    <h4>sofa products</h4>
 <% indexProducts.forEach(product => { %>
     <ul class="collection">
         <li class="collection-item avatar">
@@ -12,5 +16,21 @@
         </li>
     </ul>
  <% }) %>
+</section>
+<section style="min-width: 700px">
+    <h4>table products</h4>
+ <% tableIndex.forEach(product => { %>
+    <ul class="collection">
+        <li class="collection-item avatar">
+           <a href="/admin/products/<%=product._id%>"> 
+            <img src="<%=product.main_image%>" alt="" class="circle">
+           </a>
+            <span class="title"><%=product.title%></span>
+            <a href="/admin/products/<%=product._id%>" class="secondary-content"><i class="material-icons">info</i></a>
+        </li>
+    </ul>
+ <% }) %>
+</section>
+</div>
  
 <% include ../partials/footer %>

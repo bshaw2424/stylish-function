@@ -4,19 +4,30 @@ const productsModel = require('../models/productsModel');
 
 router.get("/", (req, res) => res.render("admin/login"));
 
-router.get("/index", (req, res) =>{
-    res.render("admin/admin-index")
+router.get("/index", async (req, res) =>{
+  try {
+    const allProducts = await productsModel.find().exec();
+    const sofaProducts = await productsModel
+					.find({ main_category: "Sofa" })
+					.exec();
+				const tableProducts = await productsModel
+					.find({ main_category: "Table" })
+					.exec();
+    res.render("admin/admin-index", { allProducts, sofaProducts, tableProducts })
+  } catch (error) {
+    if(error){
+      res.render("pages/error404Page")
+    }
+  }
+    
 });
 
 // index product route
 router.get("/products", async (req, res) =>{
   try {
-    const indexProducts = await productsModel.find({}).exec();
-    const sofaProducts = await productsModel.find({main_category: "Sofa"}).exec();
-    const tableProducts = await productsModel.find({main_category: "Table"}).exec();
-    res.render("admin/products-index", { indexProducts, sofaProducts, tableProducts });
-    
-    
+    const indexProducts = await productsModel.find({main_category: "Sofa"}).exec();
+    const tableIndex = await productsModel.find({main_category: "Table"}).exec();
+    res.render("admin/products-index", { indexProducts, tableIndex });
   } catch (error) {
     if(error){
      res.render("pages/error404Page")
@@ -35,7 +46,7 @@ router.post("/products", async (req, res) =>{
   try {
     const added_product = await productsModel.create(req.body.product);
     console.log(added_product)
-    res.redirect("/admin/products")
+    res.redirect("/admin/index")
   } catch (error) {
     if(error){
       console.log(error)
