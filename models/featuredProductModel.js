@@ -7,15 +7,16 @@ const featuredProducts = new featureModel({
 	main_image: "https://bit.ly/2phYaBh",
 	sub_images: ["https://bit.ly/2phYaBh", 'https://bit.ly/2phYaBh'],
 	price: 4234,
+	description: "this is a new description"
 });
 
-// featuredProducts.save( async(err, feature) =>{
-//   try {
-//     const data = await feature;
-//     console.log(data)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// });
+featuredProducts.save( async(err, feature) =>{
+  try {
+    const data = await feature;
+    console.log(data)
+  } catch (error) {
+    console.log(error)
+  }
+});
 
 module.exports = featureModel;

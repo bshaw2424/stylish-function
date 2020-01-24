@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const trendingProducts = new Schema({
+const featuredProducts = new Schema({
 	title: {
 		type: String,
 		required: true,
@@ -17,10 +17,14 @@ const trendingProducts = new Schema({
 		type: Number,
 		required: true,
 	},
+	description: {
+		type: String,
+		required: true,
+	},
 	created_on: {
 		type: Date,
 		default: Date.now(),
 	}
 });
 
-module.exports = trendingProducts;
+module.exports = featuredProducts;
