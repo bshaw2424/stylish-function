@@ -28,7 +28,7 @@
   <div class="container">
     <div class="row">
       <%  tableProducts.forEach(tableProduct => { %>
-      <aside id="aside-filter" class="product-aside">
+      <aside id="aside-filter" class="product-aside" style="display: none">
         <p> filter </p>
         <ul>
           <a href="/tables/newest">
@@ -52,10 +52,10 @@
           <div class="purchase-information">
             <p class="card-title">
               <a href="/tables/<%= tableProduct._id %>">
-                <%= tableProduct.title %>
+                <%= tableProducts.title %>
               </a>
             </p>
-            <p class="card-price"><%= `$${tableProduct.price}` %></p>
+            <p class="card-price"><%= `$${tableProducts.price}` %></p>
           </div>
         </div>
       </div>

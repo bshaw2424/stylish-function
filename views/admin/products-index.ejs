@@ -31,6 +31,12 @@
     </ul>
  <% }) %>
 </section>
+<section>
+    <h4>featured section</h4>
+   <% featuredProducts.forEach(product =>{ %>
+        <%= product._id %>
+   <% }) %>
+</section>
 </div>
  
 <% include ../partials/footer %>

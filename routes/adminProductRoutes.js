@@ -12,8 +12,9 @@ router.get("/index", async (req, res) =>{
 					.exec();
 				const tableProducts = await productsModel
 					.find({ main_category: "Table" })
-					.exec();
-    res.render("admin/admin-index", { allProducts, sofaProducts, tableProducts })
+          .exec();
+        const featuredProducts = await productsModel.find({main_category: "featured"}).exec()
+    res.render("admin/admin-index", { allProducts, sofaProducts, tableProducts, featuredProducts })
   } catch (error) {
     if(error){
       res.render("pages/error404Page")
@@ -27,7 +28,8 @@ router.get("/products", async (req, res) =>{
   try {
     const indexProducts = await productsModel.find({main_category: "Sofa"}).exec();
     const tableIndex = await productsModel.find({main_category: "Table"}).exec();
-    res.render("admin/products-index", { indexProducts, tableIndex });
+    const featuredProducts = await productsModel.find({main_category: "featured"}).exec();
+    res.render("admin/products-index", { indexProducts, tableIndex, featuredProducts });
   } catch (error) {
     if(error){
      res.render("pages/error404Page")

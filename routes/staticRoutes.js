@@ -1,7 +1,16 @@
 const express = require('express');
 const router = express.Router();
+const featured = require('../models/productsModel')
 
-router.get("/", (req, res) => res.render("pages/index"));
+router.get("/", async (req, res) => {
+  const feature = await featured.find({main_category: "featured"}).exec();
+  res.render("pages/index", {feature})
+});
+
+router.get("/:id", async (req, res) => {
+  const show = await featured.findById(req.params.id).exec()
+  res.render("pages/indexShow", {show})
+});
 
 router.get("/about-us", (req, res) => res.render("pages/about-us"));
 
