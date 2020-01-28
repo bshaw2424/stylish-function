@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const featured = require('../models/productsModel')
+const featured = require('../models/featuredModel')
 
 router.get("/", async (req, res) => {
-  const feature = await featured.find({main_category: "featured"}).exec();
+  const feature = await featured.find().exec();
   res.render("pages/index", {feature})
 });
 

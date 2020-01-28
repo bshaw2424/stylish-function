@@ -11,7 +11,7 @@
  <% feature.forEach(product =>{ %>
   <img src="<%= product.main_image %>" />
   <div>
-      <button type="submit"><a href="/featured/<%=product._id%>">GO</a></button>
+      <button type="submit"><a href="/admin/featured/product/<%=product._id%>">GO</a></button>
   </div>
  <% }) %>
  </div>

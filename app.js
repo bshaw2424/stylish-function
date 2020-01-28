@@ -25,7 +25,7 @@ app.use(express.static('public'));
 // route middleware
 app.use("/admin", routes);
 app.use("/category", navRoutes);
-app.use("/featured", featured);
+app.use("/admin/featured", featured);
 app.use("/", static);
 app.use(errorRoutes.errorMessage);
 
