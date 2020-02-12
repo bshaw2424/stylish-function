@@ -15,7 +15,7 @@ router.get("/seating", async (req, res) =>{
 
 router.get("/tables", async (req, res) =>{
   try {
-    const tableProducts = await productsModel.find({main_category: "Table"});
+    const tableProducts = await productsModel.find({main_category: "Table"}).where("ma");
     res.render("pages/tables", { tableProducts })
   } catch (error) {
     res.render("pages/error404Page")

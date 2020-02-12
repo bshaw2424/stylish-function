@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const productsModel = require("../../models/productsModel");
+const product = require("../../models/seatingTableProductModel");
 
 router.get("/seating", async (req, res) => {
 	try {
-		const seatingProducts = await productsModel.find({ main_category: "Sofa" });
+		const seatingProducts = await product.find({main_category: "seating"}).exec();
 		res.render("pages/seating", { seatingProducts });
 	} catch (error) {
 		if (error) {
@@ -15,7 +15,7 @@ router.get("/seating", async (req, res) => {
 
 router.get("/seating/:id", async (req, res) => {
 	try {
-		const products = await productsModel.findById(req.params.id).exec();
+		const products = await product.findById(req.params.id).exec();
 		res.render("pages/productShowPage", { products });
 	} catch (error) {
 		if(error){

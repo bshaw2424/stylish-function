@@ -8,14 +8,14 @@
     <div class="secondary-nav">
       <a href="/seating/modular-sectional">modular/sectional</a>
       <a href="/seating/alternative-seating">alternative seating</a>
-      <a href="/seating/lounge-seating">lounge seating</a>
+      <a href="/seating/lounge-seating">sleeper sofa</a>
     </div>
   
 
 <!-- Page filter section with a search bar and select menu -->
 <!-- <section class="filter-section">
   <div class="container"> -->
-    <div class="price-filter filter" style="position: absolute; left: 1rem; top: 10rem">
+    <div class="price-filter filter">
       <span class="category-title">Sort By:</span>
       <ul class="inActive">
         <li><a href="/seating/newest">newest</a></li>
@@ -53,11 +53,11 @@
           </div>
           <div class="purchase-information">
             <p class="card-title">
-              <a href="/seating/<%= seatingProduct._id %>">
+              <a href="/category/seating/<%= seatingProduct._id %>">
                 <%= seatingProduct.title %>
               </a>
             </p>
-            <p class="card-price"><%= `$${seatingProduct.product_price}` %></p>
+            <p class="card-price"><%= `$${seatingProduct.price}` %></p>
           </div>
         </div>
       </div>

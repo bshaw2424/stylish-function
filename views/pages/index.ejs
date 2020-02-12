@@ -2,22 +2,27 @@
 
 <% include ../partials/nav %>
 <% include ../partials/headerSection %>
-<% include ../partials/siteDescription %>
+
 <main class="index-main-section">
-  <div class="row">
+  <h2>Featured</h2>
+   <div class="row">
+  <% feature.forEach(product =>{ %>
+ 
     <div class="col s12 m6 l3">
-  <div class="card">
-    <div class="card-image">
- <% feature.forEach(product =>{ %>
+      <div class="card">
+        <div class="card-image">
+ 
   <img src="<%= product.main_image %>" />
   <div>
       <button type="submit"><a href="/admin/featured/product/<%=product._id%>">GO</a></button>
   </div>
- <% }) %>
- </div>
- </div>
-</div>
-</div>
+ 
+       </div>
+     </div>
+    </div>
+  
+  <% }) %>
+  </div>
 </main>
 
 <% include ../partials/footer %>

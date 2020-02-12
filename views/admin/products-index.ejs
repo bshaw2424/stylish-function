@@ -5,38 +5,23 @@
 <div style="display: flex; justify-content: space-between">
 <section style="min-width: 700px">
     <h4>sofa products</h4>
-<% indexProducts.forEach(product => { %>
-    <ul class="collection">
-        <li class="collection-item avatar">
+    <div class="row">
+  <% indexProducts.forEach(product => { %>
+    <div class="col s12 m6 l3">
+        <div class="card">
            <a href="/admin/products/<%=product._id%>"> 
-            <img src="<%=product.main_image%>" alt="" class="circle">
+            <div class="card-image">
+              <img src="<%=product.main_image%>" alt="" class="circle">
+            </div>
            </a>
             <span class="title"><%=product.title%></span>
             <a href="/admin/products/<%=product._id%>" class="secondary-content"><i class="material-icons">info</i></a>
-        </li>
-    </ul>
+        </div>
+    </div>
  <% }) %>
-</section>
-<section style="min-width: 700px">
-    <h4>table products</h4>
- <% tableIndex.forEach(product => { %>
-    <ul class="collection">
-        <li class="collection-item avatar">
-           <a href="/admin/products/<%=product._id%>"> 
-            <img src="<%=product.main_image%>" alt="" class="circle">
-           </a>
-            <span class="title"><%=product.title%></span>
-            <a href="/admin/products/<%=product._id%>" class="secondary-content"><i class="material-icons">info</i></a>
-        </li>
-    </ul>
- <% }) %>
-</section>
-<section>
-    <h4>featured section</h4>
-   <% featuredProducts.forEach(product =>{ %>
-        <%= product._id %>
-   <% }) %>
+</div>
 </section>
 </div>
+
  
 <% include ../partials/footer %>

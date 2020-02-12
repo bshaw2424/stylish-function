@@ -35,7 +35,7 @@ router.post("/products", async (req, res) =>{
   }
 });
 
-router.get("/products/:id", async (req, res) => {
+router.get("/product/:id", async (req, res) => {
   try {
     const show = await featuredModel.findById(req.params.id).exec()
     res.render("admin-featured/featuredShowPage", {show})

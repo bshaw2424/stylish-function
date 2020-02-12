@@ -1,16 +1,20 @@
 const mongoose = require ('mongoose');
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 
 const productSchema = new Schema({
   title: {
     type: String,
     required: true
   },
-  category: {
+  main_category: {
     type: String,
     required: true
   },
-  product_price: {
+  sub_category: {
+    type: String,
+    required: true
+  },
+  price: {
     type: Number,
     required: true
   },
@@ -25,10 +29,19 @@ const productSchema = new Schema({
     type: String,
     required: true
   },
+  linkAddress: {
+    type: String,
+    required: true
+  },
   create_on: {
     type: Date,
     default: Date.now()
   }
 });
 
-module.exports = productSchema;
+module.exports = model("Products", productSchema);
+
+
+
+
+ 

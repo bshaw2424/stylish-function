@@ -1,20 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const productsModel = require('../../models/productsModel');
+const products = require('../../models/seatingTableProductModel');
+
 
 router.get("/", (req, res) => res.render("admin/login"));
 
 router.get("/index", async (req, res) =>{
   try {
-    const allProducts = await productsModel.find().exec();
-    const sofaProducts = await productsModel
-					.find({ main_category: "Sofa" })
-					.exec();
-				const tableProducts = await productsModel
-					.find({ main_category: "Table" })
-          .exec();
-        const featuredProducts = await productsModel.find({main_category: "featured"}).exec()
-    res.render("admin/admin-index", { allProducts, sofaProducts, tableProducts, featuredProducts })
+    const allProducts = await products.find().exec();
+    res.render("admin/admin-index", { allProducts })
   } catch (error) {
     if(error){
       res.render("pages/error404Page")
@@ -26,10 +20,8 @@ router.get("/index", async (req, res) =>{
 // index product route
 router.get("/products", async (req, res) =>{
   try {
-    const indexProducts = await productsModel.find({main_category: "Sofa"}).exec();
-    const tableIndex = await productsModel.find({main_category: "Table"}).exec();
-    const featuredProducts = await productsModel.find({main_category: "featured"}).exec();
-    res.render("admin/products-index", { indexProducts, tableIndex, featuredProducts });
+    const indexProducts = await products.find({}).exec();
+    res.render("admin/products-index", { indexProducts });
   } catch (error) {
     if(error){
      res.render("pages/error404Page")
@@ -46,8 +38,7 @@ router.get("/products/new", (req, res) =>{
 // create a new product
 router.post("/products", async (req, res) =>{
   try {
-    const added_product = await productsModel.create(req.body.product);
-    console.log(added_product)
+    await products.create(req.body.product);
     res.redirect("/admin/index")
   } catch (error) {
     if(error){
@@ -60,7 +51,7 @@ router.post("/products", async (req, res) =>{
 // product show page
 router.get("/products/:id", async (req, res) =>{
   try {
-    const product = await productsModel.findById(req.params.id).exec();
+    const product = await products.findById(req.params.id).exec();
     res.render("admin/productShowPage", { product })
   } catch (error) {
     if(error){
@@ -72,7 +63,7 @@ router.get("/products/:id", async (req, res) =>{
 // edit product form
 router.get("/products/:id/edit", async (req, res) => {
   try {
-    const product = await productsModel
+    const product = await products
 					.findById(req.params.id)
           .exec();
     res.render("admin/product_edit", { product });
@@ -86,7 +77,7 @@ router.get("/products/:id/edit", async (req, res) => {
 // update a product / redirect
 router.put("/products/:id", async (req, res) =>{
   try {
-    const put_request = await productsModel.findByIdAndUpdate(req.params.id, req.body.product);
+    const put_request = await products.findByIdAndUpdate(req.params.id, req.body.product);
     console.log(put_request)
     res.redirect(`/admin/products/${req.params.id}`)
   } catch (error) {
@@ -99,7 +90,7 @@ router.put("/products/:id", async (req, res) =>{
 // delete a product / redirect
 router.delete("/products/:id", async (req, res) =>{
   try {
-     await productsModel.findByIdAndRemove(req.params.id);
+     await products.findByIdAndRemove(req.params.id);
     console.log(`${req.params.id} was removed successfull!`);
     res.redirect('/admin/products');
   } catch (error) {
