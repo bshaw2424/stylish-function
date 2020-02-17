@@ -4,6 +4,7 @@ class AdminRoutes {
 	adminLogIn(req, res) {
 		res.render("admin/login");
 	}
+
 	async adminMainIndexPage(req, res) {
 		try {
 			const allProducts = await productsModel.find().exec();
@@ -14,6 +15,7 @@ class AdminRoutes {
 			}
 		}
 	}
+
 	async adminProductIndexPage(req, res) {
 		try {
 			const indexProducts = await productsModel.find().exec();
@@ -24,9 +26,11 @@ class AdminRoutes {
 			}
 		}
 	}
+
 	adminProductForm(req, res) {
 		res.render("admin/products-form");
 	}
+
 	async adminProductPostForm(req, res) {
 		try {
 			await productsModel.create(req.body.product);
@@ -37,6 +41,7 @@ class AdminRoutes {
 			}
 		}
 	}
+
 	async adminProductShowPage(req, res) {
 		try {
 			const product = await productsModel.findById(req.params.id).exec();
@@ -47,6 +52,7 @@ class AdminRoutes {
 			}
 		}
 	}
+
 	async adminProductEditForm(req, res) {
 		try {
 			const product = await productsModel.findById(req.params.id).exec();
@@ -57,6 +63,7 @@ class AdminRoutes {
 			}
 		}
 	}
+
 	async adminUpdateProduct(req, res) {
 		try {
 			const put_request = await productsModel.findByIdAndUpdate(
@@ -70,6 +77,7 @@ class AdminRoutes {
 			}
 		}
 	}
+
 	async adminDeleteProduct(req, res) {
 		try {
 			await productsModel.findByIdAndRemove(req.params.id);
