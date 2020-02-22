@@ -1,11 +1,9 @@
-const seatingProduct = require("../models/seatingTableProductModel");
+const seatingProduct = require("../models/productModel");
 
-class Seating {
+class SeatingRoutes {
 	async seatingProducts(req, res) {
 		try {
-			const seatingProducts = await seatingProduct
-				.find({ main_category: "seating" })
-				.exec();
+			const seatingProducts = await seatingProduct.find().exec();
 			res.render("pages/seating", { seatingProducts });
 		} catch (error) {
 			if (error) {
@@ -26,4 +24,4 @@ class Seating {
 	}
 }
 
-module.exports = Seating;
+module.exports = SeatingRoutes;

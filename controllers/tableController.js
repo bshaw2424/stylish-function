@@ -1,11 +1,9 @@
-const tableProduct = require("../models/seatingTableProductModel");
+const tableProduct = require("../models/productModel");
 
 class TableRoutes {
 	async tableProducts(req, res) {
 		try {
-			const tableProducts = await tableProduct
-				.find({ main_category: "table" })
-				.exec();
+			const tableProducts = await tableProduct.find().exec();
 			res.render("pages/tables", { tableProducts });
 		} catch (error) {
 			if (error) {

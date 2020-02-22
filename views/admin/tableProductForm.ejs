@@ -1,0 +1,34 @@
+<% include ../admin/admin-nav %>
+<section>
+  <div class="form-container">
+    <h1>Create table Product</h1>
+    <form action="/admin/products/table" method="POST" style="display: flex; flex-direction: column;">
+      <!-- product title -->
+      <label for="product-title">Product Title</label>
+      <input id="product-title" class="product-input" type="text" name="product[title]" />
+      <!-- main category  -->
+      <label for="main-category">Main Category</label>
+      <input id="mainCategory" class="product-input" type="text" name="product[main_category]" />
+      <!-- product price -->
+      <label for="product-price">Price</label>
+      <input id="product-price" class="product-input" type="text" name="product[price]" />
+      <!-- main image upload -->
+      <label for="main-image">Main Image</label>
+      <input id="main-image" class="product-input" type="text" name="product[main_image]" />
+      <!-- sub image upload -->
+      <label for="sub-images">Sub Images</label>
+      <input id="sub-images" class="product-input" type="text" name="product[sub_images]" />
+      <!-- sub image upload -->
+      <label for="link address">link address</label>
+      <input id="link-address" class="product-input" type="text" name="product[linkAddress]" />
+      <!-- product description -->
+      <label for="product-description">Product Description</label>
+      <textarea id="product-description" class="product-input" name="product[product_description]" rows="6"
+        cols="40"></textarea>
+      <div class="product-form-button-container">
+        <button type="submit" class="form-button submit">Submit</button>
+        <button type="reset" class="form-button reset">reset</button>
+      </div>
+    </form>
+  </div>
+</section>

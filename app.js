@@ -2,14 +2,13 @@ const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const express = require("express");
 const dataBaseConnection = require("./mongodb_connect");
-const {
-	seatingModel,
-	tableModel,
-} = require("./models/seatingTableProductModel");
+const productsModel = require("./models/productModel");
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const adminRoutes = require("./routes/admin/adminProductRoutes");
+const adminSeating = require("./routes/admin/adminSeatingRoutes");
+const adminTables = require("./routes/admin/adminTableRoutes");
 const featured = require("./routes/featuredRoutes");
 const seatingRoutes = require("./routes/seating/seatingRoutes");
 const tableRoutes = require("./routes/table/tableRoutes");
@@ -28,7 +27,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static("public"));
 
 // route middleware
-app.use("/admin", adminRoutes);
+app.use("/admin", adminRoutes, adminSeating, adminTables);
 app.use("/category", seatingRoutes, tableRoutes);
 app.use("/admin/featured", featured);
 app.use("/", staticRoutes);

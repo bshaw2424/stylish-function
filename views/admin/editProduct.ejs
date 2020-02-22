@@ -3,19 +3,16 @@
 <section>
   <div class="form-container">
     <h1>Edit <%=product.title%></h1>
-    <form action="/admin/products/<%= product._id %>?_method=PUT" method="POST" style="display: flex; flex-direction: column;">
+    <form action="/admin/products/seating/<%= product._id %>?_method=PUT" method="POST" style="display: flex; flex-direction: column;">
       <!-- product title -->
       <label for="product-title">Product Title</label>
       <input id="product-title" class="product-input browser-default" type="text" name="product[title]" value="<%= product.title %>" />
       <!-- main category  -->
       <label for="main-category">Main Category</label>
       <input id="main-category" class="product-input browser-default" type="text" name="product[main_category]" value="<%= product.main_category %>" />
-      <!-- sub category  -->
-      <label for="sub-category">Sofa Sub Category</label>
-      <input id="sofa-sub-category" class="product-input" type="text" name="product[sub_category]" value="<%= product.sub_category %>" />
       <!-- product price -->
       <label for="product-price">Price</label>
-      <input id="product-price" class="product-input" type="text" name="product[product_price]" value="<%= product.product_price %>" />
+      <input id="product-price" class="product-input" type="text" name="product[price]" value="<%= product.price %>" />
       <!-- main image upload -->
       <label for="main-image">Main Image</label>
       <input id="main-image" class="product-input" type="text" name="product[main_image]" value="<%= product.main_image %>" />

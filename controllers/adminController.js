@@ -1,4 +1,8 @@
-const productsModel = require("../models/seatingTableProductModel");
+const {
+	productsModel,
+	seatingModel,
+	tableModel,
+} = require("../Schema/productSchema");
 
 class AdminRoutes {
 	adminLogIn(req, res) {
@@ -7,10 +11,12 @@ class AdminRoutes {
 
 	async adminMainIndexPage(req, res) {
 		try {
-			const allProducts = await productsModel.find().exec();
-			res.render("admin/admin-index", { allProducts });
+			const allProductsIndex = await seatingModel.find().exec();
+			const tableproducts = await tableModel.find().exec();
+			res.render("admin/adminIndex", { allProductsIndex, tableproducts });
 		} catch (error) {
 			if (error) {
+				console.log(error);
 				res.render("pages/error404Page");
 			}
 		}
@@ -18,8 +24,29 @@ class AdminRoutes {
 
 	async adminProductIndexPage(req, res) {
 		try {
-			const indexProducts = await productsModel.find().exec();
-			res.render("admin/products-index", { indexProducts });
+			const indexProducts = await seatingModel.find().exec();
+			const tableProducts = await tableModel.find().exec();
+			res.render("admin/products-index", { indexProducts, tableProducts });
+		} catch (error) {
+			if (error) {
+				console.log(error);
+				res.render("pages/error404Page");
+			}
+		}
+	}
+
+	adminProductForm(req, res) {
+		res.render("admin/productForm");
+	}
+
+	adminTableProductForm(req, res) {
+		res.render("admin/tableProductForm");
+	}
+
+	async adminProductPostForm(req, res) {
+		try {
+			await seatingModel.create(req.body.product);
+			res.redirect("/admin/index");
 		} catch (error) {
 			if (error) {
 				res.render("pages/error404Page");
@@ -27,13 +54,9 @@ class AdminRoutes {
 		}
 	}
 
-	adminProductForm(req, res) {
-		res.render("admin/products-form");
-	}
-
-	async adminProductPostForm(req, res) {
+	async adminTableProductPostForm(req, res) {
 		try {
-			await productsModel.create(req.body.product);
+			await tableModel.create(req.body.tableproduct);
 			res.redirect("/admin/index");
 		} catch (error) {
 			if (error) {
@@ -44,7 +67,7 @@ class AdminRoutes {
 
 	async adminProductShowPage(req, res) {
 		try {
-			const product = await productsModel.findById(req.params.id).exec();
+			const product = await seatingModel.findById(req.params.id).exec();
 			res.render("admin/productShowPage", { product });
 		} catch (error) {
 			if (error) {
@@ -55,7 +78,8 @@ class AdminRoutes {
 
 	async adminProductEditForm(req, res) {
 		try {
-			const product = await productsModel.findById(req.params.id).exec();
+			const product = await seatingModel.findById(req.params.id).exec();
+
 			res.render("admin/product_edit", { product });
 		} catch (error) {
 			if (error) {
@@ -66,9 +90,9 @@ class AdminRoutes {
 
 	async adminUpdateProduct(req, res) {
 		try {
-			const put_request = await productsModel.findByIdAndUpdate(
+			const seatingProduct = await seatingModel.findByIdAndUpdate(
 				req.params.id,
-				req.body.product,
+				req.body.seatingProduct,
 			);
 			res.redirect(`/admin/products/${req.params.id}`);
 		} catch (error) {
@@ -80,7 +104,7 @@ class AdminRoutes {
 
 	async adminDeleteProduct(req, res) {
 		try {
-			await productsModel.findByIdAndRemove(req.params.id);
+			await seatingModel.findByIdAndRemove(req.params.id);
 			res.redirect("/admin/products");
 		} catch (error) {
 			if (error) {

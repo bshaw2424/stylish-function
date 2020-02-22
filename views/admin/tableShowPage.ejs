@@ -4,14 +4,14 @@
    <img src="<%= product.main_image %>" />
    <p> <%= product._id %> </p>
    <%= product.title %>
-   <p>$<%= product.product_price %></p>
+   <p>$<%= product.price %></p>
    <p><%= product.product_description %></p>
    <img src="<%= product.sub_images %>" />
    <div>
-      <form action="/admin/products/<%= product._id %>?_method=DELETE" method="POST">
+      <form action="/admin/products/table/<%= product._id %>?_method=DELETE" method="POST">
          <button type="submit">Delete</button>
       </form>
-      <form action="/admin/products/<%= product._id %>/edit">
+      <form action="/admin/products/table/<%= product._id %>/edit">
          <button type="submit">Edit</button>
       </form>
       <a href="/admin/products">back</a>

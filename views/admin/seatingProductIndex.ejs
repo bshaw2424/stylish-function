@@ -3,25 +3,25 @@
 <h1>products</h1>
 <div><input class="browser-default" type="text" /></div>
 <div style="display: flex; justify-content: space-between">
-<section style="min-width: 700px">
+  <section style="min-width: 700px">
     <h4>sofa products</h4>
     <div class="row">
-  <% indexProducts.forEach(product => { %>
-    <div class="col s12 m6 l3">
+      <% seatingProducts.forEach(product => { %>
+      <div class="col s12 m6 l3">
         <div class="card">
-           <a href="/admin/products/<%=product._id%>"> 
+          <a href="/admin/products/seating/<%=product._id%>">
             <div class="card-image">
               <img src="<%=product.main_image%>" alt="" class="circle">
             </div>
-           </a>
-            <span class="title"><%=product.title%></span>
-            <a href="/admin/products/<%=product._id%>" class="secondary-content"><i class="material-icons">info</i></a>
+          </a>
+          <span class="title"><%=product.title%></span>
+          <a href="/admin/products/seating/<%=product._id%>" class="secondary-content"><i class="material-icons">info</i></a>
         </div>
+      </div>
+      <% }) %>
     </div>
- <% }) %>
-</div>
-</section>
+  </section>
 </div>
 
- 
+
 <% include ../partials/footer %>
