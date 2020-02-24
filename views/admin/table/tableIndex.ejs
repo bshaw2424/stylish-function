@@ -1,5 +1,5 @@
-<% include ../partials/header %>
-<% include ../admin/admin-nav %>
+<% include ../../partials/header %>
+<% include ../../admin/admin-nav %>
 <h1>products</h1>
 <div><input class="browser-default" type="text" /></div>
 <div style="display: flex; justify-content: space-between">
@@ -9,13 +9,14 @@
       <% tableProducts.forEach(product => { %>
       <div class="col s12 m6 l3">
         <div class="card">
-          <a href="/admin/products/table/<%=product._id%>">
+          <a href="/admin/products/tables/<%=product._id%>">
             <div class="card-image">
               <img src="<%=product.main_image%>" alt="" class="circle">
             </div>
           </a>
           <span class="title"><%=product.title%></span>
-          <a href="/admin/products/table/<%=product._id%>" class="secondary-content"><i class="material-icons">info</i></a>
+          <a href="/admin/products/tables/<%=product._id%>" class="secondary-content"><i
+              class="material-icons">info</i></a>
         </div>
       </div>
       <% }) %>
@@ -25,4 +26,4 @@
 
 
 
-<% include ../partials/footer %>
+<% include ../../partials/footer %>

@@ -1,5 +1,6 @@
-<% include ../partials/header %>
-<% include ../admin/admin-nav %>
+<% include ../../partials/header %>
+<% include ../../admin/admin-nav %>
+
 <h1>products</h1>
 <div><input class="browser-default" type="text" /></div>
 <div style="display: flex; justify-content: space-between">
@@ -15,7 +16,8 @@
             </div>
           </a>
           <span class="title"><%=product.title%></span>
-          <a href="/admin/products/seating/<%=product._id%>" class="secondary-content"><i class="material-icons">info</i></a>
+          <a href="/admin/products/seating/<%=product._id%>" class="secondary-content"><i
+              class="material-icons">info</i></a>
         </div>
       </div>
       <% }) %>
@@ -24,4 +26,4 @@
 </div>
 
 
-<% include ../partials/footer %>
+<% include ../../partials/footer %>

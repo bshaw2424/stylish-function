@@ -1,26 +1,25 @@
 const { seatingModel } = require("../Schema/productSchema");
 
-class AdminSeatingRoutes {
+class AdminSeating {
 	async index(req, res) {
 		try {
 			const seatingProducts = await seatingModel.find().exec();
-			res.render("admin/seatingProductIndex", { seatingProducts });
+			res.render("admin/seating/seatingIndex", { seatingProducts });
 		} catch (error) {
 			if (error) {
-				console.log(error);
 				res.render("pages/error404Page");
 			}
 		}
 	}
 
-	newSeatingProduct(req, res) {
-		res.render("admin/seatingProductForm");
+	create(req, res) {
+		res.render("admin/seating/seatingProductForm");
 	}
 
-	async postSeatingProduct(req, res) {
+	async post(req, res) {
 		try {
 			await seatingModel.create(req.body.product);
-			res.redirect("/admin/index");
+			res.redirect("/admin/products/seating");
 		} catch (error) {
 			if (error) {
 				res.render("pages/error404Page");
@@ -31,7 +30,7 @@ class AdminSeatingRoutes {
 	async showPage(req, res) {
 		try {
 			const product = await seatingModel.findById(req.params.id).exec();
-			res.render("admin/seatingShowPage", { product });
+			res.render("admin/seating/seatingShowPage", { product });
 		} catch (error) {
 			if (error) {
 				res.redirect("/admin/product-index");
@@ -42,7 +41,7 @@ class AdminSeatingRoutes {
 	async edit(req, res) {
 		try {
 			const product = await seatingModel.findById(req.params.id).exec();
-			res.render("admin/editProduct", { product });
+			res.render("admin/seating/editSeatingProduct", { product });
 		} catch (error) {
 			if (error) {
 				res.render("pages/error404Page");
@@ -52,10 +51,7 @@ class AdminSeatingRoutes {
 
 	async update(req, res) {
 		try {
-			const seatingProduct = await seatingModel.findByIdAndUpdate(
-				req.params.id,
-				req.body.product
-			);
+			await seatingModel.findByIdAndUpdate(req.params.id, req.body.product);
 			res.redirect(`/admin/products/seating/${req.params.id}`);
 		} catch (error) {
 			if (error) {
@@ -66,7 +62,7 @@ class AdminSeatingRoutes {
 
 	async delete(req, res) {
 		try {
-			await seatingModel.findByIdAndRemove(req.params.id);
+			await seatingModel.findByIdAndDelete(req.params.id);
 			res.redirect("/admin/products/seating");
 		} catch (error) {
 			if (error) {
@@ -76,4 +72,4 @@ class AdminSeatingRoutes {
 	}
 }
 
-module.exports = AdminSeatingRoutes;
+module.exports = AdminSeating;

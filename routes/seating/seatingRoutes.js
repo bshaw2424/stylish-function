@@ -1,10 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
-const seatingRouteMethods = require("../../controllers/seatingController");
-const Seating = new seatingRouteMethods();
+const seatingController = require("../../controllers/seatingController");
 
-router.get("/seating", Seating.seatingProducts);
-router.get("/seating/:id", Seating.seatingShowPage);
+const seating = new seatingController();
+
+router.get("/seating", seating.index);
+router.get("/seating/sortBy/desc", seating.descending);
+router.get("/seating/sortBy/asc", seating.ascending);
+router.get("/seating/:id", seating.showPage);
 
 module.exports = router;

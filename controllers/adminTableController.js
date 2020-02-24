@@ -1,10 +1,10 @@
 const { tableModel } = require("../Schema/productSchema");
 
-class AdminTableRoutes {
+class AdminTable {
 	async index(req, res) {
 		try {
 			const tableProducts = await tableModel.find().exec();
-			res.render("admin/tableProductIndex", { tableProducts });
+			res.render("admin/table/tableIndex", { tableProducts });
 		} catch (error) {
 			if (error) {
 				console.log(error);
@@ -13,15 +13,16 @@ class AdminTableRoutes {
 		}
 	}
 
-	newTableProduct(req, res) {
-		res.render("admin/tableProductForm");
+	create(req, res) {
+		res.render("admin/table/tableProductForm");
 	}
 
-	async postTableProduct(req, res) {
+	async post(req, res) {
 		try {
 			await tableModel.create(req.body.product);
-			res.redirect("/admin/index");
+			res.redirect("/admin/products/tables");
 		} catch (error) {
+			console.log(error);
 			if (error) {
 				res.render("pages/error404Page");
 			}
@@ -31,10 +32,10 @@ class AdminTableRoutes {
 	async showPage(req, res) {
 		try {
 			const product = await tableModel.findById(req.params.id).exec();
-			res.render("admin/tableShowPage", { product });
+			res.render("admin/table/tableShowPage", { product });
 		} catch (error) {
 			if (error) {
-				res.redirect("/admin/product-index");
+				res.redirect("/admin/products/tables");
 			}
 		}
 	}
@@ -42,7 +43,7 @@ class AdminTableRoutes {
 	async edit(req, res) {
 		try {
 			const product = await tableModel.findById(req.params.id).exec();
-			res.render("admin/tableEditProduct", { product });
+			res.render("admin/table/tableEditProduct", { product });
 		} catch (error) {
 			if (error) {
 				res.render("pages/error404Page");
@@ -52,11 +53,8 @@ class AdminTableRoutes {
 
 	async update(req, res) {
 		try {
-			const tableProduct = await tableModel.findByIdAndUpdate(
-				req.params.id,
-				req.body.product,
-			);
-			res.redirect(`/admin/products/table/${req.params.id}`);
+			await tableModel.findByIdAndUpdateOne(req.params.id, req.body.product);
+			res.redirect(`/admin/products/tables/${req.params.id}`);
 		} catch (error) {
 			if (error) {
 				res.render("pages/error404Page");
@@ -66,8 +64,8 @@ class AdminTableRoutes {
 
 	async delete(req, res) {
 		try {
-			await tableModel.findByIdAndRemove(req.params.id);
-			res.redirect("/admin/products/table");
+			await tableModel.findByIdAndDeleteOne(req.params.id);
+			res.redirect("/admin/products/tables");
 		} catch (error) {
 			if (error) {
 				res.render("pages/error404Page");
@@ -76,4 +74,4 @@ class AdminTableRoutes {
 	}
 }
 
-module.exports = AdminTableRoutes;
+module.exports = AdminTable;

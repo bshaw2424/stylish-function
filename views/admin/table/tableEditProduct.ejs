@@ -1,9 +1,9 @@
-<% include ../partials/header %>
+<% include ../../partials/header %>
 
 <section>
   <div class="form-container">
     <h1>Edit <%=product.title%></h1>
-    <form action="/admin/products/table/<%= product._id %>?_method=PUT" method="POST"
+    <form action="/admin/products/tables/<%= product._id %>?_method=PUT" method="POST"
       style="display: flex; flex-direction: column;">
       <!-- product title -->
       <label for="product-title">Product Title</label>
@@ -38,4 +38,4 @@
 
 
 
-<% include ../partials/footer %>
+<% include ../../partials/footer %>

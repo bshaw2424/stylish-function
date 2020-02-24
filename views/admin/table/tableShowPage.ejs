@@ -1,0 +1,19 @@
+<% include ../../partials/header %>
+<h1>products</h1>
+
+<img src="<%= product.main_image %>" />
+<p> <%= product._id %> </p>
+<%= product.title %>
+<p>$<%= product.price %></p>
+<p><%= product.product_description %></p>
+<img src="<%= product.sub_images %>" />
+<div>
+   <form action="/admin/products/tables/<%= product._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+   </form>
+   <form action="/admin/products/tables/<%= product._id %>/edit">
+      <button type="submit">Edit</button>
+   </form>
+   <a href="/admin/products">back</a>
+</div>
+<% include ../../partials/footer %>
