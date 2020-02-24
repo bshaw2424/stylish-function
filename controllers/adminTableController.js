@@ -53,7 +53,7 @@ class AdminTable {
 
 	async update(req, res) {
 		try {
-			await tableModel.findByIdAndUpdateOne(req.params.id, req.body.product);
+			await tableModel.findByIdAndUpdate(req.params.id, req.body.product);
 			res.redirect(`/admin/products/tables/${req.params.id}`);
 		} catch (error) {
 			if (error) {
@@ -64,7 +64,7 @@ class AdminTable {
 
 	async delete(req, res) {
 		try {
-			await tableModel.findByIdAndDeleteOne(req.params.id);
+			await tableModel.findByIdAndDelete(req.params.id);
 			res.redirect("/admin/products/tables");
 		} catch (error) {
 			if (error) {
