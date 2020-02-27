@@ -1,10 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-const staticRouteMethods = require("../../controllers/staticController");
-const Static = new staticRouteMethods();
+const Static = require("../../controllers/staticController");
 
-router.get("/", Static.indexHomePage);
+router.get("/", Static.index);
 router.get("/about-us", Static.aboutUs);
 router.get("/affiliate-disclaimer", Static.affiliateDisclaimer);
 router.get("/contact-us", Static.contactUs);

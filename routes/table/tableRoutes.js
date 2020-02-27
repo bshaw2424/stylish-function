@@ -1,12 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const tableController = require("../../controllers/tableController");
-const tableProduct = new tableController();
+const Tables = require("../../controllers/tableController");
 
-router.get("/tables", tableProduct.index);
-router.get("/tables/sortBy/desc", tableProduct.descending);
-router.get("/tables/sortBy/asc", tableProduct.ascending);
-router.get("/tables/:id", tableProduct.showPage);
+router.get("/tables", Tables.index);
+router.get("/tables/sortBy/desc", Tables.descending);
+router.get("/tables/sortBy/asc", Tables.ascending);
+router.get("/tables/:id", Tables.showPage);
 
 module.exports = router;

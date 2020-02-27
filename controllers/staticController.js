@@ -1,22 +1,23 @@
-class StaticRoutes {
-	indexHomePage(req, res) {
-		res.render("pages/index");
-	}
-	aboutUs(req, res) {
-		res.render("pages/about-us");
-	}
-	affiliateDisclaimer(req, res) {
-		res.render("pages/affiliateDisclaimer");
-	}
-	contactUs(req, res) {
-		res.render("pages/contactUs");
-	}
-	privacyDisclosure(req, res) {
-		res.render("pages/privacy-disclosure");
-	}
-	termsOfService(req, res) {
-		res.render("pages/TOS");
-	}
-}
+exports.index = (req, res) => {
+	res.render("pages/index");
+};
 
-module.exports = StaticRoutes;
+exports.aboutUs = (req, res) => {
+	res.render("pages/about-us");
+};
+
+exports.affiliateDisclaimer = (req, res) => {
+	res.render("pages/affiliateDisclaimer");
+};
+
+exports.contactUs = (req, res) => {
+	res.render("pages/contactUs");
+};
+
+exports.privacyDisclosure = (req, res) => {
+	res.render("pages/privacy-disclosure");
+};
+
+exports.termsOfService = (req, res) => {
+	res.render("pages/TOS");
+};
