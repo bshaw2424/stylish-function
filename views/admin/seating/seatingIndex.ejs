@@ -1,29 +1,25 @@
 <% include ../../partials/header %>
-<% include ../../admin/admin-nav %>
 
-<h1>products</h1>
-<div><input class="browser-default" type="text" /></div>
-<div style="display: flex; justify-content: space-between">
-  <section style="min-width: 700px">
-    <h4>sofa products</h4>
-    <div class="row">
-      <% seatingProducts.forEach(product => { %>
-      <div class="col s12 m6 l3">
-        <div class="card">
-          <a href="/admin/products/seating/<%=product._id%>">
-            <div class="card-image">
-              <img src="<%=product.main_image%>" alt="" class="circle">
-            </div>
-          </a>
-          <span class="title"><%=product.title%></span>
-          <a href="/admin/products/seating/<%=product._id%>" class="secondary-content"><i
-              class="material-icons">info</i></a>
-        </div>
-      </div>
-      <% }) %>
+
+<section class="index-container">
+  <% include ../../admin/admin-nav %>
+  <div class="container">
+    <div
+      style="padding-bottom: 1rem 0; margin-bottom: 1rem; display: flex; justify-content: space-around; align-items: center;">
+      <h1 style="margin: 1rem 0">Seating Products</h1>
     </div>
-  </section>
+    <section>
+      <div
+        style="background: #d3d3d3; padding: 1rem; display: flex; margin: 0 auto; align-items: center; justify-content: space-around; align-items: center"">
+      <div>
+        <span>Filter</span>
+        <div>
+          <a href=" #">modern</a>
+      </div>
+  </div>
+  <a href="/admin/products/seating/new">Create New Product</a>
+  <input type="search" placeholder="search" style="width: 40%" />
+  </div>
+</section>
 </div>
-
-
-<% include ../../partials/footer %>
+</section>
