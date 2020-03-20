@@ -1,0 +1,25 @@
+<!-- product title -->
+<label for="product-title">Product Title</label>
+<input id="product-title" class="product-input browser-default" type="text" name="product[title]"
+  value="<%= product.title %>" />
+<!-- main category  -->
+<label for="main-category">Main Category</label>
+<input id="main-category" class="product-input browser-default" type="text" name="product[main_category]"
+  value="<%= product.main_category %>" />
+<!-- product price -->
+<label for="product-price">Price</label>
+<input id="product-price" class="product-input" type="text" name="product[price]" value="<%= product.price %>" />
+<!-- main image upload -->
+<label for="main-image">Main Image</label>
+<input id="main-image" class="product-input" type="text" name="product[main_image]" value="<%= product.main_image %>" />
+<!-- sub image upload -->
+<label for="sub-images">Sub Images</label>
+<input id="sub-images" class="product-input" type="text" name="product[sub_images]" value="<%= product.sub_images %>" />
+<!-- product description -->
+<label for="product-description">Product Description</label>
+<textarea id="product-description" class="product-input" name="product[product_description]" rows="6"
+  cols="40"><%= product.product_description %></textarea>
+<div class="product-form-button-container">
+  <button type="submit" class="form-button submit">Submit</button>
+  <button type="reset" class="form-button reset">reset</button>
+</div>

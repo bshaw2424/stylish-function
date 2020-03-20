@@ -2,7 +2,7 @@ const { seatingModel } = require("../models/products");
 
 exports.index = async (req, res) => {
 	try {
-		const seatingProducts = await seatingModel.find().exec();
+		const seatingProducts = await seatingModel.find();
 		res.render("admin/seating/seatingIndex", { seatingProducts });
 	} catch (error) {
 		if (error) {
@@ -28,7 +28,7 @@ exports.post = async (req, res) => {
 
 exports.showPage = async (req, res) => {
 	try {
-		const product = await seatingModel.findById(req.params.id).exec();
+		const product = await seatingModel.findById(req.params.id);
 		res.render("admin/seating/seatingShowPage", { product });
 	} catch (error) {
 		if (error) {
@@ -39,7 +39,7 @@ exports.showPage = async (req, res) => {
 
 exports.edit = async (req, res) => {
 	try {
-		const product = await seatingModel.findById(req.params.id).exec();
+		const product = await seatingModel.findById(req.params.id);
 		res.render("admin/seating/editSeatingProduct", { product });
 	} catch (error) {
 		if (error) {

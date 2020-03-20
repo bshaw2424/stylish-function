@@ -31,7 +31,7 @@ const productSchema = new Schema({
 	},
 	create_on: {
 		type: Date,
-		default: Date.now(),
+		default: Date.now,
 	},
 });
 

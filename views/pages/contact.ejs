@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+<div style="display: flex;">
+  <% include ../admin/admin-nav %>
+
+  <div style="width: 88%;">
+    <!-- <h1>message section</h1> -->
+    <input type="checkbox" />
+    <% form.forEach(message => { %>
+
+    <%- message.name %>
+
+    <%- message.subject %>
+    <%= message.email %>
+    <% }) %>
+  </div>
+</div>
+</div>

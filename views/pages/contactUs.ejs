@@ -7,26 +7,32 @@
     <p>Contact us about any issues, commments, or business opportunities you may have.
       We look forward to your message.
     </p>
-    <form class="contact-form" action="/contact-us" method="POST">
+    <form class="contact-form" action="/admin/messages" method="POST">
+
       <!-- name input field -->
-      <label for="form-nameInput">Name</label>
-      <input type="text" name="form[name]" class="contact-form-field form-nameInput browser-default" id="form-nameInput"
-        placeholder="Name" required />
+      <label for="name">Name</label>
+      <input type="text" id="name" name="form[name]" class="info-input browser-default" placeholder="Name" required />
+
       <!-- subject input field -->
-      <label for="form-subjectInput">Subject</label>
-      <input type="text" name="form[subject]" class=" contact-form-field form-subject browser-default"
-        id="form-subjectInput" placeholder="Subject" required />
+      <label for="subject">Subject</label>
+      <input type="text" name="form[subject]" class="info-input browser-default" id="subject" placeholder="Subject"
+        required />
+
       <!-- email input field -->
-      <label for="form-emailInput">Email</label>
-      <input type="email" name="form[email]" class=" contact-form-field form-email browser-default" id="form-emailInput"
-        placeholder="Email" required />
+      <label for="email">Email</label>
+      <input type="email" name="form[email]" id="email" class="info-input browser-default" placeholder="Email"
+        required />
+
       <!-- textarea message field -->
-      <label for="form-messageTextArea">Message</label>
-      <textarea name="form[textArea]" id="form-messageTextArea" class="contact-form-field form-TextArea browser-default"
-        placeholder="Message" required rows="10" cols="40"></textarea>
+      <label for="textarea">Message</label>
+      <textarea name="form[message]" id="textarea" class="info-input browser-default" placeholder="Message" required
+        rows="10" cols="40">
+      </textarea>
+
       <div class="form-buttons">
-        <button type="submit" class="btn form-submitButton">Submit</button>
+        <button type="submit" class="btn btn-submit">Submit</button>
       </div>
+
     </form>
   </div>
 </section>

@@ -1,20 +1,18 @@
 <nav class="dash-board-nav">
   <section class="dash-board-container">
-    <nav class="dash-board-nav">
-      <ul>
-        <li class="dash-board-nav-items">
-          <a href="/admin/index">Home</a>
-        </li>
-        <li class="dash-board-nav-items">
-          <a href="/admin/products/new">Create Product</a>
-        </li>
-        <li class="dash-board-nav-items">
-          <a href="/admin/products">View Products</a>
-        </li>
-        <li class="dash-board-nav-items">
-          <a href="/admin/featured/product">Featured Products</a>
-        </li>               
-      </ul>
-    </nav>
+    <h4>Admin</h4>
+    <div>
+      <a href="/admin/index">Home</a>
+      <div class="product-menu">
+        <a>Products<i class="material-icons">keyboard_arrow_down</i><i class="material-icons"
+            style="display: none">keyboard_arrow_up</i></a>
+      </div>
+      <div class="product-menu-items">
+        <a href="/admin/products/seating">Seating</a>
+        <a href="/admin/products/tables">Tables</a>
+      </div>
+      <a href="/admin/messages">Messages</a>
+      <a href="/admin/logout">Logout</a>
+    </div>
   </section>
 </nav>

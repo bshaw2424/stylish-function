@@ -4,6 +4,10 @@ exports.logIn = (req, res) => {
 	res.render("admin/login");
 };
 
+exports.logOut = (req, res) => {
+	res.render("admin/logout");
+};
+
 exports.index = async (req, res) => {
 	try {
 		const seatingProducts = await seatingModel.find().exec();
