@@ -1,17 +1,30 @@
 <% include ../partials/header %>
-<div style="display: flex;">
+
+<main style="display: flex;">
   <% include ../admin/admin-nav %>
-
-  <div style="width: 88%;">
-    <!-- <h1>message section</h1> -->
-    <input type="checkbox" />
-    <% form.forEach(message => { %>
-
-    <%- message.name %>
-
-    <%- message.subject %>
-    <%= message.email %>
-    <% }) %>
-  </div>
-</div>
-</div>
+  <section class="container" style="width: 70%;">
+    <div style="display: flex; justify-content: center; align-items: center; background: tan; margin: 1rem 0">
+      <h1 style="margin: 1rem;">Messages</h1>
+      <div style="display: flex; justify-content: center; flex-direction: column">
+        <span>sort</span>
+        <aside>
+          <a href="#">Old</a>
+          <a href="#">New</a>
+        </aside>
+      </div>
+    </div>
+    <div class="collection container" style=" width: 100%; border: none;">
+      <% form.forEach(formItem =>{ %>
+      <input type="checkbox" />
+      <a href="#" class="collection-item" style="display:flex; justify-content: space-between;">
+        <div style="width: 100%;display: flex; justify-content: space-evenly;">
+          <div style="width: 100%;"><%= formItem.name %></div>
+          <div style="width: 100%"><%= formItem.subject %></div>
+          <div style="width: 100%"><%= formItem.created_on.toLocaleDateString() %></div>
+        </div>
+        <i class="material-icons">delete</i>
+      </a>
+      <% }) %>
+    </div>
+  </section>
+</main>
