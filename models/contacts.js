@@ -20,7 +20,7 @@ const contactSchema = new Schema({
 	},
 	created_on: {
 		type: Date,
-		default: Date.now(),
+		default: new Date(),
 	},
 });
 
