@@ -1,11 +1,11 @@
 <% include ../partials/header %>
 
-<main style="display: flex;">
+<main id="message-center">
   <% include ../admin/admin-nav %>
-  <section class="container" style="width: 70%;">
-    <div style="display: flex; justify-content: center; align-items: center; background: tan; margin: 1rem 0">
-      <h1 style="margin: 1rem;">Messages</h1>
-      <div style="display: flex; justify-content: center; flex-direction: column">
+  <section class="container message-center-header">
+    <div class="message-center-container">
+      <h1>Messages</h1>
+      <div class="message-filter">
         <span>sort</span>
         <aside>
           <a href="#">Old</a>
@@ -13,16 +13,16 @@
         </aside>
       </div>
     </div>
-    <div class="collection container" style=" width: 100%; border: none;">
+    <div class="collection container">
       <% form.forEach(formItem =>{ %>
-      <input type="checkbox" />
-      <a href="#" class="collection-item" style="display:flex; justify-content: space-between;">
-        <div style="width: 100%;display: flex; justify-content: space-evenly;">
-          <div style="width: 100%;"><%= formItem.name %></div>
-          <div style="width: 100%"><%= formItem.subject %></div>
-          <div style="width: 100%"><%= formItem.created_on.toLocaleDateString() %></div>
+      <a href="#" class="collection-item">
+        <div class="collection-item-info">
+          <div class="collection-group collection-name"><%= formItem.name %></div>
+          <div class="collection-group collection-subject"><%= formItem.subject %></div>
+          <div class="collection-group collection-date">
+            <%= formItem.created_on.toLocaleDateString() %></div>
+          <i class="material-icons">delete</i>
         </div>
-        <i class="material-icons">delete</i>
       </a>
       <% }) %>
     </div>
