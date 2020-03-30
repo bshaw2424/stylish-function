@@ -1,12 +1,13 @@
 <% include ../../partials/header %>
-<section>
-  <div class="form-container">
-    <h1>New Seating Product</h1>
+<section class="contact-us">
+  <% include ../../admin/admin-nav %>
+  <div class="contact-us-form container">
+    <h1>Add Seat Product</h1>
     <form action="/admin/products/seating" method="POST">
       <%- include("../../admin/_createForm") %>
-      <div class="product-form-button-container">
+      <div class="contact-form-buttons">
         <button type="submit" class="form-button submit btn">Submit</button>
-        <a href="/admin/products/seating" class="btn form-button">Back</a>
+        <a href="/admin/products/tables" class="btn form-button">Back</a>
       </div>
     </form>
   </div>

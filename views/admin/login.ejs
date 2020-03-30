@@ -1,14 +1,13 @@
 <% include ../partials/header %>
-<section class="admin-login-container">
-  <div class="admin-login-form">
+<section class="admin-login">
+  <div class="admin-login-form container">
     <h1 class="admin-login-form-title">Admin Login</h1>
-    <form>
+    <form class="z-depth-1">
       <label for="username">Enter Username</label>
-      <input type="text" id="username" />
+      <input type="text" id="username" name="username" />
       <label for="password">Enter Password</label>
-      <input type="text" id="password" />
-      <button>Login</button>
+      <input type="password" id="password" name="name" />
+      <button class="btn">Login</button>
     </form>
   </div>
 </section>
-<% include ../partials/footer %>

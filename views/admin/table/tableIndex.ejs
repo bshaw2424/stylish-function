@@ -1,28 +1,40 @@
 <% include ../../partials/header %>
-<% include ../../admin/admin-nav %>
-<a href="/admin/products/tables/new">Create a Product</a>
-<div style="display: flex; justify-content: space-between">
-  <section style="min-width: 700px">
-    <h4>Table products</h4>
-    <div class="row">
-      <% tableProducts.forEach(product => { %>
-      <div class="col s12 m6 l3">
-        <div class="card">
-          <a href="/admin/products/tables/<%=product._id%>">
-            <div class="card-image">
-              <img src="<%=product.main_image%>" alt="" class="circle">
-            </div>
-          </a>
-          <span class="title"><%=product.title%></span>
-          <a href="/admin/products/tables/<%=product._id%>" class="secondary-content"><i
-              class="material-icons">info</i></a>
-        </div>
+
+<main class="index-container">
+  <% include ../../admin/admin-nav %>
+  <section class="product-container container">
+    <h1>Table Products</h1>
+    <div class="product-index">
+      <div class="product-filter-section">
+        <span>Filter
+          <!-- <i class="material-icons">arrow_drop_down</i> -->
+          <i class="material-icons">arrow_drop_up</i>
+        </span>
+        <ul class="product-filter-options" style="display: none;">
+          <li><a href="#">extendable</a></li>
+          <li><a href="#">compact</a></li>
+        </ul>
       </div>
-      <% }) %>
+      <a href="/admin/products/tables/new">Create New Product</a>
+      <input type="text" placeholder="search" />
+    </div>
+    <div class="product-display-container">
+      <div class="row">
+        <% tableProducts.forEach(tables =>{ %>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="<%= tables.main_image %>" />
+            </div>
+            <div class="card-content">
+              <a href="/admin/products/tables/<%= tables._id %>"><%= tables.title %></a>
+              <span>$<%= tables.price %></span>
+            </div>
+            <a class="btn" href="/admin/products/tables/<%= tables._id %>">More Info</a>
+          </div>
+        </div>
+        <% }) %>
+      </div>
     </div>
   </section>
-</div>
-
-
-
-<% include ../../partials/footer %>
+</main>

@@ -1,14 +1,14 @@
-<section>
-  <div class="form-container">
-    <h1>Create Table Product</h1>
-    <form action="/admin/products/tables" method="POST" style="display: flex; flex-direction: column;">
-
+<% include ../../partials/header %>
+<section class="contact-us">
+  <% include ../../admin/admin-nav %>
+  <div class="contact-us-form container">
+    <h1>Add Table Product</h1>
+    <form action="/admin/products/tables" method="POST">
       <%- include("../../admin/_createForm") %>
-      <div class="product-form-button-container">
-        <button type="submit" class="form-button submit">Submit</button>
+      <div class="contact-form-buttons">
+        <button type="submit" class="form-button submit btn">Submit</button>
         <a href="/admin/products/tables" class="btn form-button">Back</a>
       </div>
-
     </form>
   </div>
 </section>

@@ -1,0 +1,34 @@
+.contact-us {
+	display: flex;
+	height: 100vh;
+}
+
+.contact-us-form {
+	height: 100%;
+	h1 {
+		text-align: center;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 60%;
+		margin: 0 auto;
+		input[type="text"] {
+			margin-bottom: 1rem;
+			padding: 0.2rem 0.75rem;
+		}
+		label {
+			font-size: 1rem;
+		}
+		textarea {
+			height: 6rem;
+			width: 30rem;
+			padding: 1rem;
+			resize: none;
+		}
+		.contact-form-buttons {
+			margin: 1rem 0;
+		}
+	}
+}

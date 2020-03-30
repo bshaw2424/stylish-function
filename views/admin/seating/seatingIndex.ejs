@@ -2,37 +2,36 @@
 
 <main class="index-container">
   <% include ../../admin/admin-nav %>
-  <section class="container">
-    <section class="seating-index">
-      <h1 class="index-title">Seating Products</h1>
-      <div class="filter-section">
+  <section class="product-container container">
+    <h1>Seating Products</h1>
+    <div class="product-index">
+      <div class="product-filter-section">
         <span>Filter</span>
-        <div class="filter-options">
-          <a href="#">modern</a>
-        </div>
-        <a href="/admin/products/seating/new">Create New Product</a>
-        <input type="text" placeholder="search" style="width: 40%" />
+        <ul class="product-filter-options">
+          <li><a href="#">modular</a></li>
+          <li><a href="#">modular</a></li>
+        </ul>
       </div>
-    </section>
-    <section class="product-display-container">
+      <a href="/admin/products/seating/new">Create New Product</a>
+      <input type="text" placeholder="search" />
+    </div>
+    <div class="product-display-container">
       <div class="row">
         <% seatingProducts.forEach(seating =>{ %>
-        <div class="col s12 m6 l4">
-          <div class="card" style="padding-bottom: 1rem;">
+        <div class="col s12 m6 l4 card-container">
+          <div class="card">
             <div class="card-image">
               <img src="<%= seating.main_image %>" />
             </div>
             <div class="card-content">
-              <span><%= seating.title %></span>
-              <span><%= seating.price %></span>
+              <a href="/admin/products/seating/<%= seating._id %>"><%= seating.title %></a>
+              <span>$<%= seating.price %></span>
             </div>
-            <div>
-              <a href="/admin/products/seating/<%= seating._id%>" class=" btn">info</a>
-            </div>
+            <a class="btn" href="/admin/products/seating/<%= seating._id %>">More Info</a>
           </div>
         </div>
         <% }) %>
       </div>
-    </section>
+    </div>
   </section>
 </main>

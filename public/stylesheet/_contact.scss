@@ -1,0 +1,40 @@
+#message-center {
+	display: flex;
+}
+
+.message-center-header {
+	width: 70%;
+	max-height: 100vh;
+	.message-center-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: lightgray;
+		margin: 1rem 0;
+		h1 {
+			margin: 1rem 2rem 1rem 0;
+		}
+		.message-filter {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+}
+
+.collection {
+	width: 100%;
+	border: none;
+	.collection-item {
+		display: flex;
+		justify-content: space-between;
+		.collection-item-info {
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			.collection-group {
+				width: 100%;
+			}
+		}
+	}
+}
