@@ -1,19 +1,33 @@
 <% include ../../partials/header %>
-<h1>products</h1>
 
-<img src="<%= product.main_image %>" />
-<p> <%= product._id %> </p>
-<%= product.title %>
-<p>$<%= product.price %></p>
-<p><%= product.product_description %></p>
-<img src="<%= product.sub_images %>" />
-<div>
-   <form action="/admin/products/seating/<%= product._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete</button>
-   </form>
-   <form action="/admin/products/seating/<%= product._id %>/edit">
-      <button type="submit">Edit</button>
-   </form>
-   <a href="/admin/products">back</a>
-</div>
-<% include ../../partials/footer %>
+<article class="show-page">
+   <% include ../../admin/admin-nav %>
+   <div class="show-page-container container">
+      <h1><%= product.title %></h1>
+      <section class="show-page-information">
+         <div>
+            <img src="<%= product.main_image %>" />
+         </div>
+         <div>
+            <p>$<%= product.price %></p>
+            <p><%= product.product_description %></p>
+            <aside>
+               <img src="<%= product.sub_images %>" />
+            </aside>
+         </div>
+      </section>
+
+      <section class="show-page-form-container">
+         <div>
+            <form class="show-page-form form-delete-button"
+               action="/admin/products/seating/<%= product._id %>?_method=DELETE" method="POST">
+               <button class="btn" type="submit">Delete</button>
+            </form>
+            <form class="show-page-form form-edit-button" action="/admin/products/seating/<%= product._id %>/edit">
+               <button class="btn" type="submit">Edit</button>
+            </form>
+            <a class="btn red" href="/admin/products/seating">back</a>
+         </div>
+      </section>
+   </div>
+</article>
