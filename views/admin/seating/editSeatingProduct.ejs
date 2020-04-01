@@ -1,14 +1,14 @@
 <% include ../../partials/header %>
 
-<section>
-  <div class="form-container">
+<article>
+  <div class="form-container container">
     <h1>Edit <%=product.title%></h1>
     <form action="/admin/products/seating/<%= product._id %>?_method=PUT" method="POST"
       style="display: flex; flex-direction: column;">
       <%- include("../../admin/editForm") %>
     </form>
   </div>
-</section>
+</article>
 
 
 
