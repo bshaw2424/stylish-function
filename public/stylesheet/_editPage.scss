@@ -1,0 +1,30 @@
+article {
+	display: flex;
+	height: 100vh;
+	outline: 2px solid blue;
+}
+.form-container {
+	max-width: 50%;
+	height: 100%;
+	outline: 3px solid yellow;
+	margin: 0 auto;
+	h1 {
+		margin: 1rem;
+	}
+	form {
+		display: flex;
+		outline: 4px solid tan;
+		flex-direction: column;
+		height: 100%;
+		.product-input {
+			margin-bottom: 1rem;
+		}
+		label {
+			font-size: 1rem;
+			margin-bottom: 0.5rem;
+		}
+		input[type="text"] {
+			padding: 0.75rem;
+		}
+	}
+}
