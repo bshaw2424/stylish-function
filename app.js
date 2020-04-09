@@ -18,11 +18,11 @@ const contactRoutes = require("./routes/admin/contactRoutes");
 const errorRoutes = require("./routes/index/errorRoute");
 
 // middleware
+app.use(express.static("public"));
 app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static("public"));
 app.use("/admin", adminIndex, adminSeating, adminTables, contactRoutes);
 app.use("/category", seatingRoutes, tableRoutes);
 app.use("/", staticRoutes);
