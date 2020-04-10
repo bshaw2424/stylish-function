@@ -45,14 +45,34 @@ exports.edit = async (req, res) => {
 		res.render("admin/table/tableEditProduct", { product });
 	} catch (error) {
 		if (error) {
-			res.render("pages/error404Page");
+			console.log(error);
+			res.redirect("/admin/products/tables");
 		}
 	}
 };
 
 exports.update = async (req, res) => {
+	const {
+		title,
+		main_category,
+		price,
+		main_image,
+		sub_images,
+		linkAddress,
+		product_description,
+	} = req.body;
+
+	const product = {
+		title,
+		main_category,
+		price,
+		main_image,
+		sub_images,
+		linkAddress,
+		product_description,
+	};
 	try {
-		await tablesModel.findByIdAndUpdate(req.params.id, req.body.product);
+		await tablesModel.findByIdAndUpdate(req.params.id, product);
 		res.redirect(`/admin/products/tables/${req.params.id}`);
 	} catch (error) {
 		if (error) {

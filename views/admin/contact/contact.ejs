@@ -1,0 +1,32 @@
+<% include ../../partials/header %>
+
+<main id="message-center">
+  <% include ../../admin/admin-nav %>
+  <section class="container message-center-header">
+    <div class="message-center-container">
+      <h1>Messages</h1>
+      <div class="message-filter">
+        <span>sort</span>
+        <aside>
+          <a href="#">Old</a>
+          <a href="#">New</a>
+        </aside>
+      </div>
+    </div>
+    <div class="collection container">
+      <% messages.forEach(message =>{ %>
+      <a href="/admin/messages/<%= message._id %>" class="collection-item">
+        <div class="collection-item-info">
+          <div class="collection-group collection-name"><%= message.name %></div>
+          <div class="collection-group collection-subject"><%= message.subject %></div>
+          <div class="collection-group collection-date">
+            <%= message.created_on.toLocaleDateString() %></div>
+          <form action="/admin/messages/<%= message._id %>_?method=DELETE">
+            <i class="material-icons">delete</i>
+          </form>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+  </section>
+</main>

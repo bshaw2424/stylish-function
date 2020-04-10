@@ -17,11 +17,12 @@ exports.create = (req, res) => {
 
 exports.post = async (req, res) => {
 	try {
-		await seatingModel.create(req.body.product);
+		await seatingModel.create(req.body.Product);
 		res.redirect("/admin/products/seating");
 	} catch (error) {
 		if (error) {
-			res.render("pages/error404Page");
+			console.log(error);
+			res.redirect("admin/products/seating");
 		}
 	}
 };
@@ -29,9 +30,11 @@ exports.post = async (req, res) => {
 exports.showPage = async (req, res) => {
 	try {
 		const product = await seatingModel.findById(req.params.id);
+		console.log(product);
 		res.render("admin/seating/seatingShowPage", { product });
 	} catch (error) {
 		if (error) {
+			console.log(error);
 			res.redirect("/admin/product-index");
 		}
 	}
@@ -50,10 +53,11 @@ exports.edit = async (req, res) => {
 
 exports.update = async (req, res) => {
 	try {
-		await seatingModel.findByIdAndUpdate(req.params.id, req.body.product);
+		await seatingModel.findByIdAndUpdate(req.params.id, req.body.Product);
 		res.redirect(`/admin/products/seating/${req.params.id}`);
 	} catch (error) {
 		if (error) {
+			console.log(error);
 			res.render("pages/error404Page");
 		}
 	}

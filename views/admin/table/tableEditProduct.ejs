@@ -1,15 +1,16 @@
 <% include ../../partials/header %>
-
-<section>
-  <div class="form-container">
-    <h1>Edit <%=product.title%></h1>
-    <form action="/admin/products/tables/<%= product._id %>?_method=PUT" method="POST"
-      style="display: flex; flex-direction: column;">
+<% include ../../partials/header %>
+<article class="contact-us">
+  <% include ../../admin/admin-nav %>
+  <section class="contact-us-form container">
+    <h1 class="form-title">Edit <%= product.title %></h1>
+    <form action="/admin/products/tables/<%= product._id %>?_method=PUT" method="POST">
       <%- include("../../admin/editForm") %>
+      <div class="contact-form-buttons">
+        <button type="submit" class="form-button submit btn">Submit</button>
+        <a href="/admin/products/tables/<%= product._id %>" class="btn form-button red">Back</a>
+      </div>
     </form>
-  </div>
-</section>
-
-
-
+  </section>
+</article>
 <% include ../../partials/footer %>

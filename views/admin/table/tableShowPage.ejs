@@ -1,19 +1,60 @@
 <% include ../../partials/header %>
-<h1>products</h1>
 
-<img src="<%= product.main_image %>" />
-<p> <%= product._id %> </p>
-<%= product.title %>
-<p>$<%= product.price %></p>
-<p><%= product.product_description %></p>
-<img src="<%= product.sub_images %>" />
-<div>
-   <form action="/admin/products/tables/<%= product._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete</button>
-   </form>
-   <form action="/admin/products/tables/<%= product._id %>/edit">
-      <button type="submit">Edit</button>
-   </form>
-   <a href="/admin/products">back</a>
-</div>
-<% include ../../partials/footer %>
+<article class="show-page">
+   <% include ../../admin/admin-nav %>
+   <div class="show-page-container container">
+      <section class="show-page-information">
+         <div class="main-image-container">
+            <div class="main-image">
+               <img src="<%= product.main_image %>" />
+            </div>
+            <aside>
+               <% product.sub_images.forEach(sub_image =>{ %>
+               <img src="<%= sub_image.image %>" />
+               <% }) %>
+            </aside>
+         </div>
+         <section class="product-details z-depth-1">
+            <div>
+               <h1 class="product-title"><%= product.title %></h1>
+               <p class="product-price">$<%= product.price %></p>
+               <p class="product-description"><%= product.product_description %>text ever since the 1500s, when an
+                  unknown printer took a galley of
+                  type and scrambled it to make a type specimen book.
+                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                  essentially unchanged.
+                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                  and more recently
+                  with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                  Why do we use it?
+                  It is a long established fact that a reader will be distracted by the readable content of a page when
+                  looking at its
+                  layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+                  as opposed to using
+                  'Content here, content here', making it look like readable English. Many desktop publishing packages
+                  and web page
+                  editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
+                  many web sites
+                  still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes
+                  on purpose
+                  (injected humour and the like).
+               </p>
+            </div>
+            <section class="show-page-form-container">
+               <div>
+                  <form class="show-page-form form-delete-button"
+                     action="/admin/products/tables/<%= product._id %>?_method=DELETE" method="POST">
+                     <button class="btn" type="submit">Delete</button>
+                  </form>
+                  <form class="show-page-form form-edit-button" action="/admin/products/tables/<%= product._id %>/edit">
+                     <button class="btn" type="submit">Edit</button>
+                  </form>
+                  <a class="btn red" href="/admin/products/tables">back</a>
+               </div>
+            </section>
+         </section>
+   </div>
+   </section>
+   </div>
+</article>

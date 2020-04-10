@@ -18,10 +18,8 @@ const productSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	sub_images: {
-		type: [String],
-	},
-	product_description: {
+	sub_images: [String],
+	description: {
 		type: String,
 		required: true,
 	},
