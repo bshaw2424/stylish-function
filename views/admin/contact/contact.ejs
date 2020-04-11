@@ -21,8 +21,8 @@
           <div class="collection-group collection-subject"><%= message.subject %></div>
           <div class="collection-group collection-date">
             <%= message.created_on.toLocaleDateString() %></div>
-          <form action="/admin/messages/<%= message._id %>_?method=DELETE">
-            <i class="material-icons">delete</i>
+          <form action="/admin/messages/<%= message._id %>?_method=DELETE" method="POST">
+            <button class="material-icons btn">delete</button>
           </form>
         </div>
       </a>

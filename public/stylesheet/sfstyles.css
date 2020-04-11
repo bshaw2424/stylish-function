@@ -182,7 +182,7 @@ span i.material-icons:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: lightgray;
+  border-bottom: 1px solid black;
   margin: 1rem 0;
 }
 
@@ -208,6 +208,10 @@ span i.material-icons:hover {
   border: none;
 }
 
+.collection a:nth-of-type(even) {
+  background: lightgray;
+}
+
 .collection .collection-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,6 +233,57 @@ span i.material-icons:hover {
 
 .collection .collection-item .collection-item-info .collection-group {
   width: 100%;
+}
+
+.message-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50vh;
+  width: 50vw;
+  padding: 2rem;
+  margin: auto;
+}
+
+.message-details p {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.message-details p .message-label {
+  display: inline-block;
+  max-width: 15%;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.message-details aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1rem;
+}
+
+.message-details aside a {
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 .contact-us {

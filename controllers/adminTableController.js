@@ -1,12 +1,11 @@
-const { tablesModel } = require("../models/products");
+const { TablesModel } = require("../models/products");
 
 exports.index = async (req, res) => {
 	try {
-		const tableProducts = await tablesModel.find();
+		const tableProducts = await TablesModel.find();
 		res.render("admin/table/tableIndex", { tableProducts });
 	} catch (error) {
 		if (error) {
-			console.log(error);
 			res.render("pages/error404Page");
 		}
 	}
@@ -18,10 +17,9 @@ exports.create = (req, res) => {
 
 exports.post = async (req, res) => {
 	try {
-		await tablesModel.create(req.body.product);
+		await TablesModel.create(req.body.Product);
 		res.redirect("/admin/products/tables");
 	} catch (error) {
-		console.log(error);
 		if (error) {
 			res.render("pages/error404Page");
 		}
@@ -30,7 +28,7 @@ exports.post = async (req, res) => {
 
 exports.showPage = async (req, res) => {
 	try {
-		const product = await tablesModel.findById(req.params.id);
+		const product = await TablesModel.findById(req.params.id);
 		res.render("admin/table/tableShowPage", { product });
 	} catch (error) {
 		if (error) {
@@ -41,38 +39,18 @@ exports.showPage = async (req, res) => {
 
 exports.edit = async (req, res) => {
 	try {
-		const product = await tablesModel.findById(req.params.id);
+		const product = await TablesModel.findById(req.params.id);
 		res.render("admin/table/tableEditProduct", { product });
 	} catch (error) {
 		if (error) {
-			console.log(error);
 			res.redirect("/admin/products/tables");
 		}
 	}
 };
 
 exports.update = async (req, res) => {
-	const {
-		title,
-		main_category,
-		price,
-		main_image,
-		sub_images,
-		linkAddress,
-		product_description,
-	} = req.body;
-
-	const product = {
-		title,
-		main_category,
-		price,
-		main_image,
-		sub_images,
-		linkAddress,
-		product_description,
-	};
 	try {
-		await tablesModel.findByIdAndUpdate(req.params.id, product);
+		await TablesModel.findByIdAndUpdate(req.params.id, req.body.Product);
 		res.redirect(`/admin/products/tables/${req.params.id}`);
 	} catch (error) {
 		if (error) {
@@ -83,7 +61,7 @@ exports.update = async (req, res) => {
 
 exports.delete = async (req, res) => {
 	try {
-		await tablesModel.findByIdAndDelete(req.params.id);
+		await TablesModel.findByIdAndDelete(req.params.id);
 		res.redirect("/admin/products/tables");
 	} catch (error) {
 		if (error) {

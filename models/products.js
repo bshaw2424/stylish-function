@@ -33,7 +33,7 @@ const productSchema = new Schema({
 	},
 });
 
-const seatingModel = model("seating", productSchema);
-const tablesModel = model("table", productSchema);
+const SeatingModel = model("seating", productSchema);
+const TablesModel = model("table", productSchema);
 
-module.exports = { seatingModel, tablesModel };
+module.exports = { SeatingModel, TablesModel };

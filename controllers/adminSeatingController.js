@@ -1,8 +1,8 @@
-const { seatingModel } = require("../models/products");
+const { SeatingModel } = require("../models/products");
 
 exports.index = async (req, res) => {
 	try {
-		const seatingProducts = await seatingModel.find();
+		const seatingProducts = await SeatingModel.find();
 		res.render("admin/seating/seatingIndex", { seatingProducts });
 	} catch (error) {
 		if (error) {
@@ -17,11 +17,10 @@ exports.create = (req, res) => {
 
 exports.post = async (req, res) => {
 	try {
-		await seatingModel.create(req.body.Product);
+		await SeatingModel.create(req.body.Product);
 		res.redirect("/admin/products/seating");
 	} catch (error) {
 		if (error) {
-			console.log(error);
 			res.redirect("admin/products/seating");
 		}
 	}
@@ -29,12 +28,10 @@ exports.post = async (req, res) => {
 
 exports.showPage = async (req, res) => {
 	try {
-		const product = await seatingModel.findById(req.params.id);
-		console.log(product);
+		const product = await SeatingModel.findById(req.params.id);
 		res.render("admin/seating/seatingShowPage", { product });
 	} catch (error) {
 		if (error) {
-			console.log(error);
 			res.redirect("/admin/product-index");
 		}
 	}
@@ -42,7 +39,7 @@ exports.showPage = async (req, res) => {
 
 exports.edit = async (req, res) => {
 	try {
-		const product = await seatingModel.findById(req.params.id);
+		const product = await SeatingModel.findById(req.params.id);
 		res.render("admin/seating/editSeatingProduct", { product });
 	} catch (error) {
 		if (error) {
@@ -53,11 +50,10 @@ exports.edit = async (req, res) => {
 
 exports.update = async (req, res) => {
 	try {
-		await seatingModel.findByIdAndUpdate(req.params.id, req.body.Product);
+		await SeatingModel.findByIdAndUpdate(req.params.id, req.body.Product);
 		res.redirect(`/admin/products/seating/${req.params.id}`);
 	} catch (error) {
 		if (error) {
-			console.log(error);
 			res.render("pages/error404Page");
 		}
 	}
@@ -65,7 +61,7 @@ exports.update = async (req, res) => {
 
 exports.delete = async (req, res) => {
 	try {
-		await seatingModel.findByIdAndDelete(req.params.id);
+		await SeatingModel.findByIdAndDelete(req.params.id);
 		res.redirect("/admin/products/seating");
 	} catch (error) {
 		if (error) {

@@ -38,7 +38,7 @@ exports.showPage = async (req, res) => {
 exports.delete = async (req, res) => {
 	try {
 		await ContactModel.findByIdAndDelete(req.params.id);
-		res.redirect("/contact-us");
+		res.redirect("/admin/messages");
 	} catch (error) {
 		if (error) {
 			res.render("pages/error404Page");

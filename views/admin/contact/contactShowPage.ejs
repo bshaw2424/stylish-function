@@ -1,23 +1,27 @@
 <% include ../../partials/header %>
 
-<article class="message-show-page">
+<article class="message-page">
   <% include ../../admin/admin-nav %>
-  <div class="message-show-container container" style="outline: 4px solid black;">
-    <section class="message-details">
-      <span class="message-label message">Message from: </span>
-      <p class="contact-name"><%= message.name %></p>
-      <span class="message-label subject">Subject: </span>
-      <p class="contact-subject"><%= message.subject %></p>
-      <span class="message-label email">Email Address: </span>
-      <p class="contact-email"><%= message.email %></p>
-      <span class="message-label message">Message</span>
-      <p class="contact-message"><%= message.message %></p>
-    </section>
-    <section class="message-button-container">
+
+  <section class="message-details container">
+    <h1>Message Center</h1>
+    <p class="contact-name">
+      <span class="message-label message">from: </span><%= message.name %>
+    </p>
+    <p class="contact-subject">
+      <span class="message-label subject">subject: </span><%= message.subject %>
+    </p>
+    <p class="contact-email">
+      <span class="message-label email">email: </span><%= message.email %>
+    </p>
+    <p class="contact-message">
+      <span class="message-label message">message: </span><%= message.message %>
+    </p>
+    <aside class="message-button-container">
       <a href="/admin/messages" class="message-back-button btn red">Back</a>
-      <form action="/admin/messages/<%= message._id %>_?method=DELETE">
-        <button class="message-delete-button btn">Delete</a>
+      <form action="/admin/messages/<%= message._id %>?_method=DELETE" method="POST">
+        <button class="message-delete-button btn">Delete</button>
       </form>
-    </section>
-  </div>
+    </aside>
+  </section>
 </article>
