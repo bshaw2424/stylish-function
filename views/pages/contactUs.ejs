@@ -1,41 +1,34 @@
 <% include ../partials/header %>
 <% include ../partials/nav %>
 
-<section class="contact-page">
-  <div class="container">
-    <h1 class="contact-form-title">Contact Us</h1>
-    <p>Contact us about any issues, commments, or business opportunities you may have.
-      We look forward to your message.
-    </p>
-    <form class="contact-form" action="/admin/messages" method="POST">
+<section class="contact-page container">
+  <h1 class="contact-form-title">Contact Us</h1>
+  <p>Contact us about any issues, commments, or business opportunities you may have.
+    We look forward to your message.
+  </p>
+  <form class="contact-form" action="/admin/messages" method="POST">
 
-      <!-- name input field -->
-      <label for="name">Name</label>
-      <input type="text" id="name" name="Message[name]" class="info-input browser-default" placeholder="Name"
-        required />
+    <!-- name input field -->
+    <label for="name">Name</label>
+    <input type="text" id="name" name="Message[name]" class="product-input browser-default" required />
 
-      <!-- subject input field -->
-      <label for="subject">Subject</label>
-      <input type="text" name="Message[subject]" class="info-input browser-default" id="subject" placeholder="Subject"
-        required />
+    <!-- subject input field -->
+    <label for="subject">Subject</label>
+    <input type="text" name="Message[subject]" class="product-input browser-default" id="subject" required />
 
-      <!-- email input field -->
-      <label for="email">Email</label>
-      <input type="email" name="Message[email]" id="email" class="info-input browser-default" placeholder="Email"
-        required />
+    <!-- email input field -->
+    <label for="email">Email</label>
+    <input type="email" name="Message[email]" id="email" class="product-input browser-default" required />
 
-      <!-- textarea message field -->
-      <label for="textarea">Message</label>
-      <textarea name="Message[message]" id="textarea" class="info-input browser-default" placeholder="Message" required
-        rows="10" cols="40">
+    <!-- textarea message field -->
+    <label for="textarea">Message</label>
+    <textarea name="Message[message]" id="textarea" class="product-input browser-default" required>
       </textarea>
 
-      <div class="form-buttons">
-        <button type="submit" class="btn btn-submit">Submit</button>
-      </div>
 
-    </form>
-  </div>
+    <button type="submit" class="btn btn-submit">Submit</button>
+
+  </form>
 </section>
 
 <% include ../partials/footer %>
