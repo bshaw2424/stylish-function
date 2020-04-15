@@ -2,49 +2,39 @@
 <% include ../partials/nav %>
 
 <!-- page intro-description section -->
-
-<section class="page-intro">
-  <div class="container">
+<div class="container">
+  <section class="page-intro">
     <h3>Seating</h3>
-    <div class="secondary-nav">
-      <a href="/seating/modular-sectional">modular/sectional</a>
-      <a href="/seating/alternative-seating">alternative seating</a>
-      <a href="/seating/lounge-seating">sleeper sofa</a>
-    </div>
-
-
-    <!-- Page filter section with a search bar and select menu -->
-    <!-- <section class="filter-section">
-  <div class="container"> -->
-    <div class="price-filter filter">
-      <span class="category-title">Sort By:</span>
-      <ul class="inActive">
-        <li><a href="/seating/newest">newest</a></li>
-        <li><a href="/seating/low-price">low to high</a></li>
-        <li><a href="/seating/high-price">high to low</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <aside>
+      <div class="category-filter filter">
+        <p class="filter-title">Category
+          <span class="material-icons arrow-down">arrow_drop_down</span>
+          <span class="material-icons arrow-up">arrow_drop_up</span>
+        </p>
+        <div class="category-nav">
+          <a href="/seating/modular-sectional">modular/sectional</a>
+          <a href="/seating/alternative-seating">alternative seating</a>
+          <a href="/seating/lounge-seating">sleeper sofa</a>
+        </div>
+      </div>
+      <div class="sort-filter filter">
+        <p class="filter-title">Sort
+          <span class="material-icons arrow-down">arrow_drop_down</span>
+          <span class="material-icons arrow-up">arrow_drop_up</span>
+        </p>
+        <div class="sort-nav">
+          <a href="/seating/newest">newest</a>
+          <a href="/seating/low-price">low to high</a>
+          <a href="/seating/high-price">high to low</a>
+        </div>
+      </div>
+    </aside>
+  </section>
+</div>
 <main class="product-features">
   <div class="container">
     <div class="row">
       <% seatingProducts.forEach(seatingProduct => { %>
-      <!-- desktop filter section -->
-      <aside class="product-aside" style="display: none">
-        <p> filter </p>
-        <ul>
-          <a href="/seating/newest">
-            <li>Newest</li>
-          </a>
-          <a href="/seating/low-price">
-            <li>Low - High</li>
-          </a>
-          <a href="/seating/high-price">
-            <li>High - Low</li>
-          </a>
-        </ul>
-      </aside>
       <div class="product-card col s12 m6 l4">
         <div class="card">
           <div class="card-image">
@@ -53,12 +43,10 @@
             </a>
           </div>
           <div class="purchase-information">
-            <p class="card-title">
-              <a href="/category/seating/<%= seatingProduct._id %>">
-                <%= seatingProduct.title %>
-              </a>
-            </p>
-            <p class="card-price"><%= `$${seatingProduct.price}` %></p>
+            <a class="card-title" href="/category/seating/<%= seatingProduct._id %>">
+              <%= seatingProduct.title %>
+            </a>
+            <aside class="card-price"><%= `$${seatingProduct.price}` %></aside>
           </div>
         </div>
       </div>
