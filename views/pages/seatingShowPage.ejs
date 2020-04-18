@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+<% include ../partials/nav %>
+
+
+<article class="show-page">
+  <section class="show-page-information container">
+    <div class="main-image-container">
+      <div class="main-image">
+        <img src="<%= product.main_image %>" />
+      </div>
+      <aside class="image-container">
+        <% product.sub_images.forEach(sub_image =>{ %>
+        <img src=" <%= sub_image %>" />
+        <% }) %>
+      </aside>
+    </div>
+    <section class="product-details">
+      <div>
+        <h1 class="product-title"><%= product.title %></h1>
+        <p class="product-price">$<%= product.price %></p>
+        <p class="product-description"><%= product.description %></p>
+      </div>
+      <section class="show-page-form">
+        <a class="btn red" href="/category/seating">Back</a>
+        <a class="btn green" href="<%= product.linkAddress %>">More Info</a>
+      </section>
+    </section>
+  </section>
+</article>
+
+
+
+
+
+<% include ../partials/footer %>
