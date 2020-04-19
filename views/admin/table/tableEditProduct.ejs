@@ -2,7 +2,7 @@
 <% include ../../partials/header %>
 <article class="contact-us">
   <% include ../../admin/admin-nav %>
-  <section class="contact-us-form container">
+  <section class="form-container container">
     <h1 class="form-title">Edit <%= product.title %></h1>
     <form action="/admin/products/tables/<%= product._id %>?_method=PUT" method="POST">
       <%- include("../../admin/_editForm") %>

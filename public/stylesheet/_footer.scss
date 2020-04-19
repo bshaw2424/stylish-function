@@ -1,0 +1,24 @@
+.footer-section {
+	background: #d7d7d7;
+}
+
+.footer-navigation {
+	ul {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		padding: 1rem 0;
+		li {
+			margin-right: 1rem;
+			a {
+				text-transform: capitalize;
+			}
+		}
+	}
+	.copyright {
+		@extend ul;
+		color: black;
+		background: #d7d7d7;
+	}
+}

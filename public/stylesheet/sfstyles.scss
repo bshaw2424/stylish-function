@@ -13,15 +13,18 @@
 	flex-direction: column;
 }
 
-@import "navigation";
-@import "adminIndexSections";
+@import "indexNavigation";
+@import "adminNavigation";
+@import "indexMain";
+@import "adminIndexPage";
 @import "productForm";
-@import "contact";
+@import "mainIndexPages";
+@import "messages";
 @import "contactUs";
 @import "forms";
-@import "products";
 @import "showPage";
 @import "editPage";
+@import "footer";
 
 #footer-section,
 .navigation {

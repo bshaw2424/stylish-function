@@ -17,7 +17,8 @@ exports.create = (req, res) => {
 
 exports.post = async (req, res) => {
 	try {
-		await SeatingModel.create(req.body.Product);
+		const seatingPost = await new SeatingModel(req.body.Product);
+		await seatingPost.save();
 		res.redirect("/admin/products/seating");
 	} catch (error) {
 		if (error) {

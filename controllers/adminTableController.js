@@ -17,7 +17,8 @@ exports.create = (req, res) => {
 
 exports.post = async (req, res) => {
 	try {
-		await TablesModel.create(req.body.Product);
+		const tablesPost = await new TablesModel(req.body.Product);
+		await tablesPost.save();
 		res.redirect("/admin/products/tables");
 	} catch (error) {
 		if (error) {

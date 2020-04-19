@@ -1,31 +1,39 @@
-html,
-body,
+*,
+*::before,
+*::after,
 ul {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 li a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ul li {
-  list-style: none
+	list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6, li a {
-  color: #333;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li a {
+	color: #333;
 }
 
 .index-main-section {
-  width: 90%;
-  margin: 0 5%;
+	width: 90%;
+	margin: 0 5%;
 }
 
 .display-header-title,
-.affiliate-disclaimer-container a, 
+.affiliate-disclaimer-container a,
 .description-title,
-.copyright, 
+.copyright,
 .index-featured-title {
-  text-transform: $text-capitalize;
+	text-transform: $text-capitalize;
 }

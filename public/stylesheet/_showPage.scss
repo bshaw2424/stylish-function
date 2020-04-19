@@ -43,10 +43,10 @@
 	}
 }
 
-.show-page-form-container {
+.show-page-buttons {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	margin: 1rem 0;
 	max-width: 70%;
 	border-top: 1px solid black;
@@ -62,10 +62,12 @@
 	p:last-child {
 		word-wrap: break-word;
 	}
-	.show-page-form {
-		.btn {
-			margin-right: 1rem;
-		}
+}
+
+.show-page-form {
+	margin: 1rem 0;
+	.btn {
+		margin-right: 1rem;
 	}
 }
 
@@ -83,7 +85,6 @@
 		&:hover {
 			border: 1px solid black;
 			cursor: pointer;
-			padding: 0.5rem;
 		}
 	}
 }

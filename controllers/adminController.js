@@ -1,4 +1,4 @@
-const { seatingModel, tablesModel } = require("../models/products");
+const { SeatingModel, TablesModel } = require("../models/products");
 
 exports.logIn = (req, res) => {
 	res.render("admin/login");
@@ -10,8 +10,8 @@ exports.logOut = (req, res) => {
 
 exports.index = async (req, res) => {
 	try {
-		const seatingProducts = await seatingModel.find().exec();
-		const tableproducts = await tablesModel.find().exec();
+		const seatingProducts = await SeatingModel.find().exec();
+		const tableproducts = await TablesModel.find().exec();
 		res.render("admin/adminIndex", { seatingProducts, tableproducts });
 	} catch (error) {
 		if (error) {

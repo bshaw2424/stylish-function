@@ -1,8 +1,8 @@
-const { tablesModel } = require("../models/products");
+const { TablesModel } = require("../models/products");
 
 exports.index = async (req, res) => {
 	try {
-		const tableProducts = await tablesModel.find();
+		const tableProducts = await TablesModel.find();
 		res.render("pages/tables", { tableProducts });
 	} catch (error) {
 		if (error) {
@@ -13,7 +13,7 @@ exports.index = async (req, res) => {
 
 exports.ascending = async (req, res) => {
 	try {
-		const ascending = await tablesModel.find().sort({ price: 1 });
+		const ascending = await TablesModel.find().sort({ price: 1 });
 		res.render("pages/tables", { ascending });
 	} catch (error) {
 		if (error) {
@@ -24,7 +24,7 @@ exports.ascending = async (req, res) => {
 
 exports.descending = async (req, res) => {
 	try {
-		const descending = await tablesModel.find().sort({ price: -1 });
+		const descending = await TablesModel.find().sort({ price: -1 });
 		res.render("pages/tables", { descending });
 	} catch (error) {
 		if (error) {
@@ -35,8 +35,8 @@ exports.descending = async (req, res) => {
 
 exports.showPage = async (req, res) => {
 	try {
-		const products = await tablesModel.findById(req.params.id);
-		res.render("pages/productShowPage", { products });
+		const product = await TablesModel.findById(req.params.id);
+		res.render("pages/tablesShowPage", { product });
 	} catch (error) {
 		if (error) {
 			res.render("pages/error404Page");

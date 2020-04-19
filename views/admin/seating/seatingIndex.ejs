@@ -5,15 +5,15 @@
   <section class="product-container container">
     <h1>seating products</h1>
     <div class="product-index">
-      <div class="product-filter-section">
+      <div class="product-filter">
         <span>Filter</span>
-        <ul class="product-filter-options">
-          <li><a href="#">modular</a></li>
-          <li><a href="#">modular</a></li>
-        </ul>
+        <div class="product-filter-options">
+          <a href="#">modular</a>
+          <a href="#">modular</a>
+        </div>
       </div>
       <a href="/admin/products/seating/new">Create New Product</a>
-      <input type="text" placeholder="search" />
+      <input class="search" type="text" placeholder="search" />
     </div>
     <div class="product-display-container">
       <div class="row">
@@ -23,11 +23,10 @@
             <div class="card-image">
               <img src="<%= seating.main_image %>" />
             </div>
-            <div class="card-content">
+            <div class="card-content purchase-information">
               <a href="/admin/products/seating/<%= seating._id %>"><%= seating.title %></a>
               <span>$<%= seating.price %></span>
             </div>
-            <a class="btn" href="/admin/products/seating/<%= seating._id %>">More Info</a>
           </div>
         </div>
         <% }) %>

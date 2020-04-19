@@ -1,8 +1,8 @@
-const { seatingModel } = require("../models/products");
+const { SeatingModel } = require("../models/products");
 
 exports.index = async (req, res) => {
 	try {
-		const seatingProducts = await seatingModel.find();
+		const seatingProducts = await SeatingModel.find();
 		res.render("pages/seating", { seatingProducts });
 	} catch (error) {
 		if (error) {
@@ -13,7 +13,7 @@ exports.index = async (req, res) => {
 
 exports.ascending = async (req, res) => {
 	try {
-		const ascending = await seatingModel.find().sort({ price: 1 });
+		const ascending = await SeatingModel.find().sort({ price: 1 });
 		res.render("pages/seatingAsc", { ascending });
 	} catch (error) {
 		if (error) {
@@ -24,7 +24,7 @@ exports.ascending = async (req, res) => {
 
 exports.descending = async (req, res) => {
 	try {
-		const descending = await seatingModel.find().sort({ price: -1 });
+		const descending = await SeatingModel.find().sort({ price: -1 });
 		res.render("pages/seatingDesc", { descending });
 	} catch (error) {
 		if (error) {
@@ -36,8 +36,8 @@ exports.descending = async (req, res) => {
 
 exports.showPage = async (req, res) => {
 	try {
-		const products = await seatingModel.findById(req.params.id);
-		res.render("pages/productShowPage", { products });
+		const product = await SeatingModel.findById(req.params.id);
+		res.render("pages/seatingShowPage", { product });
 	} catch (error) {
 		if (error) {
 			res.render("pages/error404Page");

@@ -42,7 +42,7 @@
               <img src="<%= seatingProduct.main_image %>" alt="<%= seatingProduct.title %>" />
             </a>
           </div>
-          <div class="purchase-information">
+          <div class="card-content purchase-information">
             <a class="card-title" href="/category/seating/<%= seatingProduct._id %>">
               <%= seatingProduct.title %>
             </a>
@@ -55,5 +55,4 @@
   </div>
 </main>
 
-<% include ../partials/pagination %>
 <% include ../partials/footer %>

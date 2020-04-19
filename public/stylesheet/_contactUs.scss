@@ -1,37 +1,41 @@
 .contact-us {
 	display: flex;
-	height: 100vh;
 }
-
-.contact-us-form {
-	height: 100%;
-	h1 {
-		text-align: center;
+.contact-page {
+	max-width: 50%;
+	margin: 1rem auto;
+	padding: 2rem;
+	.contact-header {
+		padding: 1rem 2rem;
+		.contact-title {
+			margin: 0;
+			padding-bottom: 0.5rem;
+			font-size: 3.2rem;
+			text-align: center;
+			color: #333;
+		}
 	}
-	form {
+
+	.contact-form {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		width: 60%;
-		margin: 0 auto;
-		input[type="text"] {
+		.product-input {
 			margin-bottom: 1rem;
-			padding: 0.2rem 0.75rem;
+			padding: 0.4rem 0.7rem;
 		}
 		label {
 			font-size: 1rem;
 		}
-		textarea {
-			height: 6rem;
-			width: 30rem;
-			padding: 1rem;
-			resize: none;
+		label:first-child {
+			margin-top: 1rem;
 		}
-		.contact-form-buttons {
-			margin: 1rem 0;
-			.submit {
-				margin-right: 1rem;
-			}
+		textarea {
+			min-height: 6rem;
+			max-height: 10rem;
+			resize: vertical;
+		}
+		.btn-submit {
+			font-size: 1rem;
 		}
 	}
 }

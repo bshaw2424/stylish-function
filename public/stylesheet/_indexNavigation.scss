@@ -1,0 +1,18 @@
+.index-navigation {
+	position: relative;
+	i.material-icons {
+		position: absolute;
+		top: 0;
+		left: 1rem;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+.index-navigation-container {
+	display: flex;
+	justify-content: space-between;
+	.index-logo {
+		font-size: 2rem;
+	}
+}
