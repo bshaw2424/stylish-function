@@ -17,8 +17,7 @@
 	}
 
 	.contact-form {
-		display: flex;
-		flex-direction: column;
+		@include flex-direction-column;
 		.product-input {
 			margin-bottom: 1rem;
 			padding: 0.4rem 0.7rem;

@@ -10,8 +10,8 @@
 	.dash-board-container {
 		height: 100%;
 		width: 100%;
-		h4 {
-			text-align: center;
+		.admin-nav-title {
+			@include flex-center;
 		}
 	}
 }

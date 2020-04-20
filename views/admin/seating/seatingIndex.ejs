@@ -5,11 +5,16 @@
   <section class="product-container container">
     <h1>seating products</h1>
     <div class="product-index">
-      <div class="product-filter">
-        <span>Filter</span>
-        <div class="product-filter-options">
-          <a href="#">modular</a>
-          <a href="#">modular</a>
+      <div class="product-filter">Sort
+        <div class="filter-title">
+          <span class="material-icons arrow-down">keyboard_arrow_down</span>
+          <span class="material-icons arrow-up">keyboard_arrow_up</span>
+        </div>
+        <div class="product-sort-options">
+          <a href="#">newest</a>
+          <a href="#">oldest</a>
+          <a href="#">high price</a>
+          <a href="#">low price</a>
         </div>
       </div>
       <a href="/admin/products/seating/new">Create New Product</a>
@@ -24,7 +29,11 @@
               <img src="<%= seating.main_image %>" />
             </div>
             <div class="card-content purchase-information">
-              <a href="/admin/products/seating/<%= seating._id %>"><%= seating.title %></a>
+              <h4>
+                <a href="/admin/products/seating/<%= seating._id %>">
+                  <%= seating.title %>
+                </a>
+              </h4>
               <span>$<%= seating.price %></span>
             </div>
           </div>

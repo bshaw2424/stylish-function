@@ -1,6 +1,5 @@
 .form-container {
-	display: flex;
-	flex-direction: column;
+	@include flex-direction-column;
 	padding: 0 0 2rem 0;
 	h1 {
 		margin: 1rem;

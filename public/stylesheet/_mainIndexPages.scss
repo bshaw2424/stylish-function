@@ -3,24 +3,22 @@
 	justify-content: space-between;
 	align-items: center;
 	margin: 1rem 0;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	border-bottom: $border;
 	aside {
 		display: flex;
 		.filter {
 			margin-right: 2rem;
 			.filter-title {
 				margin: 0;
-				font-size: 1.2rem;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				font-size: 1.1rem;
+				@include flex-center;
+				flex-direction: row;
 				.arrow-up {
 					display: none;
 				}
 			}
 			div {
-				display: flex;
-				flex-direction: column;
+				@include flex-direction-column;
 				display: none;
 			}
 		}
@@ -31,12 +29,14 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		text-transform: capitalize;
+		text-transform: $text-capitalize;
 		padding: 1rem;
-		a,
-		span {
-			font-size: 1.2rem;
+		aside {
+			font-size: 1rem;
 			word-wrap: break-word;
+		}
+		.card-title {
+			font-size: 1.3rem;
 		}
 	}
 }

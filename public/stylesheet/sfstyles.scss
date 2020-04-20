@@ -1,14 +1,12 @@
 @import "variables";
 @import "reset";
-@mixin border($width) {
-	border-bottom: $width solid rgba(0, 0, 0, 0.1);
-}
+
 @mixin flex-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-@mixin flex-column {
+@mixin flex-direction-column {
 	display: flex;
 	flex-direction: column;
 }

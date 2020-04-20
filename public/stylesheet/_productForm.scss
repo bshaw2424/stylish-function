@@ -1,14 +1,12 @@
 .form-container {
 	max-width: 50%;
 	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
+	@include flex-direction-column;
 	h1 {
 		margin: 1rem;
 	}
 	form {
-		display: flex;
-		flex-direction: column;
+		@include flex-direction-column;
 		.product-input {
 			margin-bottom: 1rem;
 		}

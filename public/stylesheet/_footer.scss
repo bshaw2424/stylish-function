@@ -4,16 +4,11 @@
 
 .footer-navigation {
 	ul {
-		display: flex;
-		justify-content: center;
+		@include flex-center;
 		align-content: center;
-		align-items: center;
 		padding: 1rem 0;
 		li {
 			margin-right: 1rem;
-			a {
-				text-transform: capitalize;
-			}
 		}
 	}
 	.copyright {

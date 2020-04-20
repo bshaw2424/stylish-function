@@ -20,17 +20,15 @@
                <p class="product-price">$<%= product.price %></p>
                <p class="product-description"><%= product.description %></p>
             </div>
-            <section class="show-page-form-container">
-               <div>
-                  <form class="show-page-form form-delete-button"
-                     action="/admin/products/tables/<%= product._id %>?_method=DELETE" method="POST">
-                     <button class="btn" type="submit">Delete</button>
-                  </form>
-                  <form class="show-page-form form-edit-button" action="/admin/products/tables/<%= product._id %>/edit">
-                     <button class="btn" type="submit">Edit</button>
-                  </form>
-                  <a class="btn red" href="/admin/products/tables">Back</a>
-               </div>
+            <section class="show-page-buttons">
+               <form class="show-page-form form-delete-button"
+                  action="/admin/products/tables/<%= product._id %>?_method=DELETE" method="POST">
+                  <button class="btn show-btn" type="submit">Delete</button>
+               </form>
+               <form class="show-page-form form-edit-button" action="/admin/products/tables/<%= product._id %>/edit">
+                  <button class="btn show-btn" type="submit">Edit</button>
+               </form>
+               <a class="btn back-btn" href="/admin/products/tables">Back</a>
             </section>
          </section>
       </section>

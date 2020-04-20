@@ -5,15 +5,14 @@
   <section class="product-container container">
     <h1>Table Products</h1>
     <div class="product-index">
-      <div class="product-filter-section">
-        <span>Filter
-          <!-- <i class="material-icons">arrow_drop_down</i> -->
-          <i class="material-icons">arrow_drop_up</i>
-        </span>
-        <ul class="product-filter-options" style="display: none;">
-          <li><a href="#">extendable</a></li>
-          <li><a href="#">compact</a></li>
-        </ul>
+      <div class="product-filte">
+        <div class="filter-title">Sort
+          <span class="material-icons arrow-down">keyboard_arrow_down</span>
+          <span class="material-icons arrow-up">keyboard_arrow_up</span>
+        </div>
+        <div class="product-filter-options" <a href="#">extendable</a>
+          <a href="#">compact</a>
+        </div>
       </div>
       <a href="/admin/products/tables/new">Create New Product</a>
       <input type="text" placeholder="search" />
@@ -27,7 +26,11 @@
               <img src="<%= tables.main_image %>" />
             </div>
             <div class="card-content purchase-information">
-              <a href="/admin/products/tables/<%= tables._id %>"><%= tables.title %></a>
+              <h4>
+                <a href="/admin/products/tables/<%= tables._id %>">
+                  <%= tables.title %>
+                </a>
+              </h4>
               <span>$<%= tables.price %></span>
             </div>
           </div>

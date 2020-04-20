@@ -23,12 +23,12 @@
             <section class="show-page-buttons">
                <form class="show-page-form form-delete-button"
                   action="/admin/products/seating/<%= product._id %>?_method=DELETE" method="POST">
-                  <button class="btn" type="submit">Delete</button>
+                  <button class="btn show-btn" type="submit">Delete</button>
                </form>
                <form class="show-page-form form-edit-button" action="/admin/products/seating/<%= product._id %>/edit">
-                  <button class="btn" type="submit">Edit</button>
+                  <button class="btn show-btn" type="submit">Edit</button>
                </form>
-               <a class="btn red" href="/admin/products/seating">Back</a>
+               <a class="btn back-btn" href="/admin/products/seating">Back</a>
             </section>
          </section>
       </section>

@@ -9,21 +9,21 @@
     <aside>
       <div class="category-filter filter">
         <p class="filter-title">Category
-          <span class="material-icons arrow-down">arrow_drop_down</span>
-          <span class="material-icons arrow-up">arrow_drop_up</span>
+          <span class="material-icons arrow-down">keyboard_arrow_down</span>
+          <span class="material-icons arrow-up">keyboard_arrow_up</span>
         </p>
-        <div class="category-nav">
+        <div class="category-nav category">
           <a href="/seating/modular-sectional">*change to table cats*</a>
           <a href="/seating/alternative-seating">alternative seating</a>
           <a href="/seating/lounge-seating">sleeper sofa</a>
         </div>
       </div>
       <div class="sort-filter filter">
-        <p class="filter-title">Sort
-          <span class="material-icons arrow-down">arrow_drop_down</span>
-          <span class="material-icons arrow-up">arrow_drop_up</span>
-        </p>
-        <div class="sort-nav">
+        <div class="filter-title">Sort
+          <span class="material-icons arrow-down">keyboard_arrow_down</span>
+          <span class="material-icons arrow-up">keyboard_arrow_up</span>
+        </div>
+        <div class=category-nav sort">
           <a href="/seating/newest">newest</a>
           <a href="/seating/low-price">low to high</a>
           <a href="/seating/high-price">high to low</a>
@@ -45,9 +45,11 @@
             </a>
           </div>
           <div class="purchase-information">
-            <a class="card-title" href="/category/tables/<%= tableProduct._id %>">
-              <%= tableProduct.title %>
-            </a>
+            <h4>
+              <a class="card-title" href="/category/tables/<%= tableProduct._id %>">
+                <%= tableProduct.title %>
+              </a>
+            </h4>
             <aside class="card-price"><%= `$${tableProduct.price}` %></aside>
           </div>
         </div>
