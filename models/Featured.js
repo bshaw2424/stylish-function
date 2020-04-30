@@ -20,7 +20,7 @@ const featuredSchema = new Schema({
 	},
 	video: {
 		type: [String],
-		unique: true,
+		default: null,
 	},
 	description: {
 		main: {
@@ -34,6 +34,12 @@ const featuredSchema = new Schema({
 			unique: true,
 		},
 	},
+	created_on: {
+		type: String,
+		default: new Date(),
+	},
 });
 
-module.exports = model("Featured", featuredSchema);
+const FeaturedModel = model("Featured", featuredSchema);
+
+module.exports = { FeaturedModel };
