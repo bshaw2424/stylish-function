@@ -14,7 +14,7 @@ const featuredSchema = new Schema({
 		required: true,
 		unique: true,
 	},
-	sub_image: {
+	sub_images: {
 		type: [String],
 		unique: true,
 	},
