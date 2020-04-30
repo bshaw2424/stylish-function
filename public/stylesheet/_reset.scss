@@ -25,6 +25,19 @@ li a {
 	color: #333;
 	text-transform: $text-capitalize;
 }
+.back {
+	background-color: $back-button;
+}
+.back:hover {
+	background-color: $back-button-hover;
+}
+.hide {
+	display: none;
+}
+
+.show {
+	display: flex;
+}
 
 h1 {
 	font-size: 3rem;
@@ -35,6 +48,16 @@ h4 {
 h4,
 .purchase-information span {
 	font-size: 1.3rem;
+}
+.filter-title:hover {
+	cursor: pointer;
+}
+.arrow-up,
+.arrow-down {
+	pointer-events: none;
+}
+.arrow-up {
+	display: none;
 }
 .back-btn {
 	background-color: $back-button;

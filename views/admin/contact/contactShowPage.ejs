@@ -15,12 +15,13 @@
       <span class="message-label email">email: </span><%= message.email %>
     </p>
     <p class="contact-message">
-      <span class="message-label message">message: </span><%= message.message %>
+      <span class="message-label message">message:
+      </span><%= message.message %>
     </p>
     <aside class="message-button-container">
-      <a href="/admin/messages" class="message-back-button btn red">Back</a>
+      <a href="/admin/messages" class="message-back-button btn back">Back</a>
       <form action="/admin/messages/<%= message._id %>?_method=DELETE" method="POST">
-        <button class="message-delete-button btn">Delete</button>
+        <button class="message-delete-button btn"><i class="material-icons">delete</i>Delete</button>
       </form>
     </aside>
   </section>

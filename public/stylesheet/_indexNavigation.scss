@@ -1,6 +1,11 @@
 .index-navigation {
 	position: relative;
+	height: 100%;
+	background-color: hsl(200, 100%, 50%);
 	i.material-icons {
+		display: inline-block;
+		min-height: 100%;
+		@include flex-center;
 		position: absolute;
 		top: 0;
 		left: 1rem;
@@ -8,11 +13,16 @@
 			cursor: pointer;
 		}
 	}
+	ul li a {
+		padding: 6px 15px;
+		font-size: 1.1rem;
+	}
 }
 .index-navigation-container {
 	display: flex;
 	justify-content: space-between;
 	.index-logo {
-		font-size: 2rem;
+		margin: 0;
+		font-size: 3rem;
 	}
 }

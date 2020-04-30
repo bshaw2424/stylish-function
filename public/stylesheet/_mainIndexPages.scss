@@ -2,28 +2,44 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 0 0.75rem;
 	margin: 1rem 0;
 	border-bottom: $border;
+	h3 {
+		margin: 0;
+	}
 	aside {
 		display: flex;
+		margin: 1rem 0;
 		.filter {
 			margin-right: 2rem;
+			position: relative;
 			.filter-title {
 				margin: 0;
 				font-size: 1.1rem;
 				@include flex-center;
 				flex-direction: row;
-				.arrow-up {
-					display: none;
-				}
 			}
 			div {
 				@include flex-direction-column;
-				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				border: 1px solid black;
+				z-index: 1;
+				width: 7rem;
+				background: white;
 			}
+		}
+		.filter:last-child {
+			margin-right: 0;
 		}
 	}
 }
+.product-card {
+	padding-left: 0;
+}
+
 .card {
 	.purchase-information {
 		display: flex;

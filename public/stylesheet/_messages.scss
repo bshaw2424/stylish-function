@@ -1,4 +1,4 @@
-#message-center {
+.message-page {
 	display: flex;
 }
 
@@ -22,7 +22,10 @@
 .collection {
 	width: 100%;
 	border: none;
-
+	form button {
+		background: none;
+		color: $show-button;
+	}
 	a:nth-of-type(even) {
 		background: lightgray;
 	}
@@ -44,7 +47,6 @@
 .message-details {
 	@include flex-direction-column;
 	justify-content: center;
-	height: 50vh;
 	width: 50vw;
 	padding: 2rem;
 	margin: auto;
@@ -69,6 +71,13 @@
 		a {
 			display: inline-block;
 			margin-right: 1rem;
+		}
+		form button {
+			@include flex-center;
+			.material-icons {
+				display: inline-block;
+				margin-right: 4px;
+			}
 		}
 	}
 }

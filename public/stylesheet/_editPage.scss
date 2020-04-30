@@ -15,16 +15,26 @@
 			border-radius: 0.2rem;
 		}
 		.contact-form-buttons {
-			margin-top: 0;
+			margin: 0 0 2rem 0;
 			.submit {
 				margin-right: 0.5rem;
+				background-color: $show-button;
+				&:hover {
+					background-color: $show-button-hover;
+				}
+			}
+			.back {
+				background-color: $back-button;
+				&:hover {
+					background-color: $back-button-hover;
+				}
 			}
 		}
 		label {
 			font-size: 1rem;
 		}
 		textarea {
-			min-height: 10rem;
+			min-height: 8rem;
 			resize: none;
 		}
 	}

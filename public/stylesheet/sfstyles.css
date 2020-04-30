@@ -28,6 +28,24 @@ li a {
   text-transform: capitalize;
 }
 
+.back {
+  background-color: #999900;
+}
+
+.back:hover {
+  background-color: olive;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -39,6 +57,19 @@ h4 {
 h4,
 .purchase-information span {
   font-size: 1.3rem;
+}
+
+.filter-title:hover {
+  cursor: pointer;
+}
+
+.arrow-up,
+.arrow-down {
+  pointer-events: none;
+}
+
+.arrow-up {
+  display: none;
 }
 
 .back-btn {
@@ -72,9 +103,22 @@ h4,
 
 .index-navigation {
   position: relative;
+  height: 100%;
+  background-color: #00aaff;
 }
 
 .index-navigation i.material-icons {
+  display: inline-block;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   left: 1rem;
@@ -82,6 +126,11 @@ h4,
 
 .index-navigation i.material-icons:hover {
   cursor: pointer;
+}
+
+.index-navigation ul li a, .index-navigation .footer-navigation .copyright li a, .footer-navigation .index-navigation .copyright li a {
+  padding: 6px 15px;
+  font-size: 1.1rem;
 }
 
 .index-navigation-container {
@@ -94,7 +143,8 @@ h4,
 }
 
 .index-navigation-container .index-logo {
-  font-size: 2rem;
+  margin: 0;
+  font-size: 3rem;
 }
 
 .dash-board-nav {
@@ -183,7 +233,7 @@ span i.material-icons:hover {
 }
 
 .display-header {
-  background: #00aaff;
+  background: #f6f9fc;
   position: relative;
 }
 
@@ -191,8 +241,9 @@ span i.material-icons:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 70vh;
   background: url("../images/blue-chair-med.jpg") no-repeat;
-  background-size: 40%;
+  background-size: 60%;
   background-position: right;
 }
 
@@ -204,8 +255,8 @@ span i.material-icons:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #fff;
-  width: 70%;
+  color: #333;
+  width: 38%;
   margin: 0 auto;
   padding: 2rem;
   margin: 1rem;
@@ -300,18 +351,25 @@ span i.material-icons:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 0.75rem;
   margin: 1rem 0;
   border-bottom: rgba(0, 0, 0, 0.3);
+}
+
+.page-intro h3 {
+  margin: 0;
 }
 
 .page-intro aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 1rem 0;
 }
 
 .page-intro aside .filter {
   margin-right: 2rem;
+  position: relative;
 }
 
 .page-intro aside .filter .filter-title {
@@ -332,10 +390,6 @@ span i.material-icons:hover {
           flex-direction: row;
 }
 
-.page-intro aside .filter .filter-title .arrow-up {
-  display: none;
-}
-
 .page-intro aside .filter div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -344,7 +398,21 @@ span i.material-icons:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid black;
+  z-index: 1;
+  width: 7rem;
+  background: white;
+}
+
+.page-intro aside .filter:last-child {
+  margin-right: 0;
+}
+
+.product-card {
+  padding-left: 0;
 }
 
 .card .purchase-information {
@@ -370,7 +438,7 @@ span i.material-icons:hover {
   font-size: 1.3rem;
 }
 
-#message-center {
+.message-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,6 +485,11 @@ span i.material-icons:hover {
   border: none;
 }
 
+.collection form button {
+  background: none;
+  color: #00aaff;
+}
+
 .collection a:nth-of-type(even) {
   background: lightgray;
 }
@@ -455,7 +528,6 @@ span i.material-icons:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 50vh;
   width: 50vw;
   padding: 2rem;
   margin: auto;
@@ -496,7 +568,25 @@ span i.material-icons:hover {
   margin-right: 1rem;
 }
 
-.contact-us {
+.message-details aside form button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.message-details aside form button .material-icons {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.contact-us,
+.featured {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -505,7 +595,7 @@ span i.material-icons:hover {
 .contact-page {
   max-width: 50%;
   margin: 1rem auto;
-  padding: 2rem;
+  padding: 0 3rem;
 }
 
 .contact-page .contact-header {
@@ -546,11 +636,18 @@ span i.material-icons:hover {
 .contact-page .contact-form textarea {
   min-height: 6rem;
   max-height: 10rem;
-  resize: vertical;
+  padding: 0;
+  resize: none;
 }
 
 .contact-page .contact-form .btn-submit {
   font-size: 1rem;
+  margin-bottom: 2rem;
+  background-color: #00aaff;
+}
+
+.contact-page .contact-form .btn-submit:hover {
+  background-color: #0088cc;
 }
 
 .admin-login {
@@ -770,11 +867,24 @@ span i.material-icons:hover {
 }
 
 .form-container form .contact-form-buttons {
-  margin-top: 0;
+  margin: 0 0 2rem 0;
 }
 
 .form-container form .contact-form-buttons .submit {
   margin-right: 0.5rem;
+  background-color: #00aaff;
+}
+
+.form-container form .contact-form-buttons .submit:hover {
+  background-color: #0088cc;
+}
+
+.form-container form .contact-form-buttons .back {
+  background-color: #999900;
+}
+
+.form-container form .contact-form-buttons .back:hover {
+  background-color: olive;
 }
 
 .form-container form label {
@@ -782,12 +892,12 @@ span i.material-icons:hover {
 }
 
 .form-container form textarea {
-  min-height: 10rem;
+  min-height: 8rem;
   resize: none;
 }
 
 .footer-section {
-  background: #d7d7d7;
+  background: #00aaff;
 }
 
 .footer-navigation ul, .footer-navigation .copyright {
@@ -811,7 +921,7 @@ span i.material-icons:hover {
 
 .footer-navigation .copyright {
   color: black;
-  background: #d7d7d7;
+  background: inherit;
 }
 
 #footer-section,

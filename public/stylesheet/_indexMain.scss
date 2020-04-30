@@ -1,17 +1,18 @@
 .display-header {
-	background: hsl(200, 100%, 50%);
+	background: #f6f9fc;
 	position: relative;
 }
 .display-header-container {
 	display: flex;
+	height: 70vh;
 	background: url("../images/blue-chair-med.jpg") no-repeat;
-	background-size: 40%;
+	background-size: 60%;
 	background-position: right;
 
 	h1 {
 		@include flex-direction-column;
-		color: #fff;
-		width: 70%;
+		color: #333;
+		width: 38%;
 		margin: 0 auto;
 		padding: 2rem;
 		margin: 1rem;
