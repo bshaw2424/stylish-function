@@ -1,4 +1,4 @@
-const FeaturedModel = require("../models/Featured");
+const { FeaturedModel } = require("../models/Featured");
 
 exports.create = (req, res) => {
 	res.render("admin/featured/featuredArticleForm");
@@ -6,12 +6,12 @@ exports.create = (req, res) => {
 
 exports.post = async (req, res) => {
 	try {
-		const seatingPost = await new FeaturedModel(req.body.Article);
-		await seatingPost.save();
-		res.redirect("/admin/products/seating");
+		const featuredPost = await new FeaturedModel(req.body.Article);
+		await featuredPost.save();
+		res.redirect("/admin/dashboard");
 	} catch (error) {
 		if (error) {
-			res.redirect("admin/products/seating");
+			res.send(error);
 		}
 	}
 };
