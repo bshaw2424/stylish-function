@@ -13,8 +13,9 @@ const adminSeating = require("./routes/admin/seatingRoutes");
 const adminTables = require("./routes/admin/tableRoutes");
 const seatingRoutes = require("./routes/seating/seatingRoutes");
 const tableRoutes = require("./routes/table/tableRoutes");
-const featuredRoutes = require("./routes/featured/featuredRoutes");
+const featuredRoutes = require("./routes/admin/featuredRoutes");
 const staticRoutes = require("./routes/index/staticRoutes");
+const mainFeaturedRoutes = require("./routes/articleRoutes");
 const contactRoutes = require("./routes/admin/contactRoutes");
 const errorRoutes = require("./routes/index/errorRoute");
 
@@ -33,6 +34,7 @@ app.use(
 	featuredRoutes,
 );
 app.use("/category", seatingRoutes, tableRoutes);
+app.use("/featured/articles", mainFeaturedRoutes);
 app.use("/", staticRoutes);
 app.use(errorRoutes.errorMessage);
 
