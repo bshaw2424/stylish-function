@@ -21,8 +21,11 @@
 .index-navigation-container {
 	display: flex;
 	justify-content: space-between;
+	& li:first-child {
+		border-right: 1px solid white;
+	}
 	.index-logo {
 		margin: 0;
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 }

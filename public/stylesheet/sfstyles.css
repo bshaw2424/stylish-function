@@ -142,9 +142,13 @@ h4,
           justify-content: space-between;
 }
 
+.index-navigation-container li:first-child {
+  border-right: 1px solid white;
+}
+
 .index-navigation-container .index-logo {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .dash-board-nav {
@@ -747,7 +751,7 @@ span i.material-icons:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 1rem;
+  padding: 0 2rem;
   width: 100%;
   max-height: 70vh;
 }

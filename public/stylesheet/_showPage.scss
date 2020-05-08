@@ -20,7 +20,7 @@
 
 	.product-details {
 		@include flex-direction-column;
-		padding: 0 1rem;
+		padding: 0 2rem;
 		width: 100%;
 		max-height: 70vh;
 		.product-title {
