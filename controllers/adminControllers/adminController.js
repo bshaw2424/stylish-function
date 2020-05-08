@@ -1,4 +1,6 @@
-const { SeatingModel, TablesModel } = require("../../models/products");
+exports.index = (req, res) => {
+	res.render("admin/adminIndex");
+};
 
 exports.logIn = (req, res) => {
 	res.render("admin/login");
@@ -6,17 +8,4 @@ exports.logIn = (req, res) => {
 
 exports.logOut = (req, res) => {
 	res.render("admin/logout");
-};
-
-exports.index = async (req, res) => {
-	try {
-		const seatingProducts = await SeatingModel.find().exec();
-		const tableproducts = await TablesModel.find().exec();
-		res.render("admin/adminIndex", { seatingProducts, tableproducts });
-	} catch (error) {
-		if (error) {
-			console.log(error);
-			res.render("pages/error404Page");
-		}
-	}
 };
