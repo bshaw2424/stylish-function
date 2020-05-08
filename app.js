@@ -15,7 +15,7 @@ const seatingRoutes = require("./routes/seating/seatingRoutes");
 const tableRoutes = require("./routes/table/tableRoutes");
 const featuredRoutes = require("./routes/admin/featuredRoutes");
 const staticRoutes = require("./routes/index/staticRoutes");
-const mainFeaturedRoutes = require("./routes/articleRoutes");
+const mainArticleRoutes = require("./routes/articleRoutes");
 const contactRoutes = require("./routes/admin/contactRoutes");
 const errorRoutes = require("./routes/index/errorRoute");
 
@@ -25,16 +25,11 @@ app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(
-	"/admin",
-	adminIndex,
-	adminSeating,
-	adminTables,
-	contactRoutes,
-	featuredRoutes,
-);
+// routes
+app.use("/admin", adminIndex, adminSeating, adminTables, contactRoutes);
+app.use("/admin/featured/articles", featuredRoutes);
 app.use("/category", seatingRoutes, tableRoutes);
-app.use("/featured/article", mainFeaturedRoutes);
+app.use("/featured/articles", mainArticleRoutes);
 app.use("/", staticRoutes);
 app.use(errorRoutes.errorMessage);
 
