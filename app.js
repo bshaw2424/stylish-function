@@ -34,7 +34,7 @@ app.use(
 	featuredRoutes,
 );
 app.use("/category", seatingRoutes, tableRoutes);
-app.use("/featured/articles", mainFeaturedRoutes);
+app.use("/featured/article", mainFeaturedRoutes);
 app.use("/", staticRoutes);
 app.use(errorRoutes.errorMessage);
 
