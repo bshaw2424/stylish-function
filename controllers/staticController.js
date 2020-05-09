@@ -1,4 +1,15 @@
-exports.index = (req, res) => res.render("pages/index");
+const { FeaturedModel } = require("../models/Featured");
+
+exports.index = async (req, res) => {
+	try {
+		const Articles = await FeaturedModel.find();
+		res.render("pages/index", { Articles });
+	} catch (error) {
+		if (error) {
+			res.send(error);
+		}
+	}
+};
 
 exports.aboutUs = (req, res) => res.render("pages/about-us");
 
