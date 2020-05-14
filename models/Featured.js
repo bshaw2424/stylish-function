@@ -35,7 +35,7 @@ const featuredSchema = new Schema({
 		},
 	},
 	created_on: {
-		type: String,
+		type: Date,
 		default: new Date(),
 	},
 });

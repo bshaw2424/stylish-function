@@ -2,7 +2,7 @@ const { FeaturedModel } = require("../models/Featured");
 
 exports.index = async (req, res) => {
 	try {
-		const Articles = await FeaturedModel.find();
+		const Articles = await FeaturedModel.find().limit(3);
 		res.render("pages/index", { Articles });
 	} catch (error) {
 		if (error) {
@@ -11,14 +11,16 @@ exports.index = async (req, res) => {
 	}
 };
 
-exports.aboutUs = (req, res) => res.render("pages/about-us");
+exports.aboutUs = async (req, res) => res.render("pages/static/aboutUs");
+
+exports.affiliateDisclaimer = (req, res) => res.render("pages/static/about-us");
 
 exports.affiliateDisclaimer = (req, res) =>
-	res.render("pages/affiliateDisclaimer");
+	res.render("pages/static/affiliateDisclaimer");
 
-exports.contactUs = (req, res) => res.render("pages/contactUs");
+exports.contactUs = (req, res) => res.render("pages/static/contactUs");
 
 exports.privacyDisclosure = (req, res) =>
-	res.render("pages/privacy-disclosure");
+	res.render("pages/static/privacy-disclosure");
 
-exports.termsOfService = (req, res) => res.render("pages/TOS");
+exports.termsOfService = (req, res) => res.render("pages/static/TOS");

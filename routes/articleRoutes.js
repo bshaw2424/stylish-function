@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const mainPageArticles = require("../controllers/mainArticleController");
+const mainPageArticles = require("../controllers/mainControllers/ArticleController");
 
 router.get("/", mainPageArticles.index);
 router.get("/:id", mainPageArticles.showPage);

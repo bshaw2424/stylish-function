@@ -104,6 +104,8 @@ h4,
 .index-navigation {
   position: relative;
   height: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: #00aaff;
 }
 
@@ -131,6 +133,7 @@ h4,
 .index-navigation ul li a, .index-navigation .footer-navigation .copyright li a, .footer-navigation .index-navigation .copyright li a {
   padding: 6px 15px;
   font-size: 1.1rem;
+  display: inline-block;
 }
 
 .index-navigation-container {
@@ -140,10 +143,6 @@ h4,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.index-navigation-container li:first-child {
-  border-right: 1px solid white;
 }
 
 .index-navigation-container .index-logo {
@@ -245,10 +244,6 @@ span i.material-icons:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70vh;
-  background: url("../images/blue-chair-med.jpg") no-repeat;
-  background-size: 60%;
-  background-position: right;
 }
 
 .display-header-container h1 {
@@ -260,7 +255,8 @@ span i.material-icons:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #333;
-  width: 38%;
+  width: 90%;
+  min-height: 50vh;
   margin: 0 auto;
   padding: 2rem;
   margin: 1rem;
@@ -304,6 +300,95 @@ span i.material-icons:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.featured-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.featured-section h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+
+.card {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.card .card-image img {
+  max-height: 217.563px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .card-content {
+  padding: 1rem;
+}
+
+.card .card-content h5 {
+  margin: 0 0 0.75rem 0;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.featured-images {
+  height: 200px;
+}
+
+.collection .collection-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+}
+
+.collection .collection-item .article-content {
+  max-width: 90%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.collection .collection-item .article-content h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.collection .collection-item .article-content h5 a {
+  margin: 0 0 0.75rem 0;
+}
+
+.collection .collection-item .article-content h5 .article-date {
+  font-size: 0.75rem;
+  color: gray;
 }
 
 .form-container {
