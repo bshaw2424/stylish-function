@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<% include ../partials/nav %>
+
+<section class="featured-section">
+  <div class="container">
+    <h1> Trending Articles </h1>
+    <% Articles.forEach( Article => { %>
+    <div class="feature-articles">
+      <ul class="collection">
+        <li class="collection-item" style="border: 1px solid black;">
+          <img class="featured-images" src="<%= Article.main_image %>" alt="#" />
+          <div class="article-content">
+            <h5>
+              <a href="/trending/articles/<%= Article._id %>">
+                <%= Article.title %>
+              </a>
+              <span class="article-date">
+                <%= Article.created_on.toLocaleDateString() %>
+              </span>
+            </h5>
+            <p> <%= Article.description.brief %> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi mollitia
+              esse rem nobis ea enim? Culpa error, alias assumenda quaerat modi impedit odit tempora sit rem debitis a
+              quis dignissimos? </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<% include ../partials/footer %>
