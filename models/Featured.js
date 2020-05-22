@@ -5,18 +5,15 @@ const featuredSchema = new Schema({
 	title: {
 		type: String,
 		required: true,
-		unique: true,
 	},
 	price: Number,
 	linkAddress: String,
 	main_image: {
 		type: String,
 		required: true,
-		unique: true,
 	},
 	sub_images: {
 		type: [String],
-		unique: true,
 	},
 	video: {
 		type: [String],
@@ -26,12 +23,10 @@ const featuredSchema = new Schema({
 		main: {
 			type: String,
 			required: true,
-			unique: true,
 		},
 		brief: {
 			type: String,
 			required: true,
-			unique: true,
 		},
 	},
 	created_on: {

@@ -30,7 +30,7 @@ exports.post = async (req, res) => {
 exports.showPage = async (req, res) => {
 	try {
 		const featuredArticle = await FeaturedModel.findById(req.params.id);
-		res.render("pages/articleShowPage", { featuredArticle });
+		res.render("admin/featured/showPage", { featuredArticle });
 	} catch (error) {
 		if (error) {
 			res.send(error);
@@ -41,7 +41,7 @@ exports.showPage = async (req, res) => {
 exports.edit = async (req, res) => {
 	try {
 		const Article = await FeaturedModel.findById(req.params.id);
-		res.render("pages/articleEditPage", { Article });
+		res.render("admin/featured/articleEditPage", { Article });
 	} catch (error) {
 		if (error) {
 			res.send(error);
