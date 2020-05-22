@@ -26,6 +26,10 @@ const productSchema = new Schema({
 		type: String,
 		required: true,
 	},
+	created_on: {
+		type: Date,
+		default: new Date(),
+	},
 });
 
 module.exports = model("Product", productSchema);
