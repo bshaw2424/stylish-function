@@ -4,17 +4,18 @@ const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const database = require("./mongoDatabase");
 const path = require("path");
+const asyncError = require("./utility/error");
 const PORT = process.env.PORT || 3000;
 
 // imported routes
-const adminIndex = require("./routes/admin/indexRoutes");
-const featuredRoutes = require("./routes/admin/featuredRoutes");
+const adminIndex = require("./routes/admin");
+const featuredRoutes = require("./routes/admin/featured");
 const productRoutes = require("./routes/admin/products");
-const contactRoutes = require("./routes/admin/contactRoutes");
+const contactRoutes = require("./routes/admin/contact");
 const staticRoutes = require("./routes/index/staticRoutes");
 const mainArticleRoutes = require("./routes/articleRoutes");
 const mainProductRoutes = require("./routes/products");
-const errorRoutes = require("./routes/index/errorRoute");
+const errorRoutes = require("./utility/error");
 
 // middleware
 app.use(express.static("public"));
@@ -29,5 +30,5 @@ app.use("/trending/articles", mainArticleRoutes);
 app.use("/products", mainProductRoutes);
 app.use("/", staticRoutes);
 app.use(errorRoutes.errorMessage);
-
-app.listen(PORT, () => console.log(`Server on ${PORT}`));
+app.use(errorRoutes.asyncError);
+app.listen(PORT, () => console.log(`Server on PORT ${PORT}`));

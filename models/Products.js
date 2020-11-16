@@ -1,36 +1,39 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
+const slugify = require("slugify");
 
 const productSchema = new Schema({
 	title: {
 		type: String,
-		required: true,
+		trim: true,
+		unique: true,
+		required: [true, "Product must have a title"],
 	},
+	slug: String,
 	category: {
 		type: String,
-		required: true,
+		enum: ["modular", "lounge", "sleeper"],
+		required: [true, "option required"],
 	},
-	sub_category: {
-		type: String,
-		required: true,
-	},
-	main_image: {
-		type: String,
-		required: true,
-	},
-	sub_images: [String],
 	price: {
 		type: Number,
-		required: true,
+		required: [true, "Price is required"],
+		min: [0, "Price must be greater than 0"],
 	},
 	description: {
 		type: String,
-		required: true,
+		required: [true, "Description can't be blank"],
+		unique: true,
 	},
 	created_on: {
 		type: Date,
 		default: new Date(),
 	},
+});
+
+productSchema.pre("save", function (next) {
+	this.slug = slugify(this.title, { lower: true });
+	next();
 });
 
 module.exports = model("Product", productSchema);
