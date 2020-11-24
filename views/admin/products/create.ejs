@@ -1,5 +1,27 @@
-<article>
-  <form>
-    
-  </form>
-</article>
+<% include ../../partials/header %>
+<% include ../../admin/admin-nav %>
+<section>
+<h1></h1>Add A Product</h1>
+<form action="/admin" method="POST">
+  <!-- product title -->
+  <label for="product-title">Product Title</label>
+  <input id="product-title" class="product-input browser-default" type="text" name="Product[title]" required />
+  <!-- category  -->
+  <label for="main-category">Category</label>
+  <input id="main-category" class="product-input browser-default" type="text" name="Product[main_category]" required />
+  <!-- product price -->
+  <label for="product-price">Price</label>
+  <input id="product-price" class="product-input browser-default" type="text" name="Product[price]" required />
+  <!-- image upload -->
+  <label for="main-image">Image</label>
+  <input id="image" class="product-input browser-default" type="text" name="Product[image]" required />
+  <!-- product description -->
+  <label for="product-description">Product Description</label>
+  <textarea id="product-description" class="product-input browser-default" name="Product[description]" required>
+  </textarea>
+</form>
+<div>
+<button>send</buton>
+<button>back</button>
+</div>
+</section>

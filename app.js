@@ -8,7 +8,7 @@ const asyncError = require("./utility/error");
 const PORT = process.env.PORT || 3000;
 
 // imported routes
-const adminIndex = require("./routes/admin");
+const adminIndexRoutes = require("./routes/admin");
 const featuredRoutes = require("./routes/admin/featured");
 const productRoutes = require("./routes/admin/products");
 const contactRoutes = require("./routes/admin/contact");
@@ -23,8 +23,9 @@ app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-// routes
-app.use("/admin", adminIndex, contactRoutes, productRoutes);
+app.use("/admin", adminIndexRoutes);
+app.use("/admin/products", productRoutes);
+app.use("/admin/messages", contactRoutes);
 app.use("/admin/featured/articles", featuredRoutes);
 app.use("/trending/articles", mainArticleRoutes);
 app.use("/products", mainProductRoutes);

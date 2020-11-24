@@ -1,23 +1,12 @@
 const ProductsModel = require("../../models/Products");
 
-exports.index = async (req, res) => {
-	try {
+module.exports.index = async (req, res, next) => {
 		const products = await ProductsModel.find();
 		res.render("products/index", { products });
-	} catch (error) {
-		if (error) {
-			res.send(error);
-		}
-	}
 };
 
-exports.showPage = async (req, res) => {
-	try {
-		const productShowPage = await ProductsModel.findById(req.params.id);
+module.exports.showPage = async (req, res, next) => {
+	  const { id } = req.params;
+		const productShowPage = await ProductsModel.findById(id);
 		res.render("products/showPage", { productShowPage });
-	} catch (error) {
-		if (error) {
-			res.send(error);
-		}
-	}
 };

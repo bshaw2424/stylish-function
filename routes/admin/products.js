@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { asyncError } = require("../../utility/error");
 
-const Products = require("../../controllers/adminControllers/productsController");
+const Products = require("../../controllers/adminControllers/products");
 
 router.get("/", asyncError(Products.index));
 router.get("/new", Products.create);
