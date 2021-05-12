@@ -16,7 +16,7 @@
     "method-override": "^3.0.0",
     "mongodb": "^3.1.13",
     "mongoose": "^5.7.7",
-    "nodemailer": "^6.4.3",
+    "nodemailer": "^6.4.16",
     "path": "^0.12.7",
     "slugify": "^1.4.6"
   },
