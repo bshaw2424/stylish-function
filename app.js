@@ -20,7 +20,7 @@ const errorRoutes = require("./utility/error");
 // middleware
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use("/admin", adminIndexRoutes);
