@@ -1,42 +1,42 @@
-const ProductsModel = require("../../models/Products");
+const ArticleModel = require("../../models/Articles");
 
 module.exports.index = async (req, res, next) => {
-	const products = await ProductsModel.find();
-	res.render("admin/products/index", { products });
+	const products = await ArticleModel.find();
+	res.render("admin/articles/index", { products });
 };
 
 module.exports.create = (req, res) => {
-	res.render("admin/products/create");
+	res.render("admin/articles/create");
 };
 
 module.exports.post = async (req, res, next) => {
 	const { Products } = req.body;
-	const productsPost = new ProductsModel(Products);
+	const productsPost = new ArticleModel(Products);
 	await productsPost.save();
-	res.redirect("/admin/products/index");
+	res.redirect("/admin/articles/index");
 };
 
 module.exports.showPage = async (req, res, next) => {
 	const { id } = req.params;
-	const productShowPage = await ProductsModel.findById(id);
-	res.render("admin/products/showPage", { productShowPage });
+	const productShowPage = await ArticleModel.findById(id);
+	res.render("admin/articles/showPage", { productShowPage });
 };
 
 module.exports.edit = async (req, res, next) => {
 	const { id } = req.params;
-	const Article = await ProductsModel.findById(id);
-	res.render("admin/products/productsEditPage", { Article });
+	const Article = await ArticleModel.findById(id);
+	res.render("admin/articles/productsEditPage", { Article });
 };
 
 module.exports.update = async (req, res, next) => {
 	const { id } = req.params;
 	const { Products } = req.body;
 	await ProductsModel.findByIdAndUpdate(id, Products);
-	res.redirect(`/admin/products/index/${id}`);
+	res.redirect(`/admin/articles/index/${id}`);
 };
 
 module.exports.delete = async (req, res, next) => {
 	const { id } = req.params;
 	await ProductsModel.findByIdAndDelete(id);
-	res.redirect("/admin/products/index");
+	res.redirect("/admin/articles/index");
 };
