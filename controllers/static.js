@@ -1,17 +1,6 @@
-const { FeaturedModel } = require("../models/Featured");
+exports.index = (req, res) => res.render("pages/index");
 
-exports.index = async (req, res) => {
-	try {
-		const Articles = await FeaturedModel.find().limit(3);
-		res.render("pages/index", { Articles });
-	} catch (error) {
-		if (error) {
-			res.send(error);
-		}
-	}
-};
-
-exports.aboutUs = async (req, res) => res.render("static/aboutUs");
+exports.aboutUs = (req, res) => res.render("static/aboutUs");
 
 exports.affiliateDisclaimer = (req, res) => res.render("static/about-us");
 

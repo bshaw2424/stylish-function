@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const AdminArticles = require("../../controllers/adminControllers/featured");
+const AdminArticles = require("../../controllers/admin/featured");
 
 router.get("/", AdminArticles.index);
 router.get("/new", AdminArticles.create);

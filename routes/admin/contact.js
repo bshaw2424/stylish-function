@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const contacts = require("../../controllers/adminControllers/contact");
+const contacts = require("../../controllers/admin/contact");
 const { asyncError } = require("../../utility/error");
 
 router.get("/", asyncError(contacts.index));

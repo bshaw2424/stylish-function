@@ -2,14 +2,14 @@ const express = require("express");
 const router = express.Router();
 const { asyncError } = require("../../utility/error");
 
-const Products = require("../../controllers/adminControllers/products");
+const Articles = require("../../controllers/admin/articles");
 
-router.get("/", asyncError(Products.index));
-router.get("/new", Products.create);
-router.post("/", asyncError(Products.post));
-router.get("/:id", asyncError(Products.showPage));
-router.get("/:id/edit", asyncError(Products.edit));
-router.put("/:id", asyncError(Products.update));
-router.delete("/:id", asyncError(Products.delete));
+router.get("/", asyncError(Articles.index));
+router.get("/new", Articles.create);
+router.post("/", asyncError(Articles.post));
+router.get("/:id", asyncError(Articles.showPage));
+router.get("/:id/edit", asyncError(Articles.edit));
+router.put("/:id", asyncError(Articles.update));
+router.delete("/:id", asyncError(Articles.delete));
 
 module.exports = router;

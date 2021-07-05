@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Static = require("../../controllers/staticController");
+const Static = require("../../controllers/static");
 
 router.get("/", Static.index);
 router.get("/about-us", Static.aboutUs);
