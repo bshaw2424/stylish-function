@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 3000;
 const adminIndexRoutes = require("./routes/admin");
 const articleRoutes = require("./routes/admin/articles");
 const contactRoutes = require("./routes/admin/contact");
-const staticRoutes = require("./routes/index/staticRoutes");
-const mainArticleRoutes = require("./routes/index/articleRoutes");
+const staticRoutes = require("./routes/index/static");
+const mainArticleRoutes = require("./routes/index/articles");
 const errorRoutes = require("./utility/error");
 
 // middleware
