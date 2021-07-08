@@ -1,12 +1,18 @@
 <% include ../../partials/header %>
 <section>
-  <div class="container">
-  <h1>Products</h1>
-  <div>
-    <a href="/admin/products/new">create product</a>
-  </div>
-    <% for(product of products) { %>
-      <%=product.price%>
-    <% } %>
+  <div class="index-container">
+    <% include ../../admin/admin-nav %>
+    <div class="container">
+      <div>
+        <h1>Articles</h1>
+        <a href="/admin.stylishfunction.com/articles/new">create product</a>
+      </div>
+      <div>
+     <input type="text" name="article-search" class="browser-default" id="article-search">
+      <% for(article of articles) { %>
+        <%= article.price%>
+      <% } %>
+      </div>
+    </div>
   </div>
 </section>
