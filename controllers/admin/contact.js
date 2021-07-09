@@ -10,7 +10,7 @@ module.exports.create = (req, res) => res.render("admin/contact/contactUs");
 module.exports.post = async (req, res, next) => {
 	  const { Message } = req.body;
 		await ContactModel.create(Message);
-		res.redirect("/admin/messages")
+		res.redirect("/contact-us")
 };
 
 module.exports.showPage = async (req, res, next) => {
@@ -22,5 +22,5 @@ module.exports.showPage = async (req, res, next) => {
 module.exports.delete = async (req, res, next) => {
 	  const { id } = req.params
 		await ContactModel.findByIdAndDelete(id);
-		res.redirect("/admin/messages");
+		res.redirect("/admin.stylishfunction.com/messages");
 };
