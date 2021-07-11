@@ -10,10 +10,9 @@ module.exports.create = (req, res) => {
 };
 
 module.exports.post = async (req, res, next) => {
-	const { Products } = req.body;
-	const productsPost = new ArticleModel(Products);
-	await productsPost.save();
-	res.redirect("/admin/articles/index");
+	const { Article } = req.body;
+	await ArticleModel.create(Article);
+	res.redirect("/admin.stylishfunction.com/articles");
 };
 
 module.exports.showPage = async (req, res, next) => {

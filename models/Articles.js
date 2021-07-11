@@ -3,36 +3,28 @@ const { Schema, model } = mongoose;
 const slugify = require("slugify");
 
 const articleSchema = new Schema({
-	title: {
-		type: String,
-		trim: true,
-		unique: true,
-		required: [true, "Article must have a title"],
+	article_title: {
+		type: String
 	},
-	slug: String,
-	image: {
-		type: String,
-		unique: true,
+	article_image: {
+		type: String
 	},
-	description: {
-		type: String,
-		required: [true, "Description required"],
-		unique: true,
+	article_description: {
+		type: String
 	},
 	products: [{
-		title: {
+		product_title: {
 			type: String,
 			required: true
 		},
-		price: {
+		product_price: {
 			type: Number,
 			min: [0, "Price can not be Negative"]
 		}, 
-		image: {
-			type: String,
-			unique: true
+		product_image: {
+			type: String
 		},
-		description: {
+		product_description: {
 			type: String,
 			required: ["Description is required"]
 		}
@@ -43,9 +35,9 @@ const articleSchema = new Schema({
 	},
 });
 
-articleSchema.pre("save", function (next) {
-	this.slug = slugify(this.title, { lower: true });
+/*articleSchema.pre("save", function (next) {
+	this.slug = slugify(this.article_title, { lower: true });
 	next();
-});
+});*/
 
-module.exports = model("Product", articleSchema);
+module.exports = model("Articles", articleSchema);

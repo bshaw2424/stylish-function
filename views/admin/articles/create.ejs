@@ -7,27 +7,31 @@
       <h1>Add Article</h1>
       <form action="/admin.stylishfunction.com/articles" method="POST">
         <label for="article-title">Article Title</label>
-        <input id="article-title" class="product-input browser-default" type="text" name="Product[title]" required />
-        <!-- image upload -->
+        <input type="text" id="article-title" class="product-input browser-default"  name="Article[title]" required />
+        
         <label for="main-image">Image</label>
-        <input id="image" class="article-input browser-default" type="text" name="Product[image]" required />
-        <!-- article description -->
+        <input id="main-image" class="article-input browser-default" type="text" name="Article[image]" required />
+        
         <label for="article-description">Product Description</label>
-        <textarea id="article-description" class="product-input browser-default" name="Product[description]" required>
+        <textarea id="article-description" class="product-input browser-default" name="Article[description]" required>
         </textarea>
+        
         <label for="product-title">Product Title</label>
-        <input type="text" name="product-title" id="product-title" class="browser-default">
+        <input type="text" name="Article[product-title]" id="product-title" class="browser-default">
+        
         <label for="product-price">Product Price</label>
-        <input type="text" name="product-price" id="" class="browser-default">
+        <input type="text" name="Article[product-price]" id="" class="browser-default">
+        
         <label for="product-image">Product Image</label>
-        <input type="file" name="product-image" id="" class="browser-default">
+        <input type="file" name="Article[product-image]" id="" class="browser-default">
+        
         <label for="product-description">Product Description</label>
-        <textarea name="product-description" id="" cols="30" rows="10"></textarea>
+        <textarea name="Article[product-description]" id="product-description" cols="30" rows="10"></textarea>
+        <div>
+          <button type="submit" class="btn-submit btn-small">send</button>
+          <a href="/admin.stylishfunction.com/articles" class="btn-submit btn-small">back</a>
+        </div>
       </form>
-      <div>
-        <button>send</buton>
-        <button>back</button>
-      </div>
     </div>
   </div>
 </section>
