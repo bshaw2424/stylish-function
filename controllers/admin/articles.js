@@ -11,7 +11,8 @@ module.exports.create = (req, res) => {
 
 module.exports.post = async (req, res, next) => {
 	const { Article } = req.body;
-	await ArticleModel.create(Article);
+	const articles = new ArticleModel(Article);
+	await articles.save()
 	res.redirect("/admin.stylishfunction.com/articles");
 };
 

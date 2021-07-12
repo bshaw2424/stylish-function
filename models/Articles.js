@@ -3,18 +3,27 @@ const { Schema, model } = mongoose;
 const slugify = require("slugify");
 
 const articleSchema = new Schema({
-	article_title: {
+	title: {
+		type: String, 
+		trim: true, 
+		required: true
+	},
+	image: {
 		type: String
 	},
-	article_image: {
-		type: String
+	description: {
+		type: String, 
+		trim: true,
+		required: true
 	},
-	article_description: {
-		type: String
+	slug: {
+		type: String,
+		unique: true
 	},
 	products: [{
 		product_title: {
 			type: String,
+			trim: true,
 			required: true
 		},
 		product_price: {
@@ -26,18 +35,19 @@ const articleSchema = new Schema({
 		},
 		product_description: {
 			type: String,
+			trim: true,
 			required: ["Description is required"]
 		}
 	}],
 	created_on: {
 		type: Date,
 		default: new Date(),
-	},
+	}
 });
 
-/*articleSchema.pre("save", function (next) {
-	this.slug = slugify(this.article_title, { lower: true });
+articleSchema.pre("save", function(next) {
+	this.slug = slugify(this.title, { lower: true });
 	next();
-});*/
+});
 
 module.exports = model("Articles", articleSchema);
