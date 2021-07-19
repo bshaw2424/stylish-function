@@ -19,20 +19,19 @@ module.exports.post = async (req, res, next) => {
 		description
 	})
 	await article.save()
-	console.log(article)
 	res.redirect("/admin.stylishfunction.com/articles");
 };
 
 module.exports.showPage = async (req, res, next) => {
 	const { id } = req.params;
-	const productShowPage = await ArticleModel.findById(id);
-	res.render("admin/articles/showPage", { productShowPage });
+	const article = await ArticleModel.findById(id);
+	res.render("admin/articles/showPage", { article });
 };
 
 module.exports.edit = async (req, res, next) => {
 	const { id } = req.params;
-	const Article = await ArticleModel.findById(id);
-	res.render("admin/articles/productsEditPage", { Article });
+	const article = await ArticleModel.findById(id);
+	res.render("admin/articles/edit", { article });
 };
 
 module.exports.update = async (req, res, next) => {

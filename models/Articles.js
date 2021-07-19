@@ -18,25 +18,25 @@ const articleSchema = new Schema({
 	},
 	slug: {
 		type: String,
-		unique: true
+		unique: true,
 	},
 	products: [{
-		product_title: {
+		_id: { id: false },
+		title: {
 			type: String,
 			trim: true,
-			required: true
 		},
-		product_price: {
+		price: {
 			type: Number,
 			min: [0, "Price can not be Negative"]
 		}, 
-		product_image: {
+		image: {
 			type: String
 		},
-		product_description: {
+		description: {
 			type: String,
 			trim: true,
-			required: ["Description is required"]
+			required: [true, "description is required"]
 		}
 	}],
 	created_on: {

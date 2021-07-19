@@ -8,7 +8,29 @@
         <a href="/admin.stylishfunction.com/articles/new">create product</a>
       </div>
       <div>
-     <input type="text" name="article-search" class="browser-default" id="article-search">
+        <input type="text" name="article-search" class="browser-default" id="article-search">
+      </div>
+      <div class="article-container">
+        <div class="row">
+          <% for(let article of articles) { %>
+            <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="<%= article.image %>" alt="<%= article.image %>">
+                </div>
+                <div class="card-content"> 
+                  <a href="/admin.stylishfunction.com/articles/<%= article._id %>">
+                    <span class="card-title">
+                      <%= article.title %>
+                    </span>
+                  </a>
+                  <p><%= article.description %></p>
+                </div>
+                <a href="/admin.stylishfunction.com/articles/<%= article._id %>/edit" class="btn">Edit</a>
+              </div>
+            </div>
+          <% } %>
+        </div>
       </div>
     </div>
   </div>

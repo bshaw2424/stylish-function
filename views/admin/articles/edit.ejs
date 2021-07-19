@@ -1,0 +1,40 @@
+<% include ../../partials/header %>
+
+<section>
+  <div class="index-container">
+  <% include ../../admin/admin-nav %>
+  <div class="container">
+      <h1>Add Article</h1>
+      <form action="/admin.stylishfunction.com/articles" method="POST">
+        <div class="article-section">
+          <label for="article-title">Article Title</label>
+          <input type="text" id="article-title" class="product-input browser-default"  name="Article[title]" value="<%= article.title %>" required />
+          
+          <label for="main-image">Image</label>
+          <input id="main-image" class="article-input browser-default" type="text" name="Article[image]" value="<%= article.image%>" required />
+          
+          <label for="article-description">Article Description</label>
+          <textarea id="article-description" class="product-input browser-default" name="Article[description]" value="<%= article.description %>" required>
+          </textarea>
+        </div>
+        <div class="article-product-section">
+          <label for="product-title">Product Title</label>
+          <input type="text" name="title" id="product-title" class="browser-default">
+          
+          <label for="product-price">Product Price</label>
+          <input type="text" name="price" id="product-price" class="browser-default">
+          
+          <label for="product-image">Product Image</label>
+          <input type="file" name="image" id="product-image" class="browser-default">
+          
+          <label for="product-description">Product Description</label>
+          <textarea name="description" id="product-description" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn-submit btn-small">send</button>
+          <a href="/admin.stylishfunction.com/articles" class="btn-submit btn-small">back</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
