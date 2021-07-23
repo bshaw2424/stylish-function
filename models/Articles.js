@@ -11,6 +11,11 @@ const articleSchema = new Schema({
   image: {
     type: String,
   },
+  sub_description: {
+    type: String,
+    trim: true,
+    require: true,
+  },
   description: {
     type: String,
     trim: true,
@@ -22,7 +27,6 @@ const articleSchema = new Schema({
   },
   products: [
     {
-      _id: { id: false },
       title: {
         type: String,
         trim: true,
