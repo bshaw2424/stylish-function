@@ -9,6 +9,10 @@ module.exports.create = (req, res) => {
   res.render("admin/articles/create");
 };
 
+module.exports.product_create = (req, res) => {
+  res.render("admin/products/create");
+};
+
 module.exports.post = async (req, res, next) => {
   const { Article, title, price, image, description } = req.body;
 
@@ -19,14 +23,15 @@ module.exports.post = async (req, res, next) => {
     image,
     description,
   });
+
   await article.save();
   res.redirect("/admin.stylishfunction.com/articles");
 };
 
 module.exports.showPage = async (req, res, next) => {
   const { id } = req.params;
-  const article = await ArticleModel.findById(id);
-  res.render("admin/articles/showPage", { article });
+  const product = await ArticleModel.findById(id);
+  res.render("admin/products/showPage", { product });
 };
 
 module.exports.edit = async (req, res, next) => {
@@ -38,10 +43,9 @@ module.exports.edit = async (req, res, next) => {
 module.exports.update = async (req, res, next) => {
   const { id } = req.params;
   const { title, price, image, description } = req.body;
-  const newProduct = {
-    $push: { products: { title, price, image, description } },
-  };
-  await ArticleModel.findByIdAndUpdate(id, newProduct);
+  await ArticleModel.findByIdAndUpdate(id, {
+    $set: { title, price, image, description },
+  });
   res.redirect(`/admin/articles/index/${id}`);
 };
 
