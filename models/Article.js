@@ -25,6 +25,7 @@ const articleSchema = new Schema({
     type: String,
     unique: true,
   },
+  products: [{ type: Schema.Types.ObjectId, ref: "Product" }],
   created_on: {
     type: Date,
     default: new Date(),

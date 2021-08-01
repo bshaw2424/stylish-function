@@ -24,7 +24,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use("/admin", adminIndexRoutes);
 app.use("/admin/articles", articleRoutes);
-app.use("/admin/articles/:id", productRoutes);
+app.use("/admin/products", productRoutes);
 app.use("/admin/messages", contactRoutes);
 app.use("/articles", mainArticleRoutes);
 app.use("/", staticRoutes);
