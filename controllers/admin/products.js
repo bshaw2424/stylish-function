@@ -34,7 +34,6 @@ module.exports.update = async (req, res, next) => {
     },
   );
   await article_products.save();
-  console.log(article_products);
   res.redirect(`/admin/articles/${id}`);
 };
 
