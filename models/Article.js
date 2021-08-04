@@ -2,7 +2,29 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 const slugify = require("slugify");
 
-const articleSchema = new Schema({
+const Products = Schema({
+  title: {
+    type: String,
+    trim: true,
+  },
+  slug: {
+    type: String,
+    unique: true,
+  },
+  price: {
+    type: Number,
+    min: [0, "Price can not be Negative"],
+  },
+  image: {
+    type: String,
+  },
+  description: {
+    type: String,
+    trim: true,
+  },
+});
+
+const Articles = new Schema({
   title: {
     type: String,
     trim: true,
@@ -25,16 +47,16 @@ const articleSchema = new Schema({
     type: String,
     unique: true,
   },
-  products: [{ type: Schema.Types.ObjectId, ref: "Product" }],
+  products: [Products],
   created_on: {
     type: Date,
     default: new Date(),
   },
 });
 
-articleSchema.pre("save", function (next) {
+Articles.pre("save", function (next) {
   this.slug = slugify(this.title, { lower: true });
   next();
 });
 
-module.exports = model("Article", articleSchema);
+module.exports = model("Article", Articles);

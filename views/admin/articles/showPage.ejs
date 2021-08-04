@@ -5,28 +5,24 @@
     <div class="container">
       <div class="article-container">
         <div class="row">
-          <h1>welcome to product page i.e. example page</h1>
-          <hr />
-          <div class="col sm12 m6 l4">
-            <% for(let articles of article.products){ %>
-            <h4><%= articles.title %></h4>
-            <div class="card">
-              <div class="card-image">
-                <img src="<%= articles.image %>" alt="<%= articles.image %>" />
-              </div>
-              <div class="card-content">
-                <span>$<%= articles.price %></span>
-                <p><%= articles.description %></p>
-              </div>
+          <h1><%= articles.title %></h1>
+          <div>
+            <a
+              href="/admin/articles/<%= articles._id %>/products/edit"
+              class="btn btn-small blue"
+              >Add Product</a
+            >
+            <div>
+              <h3>products</h3>
+              <% for(let product of articles.products){ %>
+              <h3><%= product.title %></h3>
+              <img src="<%= product.image %>" alt="tester image" />
+              <% } %>
             </div>
-            <% } %>
+            <a href="/admin/articles" class="btn btn-small">Back</a>
           </div>
+          <div class="col sm12 m6 l4"></div>
         </div>
-        <a href="/admin.stylishfunction.com/articles" class="btn btn-small"
-          >Back</a
-        >
-        <a href="/" class="btn">Edit</a>
-        <a href="/" class="btn btn-small">delete</a>
       </div>
     </div>
   </div>

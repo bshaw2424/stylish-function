@@ -22,5 +22,5 @@ module.exports.showPage = async (req, res, next) => {
 module.exports.delete = async (req, res, next) => {
   const { id } = req.params;
   await ContactModel.findByIdAndDelete(id);
-  res.redirect("/admin.stylishfunction.com/messages");
+  res.redirect("/admin/messages");
 };

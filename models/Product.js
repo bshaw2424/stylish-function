@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 const slugify = require("slugify");
 
-const productSchema = Schema({
+const Products = Schema({
   title: {
     type: String,
     trim: true,
@@ -23,12 +23,11 @@ const productSchema = Schema({
     trim: true,
     required: [true, "description is required"],
   },
-  article: [{ type: Schema.Types.ObjectId, ref: "Article" }],
 });
 
-productSchema.pre("save", function (next) {
+Products.pre("save", function (next) {
   this.slug = slugify(this.title, { lower: true });
   next();
 });
 
-module.exports = model("Product", productSchema);
+module.exports = model("Product", Products);

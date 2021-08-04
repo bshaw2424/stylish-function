@@ -5,7 +5,12 @@
   <section class="container message-center-header">
     <div class="message-center-container">
       <h1>Messages</h1>
-      <input type="text" name="message-search" id="message-search" class="browser-default">
+      <input
+        type="text"
+        name="message-search"
+        id="message-search"
+        class="browser-default"
+      />
       <div class="message-filter">
         <aside class="message-filter">
           <ul>
@@ -20,7 +25,7 @@
     </div>
     <div class="collection container">
       <% messages.forEach(message =>{ %>
-      <a href="/admin.stylishfunction.com/messages/<%= message._id %>" class="collection-item">
+      <a href="/admin/messages/<%= message._id %>" class="collection-item">
         <div class="collection-item-info">
           <div class="collection-group collection-name">
             <label for="<%= message.name %>">
@@ -34,7 +39,10 @@
           <div class="collection-group collection-date">
             <%= message.created_on.toLocaleDateString() %>
           </div>
-          <form action="/admin.stylishfunction.com/messages/<%= message._id %>?_method=DELETE" method="POST">
+          <form
+            action="/admin/messages/<%= message._id %>?_method=DELETE"
+            method="POST"
+          >
             <button class="material-icons btn">delete</button>
           </form>
         </div>

@@ -15,12 +15,14 @@
       <span class="message-label email">email: </span><%= message.email %>
     </p>
     <p class="contact-message">
-      <span class="message-label message">message:
-      </span><%= message.message %>
+      <span class="message-label message">message: </span><%= message.message %>
     </p>
     <aside class="message-button-container">
-      <a href="/admin.stylishfunction.com/messages" class="message-back-button btn back">Back</a>
-      <form action="/admin.stylishfunction.com/messages/<%= message._id %>?_method=DELETE" method="POST">
+      <a href="/admin/messages" class="message-back-button btn back">Back</a>
+      <form
+        action="/admin/messages/<%= message._id %>?_method=DELETE"
+        method="POST"
+      >
         <button class="material-icons btn">delete</button>
       </form>
     </aside>
