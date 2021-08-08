@@ -10,17 +10,17 @@ module.exports.create = async (req, res) => {
 };
 
 module.exports.post = async (req, res, next) => {
-  const { Article } = req.body;
+  const { Article, Products } = req.body;
   const article = new ArticleModel(Article);
+  article.products.push(Products);
   await article.save();
   res.redirect("/admin/articles");
 };
 
 module.exports.showPage = async (req, res, next) => {
   const { id } = req.params;
-  const articles = await ArticleModel.findById(id);
-  console.log(articles);
-  await res.render("admin/articles/showPage", { articles });
+  const articles = await ArticleModel.findById({ _id: id });
+  await res.render("admin/articles/showPage", { id, articles });
 };
 
 module.exports.edit = async (req, res, next) => {
