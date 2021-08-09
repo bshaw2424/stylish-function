@@ -5,7 +5,10 @@
     <% include ../../admin/admin-nav %>
     <div class="container">
       <h1>Add a product</h1>
-      <form action="/admin/articles/<%= id %>" method="POST">
+      <form
+        action="/admin/articles/<%= id %>/products?_method=PUT"
+        method="POST"
+      >
         <div class="article-product-section">
           <label for="product-title">Product Title</label>
           <input
@@ -25,7 +28,7 @@
 
           <label for="product-image">Product Image</label>
           <input
-            type="file"
+            type="text"
             name="Products[image]"
             id="product-image"
             class="browser-default"
