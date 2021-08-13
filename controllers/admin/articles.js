@@ -5,7 +5,7 @@ module.exports.index = async (req, res, next) => {
   res.render("admin/articles/index", { articles });
 };
 
-module.exports.create = async (req, res) => {
+module.exports.create = (req, res) => {
   res.render("admin/articles/create");
 };
 
@@ -14,13 +14,14 @@ module.exports.post = async (req, res, next) => {
   const article = new ArticleModel(Article);
   article.products.push(Products);
   await article.save();
+  console.log(article);
   res.redirect("/admin/articles");
 };
 
 module.exports.showPage = async (req, res, next) => {
-  const { id } = req.params;
-  const articles = await ArticleModel.findById({ _id: id });
-  await res.render("admin/articles/showPage", { id, articles });
+  const { id, product } = req.params;
+  const articles = await ArticleModel.findById(id);
+  res.render("admin/articles/showPage", { articles, product });
 };
 
 module.exports.edit = async (req, res, next) => {
@@ -41,6 +42,6 @@ module.exports.update = async (req, res, next) => {
 
 module.exports.delete = async (req, res, next) => {
   const { id } = req.params;
-  await Article.findByIdAndDelete(id);
+  await ArticleModel.findByIdAndDelete(id);
   res.redirect("/admin/articles");
 };
