@@ -1,67 +1,76 @@
-const Article = require("../../models/Article");
+const ArticleModel = require("../../models/Article");
 
 module.exports.showPage = async (req, res, next) => {
-  const articles = Article.find({});
-
-  res.render("admin/products/showPage", { articles });
+  const { id, product } = req.params;
+  const articles = await ArticleModel.findById(id);
+  const products = articles.products.id(product);
+  res.render("admin/products/showPage", { products });
 };
 
-// module.exports.post = async (req, res, next) => {
-//   const { id } = req.params;
-//   const { Products } = req.body;
-//   const articles = req.body.Products;
-//   const productings = Article.findById(id);
-//   console.log(productings);
-//   res.redirect(`/admin/articles/${id}`);
-// };
-
+// form to create a new product to parent article
 module.exports.new = async (req, res, next) => {
   const { id, product } = req.params;
-  const articles = await Article.findById(id);
+  const articles = await ArticleModel.findById(id);
   res.render("admin/products/create", { articles, product });
 };
 
 module.exports.edit = async (req, res, next) => {
   const { id, product } = req.params;
   // finds the parent document by id
-  const articles = await Article.findById(id);
+  const articles = await ArticleModel.findById(id);
   // finds the subdocument array id
   const products = articles.products.id(product);
   res.render("admin/products/edit", { articles, products });
 };
 
+// creates a new product to parent article
 module.exports.update = async (req, res, next) => {
   const { id } = req.params;
   const { Products } = req.body;
-  const article_products = await Article.findByIdAndUpdate(id);
+
+  const article_products = await ArticleModel.findByIdAndUpdate(id);
+
   article_products.products.unshift(Products);
+
   await article_products.save();
+
   res.redirect(`/admin/articles/${id}`);
 };
 
+// updates a product in parent article
 module.exports.product_update = async (req, res, next) => {
   const { id, product } = req.params;
 
+  // destructed form Products wrapper to access form name attributes
   const {
     Products: { title, price, image, description },
   } = req.body;
 
-  const articles = await Article.findByIdAndUpdate(id);
+  const articles = await ArticleModel.findByIdAndUpdate(id);
 
-  const products = articles.products.id(product); // find subdocument by id
+  // find subdocument by id
+  const products = articles.products.id(product);
+  // edit form fields by name
   products.title = title;
   products.price = price;
   products.image = image;
   products.description = description;
 
-  await articles.save(); // save updated product to database
+  // save updated product to database
+  await articles.save();
+
   res.redirect(`/admin/articles/${id}`);
 };
 
+// removes a product from parent article
 module.exports.delete_product = async (req, res, next) => {
   const { id, product } = req.params;
-  const articles = await Article.findByIdAndDelete(id);
+  const articles = await ArticleModel.findById(id);
 
-  console.log(articles);
+  // find subdocument by id and remove it for the article
+  articles.products.id(product).remove();
+
+  await articles.save();
+
   res.redirect(`/admin/articles/${id}`);
 };

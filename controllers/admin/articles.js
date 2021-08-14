@@ -19,9 +19,9 @@ module.exports.post = async (req, res, next) => {
 };
 
 module.exports.showPage = async (req, res, next) => {
-  const { id, product } = req.params;
+  const { id } = req.params;
   const articles = await ArticleModel.findById(id);
-  res.render("admin/articles/showPage", { articles, product });
+  res.render("admin/articles/showPage", { articles });
 };
 
 module.exports.edit = async (req, res, next) => {
