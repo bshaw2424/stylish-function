@@ -2,15 +2,12 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 const slugify = require("slugify");
 
-const Products = Schema({
+const Products = new Schema({
   title: {
     type: String,
     trim: true,
   },
-  slug: {
-    type: String,
-    unique: true,
-  },
+  slug: { type: String, unique: true },
   price: {
     type: Number,
     min: [0, "Price can not be Negative"],
@@ -28,7 +25,6 @@ const Articles = new Schema({
   title: {
     type: String,
     trim: true,
-    required: true,
   },
   image: {
     type: String,
@@ -36,12 +32,10 @@ const Articles = new Schema({
   sub_description: {
     type: String,
     trim: true,
-    require: true,
   },
   description: {
     type: String,
     trim: true,
-    required: true,
   },
   slug: {
     type: String,
@@ -52,6 +46,11 @@ const Articles = new Schema({
     type: Date,
     default: new Date(),
   },
+});
+
+Products.pre("save", function (next) {
+  this.slug = slugify(this.title, { lower: true });
+  next();
 });
 
 Articles.pre("save", function (next) {
