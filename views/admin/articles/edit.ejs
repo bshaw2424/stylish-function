@@ -10,6 +10,15 @@
         method="POST"
       >
         <div class="article-section">
+          <label for="article-title">Article Title</label>
+          <input
+            type="text"
+            id="article-title"
+            class="article-input browser-default"
+            name="Article[title]"
+            value="<%= articles.title %>"
+            required
+          />
           <label for="main-image">Image</label>
           <input
             id="main-image"

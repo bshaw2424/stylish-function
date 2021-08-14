@@ -6,7 +6,7 @@
     <div class="container">
       <h1>Add a product</h1>
       <form
-        action="/admin/articles/<%= id %>/products?_method=PUT"
+        action="/admin/articles/<%= articles._id %>/products/add?_method=PUT"
         method="POST"
       >
         <div class="article-product-section">
@@ -46,7 +46,6 @@
           <button class="btn btn-small blue" id="add-a-product-button">
             Add
           </button>
-          <button type="submit" class="btn-submit btn-small">send</button>
           <a href="/admin/articles" class="btn-submit btn-small">back</a>
         </div>
       </form>
