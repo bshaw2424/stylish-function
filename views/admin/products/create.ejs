@@ -4,18 +4,18 @@
   <div class="index-container">
     <% include ../../admin/admin-nav %>
     <div class="container">
-      <h1>Add a product</h1>
       <form
         action="/admin/articles/<%= articles._id %>/products/add?_method=PUT"
         method="POST"
       >
-        <div class="article-product-section">
+        <h1>Add a product</h1>
+        <div class="product-section">
           <label for="product-title">Product Title</label>
           <input
             type="text"
             name="Products[title]"
             id="product-title"
-            class="browser-default"
+            class="browser-default form-field"
           />
 
           <label for="product-price">Product Price</label>
@@ -23,7 +23,7 @@
             type="text"
             name="Products[price]"
             id="product-price"
-            class="browser-default"
+            class="browser-default form-field"
           />
 
           <label for="product-image">Product Image</label>
@@ -31,7 +31,7 @@
             type="text"
             name="Products[image]"
             id="product-image"
-            class="browser-default"
+            class="browser-default form-field"
           />
 
           <label for="product-description">Product Description</label>
@@ -40,10 +40,11 @@
             id="product-description"
             cols="30"
             rows="10"
+            class="form-field"
           ></textarea>
         </div>
-        <div>
-          <button class="btn btn-small blue" id="add-a-product-button">
+        <div class="button-container">
+          <button class="btn btn-small blue" id="add-product-button">
             Add
           </button>
           <a href="/admin/articles" class="btn-submit btn-small">back</a>

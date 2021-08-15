@@ -4,17 +4,17 @@
   <div class="index-container">
     <% include ../../admin/admin-nav %>
     <div class="container">
-      <h1>Edit <%= articles.title %></h1>
       <form
         action="/admin/articles/<%= articles._id %>?_method=PUT"
         method="POST"
       >
+        <h1>Edit <%= articles.title %></h1>
         <div class="article-section">
           <label for="article-title">Article Title</label>
           <input
             type="text"
             id="article-title"
-            class="article-input browser-default"
+            class="browser-default form-field"
             name="Article[title]"
             value="<%= articles.title %>"
             required
@@ -22,7 +22,7 @@
           <label for="main-image">Image</label>
           <input
             id="main-image"
-            class="article-input browser-default"
+            class="browser-default form-field"
             type="text"
             name="Article[image]"
             value="<%= articles.image %>"
@@ -31,7 +31,7 @@
           <label for="article-sub-description">Sub Description</label>
           <textarea
             id="article-sub-description"
-            class="product-input browser-default"
+            class="browser-default form-field"
             name="Article[sub_description]"
             required
           >
@@ -40,14 +40,14 @@
           <label for="article-description">Article Description</label>
           <textarea
             id="article-description"
-            class="product-input browser-default"
+            class="browser-default form-field"
             name="Article[description]"
             required
           >
           <%= articles.description %>
           </textarea>
         </div>
-        <div>
+        <div class="button-container">
           <button type="submit" class="btn-submit btn-small">send</button>
           <a href="/admin/articles" class="btn-submit btn-small">back</a>
         </div>
