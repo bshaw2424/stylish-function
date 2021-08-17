@@ -1,8 +1,10 @@
-form {
+.form-group {
   width: 55%;
-  margin: auto;
+  margin: 0 auto;
   h1 {
     text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -35,6 +37,7 @@ form {
     margin: 0 1rem 0 0;
   }
 }
+
 .article-section {
   border-bottom: 6px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;

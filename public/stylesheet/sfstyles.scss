@@ -2,13 +2,13 @@
 @import "reset";
 
 @mixin flex-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @mixin flex-direction-column {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 @import "indexNavigation";
@@ -21,15 +21,16 @@
 @import "messages";
 @import "contactUs";
 @import "forms";
+@import "productsCards";
 @import "showPage";
 @import "editPage";
 @import "footer";
 
 #footer-section,
 .navigation {
-	background: $nav-background;
+  background: $nav-background;
 }
 .copyright {
-	background: $aside-background;
-	color: $aside-text;
+  background: $aside-background;
+  color: $aside-text;
 }

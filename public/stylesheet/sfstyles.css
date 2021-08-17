@@ -739,13 +739,15 @@ span i.material-icons:hover {
   background-color: #0088cc;
 }
 
-form {
+.form-group {
   width: 55%;
-  margin: auto;
+  margin: 0 auto;
 }
 
-form h1 {
+.form-group h1 {
   text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .article-section,
@@ -869,6 +871,92 @@ form h1 {
   display: inline-block;
   width: 70%;
   margin: 1rem 15%;
+}
+
+.row .col:first-child {
+  padding-left: 0;
+}
+
+.index-container > .container {
+  margin-top: 1rem;
+}
+
+.title-container {
+  margin: 0 0 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+.title-container h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.filter-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-search input {
+  width: 40%;
+  padding: 0.25rem;
+}
+
+.filter-search input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.filter-search input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.filter-search input::-ms-input-placeholder {
+  text-align: center;
+}
+
+.filter-search input::placeholder {
+  text-align: center;
+}
+
+.card-content {
+  padding: 0.5rem;
+}
+
+.card-content .card-title {
+  text-align: center;
+}
+
+.card-content p {
+  margin: 0 0 1rem 0;
+  padding: 0 0.5rem;
+}
+
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 1rem 0 0 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.button-container form {
+  margin: 0;
+}
+
+.button-container form button {
+  background: green;
+  width: 85px;
 }
 
 .show-page {
