@@ -5,10 +5,10 @@
     <% include ../../admin/admin-nav %>
     <div class="container">
       <!-- article form -->
-      <form action="/admin/articles" method="POST">
+      <form action="/admin/articles" method="POST" class="form-group">
         <h1>Add Article</h1>
         <div class="article-section">
-          <label for="article-title">Article Title</label>
+          <label for="article-title">Article Title:</label>
           <input
             type="text"
             id="article-title"
@@ -17,7 +17,7 @@
             required
           />
 
-          <label for="main-image">Image</label>
+          <label for="main-image">Image:</label>
           <input
             id="main-image"
             class="browser-default form-field"
@@ -33,7 +33,7 @@
             required
           >
           </textarea>
-          <label for="article-description">Article Description</label>
+          <label for="article-description">Article Description:</label>
           <textarea
             id="article-description"
             class="browser-default form-field"
@@ -45,7 +45,7 @@
 
         <!-- product form for parent article -->
         <div class="product-section">
-          <label for="product-title">Product Title</label>
+          <label for="product-title">Product Title:</label>
           <input
             type="text"
             name="Products[title]"
@@ -53,7 +53,7 @@
             class="browser-default form-field"
           />
 
-          <label for="product-price">Product Price</label>
+          <label for="product-price">Product Price:</label>
           <input
             type="text"
             name="Products[price]"
@@ -61,7 +61,7 @@
             class="browser-default form-field"
           />
 
-          <label for="product-image">Product Image</label>
+          <label for="product-image">Product Image:</label>
           <input
             type="text"
             name="Products[image]"
@@ -69,7 +69,7 @@
             class="browser-default form-field"
           />
 
-          <label for="product-description">Product Description</label>
+          <label for="product-description">Product Description:</label>
           <textarea
             name="Products[description]"
             id="product-description"
@@ -80,7 +80,7 @@
         </div>
         <div class="button-container">
           <button type="submit" class="btn-submit btn-small">send</button>
-          <a href="/admin/articles" class="btn-submit btn-small">back</a>
+          <a href="/admin/articles" class="btn-submit btn-small">cancel</a>
         </div>
       </form>
     </div>

@@ -3,11 +3,18 @@
   <div class="index-container">
     <% include ../../admin/admin-nav %>
     <div class="container">
-      <div>
+      <div class="title-container">
         <h1>Articles</h1>
-        <a href="/admin/articles/new" class="btn btn-small blue"
-          >Create New Articles</a
-        >
+      </div>
+      <div class="filter-search">
+        <input
+          type="text"
+          name="filter-search"
+          id="filter-search"
+          class="browser-default"
+          placeholder="filter seach"
+        />
+        <a href="/admin/articles/new" class="btn blue">Create New Article</a>
       </div>
       <div class="article-container">
         <div class="row">
@@ -18,22 +25,25 @@
                 <img src="<%= article.image %>" alt="<%= article.image %>" />
               </div>
               <div class="card-content">
-                <a href="/admin/articles/<%= article._id %>" class="card-title">
-                  <%= article.title %>
-                </a>
+                <div class="card-title">
+                  <a href="/admin/articles/<%= article._id %>">
+                    <%= article.title %>
+                  </a>
+                </div>
                 <p><%= article.description %></p>
-              </div>
-              <div class="button-container">
-                <a href="/admin/articles/<%= article._id %>/edit" class="btn"
-                  >Edit Article</a
-                >
-                <form
-                  action="/admin/articles/<%= article._id %>?_method=DELETE"
-                  method="POST"
-                >
-                  <button class="btn">delete</button>
-                </form>
-                <a href="/" class="btn btn-small disabled">Publish</a>
+                <div class="button-container">
+                  <a
+                    href="/admin/articles/<%= article._id %>/edit"
+                    class="btn blue"
+                    >Edit</a
+                  >
+                  <form
+                    action="/admin/articles/<%= article._id %>?_method=DELETE"
+                    method="POST"
+                  >
+                    <button class="btn red">delete</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

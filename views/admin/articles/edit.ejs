@@ -5,10 +5,11 @@
     <% include ../../admin/admin-nav %>
     <div class="container">
       <form
+        class="form-group"
         action="/admin/articles/<%= articles._id %>?_method=PUT"
         method="POST"
       >
-        <h1>Edit <%= articles.title %></h1>
+        <h1>Edit: <%= articles.title %></h1>
         <div class="article-section">
           <label for="article-title">Article Title</label>
           <input
@@ -49,7 +50,7 @@
         </div>
         <div class="button-container">
           <button type="submit" class="btn-submit btn-small">send</button>
-          <a href="/admin/articles" class="btn-submit btn-small">back</a>
+          <a href="/admin/articles" class="btn-submit btn-small">cancel</a>
         </div>
       </form>
     </div>

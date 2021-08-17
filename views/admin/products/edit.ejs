@@ -7,8 +7,9 @@
       <form
         action="/admin/articles/<%= articles._id %>/products/<%= products._id %>?_method=PUT"
         method="POST"
+        class="form-group"
       >
-        <h1>Edit</h1>
+        <h1>Edit: <%= products.title %></h1>
         <div class="product-section">
           <label for="product-title">Product Title</label>
           <input
@@ -55,7 +56,7 @@
           <a
             href="/admin/articles/<%= articles._id %>"
             class="btn-submit btn-small"
-            >back</a
+            >cancel</a
           >
         </div>
       </form>

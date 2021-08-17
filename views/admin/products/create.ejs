@@ -7,10 +7,11 @@
       <form
         action="/admin/articles/<%= articles._id %>/products/add?_method=PUT"
         method="POST"
+        class="form-group"
       >
         <h1>Add a product</h1>
         <div class="product-section">
-          <label for="product-title">Product Title</label>
+          <label for="product-title">Product Title:</label>
           <input
             type="text"
             name="Products[title]"
@@ -18,7 +19,7 @@
             class="browser-default form-field"
           />
 
-          <label for="product-price">Product Price</label>
+          <label for="product-price">Product Price:</label>
           <input
             type="text"
             name="Products[price]"
@@ -26,7 +27,7 @@
             class="browser-default form-field"
           />
 
-          <label for="product-image">Product Image</label>
+          <label for="product-image">Product Image:</label>
           <input
             type="text"
             name="Products[image]"
@@ -34,7 +35,7 @@
             class="browser-default form-field"
           />
 
-          <label for="product-description">Product Description</label>
+          <label for="product-description">Product Description:</label>
           <textarea
             name="Products[description]"
             id="product-description"
@@ -47,7 +48,7 @@
           <button class="btn btn-small blue" id="add-product-button">
             Add
           </button>
-          <a href="/admin/articles" class="btn-submit btn-small">back</a>
+          <a href="/admin/articles" class="btn-submit btn-small">cancel</a>
         </div>
       </form>
     </div>

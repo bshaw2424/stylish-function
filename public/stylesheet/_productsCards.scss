@@ -1,0 +1,56 @@
+.row .col:first-child {
+  padding-left: 0;
+}
+.index-container > .container {
+  margin-top: 1rem;
+}
+.title-container {
+  margin: 0 0 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.filter-search {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  input {
+    width: 40%;
+    padding: 0.25rem;
+    &::placeholder {
+      text-align: center;
+    }
+  }
+}
+.card-content {
+  padding: 0.5rem;
+  .card-title {
+    text-align: center;
+  }
+  p {
+    margin: 0 0 1rem 0;
+    padding: 0 0.5rem;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0 0 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  form {
+    margin: 0;
+    button {
+      background: green;
+      width: 85px;
+    }
+  }
+}
