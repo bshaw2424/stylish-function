@@ -28,29 +28,29 @@
     }
   }
 }
-.card-content {
-  padding: 0.5rem;
-  .card-title {
-    text-align: center;
-  }
-  p {
-    margin: 0 0 1rem 0;
-    padding: 0 0.5rem;
-  }
-}
 
-.button-container {
-  display: flex;
-  justify-content: space-around;
-  margin: 1rem 0 0 0;
-  padding: 0.75rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  form {
-    margin: 0;
-    button {
-      background: green;
-      width: 85px;
+.card {
+  .card-content {
+    padding: 0.5rem;
+    .card-title {
+      text-align: center;
+    }
+    p {
+      margin: 0 0 1rem 0;
+      padding: 0 0.5rem;
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0 0 0;
+    padding: 0.75rem 0;
+    form {
+      margin: 0;
+      button {
+        width: 85px;
+      }
     }
   }
 }
