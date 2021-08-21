@@ -12,9 +12,11 @@
           name="filter-search"
           id="filter-search"
           class="browser-default"
-          placeholder="filter seach"
+          placeholder="filter search"
         />
-        <a href="/admin/articles/new" class="btn blue">Create New Article</a>
+        <a href="/admin/articles/new" class="btn go-button"
+          >Create New Article</a
+        >
       </div>
       <div class="article-container">
         <div class="row">
@@ -24,24 +26,22 @@
               <div class="card-image">
                 <img src="<%= article.image %>" alt="<%= article.image %>" />
               </div>
-              <div class="card-content">
-                <div class="card-title">
-                  <a href="/admin/articles/<%= article._id %>">
-                    <%= article.title %>
-                  </a>
-                </div>
+              <div class="card-content z-depth-1">
+                <a href="/admin/articles/<%= article._id %>" class="card-title">
+                  <%= article.title %>
+                </a>
                 <p><%= article.description %></p>
-                <div class="button-container">
+                <div class="button-container card-action">
                   <a
                     href="/admin/articles/<%= article._id %>/edit"
-                    class="btn blue"
+                    class="btn go-button"
                     >Edit</a
                   >
                   <form
                     action="/admin/articles/<%= article._id %>?_method=DELETE"
                     method="POST"
                   >
-                    <button class="btn red">delete</button>
+                    <button class="btn delete-button">delete</button>
                   </form>
                 </div>
               </div>

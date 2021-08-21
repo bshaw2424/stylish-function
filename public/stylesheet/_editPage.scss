@@ -1,41 +1,41 @@
 .form-container {
-	@include flex-direction-column;
-	padding: 0 0 2rem 0;
-	h1 {
-		margin: 1rem;
-		font-size: 3.2rem;
-		text-align: center;
-	}
-	form {
-		width: 70%;
-		margin: 0 auto;
-		.product-input {
-			padding: 1rem;
-			height: 2px;
-			border-radius: 0.2rem;
-		}
-		.contact-form-buttons {
-			margin: 0 0 2rem 0;
-			.submit {
-				margin-right: 0.5rem;
-				background-color: $show-button;
-				&:hover {
-					background-color: $show-button-hover;
-				}
-			}
-			.back {
-				background-color: $back-button;
-				&:hover {
-					background-color: $back-button-hover;
-				}
-			}
-		}
-		label {
-			font-size: 1rem;
-		}
-		textarea {
-			min-height: 8rem;
-			resize: none;
-		}
-	}
+  @include flex-direction-column;
+  padding: 0 0 2rem 0;
+  h1 {
+    margin: 1rem;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  form {
+    width: 70%;
+    margin: 0 auto;
+    .product-input {
+      padding: 1rem;
+      height: 2px;
+      border-radius: 0.2rem;
+    }
+    .contact-form-buttons {
+      margin: 0 0 2rem 0;
+      .submit {
+        margin-right: 0.5rem;
+        background-color: $go-button;
+        &:hover {
+          background-color: $go-button-hover;
+        }
+      }
+      .back {
+        background-color: $back-button;
+        &:hover {
+          background-color: $back-button-hover;
+        }
+      }
+    }
+    label {
+      font-size: 1rem;
+    }
+    textarea {
+      min-height: 8rem;
+      resize: none;
+    }
+  }
 }

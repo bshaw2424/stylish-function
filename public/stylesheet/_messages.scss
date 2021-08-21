@@ -1,83 +1,83 @@
 .message-page {
-	display: flex;
+  display: flex;
 }
 
 .message-center-header {
-	width: 70%;
-	max-height: 100vh;
-	.message-center-container {
-		@include flex-center;
-		border-bottom: $border;
-		margin: 1rem 0;
-		h1 {
-			margin: 1rem 2rem 1rem 0;
-		}
-		.message-filter {
-			@include flex-direction-column;
-			justify-content: center;
-		}
-	}
+  width: 70%;
+  max-height: 100vh;
+  .message-center-container {
+    @include flex-center;
+    border-bottom: $border;
+    margin: 1rem 0;
+    h1 {
+      margin: 1rem 2rem 1rem 0;
+    }
+    .message-filter {
+      @include flex-direction-column;
+      justify-content: center;
+    }
+  }
 }
 
 .collection {
-	width: 100%;
-	border: none;
-	form button {
-		background: none;
-		color: $show-button;
-	}
-	a:nth-of-type(even) {
-		background: lightgray;
-	}
-	.collection-item {
-		display: flex;
-		justify-content: space-between;
-		.collection-item-info {
-			width: 100%;
-			display: flex;
-			justify-content: space-evenly;
-			.collection-group {
-				width: 100%;
-			}
-		}
-	}
+  width: 100%;
+  border: none;
+  form button {
+    background: none;
+    color: $go-button;
+  }
+  a:nth-of-type(even) {
+    background: lightgray;
+  }
+  .collection-item {
+    display: flex;
+    justify-content: space-between;
+    .collection-item-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .collection-group {
+        width: 100%;
+      }
+    }
+  }
 }
 
 // contact show page section
 .message-details {
-	@include flex-direction-column;
-	justify-content: center;
-	width: 50vw;
-	padding: 2rem;
-	margin: auto;
-	p {
-		font-size: 1rem;
-		margin: 0 0 1rem 0;
-		word-wrap: break-word;
-		@include flex-direction-column;
-		.message-label {
-			display: inline-block;
-			max-width: 15%;
-			text-decoration: underline;
-			margin-bottom: 0.5rem;
-			font-size: 1.2rem;
-			text-transform: $text-capitalize;
-			font-weight: 700;
-		}
-	}
-	aside {
-		display: flex;
-		margin-right: 1rem;
-		a {
-			display: inline-block;
-			margin-right: 1rem;
-		}
-		form button {
-			@include flex-center;
-			.material-icons {
-				display: inline-block;
-				margin-right: 4px;
-			}
-		}
-	}
+  @include flex-direction-column;
+  justify-content: center;
+  width: 50vw;
+  padding: 2rem;
+  margin: auto;
+  p {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    word-wrap: break-word;
+    @include flex-direction-column;
+    .message-label {
+      display: inline-block;
+      max-width: 15%;
+      text-decoration: underline;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      text-transform: $text-capitalize;
+      font-weight: 700;
+    }
+  }
+  aside {
+    display: flex;
+    margin-right: 1rem;
+    a {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+    form button {
+      @include flex-center;
+      .material-icons {
+        display: inline-block;
+        margin-right: 4px;
+      }
+    }
+  }
 }

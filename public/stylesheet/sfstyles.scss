@@ -25,6 +25,36 @@
 @import "editPage";
 @import "footer";
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $title-text;
+}
+.go-button {
+  background-color: $go-button;
+  &:hover {
+    background-color: $go-button-hover;
+  }
+}
+
+.delete-button {
+  background-color: $delete-button;
+  &:hover {
+    background-color: $delete-button-hover;
+  }
+}
+
+.cancel-button {
+  background-color: $cancel-button;
+  color: $nav-text;
+  &:hover {
+    background-color: $cancel-button-hover;
+  }
+}
+
 #footer-section,
 .navigation {
   background: $nav-background;

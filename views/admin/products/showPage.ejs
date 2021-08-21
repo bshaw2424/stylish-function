@@ -3,6 +3,24 @@
   <div class="index-container">
     <% include ../../admin/admin-nav %>
     <div class="container">
-        <h1>products view</h1>
+      <div class="row">
+        <div class="product-container">
+          <div class="image-container">
+            <img src="<%=products.image %>" alt="<%= products.title %>" />
+          </div>
+          <div class="content-container">
+            <h3><%= products.title %></h3>
+            <div><%= products.description %></div>
+            <span><strong>$<%= products.price %></strong></span>
+            <a
+              class="btn go-button"
+              href="https://bit.ly/3gaosfY"
+              target="_blank"
+              >get more information</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

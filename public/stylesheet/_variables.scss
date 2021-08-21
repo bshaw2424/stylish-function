@@ -1,5 +1,6 @@
 $white: #fff;
 $nav-text: #333;
+$title-text: #333;
 $nav-background: #ed8a63;
 $text-capitalize: capitalize;
 $text-center: center;
@@ -10,8 +11,12 @@ $aside-text: #ddd;
 $border: rgba(0, 0, 0, 0.3);
 $back-button: hsl(60, 100%, 30%);
 $back-button-hover: hsl(60, 100%, 25%);
-$show-button: hsl(200, 100%, 50%);
-$show-button-hover: hsl(200, 100%, 40%);
+$go-button: hsl(200, 100%, 40%);
+$go-button-hover: hsl(200, 100%, 50%);
+$delete-button: hsl(0, 100%, 50%);
+$delete-button-hover: hsl(0, 100%, 45%);
+$cancel-button: hsl(0, 0%, 80%);
+$cancel-button-hover: hsl(0, 0%, 88%);
 
 $break-small: 600px;
 $break-medium: 900px;

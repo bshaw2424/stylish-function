@@ -10,9 +10,8 @@ module.exports.create = (req, res) => {
 };
 
 module.exports.post = async (req, res, next) => {
-  const { Article, Products } = req.body;
+  const { Article } = req.body;
   const article = new ArticleModel(Article);
-  article.products.push(Products);
   await article.save();
   console.log(article);
   res.redirect("/admin/articles");

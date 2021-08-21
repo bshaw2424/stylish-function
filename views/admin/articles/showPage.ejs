@@ -16,7 +16,7 @@
         />
         <a
           href="/admin/articles/<%= articles._id %>/products/new"
-          class="btn btn-small blue"
+          class="btn go-button"
           >Add Product</a
         >
       </div>
@@ -28,18 +28,17 @@
             <div class="card-image">
               <img src="<%= product.image %>" alt="test" />
             </div>
-            <div class="card-content">
-              <div class="card-title">
-                <a
-                  href="/admin/articles/<%= articles._id %>/products/<%= product._id %>"
-                  ><%= product.title %></a
-                >
-              </div>
+            <div class="card-content z-depth-1">
+              <a
+                href="/admin/articles/<%= articles._id %>/products/<%= product._id %>"
+                class="card-title"
+                ><%= product.title %></a
+              >
               <p><%= product.description %></p>
-              <div class="button-container">
+              <div class="button-container card-action">
                 <a
                   href="/admin/articles/<%= articles._id %>/products/<%= product._id %>/edit"
-                  class="btn"
+                  class="btn go-button"
                 >
                   edit
                 </a>
@@ -47,7 +46,7 @@
                   action="/admin/articles/<%= articles._id %>/products/<%= product._id %>?_method=DELETE"
                   method="POST"
                 >
-                  <button class="btn">delete</button>
+                  <button class="btn delete-button">delete</button>
                 </form>
               </div>
             </div>

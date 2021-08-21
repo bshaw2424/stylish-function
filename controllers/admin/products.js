@@ -30,7 +30,7 @@ module.exports.update = async (req, res, next) => {
 
   const article_products = await ArticleModel.findByIdAndUpdate(id);
 
-  article_products.products.unshift(Products);
+  article_products.products.unshift({ ...Products });
 
   await article_products.save();
 
