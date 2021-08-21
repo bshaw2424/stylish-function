@@ -13,7 +13,6 @@ module.exports.post = async (req, res, next) => {
   const { Article } = req.body;
   const article = new ArticleModel(Article);
   await article.save();
-  console.log(article);
   res.redirect("/admin/articles");
 };
 
