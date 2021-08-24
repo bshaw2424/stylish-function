@@ -783,10 +783,6 @@ span i.material-icons:hover {
   margin: 1rem 15%;
 }
 
-.row .col:first-child {
-  padding-left: 0;
-}
-
 .index-container > .container {
   margin-top: 1rem;
 }
