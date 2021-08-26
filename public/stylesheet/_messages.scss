@@ -1,20 +1,26 @@
 .message-page {
-  display: flex;
+  @include flex;
+  border: 1px solid black;
 }
 
 .message-center-header {
   width: 70%;
   max-height: 100vh;
   .message-center-container {
-    @include flex-center;
-    border-bottom: $border;
-    margin: 1rem 0;
+    @include flex-between;
     h1 {
-      margin: 1rem 2rem 1rem 0;
+      margin: 0;
+      width: 100%;
+      text-align: center;
     }
-    .message-filter {
+
+    .message-filter-container {
       @include flex-direction-column;
       justify-content: center;
+    }
+    .input-field {
+      width: 20%;
+      margin: 0;
     }
   }
 }
@@ -22,22 +28,58 @@
 .collection {
   width: 100%;
   border: none;
-  form button {
-    background: none;
-    color: $go-button;
+  &:hover {
+    button {
+      display: block;
+    }
   }
-  a:nth-of-type(even) {
-    background: lightgray;
+  .delete-container {
+    border: 1px solid black;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    input {
+      width: 50%;
+      padding: 6px 8px;
+      align-self: center;
+    }
+    button {
+      background: none;
+      color: black;
+      box-shadow: none;
+    }
+  }
+  form {
+    button {
+      border: 0;
+      font-size: 1.75rem;
+      background: none;
+      box-shadow: none;
+      display: none;
+      color: $go-button;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
   .collection-item {
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
+    &:last-child {
+      border-bottom: 1px solid #26a69a;
+    }
     .collection-item-info {
       width: 100%;
-      display: flex;
-      justify-content: space-evenly;
+      @include flex-center;
       .collection-group {
         width: 100%;
+      }
+      form {
+        button {
+          padding-right: 15px;
+          color: black;
+        }
       }
     }
   }
@@ -45,11 +87,8 @@
 
 // contact show page section
 .message-details {
-  @include flex-direction-column;
-  justify-content: center;
-  width: 50vw;
   padding: 2rem;
-  margin: auto;
+  height: 100vh;
   p {
     font-size: 1rem;
     margin: 0 0 1rem 0;
@@ -58,26 +97,54 @@
     .message-label {
       display: inline-block;
       max-width: 15%;
-      text-decoration: underline;
       margin-bottom: 0.5rem;
       font-size: 1.2rem;
       text-transform: $text-capitalize;
       font-weight: 700;
     }
   }
-  aside {
-    display: flex;
-    margin-right: 1rem;
+  .message-body {
+    padding: 8px;
+    background: white;
+  }
+  .message-showpage-buttons {
+    @include flex-center;
+    padding: 1rem 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     a {
       display: inline-block;
-      margin-right: 1rem;
-    }
-    form button {
-      @include flex-center;
-      .material-icons {
-        display: inline-block;
-        margin-right: 4px;
-      }
+      margin: 0 1rem 0 0;
     }
   }
+}
+
+.message-button-container {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  @include flex;
+  align-items: center;
+  padding: 10px;
+  h1 {
+    margin: 0;
+    width: 100%;
+    padding: 0 0 6px 0;
+    text-align: center;
+  }
+
+  form {
+    button {
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+h2 {
+  margin: 1rem 0;
+}
+.message-subject {
+  @include flex-center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 6px;
 }
