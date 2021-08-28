@@ -1,0 +1,39 @@
+<% include ../../partials/header %>
+
+<article class="message-page">
+  <% include ../../admin/admin-nav %>
+
+  <section class="message-details container">
+    <!-- start of message-button-container -->
+    <div class="message-button-container">
+      <i class="material-icons">menu</i>
+      <h1>Messages</h1>
+    </div>
+    <!-- end of message-button-container -->
+    <h2 class="message-label message"><%= message.name %></h2>
+    <!-- start of message subject line div -->
+    <div class="message-subject">
+      <span><%= message.subject %></span>
+    </div>
+    <!-- end of message subject line div -->
+    <!-- start contact message body -->
+    <div class="message-body">
+      <p class="contact-email">
+        <span class="message-label">email:</span> <%= message.email %>
+      </p>
+      <p class="contact-message">
+        <span class="message-label">message:</span> <%= message.message %>
+      </p>
+    </div>
+    <!-- end of contact message body -->
+    <div class="message-showpage-buttons">
+      <a href="/admin/messages" class="static-button btn">Back</a>
+      <form
+        action="/admin/messages/<%= message._id %>?_method=DELETE"
+        method="POST"
+      >
+        <button class="btn delete-button">Delete</button>
+      </form>
+    </div>
+  </section>
+</article>

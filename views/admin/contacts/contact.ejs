@@ -1,0 +1,66 @@
+<% include ../../partials/header %>
+
+<main class="message-page col s12">
+  <% include ../../admin/admin-nav %>
+  <section class="message-center-header container">
+    <div class="message-center-container title-container">
+      <i class="material-icons">menu</i>
+      <h1 class="col s12">Messages</h1>
+
+      <div class="input-field">
+        <select class="browser-default" id="message-filter">
+          <option class="disabled">Sort By:</option>
+          <option value="oldest">Oldest</option>
+          <option value="newest">Newest</option>
+        </select>
+        <!-- <label for="message-filter">Sort By:</label> -->
+      </div>
+    </div>
+
+    <!-- collection container -->
+    <div class="collection container">
+      <!-- delete/delete-all section -->
+      <div class="delete-container">
+        <label for="delete-all">
+          <input type="checkbox" id="delete-all" />
+          <span>Delete all</span>
+        </label>
+        <input
+          type="text"
+          name="message-search"
+          id="message-search"
+          class="browser-default"
+          placeholder="Search by name or subject"
+        />
+        <button class="material-icons btn">delete</button>
+      </div>
+      <!-- end of delete/delete-all section -->
+
+      <!-- start message body container -->
+      <% messages.forEach(message =>{ %>
+      <a href="/admin/messages/<%= message._id %>" class="collection-item">
+        <div class="collection-item-info">
+          <div class="collection-group">
+            <label for="<%= message.name %>">
+              <input type="checkbox" id="<%= message.name %>" />
+              <span><%= message.name %></span>
+            </label>
+          </div>
+          <div class="collection-group"><%= message.subject %></div>
+          <div class="collection-group">
+            <%= message.created_on.toLocaleDateString() %>
+          </div>
+          <form
+            action="/admin/messages/<%= message._id %>?_method=DELETE"
+            method="POST"
+          >
+            <button class="material-icons">delete</button>
+          </form>
+        </div>
+      </a>
+      <% }) %>
+      <!-- end of message body container -->
+    </div>
+    <!-- end of collection container -->
+  </section>
+</main>
