@@ -17,6 +17,9 @@
   @include flex();
   flex-direction: column;
 }
+@mixin no-box-shadow {
+  box-shadow: none;
+}
 
 @import "indexNavigation";
 @import "adminNavigation";
@@ -31,6 +34,7 @@
 @import "showPage";
 @import "editPage";
 @import "footer";
+@import "media-queries";
 
 h1,
 h2,
@@ -55,11 +59,14 @@ h6 {
   }
 }
 
-.cancel-button {
-  background-color: $cancel-button;
+.static-button {
+  background-color: $static-button;
   color: $nav-text;
+  @include no-box-shadow;
+  outline: 1px solid $nav-text;
   &:hover {
-    background-color: $cancel-button-hover;
+    background-color: $static-button-hover;
+    @include no-box-shadow;
   }
 }
 
