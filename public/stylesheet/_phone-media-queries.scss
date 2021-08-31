@@ -1,0 +1,35 @@
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .filter-search {
+    @include flex-direction-column;
+    & input {
+      width: 100%;
+      margin: 0 0 1rem 0;
+    }
+    input,
+    a {
+      height: 40px;
+    }
+  }
+  .form-group {
+    width: 100%;
+  }
+
+  .article-container {
+    .card {
+      .card-title {
+        font-size: 2rem;
+      }
+      p {
+        text-align: center;
+        font-size: 1.1rem;
+      }
+      .button-container {
+        padding: 10px;
+        .go-button,
+        .static-button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
