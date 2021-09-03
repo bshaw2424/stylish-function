@@ -1,0 +1,44 @@
+@media screen and (min-width: 1201px) {
+  .card {
+    .card-action {
+      padding: 0;
+    }
+    .button-container {
+      @include flex;
+      width: 100%;
+      justify-content: center;
+      padding: 10px;
+      & .go-button,
+      form,
+      form button {
+        width: 100%;
+      }
+      .go-button {
+        margin: 0 0.5rem 0 0;
+      }
+      form {
+        margin: 0 0 0 0.5rem;
+      }
+    }
+  }
+
+  .form-group {
+    width: 100%;
+    h1 {
+      padding: 10px 0;
+    }
+    .button-container {
+      @include flex-center;
+      .go-button,
+      .static-button {
+        width: 25%;
+      }
+      .go-button {
+        margin-right: 0.5rem;
+      }
+      .static-button {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
