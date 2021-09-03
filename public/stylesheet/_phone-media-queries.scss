@@ -12,6 +12,19 @@
   }
   .form-group {
     width: 100%;
+    .button-container {
+      @include flex-center;
+      & .go-button,
+      .static-button {
+        width: 100%;
+      }
+      .go-button {
+        margin: 0 0.5rem 0 0;
+      }
+      .static-button {
+        margin: 0 0 0 0.5rem;
+      }
+    }
   }
 
   .article-container {
@@ -26,8 +39,11 @@
       .button-container {
         padding: 10px;
         .go-button,
-        .static-button {
+        .delete-button {
           width: 100%;
+        }
+        .go-button {
+          margin: 0 0 1rem 0;
         }
       }
     }
