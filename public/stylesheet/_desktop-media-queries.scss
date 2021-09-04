@@ -41,4 +41,36 @@
       }
     }
   }
+
+  // contact/message section
+  .message-details {
+    h1 {
+      padding-bottom: 0.75rem;
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .title-container,
+    .message-button-container {
+      padding: 0;
+    }
+    .message-showpage-buttons {
+      padding: 0.75rem;
+    }
+    form,
+    .static-button {
+      width: 25%;
+    }
+    form button {
+      width: 100%;
+    }
+    form {
+      margin-right: 0.5rem;
+    }
+  }
+  .static-button {
+    margin-left: 0.5rem;
+  }
 }
