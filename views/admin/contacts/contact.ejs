@@ -4,9 +4,8 @@
   <% include ../../admin/admin-nav %>
   <section class="message-center-header container">
     <div class="message-center-container title-container">
-      <i class="material-icons">menu</i>
-      <h1 class="col s12">Messages</h1>
-
+      <i class="material-icons hide-on-large-only">menu</i>
+      <h1>Messages</h1>
       <div class="input-field">
         <select class="browser-default" id="message-filter">
           <option class="disabled">Sort By:</option>
@@ -23,7 +22,7 @@
       <div class="delete-container">
         <label for="delete-all">
           <input type="checkbox" id="delete-all" />
-          <span>Delete all</span>
+          <span></span>
         </label>
         <input
           type="text"
@@ -47,7 +46,7 @@
             </label>
           </div>
           <div class="collection-group"><%= message.subject %></div>
-          <div class="collection-group">
+          <div class="collection-group collection-group_date">
             <%= message.created_on.toLocaleDateString() %>
           </div>
           <form
