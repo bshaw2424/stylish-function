@@ -5,9 +5,8 @@
 
   <section class="message-details container">
     <!-- start of message-button-container -->
-    <div class="message-button-container">
-      <i class="material-icons">menu</i>
-      <h1>Messages</h1>
+    <div class="message-button-container title-container">
+      <i class="material-icons hide-on-large-only">menu</i>
     </div>
     <!-- end of message-button-container -->
     <h2 class="message-label message"><%= message.name %></h2>
@@ -16,6 +15,9 @@
       <span><%= message.subject %></span>
     </div>
     <!-- end of message subject line div -->
+    <div class="collection-group collection-group_date">
+      <b>Send Date: </b> <%= message.created_on.toLocaleDateString() %>
+    </div>
     <!-- start contact message body -->
     <div class="message-body">
       <p class="contact-email">
@@ -26,14 +28,14 @@
       </p>
     </div>
     <!-- end of contact message body -->
-    <div class="message-showpage-buttons">
-      <a href="/admin/messages" class="static-button btn">Back</a>
+    <div class="message-showpage-buttons button-container">
       <form
         action="/admin/messages/<%= message._id %>?_method=DELETE"
         method="POST"
       >
         <button class="btn delete-button">Delete</button>
       </form>
+      <a href="/admin/messages" class="btn static-button">cancel</a>
     </div>
   </section>
 </article>
