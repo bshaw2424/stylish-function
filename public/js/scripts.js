@@ -5,11 +5,11 @@ messageCheckBox.forEach(item => {
   item.addEventListener("mouseenter", e => {
     const form = e.target.querySelector("#message-delete-button button");
     e.preventDefault();
-    form.style.display = "block";
+    form.style.visibility = "visible";
   });
 
   item.addEventListener("mouseleave", e => {
     const form = e.target.querySelector("#message-delete-button button");
-    form.style.display = "none";
+    form.style.visibility = "hidden";
   });
 });
