@@ -20,20 +20,21 @@
     .input-field {
       width: 20%;
       margin: 0;
+      #message-filter {
+        padding: 5px 0;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
 
 .collection {
   width: 100%;
-  border: none;
-  &:hover {
-    button {
-      display: block;
-    }
-  }
   .delete-container {
-    outline: 1px solid black;
+    border: 1px solid black;
+    height: 20px;
     height: 3rem;
     display: flex;
     align-items: center;
@@ -48,6 +49,8 @@
     input {
       width: 50%;
       align-self: center;
+      padding: 6px 8px;
+      height: 2.4rem;
     }
     button {
       background: none;
@@ -61,7 +64,7 @@
       font-size: 1.75rem;
       background: none;
       @include no-box-shadow;
-      display: none;
+      visibility: hidden;
       color: $go-button;
       &:hover {
         cursor: pointer;
@@ -70,19 +73,19 @@
   }
   .collection-item {
     @include flex-between;
-    &:last-child {
-      border-bottom: 1px solid #26a69a;
-    }
     .collection-item-info {
       width: 100%;
       @include flex-center;
       .collection-group {
         width: 100%;
       }
+      .collection-group_date {
+        text-align: center;
+      }
       form {
         button {
           padding-right: 15px;
-          color: black;
+          color: $nav-text;
         }
       }
     }
