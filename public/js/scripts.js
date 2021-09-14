@@ -1,32 +1,49 @@
 const messageCheckBox = document.querySelectorAll(".collection-item");
-const deleteAllButton = document.getElementById("delete-all");
-const messages = document.querySelectorAll(".message-checkbox");
+const messagebox = document.querySelectorAll(".message-checkbox");
+const delete_all_checkbox = document.getElementById("delete-all");
+let message_counter = document.getElementById("message-checkbox-counter");
 
-// delete button in message section appears/disappears on hover
-messageCheckBox.forEach(item => {
-  item.addEventListener("mouseenter", e => {
-    const form = e.target.querySelector("#message-delete-button button");
-    e.preventDefault();
-    form.style.visibility = "visible";
+messageCheckBox.forEach(function (messageItem) {
+  messageItem.addEventListener("mouseenter", e => {
+    const deleteIcon = e.target.querySelector("#message-delete-button button");
+    deleteIcon.style.visibility = "visible";
   });
 
-  item.addEventListener("mouseleave", e => {
-    const form = e.target.querySelector("#message-delete-button button");
-    form.style.visibility = "hidden";
+  messageItem.addEventListener("mouseleave", e => {
+    const deleteIcon = e.target.querySelector("#message-delete-button button");
+    deleteIcon.style.visibility = "hidden";
   });
 });
-// checked = "checked";
 
-deleteAllButton.addEventListener("change", function () {
-  buttons(messages, this);
+// check and uncheck message checkbox
+delete_all_checkbox.addEventListener("change", function (e) {
+  if (e.target.checked === false) {
+    checkAllCheckBoxes(false);
+  } else {
+    checkAllCheckBoxes();
+  }
 });
 
-function buttons(a, deletebtn) {
-  for (let i = 0; i < a.length; i++) {
-    if (deletebtn.checked === true) {
-      a[i].setAttribute("checked", "checked");
-    } else {
-      a[i].removeAttribute("checked");
+messagebox.forEach(checkbox => {
+  checkbox.addEventListener("change", e => {
+    messageCounter(e.target.id);
+  });
+});
+
+function checkAllCheckBoxes(checked = true) {
+  messagebox.forEach(checkedbox => (checkedbox.checked = checked));
+}
+
+function messageCounter(id) {
+  let counter = [];
+  for (let i = 0; i < messagebox.length; i++) {
+    if (messagebox[i].checked === true) {
+      counter.push(messagebox[i].id);
     }
+  }
+  if (counter === 0) {
+    message_counter.innerText = " - ";
+  } else {
+    message_counter.innerText = counter.length;
   }
 }
