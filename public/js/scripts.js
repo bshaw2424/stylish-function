@@ -41,9 +41,9 @@ function messageCounter(id) {
       counter.push(messagebox[i].id);
     }
   }
-  if (counter === 0) {
-    message_counter.innerText = " - ";
-  } else {
+  if (counter.length !== 0) {
     message_counter.innerText = counter.length;
+  } else {
+    message_counter.innerText = " - ";
   }
 }
