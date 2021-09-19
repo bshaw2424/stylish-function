@@ -27,11 +27,9 @@ delete_all_checkbox.addEventListener("change", function (e) {
   }
 });
 
-delete_message.addEventListener("click", () => alert("this was clicked"));
-
 messagebox.forEach(checkbox => {
   checkbox.addEventListener("change", e => {
-    messageCounter(e.target.id);
+    messageCounter();
   });
 });
 
@@ -40,23 +38,14 @@ function checkAllCheckBoxes(checked = true) {
 }
 
 function messageCounter() {
-  let counter = [];
+  let counter = 0;
   for (let i = 0; i < messagebox.length; i++) {
     if (messagebox[i].checked === true) {
-      counter.push(messagebox[i].id);
+      counter++;
     }
   }
-  if (counter.length !== 0) {
-    message_counter.innerText = counter.length;
-  } else {
-    message_counter.innerText = " - ";
-  }
-  console.log(counter);
-}
 
-function deleteAllCheckedMessages(id) {
-  const item = document.querySelectorAll(".collection-item-info");
-  const a = messagebox.closest(item);
-  console.log(a);
+  counter === 0
+    ? (message_counter.innerText = " - ")
+    : (message_counter.innerText = counter);
 }
-deleteAllCheckedMessages();
