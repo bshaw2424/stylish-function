@@ -6,6 +6,9 @@ const database = require("./mongoDatabase");
 const path = require("path");
 const asyncError = require("./utility/error");
 const session = require("express-session");
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
+const User = require("./models/AdminUsers");
 const PORT = process.env.PORT || 3000;
 
 // imported routes
@@ -13,6 +16,7 @@ const adminIndexRoutes = require("./routes/admin");
 const articleRoutes = require("./routes/admin/articles");
 const productRoutes = require("./routes/admin/products");
 const contactRoutes = require("./routes/admin/contact");
+const userRoutes = require("./routes/admin/users");
 const staticRoutes = require("./routes/index/static");
 const mainArticleRoutes = require("./routes/index/articles");
 const errorRoutes = require("./utility/error");
@@ -29,6 +33,13 @@ app.use(
     saveUninitialized: true,
   }),
 );
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+passport.use(new LocalStrategy(User.authenticate()));
+
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -36,6 +47,7 @@ app.use("/admin", adminIndexRoutes);
 app.use("/admin/articles", articleRoutes);
 app.use("/admin/articles/:id/products", productRoutes);
 app.use("/admin/messages", contactRoutes);
+app.use("/admin/users", userRoutes);
 app.use("/articles", mainArticleRoutes);
 app.use("/", staticRoutes);
 app.use(errorRoutes.errorMessage);
