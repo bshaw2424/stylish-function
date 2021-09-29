@@ -15,18 +15,8 @@ module.exports.post = async (req, res) => {
   res.redirect("/contact-us");
 };
 
-module.exports.contact_post = async (req, res) => {
-  const { message } = req.body;
-  const runt = await ContactModel.find({});
-  const turn = runt.map(a => a._id);
-
-  let gran = [];
-  for (let i = 0; i < message.length; i++) {
-    gran.push({ _id: turn[i], message_value: Boolean(message[i]) });
-  }
-  console.log(gran);
-
-  res.redirect("/admin/messages");
+module.exports.update = (req, res) => {
+  console.log(req.body);
 };
 
 module.exports.showPage = async (req, res) => {
