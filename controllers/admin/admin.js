@@ -14,4 +14,7 @@ module.exports.post = (req, res) => {
   res.redirect("/admin/dashboard");
 };
 
-module.exports.logout = (req, res) => {};
+module.exports.logout = (req, res) => {
+  req.logout();
+  res.redirect("/admin/login");
+};

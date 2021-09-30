@@ -15,7 +15,10 @@ module.exports.post = async (req, res) => {
     const user = new UsersModel({ username });
     await UsersModel.register(user, password);
     await user.save();
-    res.redirect("/admin/dashboard");
+    req.login(user, function (err) {
+      if (err) return next(err);
+      return res.redirect("/admin/dashboard");
+    });
   } catch (error) {
     console.log(error);
     res.redirect("/admin/login");
