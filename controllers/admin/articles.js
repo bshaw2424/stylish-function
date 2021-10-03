@@ -10,10 +10,14 @@ module.exports.create = (req, res) => {
 };
 
 module.exports.post = async (req, res) => {
-  const { Article } = req.body;
+  let { Article } = req.body;
   const article = new ArticleModel(Article);
+  article.image.url = req.file.path;
+  article.image.filename = req.file.filename;
+  const redirectUrl = req.session.returnTo || "/admin/articles";
   await article.save();
-  res.redirect("/admin/articles");
+  delete req.session.returnTo;
+  res.redirect(redirectUrl);
 };
 
 module.exports.showPage = async (req, res) => {
