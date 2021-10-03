@@ -27,7 +27,8 @@ const Articles = new Schema({
     trim: true,
   },
   image: {
-    type: String,
+    url: String,
+    filename: String,
   },
   sub_description: {
     type: String,
