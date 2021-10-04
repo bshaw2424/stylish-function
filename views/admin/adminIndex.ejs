@@ -2,7 +2,7 @@
 <section class="index-container">
   <% include ../admin/admin-nav %>
   <div class="container">
-    <h1>Hello Admin</h1>
+    <h1>Welcome <%= locals.username.username %></h1>
+    <h1>Articles: <%= articles.length %></h1>
   </div>
 </section>
-<% include ../partials/footer %>
