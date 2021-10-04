@@ -14,10 +14,8 @@ module.exports.post = async (req, res) => {
   const article = new ArticleModel(Article);
   article.image.url = req.file.path;
   article.image.filename = req.file.filename;
-  const redirectUrl = req.session.returnTo || "/admin/articles";
   await article.save();
-  delete req.session.returnTo;
-  res.redirect(redirectUrl);
+  res.redirect("/admin/articles");
 };
 
 module.exports.showPage = async (req, res) => {
@@ -35,10 +33,13 @@ module.exports.edit = async (req, res) => {
 module.exports.update = async (req, res) => {
   const { id } = req.params;
   const { Article } = req.body;
-  const updated_articles = await ArticleModel.findByIdAndUpdate(id, Article, {
-    new: true,
+
+  const article = await ArticleModel.findByIdAndUpdate(id, {
+    ...Article,
   });
-  await updated_articles.save();
+  article.image.url = req.file.path;
+  article.image.filename = req.file.filename;
+  await article.save();
   res.redirect("/admin/articles");
 };
 
