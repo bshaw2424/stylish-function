@@ -45,7 +45,7 @@ passport.deserializeUser(User.deserializeUser());
 passport.use(new LocalStrategy(User.authenticate()));
 
 app.use(function (req, res, next) {
-  res.locals.user = req.user;
+  res.locals.username = req.user;
   next();
 });
 
