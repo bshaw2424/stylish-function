@@ -13,7 +13,8 @@ const Products = new Schema({
     min: [0, "Price can not be Negative"],
   },
   image: {
-    type: String,
+    url: String,
+    filename: String,
   },
   description: {
     type: String,
