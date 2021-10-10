@@ -1,5 +1,5 @@
 const ENV = require("dotenv").config();
-const ArticleModel = require("../../models/Article");
+const { ArticleModel } = require("../../models/Article");
 
 module.exports.index = async (req, res) => {
   const articles = await ArticleModel.find();
