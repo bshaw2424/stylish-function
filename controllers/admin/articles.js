@@ -1,7 +1,7 @@
-const ArticleModel = require("../../models/Article");
+const { ArticleModel, ProductModel } = require("../../models/Article");
 
 module.exports.index = async (req, res) => {
-  const articles = await ArticleModel.find().sort({ created_on: "descending" });
+  const articles = await ArticleModel.find();
   res.render("admin/articles/index", { articles });
 };
 
@@ -20,7 +20,7 @@ module.exports.post = async (req, res) => {
 
 module.exports.showPage = async (req, res) => {
   const { id } = req.params;
-  const articles = await ArticleModel.findById(id);
+  const articles = await ArticleModel.findById(id).populate("products");
   res.render("admin/articles/showPage", { articles });
 };
 
