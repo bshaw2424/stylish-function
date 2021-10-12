@@ -1,60 +1,61 @@
 <% include ../../partials/header %>
-<section>
-  <div class="index-container">
-    <% include ../../admin/admin-nav %>
-    <div class="container">
-      <div class="title-container">
-        <h1><%= articles.title %></h1>
-      </div>
-      <div class="filter-search">
-        <a href="/admin/articles/" class="btn go-button">Back to Articles</a>
-        <input
-          type="text"
-          name="filter-search"
-          id="filter-search"
-          class="browser-default"
-          placeholder="filter seach"
-        />
+
+<section class="index-container">
+  <% include ../../admin/admin-nav %>
+  <div class="container">
+    <div class="title-container">
+      <h1><a href="/admin/articles"><%= articles.title %></a></h1>
+      <i class="material-icons hide-on-large-only">menu</i>
+    </div>
+    <div class="filter-search">
+      <input
+        type="text"
+        name="filter-search"
+        id="filter-search"
+        class="browser-default"
+        placeholder="filter seach"
+      />
+      <div>
         <a
           href="/admin/articles/<%= articles._id %>/products/new"
           class="btn go-button"
           >Add Product</a
         >
       </div>
-      <!-- <a href="/admin/articles/" class="btn btn-small">Back</a> -->
-      <div class="row">
-        <% for(let product of articles.products){ %>
-        <div class="col s12 m6 l4">
-          <div class="card">
-            <div class="card-image">
-              <img src="<%= product.image %>" alt="test" />
-            </div>
-            <div class="card-content z-depth-1">
+    </div>
+    <!-- <a href="/admin/articles/" class="btn btn-small">Back</a> -->
+    <div class="row">
+      <% for(let product of articles.products) { %>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-image" style="height: 400px">
+            <img src="<%= product.image.url %>" alt="<%= product.image %>" />
+          </div>
+          <div class="card-content z-depth-1">
+            <a
+              href="/admin/articles/<%= articles._id %>/products/<%= product._id %>"
+              class="card-title"
+            >
+              <%= product.title %>
+            </a>
+            <p><%= product.description %></p>
+            <div class="button-container card-action">
               <a
-                href="/admin/articles/<%= articles._id %>/products/<%= product._id %>"
-                class="card-title"
-                ><%= product.title %></a
+                href="/admin/articles/<%= articles._id %>/edit"
+                class="btn go-button"
+                >Edit</a
               >
-              <p><%= product.description %></p>
-              <div class="button-container card-action">
-                <a
-                  href="/admin/articles/<%= articles._id %>/products/<%= product._id %>/edit"
-                  class="btn go-button"
-                >
-                  edit
-                </a>
-                <form
-                  action="/admin/articles/<%= articles._id %>/products/<%= product._id %>?_method=DELETE"
-                  method="POST"
-                >
-                  <button class="btn delete-button">delete</button>
-                </form>
-              </div>
+              <form
+                action="/admin/articles/<%= product._id %>?_method=DELETE"
+                method="POST"
+              >
+                <button class="btn delete-button">delete</button>
+              </form>
             </div>
           </div>
         </div>
-        <% } %>
       </div>
+      <% } %>
     </div>
   </div>
 </section>
