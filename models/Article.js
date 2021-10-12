@@ -43,7 +43,12 @@ const Articles = new Schema({
     type: String,
     unique: true,
   },
-  products: [Products],
+  products: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Product",
+    },
+  ],
   created_on: {
     type: Date,
     default: new Date(),
@@ -60,4 +65,7 @@ Articles.pre("save", function (next) {
   next();
 });
 
-module.exports = model("Article", Articles);
+const ArticleModel = model("Article", Articles);
+const ProductModel = model("Product", Products);
+
+module.exports = { ArticleModel, ProductModel };
