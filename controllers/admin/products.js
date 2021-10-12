@@ -27,9 +27,9 @@ module.exports.create = async (req, res) => {
 };
 
 module.exports.showPage = async (req, res) => {
-  const { id } = req.params;
-  const products = await ArticleModel.findById(id).populate("products");
-  res.render("admin/products/showPage", { products });
+  const { product_id } = req.params;
+  const product = await ProductModel.findById(product_id);
+  res.render("admin/products/showPage", { product });
 };
 
 module.exports.edit = async (req, res) => {
