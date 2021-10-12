@@ -1,24 +1,19 @@
 <% include ../../partials/header %>
-<section>
-  <div class="index-container">
-    <% include ../../admin/admin-nav %>
-    <div class="container">
-      <div class="row">
-        <div class="product-container">
-          <div class="image-container">
-            <img src="<%=products.image %>" alt="<%= products.title %>" />
-          </div>
-          <div class="content-container">
-            <h3><%= products.title %></h3>
-            <div><%= products.description %></div>
-            <span><strong>$<%= products.price %></strong></span>
-            <a
-              class="btn go-button"
-              href="https://bit.ly/3gaosfY"
-              target="_blank"
-              >get more information</a
-            >
-          </div>
+<section class="index-container">
+  <% include ../../admin/admin-nav %>
+  <div class="container">
+    <div class="row">
+      <div class="product-container">
+        <div class="image-container">
+          <img src="<%= product.image.url %>" alt="<%= product.title %>" />
+        </div>
+        <div class="content-container">
+          <h3><%= product.title %></h3>
+          <div><%= product.description %></div>
+          <span><strong>$<%= product.price %></strong></span>
+          <a class="btn go-button" href="https://bit.ly/3gaosfY" target="_blank"
+            >get more information</a
+          >
         </div>
       </div>
     </div>
