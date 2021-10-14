@@ -4,13 +4,13 @@
   <% include ../../admin/admin-nav %>
   <div class="container">
     <form
-      action="/admin/articles/<%= articles._id %>/products/<%= products._id %>?_method=PUT"
+      action="/admin/articles/<%= article._id %>/products/<%= product._id %>?_method=PUT"
       method="POST"
       class="form-group"
       enctype="multipart/form-data"
     >
       <div class="title-container">
-        <h1><%= products.title %></h1>
+        <h1><%= product.title %></h1>
         <i class="material-icons hide-on-large-only">menu</i>
       </div>
       <div class="product-section">
@@ -20,7 +20,7 @@
           name="Product[title]"
           id="product-title"
           class="browser-default form-field"
-          value="<%= products.title %>"
+          value="<%= product.title %>"
         />
 
         <label for="product-price">Product Price</label>
@@ -29,17 +29,17 @@
           name="Product[price]"
           id="product-price"
           class="browser-default form-field"
-          value="<%= products.price %>"
+          value="<%= product.price %>"
         />
 
-        <label for="product-image">Product Image</label>
+        <!-- <label for="product-image">Product Image</label>
         <input
           type="file"
           name="Product[image]"
           id="product-image"
           class="browser-default form-field"
-          value="<%= products.image %>"
-        />
+          value="<%= product.image %>"
+        /> -->
 
         <label for="product-description">Product Description</label>
         <textarea
@@ -49,13 +49,13 @@
           rows="10"
           class="form-field"
         >
-<%= products.description %>
+<%= product.description %>
           </textarea
         >
       </div>
       <div class="button-container">
         <button class="btn go-button" id="add-a-product-button">save</button>
-        <a href="/admin/articles/<%= articles._id %>" class="btn static-button"
+        <a href="/admin/articles/<%= article._id %>" class="btn static-button"
           >cancel</a
         >
       </div>
