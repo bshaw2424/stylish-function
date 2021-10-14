@@ -1,4 +1,4 @@
-const { ArticleModel, ProductModel } = require("../../models/Article");
+const ArticleModel = require("../../models/Article");
 
 module.exports.index = async (req, res) => {
   const articles = await ArticleModel.find();
@@ -34,9 +34,13 @@ module.exports.update = async (req, res) => {
   const { id } = req.params;
   const { Article } = req.body;
 
-  const article = await ArticleModel.findByIdAndUpdate(id, {
-    ...Article,
-  });
+  const article = await ArticleModel.findByIdAndUpdate(
+    id,
+    {
+      ...Article,
+    },
+    { new: true },
+  );
   article.image.url = req.file.path;
   article.image.filename = req.file.filename;
   await article.save();
