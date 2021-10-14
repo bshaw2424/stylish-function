@@ -1,26 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 const slugify = require("slugify");
-
-const Products = new Schema({
-  title: {
-    type: String,
-    trim: true,
-  },
-  slug: { type: String, unique: true },
-  price: {
-    type: Number,
-    min: [0, "Price can not be Negative"],
-  },
-  image: {
-    url: String,
-    filename: String,
-  },
-  description: {
-    type: String,
-    trim: true,
-  },
-});
+const ProductModel = require("../models/Product");
 
 const Articles = new Schema({
   title: {
@@ -55,17 +36,16 @@ const Articles = new Schema({
   },
 });
 
-Products.pre("save", function (next) {
-  this.slug = slugify(this.title, { lower: true });
-  next();
-});
-
 Articles.pre("save", function (next) {
   this.slug = slugify(this.title, { lower: true });
   next();
 });
 
-const ArticleModel = model("Article", Articles);
-const ProductModel = model("Product", Products);
+Articles.post("deleteOne", async function (product) {
+  const products = await ProductModel.deleteOne({
+    _id: { $in: this.products },
+  });
+  console.log(products);
+});
 
-module.exports = { ArticleModel, ProductModel };
+module.exports = model("Article", Articles);

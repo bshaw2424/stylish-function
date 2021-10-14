@@ -7,10 +7,7 @@ const Products = new Schema({
     type: String,
     trim: true,
   },
-  slug: {
-    type: String,
-    unique: true,
-  },
+  slug: { type: String, unique: true },
   price: {
     type: Number,
     min: [0, "Price can not be Negative"],
@@ -22,7 +19,6 @@ const Products = new Schema({
   description: {
     type: String,
     trim: true,
-    required: [true, "description is required"],
   },
 });
 
