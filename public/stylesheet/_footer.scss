@@ -1,19 +1,23 @@
 .footer-section {
-	background: hsl(200, 100%, 50%);
+  // background: hsl(200, 100%, 50%);
+  background: $white;
 }
 
 .footer-navigation {
-	ul {
-		@include flex-center;
-		align-content: center;
-		padding: 1rem 0;
-		li {
-			margin-right: 1rem;
-		}
-	}
-	.copyright {
-		@extend ul;
-		color: black;
-		background: inherit;
-	}
+  ul {
+    @include flex-center;
+    align-content: center;
+    padding: 1rem 0;
+    li {
+      margin-right: 1rem;
+      a {
+        color: $nav-text;
+      }
+    }
+  }
+  .copyright {
+    @extend ul;
+    color: $nav-text;
+    background: inherit;
+  }
 }
