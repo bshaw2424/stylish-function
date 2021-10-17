@@ -20,7 +20,6 @@ module.exports.post = async (req, res) => {
       return res.redirect("/admin/dashboard");
     });
   } catch (error) {
-    console.log(error);
-    res.redirect("/admin/login");
+    res.redirect("/admin/logout");
   }
 };
