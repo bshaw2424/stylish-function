@@ -19,23 +19,23 @@ module.exports.post = async (req, res) => {
 };
 
 module.exports.showPage = async (req, res) => {
-  const { id } = req.params;
-  const articles = await ArticleModel.findById(id).populate("products");
+  const { slug } = req.params;
+  const articles = await ArticleModel.findOne({ slug }).populate("products");
   res.render("admin/articles/showPage", { articles });
 };
 
 module.exports.edit = async (req, res) => {
-  const { id } = req.params;
-  const articles = await ArticleModel.findById(id);
+  const { slug } = req.params;
+  const articles = await ArticleModel.findOne({ slug });
   res.render("admin/articles/edit", { articles });
 };
 
 module.exports.update = async (req, res) => {
-  const { id } = req.params;
+  const { slug } = req.params;
   const { Article } = req.body;
 
   const article = await ArticleModel.findByIdAndUpdate(
-    id,
+    slug,
     {
       ...Article,
     },
@@ -48,7 +48,7 @@ module.exports.update = async (req, res) => {
 };
 
 module.exports.delete = async (req, res) => {
-  const { id } = req.params;
-  await ArticleModel.findByIdAndDelete(id);
+  const { slug } = req.params;
+  await ArticleModel.findOneAndDelete(slug);
   res.redirect("/admin/articles");
 };
