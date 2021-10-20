@@ -2,7 +2,10 @@
   <%- include('../partials/nav') %>
   <section class="display-header-container container">
     <div id="hero-image-container">
-      <img src="../../images/website-hero-picture.jpg" alt="" />
+      <img
+        src="../../images/website-hero-picture.jpg"
+        alt="functional sofa setup"
+      />
       <div class="display-hero-title">
         <p>
           Redefining your space with style, functionality, and a touch of modern
@@ -21,11 +24,11 @@
               <img src="<%= article.image.url %>" alt="" />
             </div>
             <div class="card-content">
-              <span
-                ><a href="/articles/<%= article._id %>" target="_blank"
-                  ><%= article.title %></a
-                ></span
-              >
+              <span>
+                <a href="/articles/<%= article.slug %>" target="_blank">
+                  <%= article.title %>
+                </a>
+              </span>
               <p><%= article.description %></p>
             </div>
           </div>
