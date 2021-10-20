@@ -3,7 +3,7 @@
   <% include ../../admin/admin-nav %>
   <div class="container">
     <form
-      action="/admin/articles/<%= article._id %>/products"
+      action="/admin/articles/<%= article.slug %>/products"
       method="POST"
       class="form-group"
       enctype="multipart/form-data"
@@ -50,7 +50,7 @@
         <button type="submit" class="btn go-button" id="add-product-button">
           save
         </button>
-        <a href="/admin/articles/<%= article._id %>" class="btn static-button"
+        <a href="/admin/articles/<%= article.slug %>" class="btn static-button"
           >cancel</a
         >
       </div>

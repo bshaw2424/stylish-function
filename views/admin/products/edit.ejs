@@ -4,7 +4,7 @@
   <% include ../../admin/admin-nav %>
   <div class="container">
     <form
-      action="/admin/articles/<%= article._id %>/products/<%= product._id %>?_method=PUT"
+      action="/admin/articles/<%= article.slug %>/products/<%= product.product_slug %>?_method=PUT"
       method="POST"
       class="form-group"
       enctype="multipart/form-data"
@@ -55,7 +55,7 @@
       </div>
       <div class="button-container">
         <button class="btn go-button" id="add-a-product-button">save</button>
-        <a href="/admin/articles/<%= article._id %>" class="btn static-button"
+        <a href="/admin/articles/<%= article.slug %>" class="btn static-button"
           >cancel</a
         >
       </div>
