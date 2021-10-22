@@ -1,1 +1,24 @@
-<h1>Show pages</h1>
+<% include ../partials/header %> <%- include('../partials/nav') %>
+<section class="display-header-container container">
+  <div class="container">
+    <h1><%= articles.title %></h1>
+    <p><%= articles.description %></p>
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-image">
+            <img src="<%= articles.image.url %>" alt="" />
+          </div>
+          <div class="card-content">
+            <span>
+              <a href="/articles/<%= articles.slug %>" target="_blank">
+                <%= articles.title %>
+              </a>
+            </span>
+            <p><%= articles.description %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
