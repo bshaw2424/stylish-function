@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 const slugify = require("slugify");
-const ProductModel = require("../models/Product");
+const Product = require("../models/Product");
 
 const Articles = new Schema({
   title: {
@@ -41,11 +41,14 @@ Articles.pre("save", function (next) {
   next();
 });
 
-Articles.post("deleteOne", async function (product) {
-  const products = await ProductModel.deleteOne({
-    _id: { $in: this.products },
-  });
-  console.log(products);
+Articles.post("findOneAndDelete", async function (article) {
+  if (article.products.length) {
+    const products = await Product.deleteMany({
+      _id: { $in: article.products },
+    });
+    console.log(products);
+  }
 });
 
-module.exports = model("Article", Articles);
+const Article = model("Article", Articles);
+module.exports = Article;
