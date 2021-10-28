@@ -1,0 +1,118 @@
+.row {
+  margin-bottom: 0;
+}
+.index-navigation {
+  width: 100%;
+  i.material-icons {
+    min-height: 0.5rem;
+    color: $nav-text;
+    top: 1.5rem;
+  }
+}
+.index-navigation-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+  a {
+    padding: 1rem 0;
+    img {
+      height: 4.5rem;
+    }
+  }
+  .index-navigation-links {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    outline: none;
+    li {
+      height: 4rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      &:first-child() {
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+      }
+      &:last-child() {
+        border-bottom: none;
+      }
+      &:hover {
+        background: #333;
+        opacity: 0.8;
+      }
+
+      a {
+        display: inline-block;
+        width: 100%;
+        align-self: center;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+.display-header-container {
+  width: 100%;
+  height: 70vh;
+  #hero-image-container {
+    height: inherit;
+  }
+  .display-hero-title {
+    width: 100%;
+    p {
+      width: 70%;
+      font-size: 3rem;
+      padding: 1rem;
+    }
+  }
+}
+.article-section {
+  .container {
+    h1 {
+      font-size: 3.5rem;
+      margin: 1rem;
+      text-align: center;
+    }
+    .card {
+      box-shadow: none;
+      .card-image {
+        img {
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+      .card-content {
+        padding-top: 0;
+        p {
+          text-align: center;
+          &:nth-child(1) {
+            margin: 0;
+            padding: 1rem;
+            font-size: 1.5rem;
+          }
+          &:nth-child(2) {
+            font-size: 1.3rem;
+          }
+          a {
+            display: inline-block;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+.more-articles-anchor {
+  border-top: 1px solid #333;
+  width: 100%;
+  padding-top: 1rem;
+  margin: 1rem 0;
+  a {
+    font-size: 1.5rem;
+    background: hsla(0, 0, 20%, 0.9);
+    &:hover {
+      background: hsl(0, 0, 20%);
+      color: $white;
+    }
+  }
+}
