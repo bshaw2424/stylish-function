@@ -1,4 +1,6 @@
 @media screen and (min-width: 993px) and (max-width: 1200px) {
+  @import "indexNavigationDesktop";
+  @import "main-index-desktop";
   .card {
     .card-action {
       padding: 0;

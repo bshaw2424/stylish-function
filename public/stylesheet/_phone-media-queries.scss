@@ -1,5 +1,5 @@
 @media screen and (min-width: 0px) and (max-width: $break-small) {
-  @import "main-index-page";
+  @import "main-index-mobile";
   .filter-search {
     @include flex-direction-column;
     & input {

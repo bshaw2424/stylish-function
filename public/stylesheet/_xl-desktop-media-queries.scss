@@ -1,4 +1,6 @@
 @media screen and (min-width: 1201px) {
+  @import "indexNavigationDesktop";
+  @import "main-index-desktop";
   .card {
     .card-action {
       padding: 0;
@@ -39,6 +41,48 @@
       .static-button {
         margin-left: 0.5rem;
       }
+    }
+  }
+
+  // contact/message section
+  .message-details {
+    min-width: 80%;
+    h1 {
+      padding-bottom: 0.75rem;
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .title-container,
+    .message-button-container {
+      padding: 0;
+    }
+    .message-showpage-buttons {
+      padding: 0.75rem;
+    }
+    form,
+    .static-button {
+      width: 20%;
+    }
+    form button {
+      width: 100%;
+    }
+    form {
+      margin-right: 0.5rem;
+    }
+  }
+  .static-button {
+    margin-left: 0.5rem;
+  }
+  .delete-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    & > div {
+      margin-right: 15px;
     }
   }
 }
