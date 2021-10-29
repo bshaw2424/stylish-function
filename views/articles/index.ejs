@@ -1,34 +1,26 @@
 <% include ../partials/header %> <% include ../partials/nav %>
-<article>
-  <section class="container">
-    <h3
-      style="
-        text-align: center;
-        padding: 10px;
-        background: hsl(200, 100%, 50%);
-        color: #fff;
-        font-size: 3.5rem;
-      "
-    >
-      Articles
-    </h3>
-    <% articles.forEach(article => { %>
-    <div style="display: flex; margin-bottom: 2rem">
-      <div class="card-image">
-        <img
-          src="../../images/sm-arm-chair.jpg"
-          style="height: 100%; width: 100%"
-          alt=""
-        />
+
+<section class="container">
+  <div id="article-index-section">
+    <h3>Articles</h3>
+    <div class="row">
+      <% articles.forEach(article => { %>
+      <div id="article-card">
+        <div class="card-image">
+          <img src="../../images/sm-arm-chair.jpg" alt="" />
+        </div>
+        <div class="article-content" style="width: 80%">
+          <h1 style="text-align: left; padding-left: 10px">
+            <a href="/articles/<%= article.slug %>" target="_blank">
+              <%= article.title %>
+            </a>
+          </h1>
+          <p><%= article.description %></p>
+        </div>
       </div>
-      <div style="width: 100%; padding: 10px">
-        <h1 style="text-align: center; margin: 0">
-          <a href="/articles"><%= article.title %></a>
-        </h1>
-        <p><%- article.description %></p>
-      </div>
+
+      <% }) %>
     </div>
-    <% }) %>
-  </section>
-</article>
+  </div>
+</section>
 <% include ../partials/footer %>
