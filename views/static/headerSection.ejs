@@ -13,28 +13,30 @@
       </div>
     </div>
   </section>
-  <section>
+  <section class="article-section">
     <div class="container">
       <h1>Articles</h1>
       <div class="row">
         <% articles.forEach(article => { %>
-        <div class="col s12 m6 l4">
+        <div class="col s12 m6 l3">
           <div class="card">
             <div class="card-image">
               <img src="<%= article.image.url %>" alt="" />
             </div>
             <div class="card-content">
-              <span>
+              <p>
                 <a href="/articles/<%= article.slug %>" target="_blank">
                   <%= article.title %>
                 </a>
-              </span>
+              </p>
               <p><%= article.description %></p>
             </div>
           </div>
         </div>
-        <%})%>
-        <a class="article-link" href="/articles">see more articles</a>
+        <% }) %>
+      </div>
+      <div class="more-articles-anchor container">
+        <a class="article-link btn" href="/articles">see more articles</a>
       </div>
     </div>
   </section>
