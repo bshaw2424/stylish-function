@@ -1,4 +1,4 @@
-$white: #fff;
+$white: hsl(0, 0%, 100%);
 $nav-text: #333;
 $title-text: #333;
 $nav-background: #ed8a63;
@@ -8,6 +8,7 @@ $text-uppercase: uppercase;
 $aside-background: #ed8a63;
 $header-background: #00c2dc;
 $aside-text: #ddd;
+$border-color: rgba(51, 51, 51, 0.3);
 $border: rgba(0, 0, 0, 0.3);
 $back-button: hsl(60, 100%, 30%);
 $back-button-hover: hsl(60, 100%, 25%);
@@ -15,8 +16,10 @@ $go-button: hsl(200, 100%, 40%);
 $go-button-hover: hsl(200, 100%, 50%);
 $delete-button: hsl(0, 100%, 50%);
 $delete-button-hover: hsl(0, 100%, 45%);
-$cancel-button: hsl(0, 0%, 80%);
-$cancel-button-hover: hsl(0, 0%, 88%);
+$static-button: hsl(0, 0%, 100%);
+$static-button-hover: hsl(0, 0%, 95%);
+$heading-text: "Nunito", sans-serif;
+$hero-text: "Oswald", sans-serif;
 
 $break-small: 600px;
 $break-medium: 900px;
