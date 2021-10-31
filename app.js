@@ -19,6 +19,7 @@ const PORT = process.env.PORT || 3000;
 const adminIndexRoutes = require("./routes/admin");
 const articleRoutes = require("./routes/admin/articles");
 const productRoutes = require("./routes/admin/products");
+const indexProductRoutes = require("./routes/index/products");
 const contactRoutes = require("./routes/admin/contact");
 const userRoutes = require("./routes/admin/users");
 const staticRoutes = require("./routes/index/static");
@@ -58,6 +59,8 @@ app.use("/admin/articles/:slug/products", productRoutes);
 app.use("/admin/messages", contactRoutes);
 app.use("/admin/users", userRoutes);
 app.use("/articles", mainArticleRoutes);
+app.use("/articles/:slug/products", indexProductRoutes);
+
 app.use("/", staticRoutes);
 app.use(errorRoutes.errorMessage);
 app.use(errorRoutes.asyncError);
