@@ -21,6 +21,7 @@ module.exports.create = async (req, res) => {
   product.image.url = req.file.path;
   product.image.filename = req.file.filename;
   article.products.push(product);
+  product.article = article;
   await product.save();
   await article.save();
   res.redirect(`/admin/articles/${slug}`);
@@ -56,12 +57,18 @@ module.exports.update = async (req, res) => {
 };
 
 module.exports.delete = async (req, res) => {
+  let id = [];
   const { slug, product_slug } = req.params;
   const articles = await ArticleModel.findOne({ slug });
-  const products = await ProductModel.findOneAndDelete(
-    { product_slug },
-    { $in: articles.products },
-  );
-  await articles.save();
-  res.redirect(`/admin/articles/${slug}`);
+  const delete_product = await ProductModel.findOneAndDelete({
+    slug: product_slug,
+  });
+  if (delete_product) {
+    console.log(
+      delete_product._id,
+      articles.products.map(a => a._id),
+    );
+  }
+
+  // res.redirect(`/admin/articles/${slug}`);
 };
