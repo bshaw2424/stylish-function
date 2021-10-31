@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 const slugify = require("slugify");
+const Article = require("../models/Article");
 
 const Products = new Schema({
   title: {
@@ -20,6 +21,10 @@ const Products = new Schema({
     type: String,
     trim: true,
   },
+  article: {
+    type: Schema.Types.ObjectID,
+    ref: "Article",
+  },
 });
 
 Products.pre("save", function (next) {
@@ -27,4 +32,5 @@ Products.pre("save", function (next) {
   next();
 });
 
-module.exports = model("Product", Products);
+const Product = model("Product", Products);
+module.exports = Product;
