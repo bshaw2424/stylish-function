@@ -29,7 +29,7 @@ module.exports.create = async (req, res) => {
 
 module.exports.showPage = async (req, res) => {
   const { product_slug } = req.params;
-  const product = await ProductModel.findOne({ product_slug });
+  const product = await ProductModel.findOne({ slug: product_slug });
   res.render("admin/products/showPage", { product });
 };
 
