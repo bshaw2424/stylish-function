@@ -19,15 +19,14 @@ router
   );
 router.get("/new", checkAuthentication, Article.create);
 router
-  .route("/:id")
+  .route("/:slug")
   .get(checkAuthentication, asyncError(Article.showPage))
-  .put(checkAuthentication, asyncError(Article.update))
+  .put(
+    upload.single("Article[image]"),
+    checkAuthentication,
+    asyncError(Article.update),
+  )
   .delete(checkAuthentication, asyncError(Article.delete));
-router.get(
-  "/:id/edit",
-  upload.single("Article[image]"),
-  checkAuthentication,
-  asyncError(Article.edit),
-);
+router.get("/:slug/edit", checkAuthentication, asyncError(Article.edit));
 
 module.exports = router;

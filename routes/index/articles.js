@@ -4,6 +4,6 @@ const router = express.Router();
 const mainPageArticles = require("../../controllers/articles");
 
 router.get("/", mainPageArticles.index);
-router.get("/:id", mainPageArticles.showPage);
+router.get("/:slug", mainPageArticles.showPage);
 
 module.exports = router;

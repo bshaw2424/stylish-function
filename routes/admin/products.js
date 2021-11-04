@@ -1,19 +1,22 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
 const { asyncError } = require("../../utility/error");
+const multer = require("multer");
+const { storage } = require("../../cloudinary");
+const upload = multer({ storage });
 
 const product = require("../../controllers/admin/products");
 
-// router.get("/new", product.create);
-
-// router.get("/new", asyncError(product.new));
-// router.post("/", asyncError(product.post));
-
+router
+  .route("/")
+  .get(asyncError(product.index))
+  .post(upload.single("Product[image]"), asyncError(product.create));
 router.get("/new", asyncError(product.new));
-router.get("/:product", asyncError(product.showPage));
-router.get("/:product/edit", asyncError(product.edit));
-router.put("/add", asyncError(product.update));
-router.put("/:product", asyncError(product.product_update));
-router.delete("/:product", asyncError(product.delete_product));
+router
+  .route("/:product_slug")
+  .get(asyncError(product.showPage))
+  .put(upload.single("Product[image]"), asyncError(product.update))
+  .delete(asyncError(product.delete));
+router.get("/:product_slug/edit", asyncError(product.edit));
 
 module.exports = router;
