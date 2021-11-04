@@ -1,0 +1,32 @@
+.index-navigation {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  background-color: $white;
+  z-index: 3;
+  ul {
+    li {
+      height: 100%;
+      display: flex;
+      a {
+        padding: 6px 15px;
+        font-size: 1.4rem;
+        color: $nav-text;
+        align-self: center;
+      }
+    }
+  }
+}
+.index-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .index-logo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

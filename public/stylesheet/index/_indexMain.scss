@@ -1,0 +1,41 @@
+.display-header {
+  background: #f6f9fc;
+  position: relative;
+}
+.display-header-container {
+  display: flex;
+  height: 88vh;
+}
+#hero-image-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.display-hero-title {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  color: $white;
+  font-size: 2.5rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    width: 70%;
+    font-size: 3.5rem;
+    font-family: $hero-text;
+    letter-spacing: 0.25rem;
+    border-top: 8px double $white;
+    border-bottom: 8px double $white;
+    padding: 0.3rem 50px;
+  }
+}

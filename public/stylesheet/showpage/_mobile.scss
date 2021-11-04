@@ -1,0 +1,17 @@
+.display-header-container {
+  @include flex-direction-column;
+  .article-product-description {
+    h1 {
+      margin: 1rem 0;
+      text-align: center;
+    }
+  }
+
+  .card-content {
+    padding: 0;
+    h3 {
+      text-align: center;
+      margin: 1rem 0;
+    }
+  }
+}

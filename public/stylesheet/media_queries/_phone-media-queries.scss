@@ -1,0 +1,17 @@
+@media screen and (min-width: 0px) and (max-width: $break-small) {
+  .card {
+    @include no-box-shadow;
+  }
+  .card-image {
+    height: 320px;
+    img {
+      @include object-fit-photos;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  @import "../navigation/mobile-navbar";
+  @import "../index/index-mobile";
+  @import "../articles/mobile";
+  @import "../showpage/mobile";
+}
