@@ -1,4 +1,7 @@
-*,
+* {
+  box-sizing: border-box;
+}
+
 *::before,
 *::after,
 ul {
@@ -22,9 +25,10 @@ h3,
 h4,
 h5,
 h6,
-li a {
+a {
   color: #333;
   text-transform: $text-capitalize;
+  font-family: $hero-text;
 }
 .back {
   background-color: $back-button;

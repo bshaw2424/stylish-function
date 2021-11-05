@@ -20,21 +20,31 @@
 @mixin no-box-shadow {
   box-shadow: none;
 }
+@mixin object-fit-photos {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-@import "indexNavigation";
-@import "adminNavigation";
-@import "indexMain";
-@import "adminIndexPage";
-@import "productForm";
-@import "mainIndexPages";
-@import "messages";
-@import "contactUs";
-@import "forms";
-@import "productsCards";
-@import "showPage";
-@import "editPage";
-@import "footer";
-@import "media-queries";
+//admin scss
+@import "admin/adminNavigation";
+@import "admin/adminIndexPage";
+
+// index scss
+@import "index/indexMain";
+@import "navigation/indexNavigation";
+
+// static scsss
+@import "static/messages";
+@import "static/contactUs";
+@import "static/forms";
+@import "static/footer";
+
+// media queries scss
+@import "media_queries/phone-media-queries";
+@import "media_queries/tablet-media-queries";
+@import "media_queries/desktop-media-queries";
+@import "media_queries/xl-desktop-media-queries";
 
 h1,
 h2,
@@ -43,6 +53,10 @@ h4,
 h5,
 h6 {
   color: $title-text;
+}
+
+.title-container i.material-icons {
+  display: block;
 }
 
 .go-button {
@@ -68,6 +82,14 @@ h6 {
     background-color: $static-button-hover;
     @include no-box-shadow;
   }
+}
+
+.collection-group_subject::first-letter {
+  text-transform: capitalize;
+}
+
+.show-delete-button {
+  display: block;
 }
 
 #footer-section,

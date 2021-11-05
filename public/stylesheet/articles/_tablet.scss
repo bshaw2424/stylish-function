@@ -1,0 +1,25 @@
+#article-index-section {
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+    padding: 8px 0;
+    background: $go-button;
+    color: $white;
+  }
+}
+
+#article-card {
+  margin-bottom: 2.5rem;
+  .card-image {
+    img {
+      width: 100%;
+    }
+  }
+  .article-content {
+    h3 {
+      font-size: 2.2rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+  }
+}

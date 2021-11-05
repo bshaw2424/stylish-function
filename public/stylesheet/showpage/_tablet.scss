@@ -1,0 +1,70 @@
+.display-header-container {
+  @include flex-direction-column;
+  .article-product-description {
+    h1 {
+      margin: 1rem 0;
+      font-size: 3.5rem;
+      text-align: center;
+    }
+  }
+  .card {
+    @include no-box-shadow;
+    .card-content {
+      padding: 0 1rem;
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+  .footer-navigation {
+    .copyright {
+      align-self: center;
+    }
+  }
+}
+
+// index product showpage section
+.product-container {
+  margin: 2rem 0;
+  .card-content {
+    @include flex-direction-column;
+    border: none;
+  }
+  .card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border: none;
+    img {
+      width: 100%;
+      height: 50vh;
+    }
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    .card-title {
+      font-size: 2rem;
+      margin: 0;
+      text-align: center;
+      padding: 0.2rem;
+    }
+    .card-price {
+      font-size: 1.5rem;
+      display: inline-block;
+      padding: 5px 0;
+    }
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  .go-button {
+    border: none;
+    width: 50%;
+    margin: auto;
+  }
+}
