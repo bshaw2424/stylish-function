@@ -2,17 +2,19 @@
 
 <section class="container">
   <div id="article-index-section">
-    <h3>Articles</h3>
+    <h1>Articles</h1>
     <div class="row">
       <% articles.forEach(article => { %>
       <div id="article-card">
         <div class="card-image">
           <img src="../../images/sm-arm-chair.jpg" alt="" />
         </div>
-        <div class="article-content" style="width: 80%">
-          <h1 style="text-align: left; padding-left: 10px">
-            <a href="/articles/<%= article.slug %>"> <%= article.title %> </a>
-          </h1>
+        <div class="article-content">
+          <h3>
+            <a href="/articles/<%= article.slug %>" class="card-title">
+              <%= article.title %>
+            </a>
+          </h3>
           <p><%= article.description %></p>
         </div>
       </div>

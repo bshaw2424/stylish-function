@@ -1,1 +1,22 @@
-<h1>Product show page</h1>
+<% include ../partials/header %> <% include ../partials/nav %>
+<section class="index-container">
+  <div class="container">
+    <div class="product-container">
+      <div class="card-image">
+        <img src="<%= product.image.url %>" alt="<%= product.title %>" />
+      </div>
+      <div class="card-content">
+        <div>
+          <h3 class="card-title"><%= product.title %></h3>
+          <span class="card-price"><strong>$<%= product.price %></strong></span>
+        </div>
+        <p><%= product.description %></p>
+
+        <a class="go-button btn" href="https://bit.ly/3gaosfY" target="_blank"
+          >Take me there</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+<% include ../partials/footer %>

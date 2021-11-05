@@ -13,15 +13,14 @@
             <img src="<%= product.image.url %>" alt="" />
           </div>
           <div class="card-content">
-            <h3>
+            <h3 class="card-title">
               <a
-                class="card-title"
                 href="/articles/<%= articles.slug %>/products/<%= product.slug %>"
               >
                 <%= product.title %>
               </a>
             </h3>
-            <p><%= product.description %></p>
+            <p class="product-description"><%= product.description %></p>
           </div>
         </div>
       </div>
