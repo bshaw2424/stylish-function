@@ -25,18 +25,18 @@
               <img src="<%= article.image.url %>" alt="<%= article.image %>" />
             </div>
             <div class="card-content z-depth-1">
-              <a href="/admin/articles/<%= article._id %>" class="card-title">
+              <a href="/admin/articles/<%= article.slug %>" class="card-title">
                 <%= article.title %>
               </a>
               <p><%= article.description %></p>
               <div class="button-container card-action">
                 <a
-                  href="/admin/articles/<%= article._id %>/edit"
+                  href="/admin/articles/<%= article.slug %>/edit"
                   class="btn go-button"
                   >Edit</a
                 >
                 <form
-                  action="/admin/articles/<%= article._id %>?_method=DELETE"
+                  action="/admin/articles/<%= article.slug %>?_method=DELETE"
                   method="POST"
                 >
                   <button class="btn delete-button">delete</button>
