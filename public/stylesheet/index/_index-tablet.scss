@@ -4,7 +4,7 @@
 }
 .display-header-container {
   display: flex;
-  height: 50vh;
+  height: 80%;
   width: 100%;
 }
 #hero-image-container {
@@ -63,9 +63,6 @@
       .card-title {
         text-align: center;
         margin: 0.5rem 0;
-      }
-      .card-description {
-        padding: 0 1rem 1rem 1rem;
       }
     }
   }

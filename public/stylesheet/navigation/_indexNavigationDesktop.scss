@@ -7,6 +7,9 @@
   background-color: $white;
   z-index: 3;
   ul {
+    display: flex;
+    flex-direction: space-between;
+    align-items: center;
     li {
       height: 100%;
       display: flex;

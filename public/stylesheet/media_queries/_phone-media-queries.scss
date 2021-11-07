@@ -1,4 +1,4 @@
-@media screen and (min-width: 0px) and (max-width: $break-small) {
+@media screen and (max-height: 812px) and (min-width: 0px) and (max-width: $break-small) {
   .card {
     @include no-box-shadow;
   }

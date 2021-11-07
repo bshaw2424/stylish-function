@@ -1,12 +1,18 @@
-@media screen and (min-width: 601px) and (max-width: 992px) {
+@media screen and (min-width: 601px) and (max-width: 1025px) {
   @import "../navigation/tablet-navbar";
   @import "../index/index-tablet";
   @import "../articles/tablet";
   @import "../showpage/tablet";
-  .card-image {
-    img {
-      height: 350px;
-      object-fit: cover;
+  .container {
+    width: 85%;
+  }
+  .card {
+    @include no-box-shadow;
+    .card-image {
+      img {
+        height: 350px;
+        object-fit: cover;
+      }
     }
   }
 }

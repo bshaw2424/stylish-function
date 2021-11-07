@@ -9,17 +9,18 @@
 }
 
 #article-card {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   .card-image {
     img {
       width: 100%;
     }
   }
-  .article-content {
+  .card-content {
+    padding: 0 0 1rem 0;
     h3 {
       font-size: 2.2rem;
-      margin: 1rem 0;
       text-align: center;
+      margin: 0.5rem 0;
     }
   }
 }
