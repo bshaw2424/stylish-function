@@ -8,8 +8,10 @@
   }
 }
 
-#article-card {
+.article-card {
   margin-bottom: 1.5rem;
+  display: flex;
+  padding: 10px;
   .card-image {
     img {
       width: 100%;

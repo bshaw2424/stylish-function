@@ -84,6 +84,12 @@ h6 {
   }
 }
 
+.card-title {
+  color: $title-text;
+}
+.card-title a:hover {
+  color: $border-color;
+}
 .collection-group_subject::first-letter {
   text-transform: capitalize;
 }
