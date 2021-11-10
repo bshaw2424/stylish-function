@@ -18,7 +18,7 @@
       <h1>Articles</h1>
       <div class="row">
         <% articles.forEach(article => { %>
-        <div class="col s12 m6 l3">
+        <div class="col s12 m6 l6">
           <div class="card">
             <div class="card-image">
               <img src="<%= article.image.url %>" alt="" />
@@ -33,7 +33,7 @@
                   <%= article.title %>
                 </a>
               </p>
-              <p><%= article.description %></p>
+              <p class="card-description"><%= article.description %></p>
             </div>
           </div>
         </div>
