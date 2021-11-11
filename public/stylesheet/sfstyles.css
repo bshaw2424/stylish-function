@@ -1013,6 +1013,119 @@ h2 {
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     width: 100%;
   }
+  .row .col {
+    padding: 0;
+  }
+  .row {
+    border-bottom: none;
+  }
+  .title-container {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #333;
+    margin-bottom: 1rem;
+  }
+  .title-container h1 {
+    text-align: center;
+    margin: 0.75rem;
+    width: 100%;
+  }
+  .title-container i.material-icons {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .filter-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .filter-search a,
+  .filter-search input[type="text"] {
+    margin-bottom: 0.75rem;
+  }
+  .filter-search input[type="text"] {
+    display: inline-block;
+    height: 2.5rem;
+  }
+  h1 {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+  .card {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .card .card-content {
+    padding: 0 0.75rem;
+  }
+  .card .card-content .card-title {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .card .card-content .card-description {
+    padding: 0 0 1rem 0;
+  }
+  .card .card-content .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .card .card-content .button-container a {
+    width: 100%;
+    margin-right: 1rem;
+  }
+  .card .card-content .button-container form {
+    width: 100%;
+  }
+  .card .card-content .button-container form .delete-button {
+    width: 100%;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .form-group .title-container {
+    border-bottom: none;
+  }
+  .form-group .article-section label {
+    font-size: 1.2rem;
+  }
+  .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0;
+  }
+  .button-container .static-button {
+    width: 100%;
+  }
+  .button-container .go-button {
+    width: 100%;
+    margin-right: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1025px) {
@@ -1690,6 +1803,11 @@ h6 {
 
 .static-button:hover {
   background-color: #f2f2f2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.card {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
