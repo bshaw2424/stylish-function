@@ -1,0 +1,29 @@
+.dash-board-container {
+  ul {
+    li {
+      a {
+        font-size: 1.5rem;
+        line-height: 2.7rem;
+      }
+    }
+  }
+}
+
+.product-container {
+  .card-image {
+    height: 100%;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  .card-details {
+    .button-container {
+      border-bottom: none;
+
+      .go-button {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

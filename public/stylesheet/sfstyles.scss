@@ -41,11 +41,11 @@
 @import "static/footer";
 
 // media queries scss
-@import "media_queries/phone-media-queries";
-@import "media_queries/tablet-media-queries";
-@import "media_queries/desktop-media-queries";
-@import "media_queries/xl-desktop-media-queries";
 
+@import "media_queries/xl-desktop-media-queries";
+@import "media_queries/desktop-media-queries";
+@import "media_queries/tablet-media-queries";
+@import "media_queries/phone-media-queries";
 h1,
 h2,
 h3,

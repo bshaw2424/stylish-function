@@ -6,38 +6,25 @@
       text-align: center;
     }
   }
-
-  .card-content {
-    padding: 0;
-    .card-title {
-      text-align: center;
-      margin: 1rem 0;
-    }
-  }
 }
 
 // index product showpage section
 .product-container {
   .card-content {
-    div {
-      .card-title {
-        font-size: 2.5rem;
-        margin: 1rem 0;
-        text-align: center;
-      }
+    .card-title {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+      text-align: center;
     }
-    .card-price {
-      font-size: 1.5rem;
-      display: inline-block;
-      width: 100%;
-      padding: 5px 0;
-      border-top: 1px solid $border;
-      border-bottom: 1px solid $border;
-    }
-    .go-button {
-      margin-bottom: 1rem;
-      border-top: 1px solid $border;
-      width: 100%;
-    }
+  }
+  .card-price {
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 5px 0;
+  }
+  .go-button {
+    margin-bottom: 1rem;
+    border-top: 1px solid $border;
+    width: 100%;
   }
 }
