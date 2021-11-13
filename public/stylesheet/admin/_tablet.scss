@@ -1,9 +1,53 @@
-.card-image {
-  img {
-    object-fit: cover;
+.title-container {
+  h1 {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0 0.75rem;
   }
 }
 
+.card {
+  margin-bottom: 2rem;
+  .card-image {
+    img {
+      object-fit: cover;
+    }
+  }
+  .card-content {
+    padding: 0;
+    .card-title {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+  }
+  .button-container {
+    display: flex;
+    margin-top: 1rem;
+    .go-button {
+      width: 100%;
+      margin: 0 auto;
+      margin-right: 2rem;
+    }
+    form {
+      width: 100%;
+      .delete-button {
+        width: inherit;
+      }
+    }
+  }
+}
+
+.filter-search {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 1rem;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  padding: 1rem 0.75rem;
+  input[type="text"] {
+    width: 50%;
+  }
+}
 // navbar
 .dash-board-container {
   ul {

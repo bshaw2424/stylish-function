@@ -849,6 +849,16 @@ h2 {
   .more-articles-anchor .article-link:hover {
     background: #00aaff;
   }
+  .footer-navigation ul, .footer-navigation .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid white;
+  }
+  .footer-navigation ul a, .footer-navigation .copyright a {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
   #article-index-section h1 {
     text-align: center;
     font-size: 4rem;
@@ -1450,9 +1460,66 @@ h2 {
   margin: auto;
 }
 
-.card-image img {
+.title-container h1 {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0 0.75rem;
+}
+
+.card {
+  margin-bottom: 2rem;
+}
+
+.card .card-image img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.card .card-content {
+  padding: 0;
+}
+
+.card .card-content .card-title {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.card .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.card .button-container .go-button {
+  width: 100%;
+  margin: 0 auto;
+  margin-right: 2rem;
+}
+
+.card .button-container form {
+  width: 100%;
+}
+
+.card .button-container form .delete-button {
+  width: inherit;
+}
+
+.filter-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 1rem 0.75rem;
+}
+
+.filter-search input[type="text"] {
+  width: 50%;
 }
 
 .dash-board-container ul li a, .dash-board-container .footer-navigation .copyright li a, .footer-navigation .dash-board-container .copyright li a {
@@ -1750,8 +1817,9 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0 0.75rem;
   }
-  .filter-search a,
+  .filter-search .go-button,
   .filter-search input[type="text"] {
     margin-bottom: 0.75rem;
   }
@@ -1759,25 +1827,32 @@ h2 {
     display: inline-block;
     height: 2.5rem;
   }
+  .filter-search .go-button {
+    width: 100%;
+  }
   h1 {
     text-align: center;
     margin: 1rem 0;
     font-size: 2.5rem;
   }
-  .product-container .card-image {
-    height: 100%;
+  .card {
+    margin-bottom: 2rem;
   }
-  .product-container .card-content {
-    padding: 0 0.75rem;
+  .card .card-image {
+    height: 350px;
   }
-  .product-container .card-content .card-details .card-title {
-    font-size: 1.5rem;
+  .card .card-content {
+    padding: 0;
+  }
+  .card .card-content .card-title {
+    font-size: 1.7rem;
     margin: 0.5rem 0;
+    text-align: center;
   }
-  .product-container .card-content .card-description {
+  .card .card-content .card-description {
     padding: 0 0 1rem 0;
   }
-  .product-container .card-content .button-container {
+  .card .card-content .button-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1790,14 +1865,15 @@ h2 {
     border-bottom: 0;
     padding-top: 1rem;
   }
-  .product-container .card-content .button-container .go-button {
+  .card .card-content .button-container .go-button {
     width: 100%;
+    margin-right: 2rem;
   }
-  .product-container .card-content .button-container form {
+  .card .card-content .button-container form {
     width: 100%;
     margin: 0 auto;
   }
-  .product-container .card-content .button-container form .delete-button {
+  .card .card-content .button-container form .delete-button {
     width: 100%;
   }
   .card {
