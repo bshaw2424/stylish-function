@@ -27,7 +27,6 @@
   }
   .index-navigation-links {
     @include flex-direction-column;
-    display: none;
     li {
       height: 100%;
       display: flex;

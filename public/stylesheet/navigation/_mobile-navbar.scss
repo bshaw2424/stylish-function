@@ -15,6 +15,7 @@
   i.material-icons {
     display: inline-block;
     color: #333;
+    font-size: 2.2rem;
     min-height: 1.5rem;
     @include flex-center;
     position: absolute;
@@ -25,7 +26,6 @@
     }
   }
   .index-navigation-links {
-    display: none;
     li {
       height: 100%;
       display: flex;
@@ -55,7 +55,7 @@
 
     img {
       height: 3.8rem;
-      width: 90%;
+      width: 85%;
     }
   }
 }
