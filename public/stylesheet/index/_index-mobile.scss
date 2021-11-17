@@ -11,12 +11,11 @@
 // }
 
 .display-header {
-  background: #f6f9fc;
+  // background: #f6f9fc;
   position: relative;
 }
 .display-header-container {
   display: flex;
-  height: 50vh;
   width: 100%;
 }
 #hero-image-container {
@@ -61,7 +60,6 @@
     margin: 1rem 0;
   }
   .card {
-    @include no-box-shadow;
     .card-content {
       padding: 0;
       .card-title {

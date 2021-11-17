@@ -1,16 +1,7 @@
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .card {
-    @include no-box-shadow;
-    .card-image {
-      img {
-        height: 350px;
-        object-fit: cover;
-      }
-    }
-  }
+  @import "../navigation/tablet-navbar";
+  @import "../index/index-tablet";
+  @import "../articles/tablet";
+  @import "../showpage/tablet";
+  @import "../admin/tablet";
 }
-@import "../navigation/tablet-navbar";
-@import "../index/index-tablet";
-@import "../articles/tablet";
-@import "../showpage/tablet";
-@import "../admin/tablet";

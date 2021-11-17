@@ -1,5 +1,5 @@
 .display-header {
-  background: #f6f9fc;
+  // background: #f6f9fc;
   position: relative;
 }
 .display-header-container {
@@ -48,20 +48,12 @@
     text-align: center;
     margin: 1rem 0;
   }
-  .card {
-    @include no-box-shadow;
-    .card-image {
-      img {
-        height: 350px;
-        object-fit: cover;
-      }
-    }
-    .card-content {
-      padding: 0;
-      .card-title {
-        text-align: center;
-        margin: 0.5rem 0;
-      }
+
+  .card-content {
+    padding: 0;
+    .card-title {
+      text-align: center;
+      margin: 0.5rem 0;
     }
   }
 }

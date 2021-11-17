@@ -5,14 +5,4 @@
   @import "../articles/mobile";
   @import "../showpage/mobile";
   @import "../admin/mobile";
-  .card {
-    @include no-box-shadow;
-  }
-  .card-image {
-    img {
-      @include object-fit-photos;
-      height: 100%;
-      width: 100%;
-    }
-  }
 }

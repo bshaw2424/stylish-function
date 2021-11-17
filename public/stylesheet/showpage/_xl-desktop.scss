@@ -75,9 +75,14 @@
   p {
     margin-bottom: 1rem;
   }
-  .go-button {
-    border: none;
-    width: 50%;
-    margin: auto;
+  .button-container {
+    border-bottom: none;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    .go-button {
+      border: none;
+      width: 50%;
+      margin: auto;
+    }
   }
 }

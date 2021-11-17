@@ -1,4 +1,6 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  @import "../navigation/indexNavigationDesktop";
-  // @import "../navigation/desktop-navbar";
+  // @import "../navigation/indexNavigationDesktop";
+  @import "../articles/desktop";
+  @import "../showpage/desktop";
+  @import "../navigation/desktop-navbar";
 }

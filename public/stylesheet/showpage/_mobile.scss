@@ -5,22 +5,33 @@
       margin: 1rem 0;
       text-align: center;
     }
+    p {
+      padding: 0 0.75rem;
+    }
   }
 }
 
 // index product showpage section
 .product-container {
   .card-content {
+    div {
+      width: 100%;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+    }
     .card-title {
-      font-size: 2.5rem;
-      margin: 1rem 0;
-      text-align: center;
+      font-size: 1.8rem;
+      margin: 0.75rem 0;
     }
   }
   .card-price {
     font-size: 1.5rem;
     display: inline-block;
     padding: 5px 0;
+    align-self: center;
+  }
+  p {
+    margin-top: 0;
   }
   .go-button {
     margin-bottom: 1rem;

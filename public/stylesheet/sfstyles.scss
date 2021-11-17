@@ -25,6 +25,12 @@
   height: 100%;
   object-fit: cover;
 }
+@mixin image-height {
+  height: 22rem;
+  img {
+    @include object-fit-photos();
+  }
+}
 
 //admin scss
 @import "admin/adminNavigation";
@@ -87,7 +93,9 @@ h6 {
 .card {
   @include no-box-shadow;
 }
-
+.card-image {
+  @include image-height;
+}
 .card-title {
   color: $title-text;
 }
