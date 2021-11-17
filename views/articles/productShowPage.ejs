@@ -8,13 +8,16 @@
       <div class="card-content">
         <div>
           <h3 class="card-title"><%= product.title %></h3>
-          <span class="card-price"><strong>$<%= product.price %></strong></span>
+          <span class="card-price">
+            <strong>$<%= product.price %></strong>
+          </span>
         </div>
         <p><%= product.description %></p>
-
-        <a class="go-button btn" href="https://bit.ly/3gaosfY" target="_blank"
-          >Take me there</a
-        >
+        <div class="button-container">
+          <a class="go-button btn" href="https://bit.ly/3gaosfY" target="_blank"
+            >Take me there</a
+          >
+        </div>
       </div>
     </div>
   </div>
