@@ -9,16 +9,20 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  .container {
+    display: flex;
+    justify-content: center;
+  }
   .index-logo {
     margin: 0;
-    width: 70%;
-    padding: 10px 0;
+    width: 60%;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 
     img {
       height: 4rem;
-      width: 70%;
+      width: 80%;
     }
   }
 }
