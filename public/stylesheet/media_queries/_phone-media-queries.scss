@@ -1,8 +1,9 @@
-@media screen and (max-height: 812px) and (min-width: 0px) and (max-width: 480px) {
+@media screen and (min-width: 0px) and (max-width: 480px) {
   @import "../navigation/mobile-navbar";
   @import "../index/index-mobile";
   @import "../admin/mobile-edit";
   @import "../articles/mobile";
   @import "../showpage/mobile";
+  @import "../admin/tablet";
   @import "../admin/mobile";
 }
