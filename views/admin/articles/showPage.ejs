@@ -25,38 +25,41 @@
     </div>
     <span>Number of Products - <%= articles.products.length %></span>
     <!-- <a href="/admin/articles/" class="btn btn-small">Back</a> -->
-    <div class="row">
-      <% for(let product of articles.products) { %>
-      <div class="col s12 m6 l4">
-        <div class="card">
-          <div class="card-image">
-            <img src="<%= product.image.url %>" alt="<%= product.image %>" />
-          </div>
-          <div class="card-content z-depth-1">
-            <a
-              href="/admin/articles/<%= articles.slug %>/products/<%= product.slug %>"
-              class="card-title"
-            >
-              <%= product.title %>
-            </a>
-            <p><%= product.description %></p>
-            <div class="button-container card-action">
-              <a
-                href="/admin/articles/<%= articles.slug %>/products/<%= product.slug %>/edit"
-                class="btn go-button"
-                >Edit</a
-              >
-              <form
-                action="/admin/articles/<%= articles.slug %>/products/<%= product.slug %>?_method=DELETE"
-                method="POST"
-              >
-                <button class="btn delete-button">delete</button>
-              </form>
+    <div class="article-container">
+      <div class="row">
+        <% for(let product of articles.products) { %>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="<%= product.image.url %>" alt="<%= product.image %>" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a
+                  href="/admin/articles/<%= articles.slug %>/products/<%= product.slug %>"
+                >
+                  <%= product.title %>
+                </a>
+              </h3>
+              <p><%= product.description %></p>
+              <div class="button-container card-action">
+                <a
+                  href="/admin/articles/<%= articles.slug %>/products/<%= product.slug %>/edit"
+                  class="btn go-button"
+                  >Edit</a
+                >
+                <form
+                  action="/admin/articles/<%= articles.slug %>/products/<%= product.slug %>?_method=DELETE"
+                  method="POST"
+                >
+                  <button class="btn delete-button">delete</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
+        <% } %>
       </div>
-      <% } %>
     </div>
   </div>
 </section>

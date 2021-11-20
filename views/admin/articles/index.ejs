@@ -1,10 +1,10 @@
-<% include ../../partials/header %>
+<% include ../../partials/header %> <% include ../../partials/mobileNav %>
 <section class="index-container">
   <% include ../../admin/admin-nav %>
   <div class="container">
     <div class="title-container">
-      <h1>Articles</h1>
       <i class="material-icons hide-on-large-only">menu</i>
+      <h1>Articles</h1>
     </div>
     <div class="filter-search">
       <input
@@ -19,17 +19,17 @@
     <div class="article-container">
       <div class="row">
         <% for(let article of articles) { %>
-        <div class="col s12 m6 l4">
+        <div class="col s12 l4 xl4">
           <div class="card">
             <div class="card-image">
               <img src="<%= article.image.url %>" alt="<%= article.image %>" />
             </div>
-            <div class="card-content z-depth-1">
+            <div class="card-content">
               <a href="/admin/articles/<%= article.slug %>" class="card-title">
                 <%= article.title %>
               </a>
               <p><%= article.description %></p>
-              <div class="button-container card-action">
+              <div class="button-container">
                 <a
                   href="/admin/articles/<%= article.slug %>/edit"
                   class="btn go-button"
