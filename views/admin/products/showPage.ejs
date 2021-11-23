@@ -2,18 +2,26 @@
 <section class="index-container">
   <% include ../../admin/admin-nav %>
   <div class="container">
-    <div class="row">
-      <div class="product-container">
-        <div class="image-container">
-          <img src="<%= product.image.url %>" alt="<%= product.title %>" />
+    <div class="product-container">
+      <div class="card-image">
+        <img src="<%= product.image.url %>" alt="<%= product.title %>" />
+      </div>
+      <div class="card-content">
+        <div class="card-details">
+          <h3 class="card-title"><%= product.title %></h3>
+          <span class="card-price">
+            <strong>$<%= product.price %></strong>
+          </span>
         </div>
-        <div class="content-container">
-          <h3><%= product.title %></h3>
-          <div><%= product.description %></div>
-          <span><strong>$<%= product.price %></strong></span>
-          <a class="btn go-button" href="https://bit.ly/3gaosfY" target="_blank"
-            >get more information</a
+        <p><%= product.description %></p>
+        <div class="button-container">
+          <a
+            class="btn go-button"
+            href="https://bit.ly/3gaosfY"
+            target="_blank"
           >
+            get more information
+          </a>
         </div>
       </div>
     </div>
