@@ -3,23 +3,21 @@
 <section class="container">
   <div id="article-index-section">
     <h1>Articles</h1>
-    <div class="row">
-      <% articles.forEach(article => { %>
-      <div class="article-card">
-        <div class="card">
-          <div class="card-image">
-            <img src="../../images/sm-arm-chair.jpg" alt="" />
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">
-              <a href="/articles/<%= article.slug %>"> <%= article.title %> </a>
-            </h3>
-            <p><%= article.description %></p>
-          </div>
+    <% articles.forEach(article => { %>
+    <div class="article-card">
+      <div class="card">
+        <div class="card-image">
+          <img src="../../images/sm-arm-chair.jpg" alt="" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="/articles/<%= article.slug %>"> <%= article.title %> </a>
+          </h3>
+          <p><%= article.description %></p>
         </div>
       </div>
-      <% }) %>
     </div>
+    <% }) %>
   </div>
 </section>
 <% include ../partials/footer %>
