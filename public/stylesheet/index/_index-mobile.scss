@@ -18,6 +18,11 @@
   display: flex;
   width: 100%;
 }
+.index-navigation-container {
+  .container {
+    width: 100%;
+  }
+}
 #hero-image-container {
   position: relative;
   height: 100%;
@@ -42,16 +47,19 @@
   justify-content: center;
   p {
     width: 70%;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: $hero-text;
     letter-spacing: 0.25rem;
     padding: 0.3rem 1rem;
   }
 }
 
-.row {
-  border-bottom: 1px solid $border;
+.row .col {
   margin-bottom: 0;
+  padding: 0;
+}
+.row .col.s12:not(:last-child) {
+  margin-bottom: 3rem;
 }
 
 .article-section {
@@ -59,16 +67,24 @@
     text-align: center;
     margin: 1rem 0;
   }
-  .card {
-    .card-content {
-      padding: 0;
-      .card-title {
-        text-align: center;
-        margin: 0.5rem 0;
+
+  .col {
+    .card {
+      margin-bottom: 2rem;
+      .card-content {
+        padding: 0;
+        p {
+          text-align: center;
+          border-bottom: none;
+        }
+        .card-description {
+          padding: 0 0 1rem 0;
+          border-bottom: 1px solid $border;
+        }
       }
-      .card-description {
-        padding: 0 0 1rem 0;
-      }
+    }
+    .card:last-child {
+      margin-bottom: 0;
     }
   }
 }

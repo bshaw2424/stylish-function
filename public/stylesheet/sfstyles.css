@@ -1542,6 +1542,9 @@ h2 {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .index-navigation-container .container {
+    width: 100%;
+  }
   .display-hero-title {
     position: absolute;
     top: 0;
@@ -1942,6 +1945,9 @@ h2 {
     display: flex;
     width: 100%;
   }
+  .index-navigation-container .container {
+    width: 100%;
+  }
   #hero-image-container {
     position: relative;
     height: 100%;
@@ -1974,28 +1980,38 @@ h2 {
   }
   .display-hero-title p {
     width: 70%;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: "Oswald", sans-serif;
     letter-spacing: 0.25rem;
     padding: 0.3rem 1rem;
   }
-  .row {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  .row .col {
     margin-bottom: 0;
+    padding: 0;
+  }
+  .row .col.s12:not(:last-child) {
+    margin-bottom: 3rem;
   }
   .article-section h1 {
     text-align: center;
     margin: 1rem 0;
   }
-  .article-section .card .card-content {
+  .article-section .col .card {
+    margin-bottom: 2rem;
+  }
+  .article-section .col .card .card-content {
     padding: 0;
   }
-  .article-section .card .card-content .card-title {
+  .article-section .col .card .card-content p {
     text-align: center;
-    margin: 0.5rem 0;
+    border-bottom: none;
   }
-  .article-section .card .card-content .card-description {
+  .article-section .col .card .card-content .card-description {
     padding: 0 0 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .article-section .col .card:last-child {
+    margin-bottom: 0;
   }
   .more-articles-anchor {
     margin: 1rem 0;

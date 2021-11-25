@@ -18,6 +18,11 @@
     object-fit: cover;
   }
 }
+.index-navigation-container {
+  .container {
+    width: 100%;
+  }
+}
 .display-hero-title {
   position: absolute;
   top: 0;
