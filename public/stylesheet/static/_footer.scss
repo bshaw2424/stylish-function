@@ -5,7 +5,7 @@
 
 .footer-navigation {
   ul {
-    @include flex-center;
+    @include flex-align(center, center);
     align-content: center;
     padding: 1rem 0;
     li {

@@ -1,5 +1,5 @@
 .display-header-container {
-  @include flex-direction-column;
+  @include flex-direction(column);
   .article-product-description {
     h1 {
       margin: 1rem 0;
@@ -35,7 +35,7 @@
   }
   .go-button {
     margin-bottom: 1rem;
-    border-top: 1px solid $border;
+    @include border(border-top, 1px, solid, $border);
     width: 100%;
   }
 }

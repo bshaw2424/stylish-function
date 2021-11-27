@@ -1,5 +1,5 @@
 .display-header-container {
-  @include flex-direction-column;
+  @include flex-direction(column);
   .article-product-description {
     padding: 0 0.75rem;
     h1 {
@@ -9,7 +9,7 @@
     }
   }
   .card {
-    @include no-box-shadow;
+    @include box-shadow(none);
     .card-content {
       padding: 0 1rem;
       h3 {
@@ -29,13 +29,11 @@
 .product-container {
   margin: 2rem 0;
   .card-content {
-    @include flex-direction-column;
+    @include flex-direction(column);
     border: none;
   }
   .card-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-align(center, center);
     margin-bottom: 1rem;
     border: none;
     img {
@@ -67,7 +65,6 @@
     border-bottom: none;
     padding-top: 1rem;
     .go-button {
-      border: none;
       width: 50%;
       margin: auto;
     }

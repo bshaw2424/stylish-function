@@ -1,5 +1,5 @@
 .display-header-container {
-  @include flex-direction-column;
+  @include flex-direction(column);
   .article-product-description {
     padding: 0 0.75rem;
     h1 {
@@ -38,7 +38,6 @@
     padding-top: 1rem;
     margin-bottom: 1rem;
     .go-button {
-      border: none;
       width: 50%;
       margin: auto;
     }

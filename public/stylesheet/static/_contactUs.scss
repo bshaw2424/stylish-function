@@ -1,6 +1,6 @@
 .contact-us,
 .featured {
-  display: flex;
+  @include flex;
 }
 .contact-page {
   max-width: 50%;
@@ -18,7 +18,7 @@
   }
 
   .contact-form {
-    @include flex-direction-column;
+    @include flex-direction(column);
     .product-input {
       margin-bottom: 1rem;
       padding: 0.4rem 0.7rem;
@@ -36,9 +36,7 @@
       resize: none;
     }
     div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-align(center, center);
       margin: 1rem 0;
       .btn-submit {
         font-size: 1rem;

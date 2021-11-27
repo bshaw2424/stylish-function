@@ -1,22 +1,20 @@
 .index-navigation-container,
 .index-navigation-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-space-between(space-between, center);
 }
 
 .index-navigation-container {
-  display: flex;
+  @include flex;
   justify-content: space-between;
   width: 100%;
   .container {
-    display: flex;
+    @include flex;
     justify-content: center;
   }
   .index-logo {
     margin: 0;
     width: 60%;
-    display: flex;
+    @include flex;
     align-items: center;
     justify-content: flex-start;
 

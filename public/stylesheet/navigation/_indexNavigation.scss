@@ -10,7 +10,7 @@
   i.material-icons {
     display: inline-block;
     min-height: 100%;
-    @include flex-center;
+    @include flex-align(center, center);
     position: absolute;
     top: 0;
     left: 1rem;
@@ -21,7 +21,7 @@
   ul {
     li {
       height: 100%;
-      display: flex;
+      @include flex;
       a {
         padding: 6px 15px;
         font-size: 1.4rem;
@@ -32,12 +32,10 @@
   }
 }
 .index-navigation-container {
-  display: flex;
+  @include flex;
   justify-content: space-between;
   .index-logo {
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-align(center, center);
   }
 }

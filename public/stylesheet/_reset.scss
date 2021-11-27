@@ -28,20 +28,23 @@ h6,
 a {
   color: #333;
   text-transform: $text-capitalize;
-  font-family: $hero-text;
+  font-family: $text-font;
 }
+
 .back {
   background-color: $back-button;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $back-button-hover;
+  }
 }
-.back:hover {
-  background-color: $back-button-hover;
-}
+
 .hide {
   display: none;
 }
 
 .show {
-  display: flex;
+  display: block;
 }
 
 h1 {
@@ -56,29 +59,6 @@ h4,
 }
 .filter-title:hover {
   cursor: pointer;
-}
-.arrow-up,
-.arrow-down {
-  pointer-events: none;
-}
-.arrow-up {
-  display: none;
-}
-.back-btn {
-  background-color: $back-button;
-}
-.back-btn:hover {
-  background-color: $back-button-hover;
-}
-.show-btn {
-  background-color: $go-button;
-}
-.show-btn:hover {
-  background-color: $go-button-hover;
-}
-.index-main-section {
-  width: 90%;
-  margin: 0 5%;
 }
 
 .display-header-title,

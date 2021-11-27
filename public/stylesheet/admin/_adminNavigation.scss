@@ -2,7 +2,7 @@
   width: 18%;
   min-height: 100vh;
   background: $white;
-  @include no-box-shadow;
+  @include box-shadow(none);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 2.5rem;
   position: sticky;
@@ -13,14 +13,14 @@
     height: 70%;
     width: 100%;
     .admin-nav-title {
-      @include flex-center;
+      @include flex-align(center, center);
     }
     h1 {
       margin: 1.5rem 0;
     }
     ul {
       height: 70%;
-      @include flex-direction-column;
+      @include flex-direction(column);
       a {
         text-align: center;
         color: $nav-text;
