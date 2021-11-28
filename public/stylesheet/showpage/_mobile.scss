@@ -1,41 +1,68 @@
-.display-header-container {
-  @include flex-direction(column);
-  .article-product-description {
-    h1 {
-      margin: 1rem 0;
-      text-align: center;
+.article-product_description {
+  h1 {
+    @include text-align(center);
+    margin: 0.75rem 0;
+  }
+  p {
+    padding: 0.75rem;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+  }
+}
+
+.card {
+  margin-bottom: 2em;
+  .card-content {
+    padding: 0 8px;
+    h3 {
+      @include text-align(center);
+      margin: 0.75rem 0;
     }
-    p {
-      padding: 0 0.75rem;
+    .product-description {
+      padding: 0.75rem;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
     }
   }
 }
 
-// index product showpage section
-.product-container {
+// index product show page
+.article-product {
+  margin-top: 2rem;
+}
+
+.product {
+  .card-image {
+    width: 100%;
+    height: auto;
+    img {
+      @include images(100%, 100%, cover);
+    }
+  }
   .card-content {
-    div {
-      width: 100%;
+    padding: 0 0.75rem;
+    .product_description {
       border-top: 1px solid $border;
       border-bottom: 1px solid $border;
+      padding: 0.75rem;
     }
-    .card-title {
-      font-size: 1.8rem;
+    .product_information {
+      @include flex-space-between(space-between, center);
       margin: 0.75rem 0;
+      h3 {
+        font-size: 1.7em;
+        margin: 0;
+      }
+      .card-price {
+        font-size: 1.5em;
+      }
     }
-  }
-  .card-price {
-    font-size: 1.5rem;
-    display: inline-block;
-    padding: 5px 0;
-    align-self: center;
-  }
-  p {
-    margin-top: 0;
-  }
-  .go-button {
-    margin-bottom: 1rem;
-    @include border(border-top, 1px, solid, $border);
-    width: 100%;
+    .button-container {
+      min-width: 100%;
+      a {
+        display: inline-block;
+        min-width: 100%;
+      }
+    }
   }
 }

@@ -1,0 +1,21 @@
+.article-section {
+  h1 {
+    @include text-align(center);
+    margin: 1rem 0;
+  }
+}
+
+.article-container {
+  .card-content {
+    padding: 0 8px;
+    .card-title {
+      margin: 0.75rem 0;
+      text-align: center;
+    }
+    .article-description {
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+      padding: 0.75rem;
+    }
+  }
+}

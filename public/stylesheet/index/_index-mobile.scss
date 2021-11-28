@@ -66,8 +66,10 @@
     display: inline-block;
     width: inherit;
     background-color: $go-button;
-  }
-  &:hover {
-    background: $go-button-hover;
+    &:hover {
+      background: $go-button-hover;
+      padding: 0;
+      @include box-shadow(none);
+    }
   }
 }

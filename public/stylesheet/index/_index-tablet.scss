@@ -1,0 +1,30 @@
+.index-navigation .index-navigation-container .logo img {
+  width: 100%;
+}
+
+.hero-section_title-container {
+  p {
+    font-size: 2em;
+    max-width: 70%;
+  }
+}
+
+.index-articles {
+  h1 {
+    @include text-align(center);
+    margin: 0.75rem 0;
+  }
+
+  .card-container {
+    @include flex-direction(column);
+    div .card {
+      @include flex();
+      .card-image {
+        height: 350px;
+        img {
+          @include images(100%, 100%, cover);
+        }
+      }
+    }
+  }
+}

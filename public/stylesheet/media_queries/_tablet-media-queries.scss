@@ -1,5 +1,5 @@
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  @import "../navigation/tablet-navbar";
+@media screen and (max-width: 768px) {
+  @import "../navigation/mobile-navbar";
   @import "../index/index-tablet";
   @import "../articles/tablet";
   @import "../showpage/tablet";
