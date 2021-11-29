@@ -1,1 +1,45 @@
+.hero-section_title-container {
+  p {
+    font-size: 2.5em;
+    max-width: 70%;
+  }
+}
 
+.index-articles {
+  h1 {
+    margin: 1rem 0;
+    @include text-align(center);
+  }
+}
+
+.row {
+  @include flex();
+  border-bottom: 1px solid $border;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  .card {
+    margin: 0 0.75rem;
+    .card-image {
+      height: 350px;
+      img {
+        @include images(100%, 100%, cover);
+      }
+    }
+    .card-content {
+      padding: 0 0.75rem;
+      .card-title {
+        margin: 0.75rem 0;
+        @include text-align(center);
+      }
+    }
+  }
+}
+
+.button-container {
+  @include flex-align(center, center);
+  margin: 1rem 0;
+  width: 100%;
+  a {
+    width: 50%;
+  }
+}

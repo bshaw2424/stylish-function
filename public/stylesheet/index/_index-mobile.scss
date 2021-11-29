@@ -40,20 +40,22 @@
     margin: 1rem;
   }
 
-  .card {
-    .card-content {
-      padding: 0 8px;
-      .card-title {
-        margin: 0.75rem 0;
+  .card-container {
+    .card {
+      margin-bottom: 2rem;
+      @include flex-direction(column);
+      .card-content {
+        padding: 0 8px;
+        .card-title {
+          margin: 0.75rem 0;
+          border: 0;
+        }
+        .card-description {
+          border-top: 1px solid $border;
+          border-bottom: 1px solid $border;
+          padding: 0.75rem 0;
+        }
       }
-      .card-description {
-        border-top: 1px solid $border;
-        border-bottom: 1px solid $border;
-        padding: 0.75rem 0;
-      }
-    }
-    &:nth-last-of-type() {
-      margin-bottom: none;
     }
   }
 }
@@ -62,9 +64,10 @@
   margin-bottom: 1rem;
   width: 100%;
   padding: 0 0.75rem;
+  border: none;
   a {
     display: inline-block;
-    width: inherit;
+    min-width: 100%;
     background-color: $go-button;
     &:hover {
       background: $go-button-hover;
