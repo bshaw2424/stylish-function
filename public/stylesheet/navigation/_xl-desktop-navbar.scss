@@ -1,1 +1,25 @@
+.index-navigation-container,
+.index-navigation-links {
+  @include flex-space-between(space-between, center);
+}
 
+.index-navigation-container {
+  @include flex-space-between(space-between, center);
+  width: 70%;
+  margin: 0 auto;
+  .index-navigation-links {
+    display: block;
+  }
+  .logo {
+    margin: 0;
+    max-width: 100%;
+    @include flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    img {
+      height: 4rem;
+      width: 100%;
+    }
+  }
+}

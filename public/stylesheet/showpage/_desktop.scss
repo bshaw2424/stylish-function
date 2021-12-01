@@ -1,22 +1,61 @@
-.display-header-container {
-  @include flex-direction(column);
-  .article-product-description {
-    padding: 0 0.75rem;
-    h1 {
-      margin: 1rem 0;
-      font-size: 3.5rem;
-      text-align: center;
+.article-product_description {
+  h1 {
+    @include text-align(center);
+    margin: 1rem auto;
+  }
+  p {
+    padding: 0.75rem;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+  }
+}
+
+.row {
+  -webkit-box-flex: unset;
+  flex: unset;
+}
+.card {
+  padding-bottom: 2rem;
+  .card-image {
+    height: 350px;
+    img {
+      @include images(100%, 100%, cover);
+    }
+  }
+  .card-content {
+    padding: 0;
+    .card-title {
+      @include text-align(center);
+      margin: 0.75rem auto;
+    }
+    .product-description {
+      padding: 0.75rem;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
     }
   }
 }
 
-.card-content {
+// index product showpage section
+.product-container {
+  margin: 2rem 0;
+  .card-content {
+    @include flex-direction(column);
+    border: none;
+  }
+  .card-image {
+    @include flex-align(center, center);
+    margin-bottom: 1rem;
+    border: none;
+    img {
+      width: 100%;
+    }
+  }
   div {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid $border;
     border-bottom: 1px solid $border;
-    margin-top: 1rem;
     .card-title {
       font-size: 2rem;
       margin: 0;
@@ -31,12 +70,11 @@
     }
   }
   p {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   .button-container {
     border-bottom: none;
     padding-top: 1rem;
-    margin-bottom: 1rem;
     .go-button {
       width: 50%;
       margin: auto;

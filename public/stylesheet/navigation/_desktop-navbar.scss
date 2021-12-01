@@ -4,23 +4,23 @@
 }
 
 .index-navigation-container {
-  @include flex;
-  justify-content: space-between;
+  //@include flex-space-between(space-between, center);
+  @include flex-direction(column);
   width: 100%;
-  .container {
-    @include flex;
-    justify-content: center;
+  margin: 0 auto;
+  .index-navigation-links {
+    display: block;
   }
-  .index-logo {
+  .logo {
     margin: 0;
-    width: 60%;
+    max-width: 100%;
     @include flex;
     align-items: center;
     justify-content: flex-start;
 
     img {
       height: 4rem;
-      width: 80%;
+      width: 100%;
     }
   }
 }

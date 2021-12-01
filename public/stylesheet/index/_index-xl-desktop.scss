@@ -29,7 +29,6 @@
 }
 
 .row {
-  @include flex();
   border-bottom: 1px solid $border;
   padding-bottom: 1rem;
   margin-bottom: 0;
