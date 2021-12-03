@@ -1,6 +1,6 @@
 .dash-board-nav {
   width: 18%;
-  min-height: 100vh;
+  height: 100vh;
   background: $white;
   @include box-shadow(none);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -10,7 +10,7 @@
   left: 0;
 
   .dash-board-container {
-    height: 70%;
+    height: 100%;
     width: 100%;
     .admin-nav-title {
       @include flex-align(center, center);
