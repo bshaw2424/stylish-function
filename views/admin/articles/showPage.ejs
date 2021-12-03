@@ -15,15 +15,16 @@
         class="browser-default"
         placeholder="filter seach"
       />
-      <div>
-        <a
-          href="/admin/articles/<%= articles.slug %>/products/new"
-          class="btn go-button"
-          >Add Product</a
-        >
-      </div>
+
+      <a
+        href="/admin/articles/<%= articles.slug %>/products/new"
+        class="btn go-button"
+        >Add Product</a
+      >
     </div>
-    <span>Number of Products - <%= articles.products.length %></span>
+    <span class="product-count"
+      >Number of Products - <%= articles.products.length %></span
+    >
     <!-- <a href="/admin/articles/" class="btn btn-small">Back</a> -->
     <div class="article-container">
       <div class="row">
