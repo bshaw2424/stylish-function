@@ -1,0 +1,99 @@
+nav {
+  display: none;
+}
+
+.title-container {
+  h1 {
+    @include text-align(center);
+    margin: 0.75rem 0;
+  }
+}
+
+.filter-search {
+  @include flex-direction(column);
+  padding: 0 0.75rem;
+  #filter-search,
+  .go-button {
+    margin-bottom: 0.75rem;
+  }
+  #filter-search {
+    height: 36px;
+  }
+}
+
+.article-container {
+  .button-container {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    @include flex();
+    a {
+      display: inline-block;
+      min-width: 50%;
+      margin-right: 2rem;
+    }
+    form {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// products section
+.product-count {
+  padding-left: 0.75rem;
+}
+
+.index-container {
+  margin: 2rem auto;
+  .product-container {
+    .card-image {
+      img {
+        @include images(100%, 100%, cover);
+      }
+    }
+    .card-content {
+      .card-details {
+        .card-title {
+          font-size: 2em;
+          margin: 0.75rem 0;
+        }
+        .card-price {
+          font-size: 1.5em;
+          margin: 0.75rem 0;
+        }
+      }
+    }
+    .button-container {
+      min-width: 100%;
+      padding: 1rem 0;
+      border-top: 1px solid $border;
+      border-bottom: 1px solid $border;
+      a {
+        display: inline-block;
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+// mobile admin forms
+.form-group {
+  width: 100%;
+}
+
+.button-container {
+  @include flex();
+  padding: 0;
+  a {
+    min-width: 50%;
+  }
+  .go-button {
+    margin-right: 2rem;
+    width: 50%;
+  }
+}
