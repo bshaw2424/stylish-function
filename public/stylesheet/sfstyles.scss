@@ -157,3 +157,26 @@ button {
 .dash-board-container ul a {
   font-size: 1.3em;
 }
+
+.text-area,
+.input-field {
+  padding: 10px;
+}
+.text-area {
+  height: 8em;
+  width: 100%;
+  resize: none;
+}
+
+.input-field {
+  height: 34px;
+}
+
+.product-count {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.filter-search {
+  margin: 0.75rem 0;
+}

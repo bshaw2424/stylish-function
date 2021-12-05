@@ -1,6 +1,9 @@
 .row .col {
   padding: 0;
 }
+.row {
+  border-bottom: none;
+}
 
 .title-container {
   h1 {
@@ -54,7 +57,6 @@
 }
 
 .index-container {
-  margin: auto;
   .product-container {
     @include flex();
     .card-image {
@@ -92,15 +94,14 @@
   }
 }
 
-// mobile admin forms
+// forms
 .form-group {
   width: 100%;
 }
 
 .form {
   @include flex-direction(column);
-  max-width: 80%;
-  margin: 4rem auto;
+  max-width: 100%;
 }
 
 .button-container {

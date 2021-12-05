@@ -13,8 +13,6 @@
 }
 
 .row {
-  @include flex();
-  -webkit-box-flex: unset;
   border-bottom: 1px solid $border;
   padding-bottom: 1rem;
   margin-bottom: 0;
