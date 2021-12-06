@@ -4,24 +4,24 @@
 
 .message-center-header {
   max-height: 100vh;
-  margin: 1.5rem auto;
   .message-center-container {
     @include flex-space-between(space-between, center);
+    padding: 1rem 0;
     h1 {
+      font-size: 3rem;
       margin: 0;
-      width: 100%;
-      text-align: center;
+      padding: 0;
     }
-
     .message-filter-container {
       @include flex-direction(column);
       justify-content: center;
     }
     .input-field {
-      width: 20%;
+      min-width: 30%;
       margin: 0;
+      height: 100%;
       #message-filter {
-        padding: 5px 0;
+        padding: 0;
         &:hover {
           cursor: pointer;
         }
@@ -93,7 +93,7 @@
 
 // contact show page section
 .message-details {
-  padding: 2rem;
+  margin: 2rem auto;
   height: 100%;
   .collection-group_date {
     text-align: center;
@@ -109,7 +109,7 @@
     @include flex-direction(column);
     .message-label {
       display: inline-block;
-      max-width: 15%;
+      max-width: 100%;
       margin-bottom: 0.5rem;
       font-size: 1.2rem;
       text-transform: $text-capitalize;
@@ -122,10 +122,19 @@
   .message-showpage-buttons {
     @include flex-align(center, center);
     padding: 1rem 0;
-    @include border(border-top, 1px, solid, black);
-    @include border(border-bottom, 1px, solid, black);
+    width: 100%;
+    border-top: 1px solid $border;
     a {
       display: inline-block;
+      width: 26%;
+      outline: 1px solid $border;
+    }
+    form {
+      width: 100%;
+      margin-right: 2rem;
+      button {
+        width: 100%;
+      }
     }
   }
 }
@@ -149,10 +158,13 @@
   }
 }
 h2 {
-  margin: 1rem 0;
+  outline: 1px solid $border;
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
 }
 .message-subject {
   @include flex-align(center, center);
-  border-top: 1px solid black;
-  padding: 6px;
+  margin: 0.75rem 0;
+  font-size: 1.2rem;
 }

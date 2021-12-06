@@ -213,7 +213,6 @@ h4,
 
 .message-center-header {
   max-height: 100vh;
-  margin: 1.5rem auto;
 }
 
 .message-center-header .message-center-container {
@@ -226,12 +225,13 @@ h4,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1rem 0;
 }
 
 .message-center-header .message-center-container h1 {
+  font-size: 3rem;
   margin: 0;
-  width: 100%;
-  text-align: center;
+  padding: 0;
 }
 
 .message-center-header .message-center-container .message-filter-container {
@@ -248,12 +248,13 @@ h4,
 }
 
 .message-center-header .message-center-container .input-field {
-  width: 20%;
+  min-width: 30%;
   margin: 0;
+  height: 100%;
 }
 
 .message-center-header .message-center-container .input-field #message-filter {
-  padding: 5px 0;
+  padding: 0;
 }
 
 .message-center-header .message-center-container .input-field #message-filter:hover {
@@ -353,7 +354,7 @@ h4,
 }
 
 .message-details {
-  padding: 2rem;
+  margin: 2rem auto;
   height: 100%;
 }
 
@@ -381,7 +382,7 @@ h4,
 
 .message-details p .message-label {
   display: inline-block;
-  max-width: 15%;
+  max-width: 100%;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   text-transform: capitalize;
@@ -403,12 +404,23 @@ h4,
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem 0;
-  border: 1px solid black;
-  border: 1px solid black;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .message-details .message-showpage-buttons a {
   display: inline-block;
+  width: 26%;
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.message-details .message-showpage-buttons form {
+  width: 100%;
+  margin-right: 2rem;
+}
+
+.message-details .message-showpage-buttons form button {
+  width: 100%;
 }
 
 .message-button-container {
@@ -434,7 +446,10 @@ h4,
 }
 
 h2 {
-  margin: 1rem 0;
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
 }
 
 .message-subject {
@@ -447,8 +462,8 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 1px solid black;
-  padding: 6px;
+  margin: 0.75rem 0;
+  font-size: 1.2rem;
 }
 
 .contact-us,
@@ -2387,5 +2402,33 @@ button {
 
 .filter-search {
   margin: 0.75rem 0;
+}
+
+.admin-mobile-nav {
+  height: 5rem;
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.admin-mobile-nav .hamburger {
+  padding-left: 1rem;
+}
+
+.admin-mobile-nav h1 {
+  margin: 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
 }
 /*# sourceMappingURL=sfstyles.css.map */
