@@ -1,4 +1,4 @@
-<% include ../../partials/header %>
+<% include ../../partials/header %><% include ../../admin/mobile-nav %>
 <section class="index-container">
   <% include ../../admin/admin-nav %>
   <div class="container">
@@ -13,7 +13,7 @@
             <strong>$<%= product.price %></strong>
           </span>
         </div>
-        <p><%= product.description %></p>
+        <p class="product-description"><%= product.description %></p>
         <div class="button-container">
           <a
             class="btn go-button"

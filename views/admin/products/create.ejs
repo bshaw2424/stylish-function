@@ -1,11 +1,11 @@
-<% include ../../partials/header %>
+<% include ../../partials/header %><% include ../../admin/mobile-nav %>
 <section class="index-container">
   <% include ../../admin/admin-nav %>
   <div class="container">
     <form
       action="/admin/articles/<%= article.slug %>/products"
       method="POST"
-      class="form-group"
+      class="form form-group"
       enctype="multipart/form-data"
     >
       <div class="title-container">
@@ -41,9 +41,7 @@
         <textarea
           name="Product[description]"
           id="product-description"
-          cols="30"
-          rows="10"
-          class="form-field"
+          class="form-field text-area"
         ></textarea>
       </div>
       <div class="button-container">

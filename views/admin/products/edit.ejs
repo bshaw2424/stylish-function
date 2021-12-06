@@ -1,4 +1,4 @@
-<% include ../../partials/header %>
+<% include ../../partials/header %><% include ../../admin/mobile-nav %>
 
 <section class="index-container">
   <% include ../../admin/admin-nav %>
@@ -6,7 +6,7 @@
     <form
       action="/admin/articles/<%= article.slug %>/products/<%= product.product_slug %>?_method=PUT"
       method="POST"
-      class="form-group"
+      class="form form-group"
       enctype="multipart/form-data"
     >
       <div class="title-container">
