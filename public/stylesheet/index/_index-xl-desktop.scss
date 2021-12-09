@@ -1,10 +1,10 @@
 .hero-section_container {
   .hero-section_image-container {
-    height: 600px;
+    height: 660px;
     .hero-section_image {
       display: inline-block;
       @include images(100%, 100%, cover);
-      height: 600px;
+      height: 660px;
     }
     .hero-section_title-container {
       height: 100%;

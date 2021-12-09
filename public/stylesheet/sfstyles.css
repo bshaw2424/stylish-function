@@ -744,7 +744,7 @@ h2 {
     width: 100%;
   }
   .hero-section_container .hero-section_image-container {
-    height: 600px;
+    height: 660px;
   }
   .hero-section_container .hero-section_image-container .hero-section_image {
     display: inline-block;
@@ -752,7 +752,7 @@ h2 {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    height: 600px;
+    height: 660px;
   }
   .hero-section_container .hero-section_image-container .hero-section_title-container {
     height: 100%;
