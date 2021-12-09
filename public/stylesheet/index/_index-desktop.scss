@@ -1,44 +1,57 @@
+.index-navigation .index-navigation-container .logo img {
+  width: 100%;
+}
+
+.row {
+  margin: 0;
+}
+
 .hero-section_title-container {
   p {
-    font-size: 2.5em;
+    font-size: 2em;
     max-width: 70%;
   }
 }
 
 .index-articles {
   h1 {
-    margin: 1rem 0;
     @include text-align(center);
+    margin: 0.75rem 0;
   }
-}
 
-.row {
-  border-bottom: 1px solid $border;
-  padding-bottom: 1rem;
-  margin-bottom: 0;
-  .card {
-    margin: 0 0.75rem;
-    .card-image {
-      height: 350px;
-      img {
-        @include images(100%, 100%, cover);
+  .card-container {
+    @include flex-direction(column);
+    .card {
+      @include flex();
+      .card-image {
+        height: 200px;
+        width: 100%;
+        img {
+          @include images(100%, 100%, cover);
+        }
+      }
+      .card-content {
+        padding: 0;
+        margin-left: 1rem;
+        .card-title {
+          margin: 0;
+          border-bottom: 1px solid $border;
+          font-size: 2em;
+          @include text-align(justify);
+        }
+        .card-description {
+          padding-top: 0.75rem;
+        }
       }
     }
-    .card-content {
-      padding: 0 0.75rem;
-      .card-title {
-        margin: 0.75rem 0;
-        @include text-align(center);
-      }
-    }
   }
-}
-
-.button-container {
-  @include flex-align(center, center);
-  margin: 1rem 0;
-  width: 100%;
-  a {
-    width: 50%;
+  .button-container {
+    padding: 1rem 0;
+    width: 100%;
+    @include flex-align(center, center);
+    border-top: 1px solid $border;
+    a {
+      width: 70%;
+    }
   }
 }

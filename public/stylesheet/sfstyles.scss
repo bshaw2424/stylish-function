@@ -88,7 +88,14 @@ h6 {
     }
   }
 }
-
+.card-title {
+  a {
+    color: $title-text;
+    &:hover {
+      color: $title-text-hover;
+    }
+  }
+}
 .title-container i.material-icons {
   display: block;
 }
@@ -177,6 +184,21 @@ button {
   margin-bottom: 0.75rem;
 }
 
+.about-us_heading {
+  text-align: center;
+  margin: 1rem 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0;
+  background-color: #333;
+  color: $white;
+}
+.about-us_description {
+  margin: 0 auto;
+  p {
+    font-size: 1.3em;
+  }
+}
 .filter-search {
   margin: 0.75rem 0;
 }

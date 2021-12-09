@@ -2,13 +2,14 @@
 .featured {
   @include flex;
 }
+
 .contact-page {
-  max-width: 50%;
+  max-width: 100%;
   margin: 1rem auto;
   padding: 0 3rem;
-  .contact-header {
+  .contact-page_header {
     padding: 1rem 2rem;
-    .contact-title {
+    #contact-title {
       margin: 0;
       padding-bottom: 0.5rem;
       font-size: 3.2rem;
@@ -17,7 +18,7 @@
     }
   }
 
-  .contact-form {
+  .contact-page_form {
     @include flex-direction(column);
     .product-input {
       margin-bottom: 1rem;
@@ -35,12 +36,12 @@
       padding: 0;
       resize: none;
     }
-    div {
+    .button-container {
       @include flex-align(center, center);
       margin: 1rem 0;
       .btn-submit {
         font-size: 1rem;
-        width: 50%;
+        width: 100%;
         background-color: $go-button;
         &:hover {
           background-color: $go-button-hover;
