@@ -11,6 +11,7 @@ module.exports.login = (req, res) => {
 };
 
 module.exports.post = (req, res) => {
+  // return to current spot when logged back in
   const redirectUrl = req.session.returnTo || "/admin/dashboard";
   delete req.session.returnTo;
   res.redirect(redirectUrl);

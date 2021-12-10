@@ -1,11 +1,11 @@
-exports.aboutUs = (req, res) => res.render("pages/static/about-us");
+module.exports.aboutUs = (req, res) => res.render("pages/static/about-us");
 
-exports.affiliateDisclaimer = (req, res) =>
+module.exports.affiliateDisclaimer = (req, res) =>
   res.render("pages/static/affiliateDisclaimer");
 
-exports.contactUs = (req, res) => res.render("pages/static/contactUs");
+module.exports.contactUs = (req, res) => res.render("pages/static/contactUs");
 
-exports.privacyDisclosure = (req, res) =>
+module.exports.privacyDisclosure = (req, res) =>
   res.render("pages/static/privacy-disclosure");
 
-exports.termsOfService = (req, res) => res.render("pages/static/TOS");
+module.exports.termsOfService = (req, res) => res.render("pages/static/TOS");

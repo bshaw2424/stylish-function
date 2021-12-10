@@ -16,11 +16,16 @@ module.exports.new = async (req, res) => {
 module.exports.create = async (req, res) => {
   const { slug } = req.params;
   const { Product } = req.body;
+  // find article by slug name
   const article = await ArticleModel.findOne({ slug });
+  // create a new product associated with the article
   const product = new ProductModel(Product);
+  // file upload (url/filename) for photo using multer
   product.image.url = req.file.path;
   product.image.filename = req.file.filename;
+  // push the created product to the article using refs
   article.products.push(product);
+  // reference the article to the product areas
   product.article = article;
   await product.save();
   await article.save();
@@ -57,18 +62,10 @@ module.exports.update = async (req, res) => {
 };
 
 module.exports.delete = async (req, res) => {
-  let id = [];
   const { slug, product_slug } = req.params;
-  const articles = await ArticleModel.findOne({ slug });
-  const delete_product = await ProductModel.findOneAndDelete({
+  await ArticleModel.findOne({ slug });
+  await ProductModel.findOneAndDelete({
     slug: product_slug,
   });
-  if (delete_product) {
-    console.log(
-      delete_product._id,
-      articles.products.map(a => a._id),
-    );
-  }
-
-  // res.redirect(`/admin/articles/${slug}`);
+  res.redirect(`/admin/articles/${slug}`);
 };
