@@ -94,3 +94,55 @@
     width: 50%;
   }
 }
+
+// login form
+.admin-login-form {
+  width: 100%;
+  form,
+  form h1,
+  .go-button {
+    width: inherit;
+  }
+  h1 {
+    background-color: $go-button;
+    color: $white;
+    border-radius: 0.5rem;
+  }
+  .go-button {
+    margin: 0.75rem 0;
+  }
+}
+// mobile nav bar
+.admin-mobile-nav_links {
+  transform: translateX(-100%);
+  width: 80%;
+  border: 1px solid $title-text-hover;
+  transition: all 0.4s;
+  position: absolute;
+  @include flex-direction(column);
+  top: 5rem;
+  left: 0;
+  z-index: 1;
+  background: $white;
+  li {
+    line-height: 2;
+    padding: 0.75rem;
+    font-size: 1.2em;
+    border-bottom: 1px solid $title-text-hover;
+    transition: all 0.4s;
+    &:hover {
+      background: $title-text-hover;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      color: $title-text;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

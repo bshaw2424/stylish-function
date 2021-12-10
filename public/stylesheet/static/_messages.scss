@@ -93,7 +93,7 @@
 
 // contact show page section
 .message-details {
-  margin: 2rem auto;
+  margin: auto;
   height: 100%;
   .collection-group_date {
     text-align: center;
@@ -122,15 +122,15 @@
   .message-showpage-buttons {
     @include flex-align(center, center);
     padding: 1rem 0;
-    width: 100%;
+    min-width: 100%;
     border-top: 1px solid $border;
     a {
       display: inline-block;
-      width: 26%;
+      max-width: 50%;
       outline: 1px solid $border;
     }
     form {
-      width: 100%;
+      width: 50%;
       margin-right: 2rem;
       button {
         width: 100%;
