@@ -2,11 +2,15 @@
   <i class="material-icons hamburger hide-on-large-only">menu</i>
   <h1 class="admin-mobile-nav_title"><a href="/admin/dashboard">Admin</a></h1>
 </nav>
-<ul class="admin-mobile-nav_links" style="display: none">
-  <li><a href="/admin/dashboard">Home</a></li>
-  <li><a href="/admin/articles">Articles</a></li>
-  <li><a href="/admin/messages">Messages</a></li>
-  <li><a href="/">Featured</a></li>
-  <li><a href="/">Main</a></li>
-  <li><a href="/admin/logout">Logout</a></li>
-</ul>
+<div style="background: rgba(0, 0, 0, 0.5); width: 100%; z-index: 1">
+  <ul class="admin-mobile-nav_links hidden hide-on-large-only">
+    <li><a href="/admin/dashboard">Home</a></li>
+    <li><a href="/admin/articles">Articles</a></li>
+    <li><a href="/admin/messages">Messages</a></li>
+    <li><a href="/">Featured</a></li>
+    <li><a href="/">Main</a></li>
+    <li class="logout">
+      <a class="go-button btn" href="/admin/logout">Logout</a>
+    </li>
+  </ul>
+</div>
