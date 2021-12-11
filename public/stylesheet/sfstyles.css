@@ -2375,13 +2375,12 @@ h2 {
     margin: 0.75rem 0;
   }
   .admin-mobile-nav_links {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
     width: 80%;
+    min-height: 100%;
     border: 1px solid gray;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
-    position: absolute;
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2395,26 +2394,20 @@ h2 {
     background: white;
   }
   .admin-mobile-nav_links li {
-    line-height: 2;
-    padding: 0.75rem;
+    padding-left: 1rem;
+    line-height: 2.5;
     font-size: 1.2em;
-    border-bottom: 1px solid gray;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-  .admin-mobile-nav_links li:hover {
-    background: gray;
-  }
-  .admin-mobile-nav_links li:last-child {
-    border-bottom: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
   .admin-mobile-nav_links li a {
     display: inline-block;
     width: 100%;
     color: #333333;
   }
-  .admin-mobile-nav_links li a:hover {
-    color: white;
+  .admin-mobile-nav_links li a:not(.btn):hover {
+    color: gray;
+    text-decoration: underline;
   }
 }
 
@@ -2583,7 +2576,35 @@ button {
   margin: 0.75rem 0;
 }
 
+.hidden {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.scroll {
+  overflow: hidden;
+}
+
+.logout {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.logout .btn {
+  display: inline-block;
+  max-width: 30%;
+  border-radius: 5%;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  color: white;
+}
+
 .admin-mobile-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
   height: 5rem;
   background-color: #333;
   display: -webkit-box;

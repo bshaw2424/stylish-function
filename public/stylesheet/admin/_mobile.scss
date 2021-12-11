@@ -114,34 +114,29 @@
 }
 // mobile nav bar
 .admin-mobile-nav_links {
-  transform: translateX(-100%);
   width: 80%;
+  min-height: 100%;
   border: 1px solid $title-text-hover;
   transition: all 0.4s;
-  position: absolute;
+  position: fixed;
   @include flex-direction(column);
   top: 5rem;
   left: 0;
   z-index: 1;
   background: $white;
   li {
-    line-height: 2;
-    padding: 0.75rem;
+    padding-left: 1rem;
+    line-height: 2.5;
     font-size: 1.2em;
-    border-bottom: 1px solid $title-text-hover;
-    transition: all 0.4s;
-    &:hover {
-      background: $title-text-hover;
-    }
-    &:last-child {
-      border-bottom: none;
-    }
+    transition: all 0.3s;
+
     a {
       display: inline-block;
       width: 100%;
       color: $title-text;
-      &:hover {
-        color: $white;
+      &:not(.btn):hover {
+        color: $title-text-hover;
+        text-decoration: underline;
       }
     }
   }

@@ -202,8 +202,29 @@ button {
 .filter-search {
   margin: 0.75rem 0;
 }
-
+.hidden {
+  transform: translateX(-100%);
+}
+.scroll {
+  overflow: hidden;
+}
+.logout {
+  width: 100%;
+  border-top: 1px solid $border;
+  .btn {
+    display: inline-block;
+    max-width: 30%;
+    border-radius: 5%;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    color: white;
+  }
+}
 .admin-mobile-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
   height: 5rem;
   background-color: $nav-text;
   @include flex-space-between(space-between, center);
