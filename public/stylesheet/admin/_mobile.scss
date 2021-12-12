@@ -114,7 +114,7 @@
 }
 // mobile nav bar
 .admin-mobile-nav_links {
-  width: 80%;
+  width: 100%;
   min-height: 100%;
   border: 1px solid $title-text-hover;
   transition: all 0.4s;
@@ -124,6 +124,7 @@
   left: 0;
   z-index: 1;
   background: $white;
+
   li {
     padding-left: 1rem;
     line-height: 2.5;
