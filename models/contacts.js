@@ -18,6 +18,10 @@ const contactSchema = new Schema({
     type: String,
     required: true,
   },
+  message_value: {
+    type: Boolean,
+    default: false,
+  },
   created_on: {
     type: Date,
     default: new Date(),

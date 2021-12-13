@@ -3,6 +3,16 @@ const messagebox = document.querySelectorAll(".message-checkbox");
 const delete_all_checkbox = document.getElementById("delete-all");
 let message_counter = document.getElementById("message-checkbox-counter");
 const delete_message = document.getElementById("delete-all-icon");
+const contactSendButton = document.getElementById("contact-send-button");
+const contactHeader = document.getElementById("contact-header");
+const message_search = document.getElementById("message-search");
+const mobile_nav_links = document.querySelector(".admin-mobile-nav_links");
+const hamburger_menu = document.querySelector(".hamburger");
+
+hamburger_menu.addEventListener("click", () => {
+  mobile_nav_links.classList.toggle("hidden");
+  document.body.classList.toggle("scroll");
+});
 
 messageCheckBox.forEach(function (messageItem) {
   messageItem.addEventListener("mouseenter", e => {
@@ -20,32 +30,40 @@ messageCheckBox.forEach(function (messageItem) {
 delete_all_checkbox.addEventListener("change", function (e) {
   if (e.target.checked === false) {
     checkAllCheckBoxes(false);
-    messageCounter();
+    clickedUnclickedMessageCounter();
   } else {
     checkAllCheckBoxes();
-    messageCounter();
+    clickedUnclickedMessageCounter();
   }
 });
 
+// checkbox click/unclick counter
 messagebox.forEach(checkbox => {
-  checkbox.addEventListener("change", e => {
-    messageCounter();
-  });
+  checkbox.addEventListener("change", e => clickedUnclickedMessageCounter());
 });
 
-function checkAllCheckBoxes(checked = true) {
+const checkAllCheckBoxes = (checked = true) => {
   messagebox.forEach(checkedbox => (checkedbox.checked = checked));
-}
+};
 
-function messageCounter() {
+const clickedUnclickedMessageCounter = () => {
   let counter = 0;
-  for (let i = 0; i < messagebox.length; i++) {
-    if (messagebox[i].checked === true) {
-      counter++;
-    }
+  for (let message of messagebox) {
+    message.checked === true ? counter++ : null;
   }
-
   counter === 0
     ? (message_counter.innerText = " - ")
     : (message_counter.innerText = counter);
-}
+};
+
+const checkboxStatusChange = e => {
+  messagebox.forEach(message => {
+    message.addEventListener("change", e => {
+      let targetValue = e.target;
+      targetValue.checked
+        ? (targetValue.value = true)
+        : (targetValue.value = false);
+    });
+  });
+};
+checkboxStatusChange();

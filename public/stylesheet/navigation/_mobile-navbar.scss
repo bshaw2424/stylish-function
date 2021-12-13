@@ -44,4 +44,13 @@
   }
 }
 
-// admin mobile/tablet navigation
+// index mobile/tablet navigation
+.links-container {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  min-height: 100%;
+  .index-mobile-navigation-links {
+    width: 80%;
+    background: $white;
+  }
+}

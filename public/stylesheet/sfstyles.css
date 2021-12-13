@@ -1621,6 +1621,15 @@ h2 {
     height: auto;
     max-width: 85%;
   }
+  .links-container {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    min-height: 100%;
+  }
+  .links-container .index-mobile-navigation-links {
+    width: 80%;
+    background: white;
+  }
   .index-navigation .index-navigation-container .logo img {
     width: 100%;
   }
@@ -2016,6 +2025,15 @@ h2 {
   .index-navigation .index-navigation-container .logo img {
     height: auto;
     max-width: 85%;
+  }
+  .links-container {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    min-height: 100%;
+  }
+  .links-container .index-mobile-navigation-links {
+    width: 80%;
+    background: white;
   }
   .index-navigation {
     position: -webkit-sticky;
