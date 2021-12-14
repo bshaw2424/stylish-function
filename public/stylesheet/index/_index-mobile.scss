@@ -47,6 +47,12 @@
     }
     .card {
       @include flex-direction(column);
+      .card-image {
+        height: 350px;
+        img {
+          @include images(100%, 100%, cover);
+        }
+      }
       .card-content {
         padding: 0 8px;
         .card-title {

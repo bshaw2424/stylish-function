@@ -45,12 +45,32 @@
 }
 
 // index mobile/tablet navigation
-.links-container {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.1);
+.index-navigation-container {
+  position: relative;
+}
+.index-navigation-links {
+  position: fixed;
+  top: 5.3rem;
+  left: 0;
+  background-color: $white;
+  border-right: 1px solid $title-text;
+  z-index: 1;
   min-height: 100%;
-  .index-mobile-navigation-links {
-    width: 80%;
-    background: $white;
+  width: 80%;
+  &::before {
+    content: "";
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    min-height: inhert;
+    min-width: 100%;
+    z-index: 9;
+  }
+  a {
+    color: $title-text;
+    &:hover {
+      text-decoration: underline;
+      background-color: $white;
+      color: $title-text-hover;
+    }
   }
 }
