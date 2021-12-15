@@ -204,6 +204,9 @@ button {
 .scroll {
   overflow: hidden;
 }
+.body-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
 .logout {
   width: 100%;
   border-top: 1px solid $border;

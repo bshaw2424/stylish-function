@@ -2512,7 +2512,7 @@ h2 {
     margin: 0.75rem 0;
   }
   .admin-mobile-nav_links {
-    width: 100%;
+    width: 70%;
     min-height: 100%;
     border: 1px solid gray;
     -webkit-transition: all 0.4s;
@@ -2716,6 +2716,10 @@ button {
 
 .scroll {
   overflow: hidden;
+}
+
+.body-overlay {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .logout {
