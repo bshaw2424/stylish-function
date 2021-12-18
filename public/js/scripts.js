@@ -8,6 +8,11 @@ const contactHeader = document.getElementById("contact-header");
 const message_search = document.getElementById("message-search");
 const mobile_nav_links = document.querySelector(".admin-mobile-nav_links");
 const hamburger_menu = document.querySelector(".hamburger");
+const search_filter = document.querySelector("#filter-search");
+const card = document.querySelectorAll(".card");
+const title = document.querySelectorAll(".card-content .card-title");
+
+// search_filter.addEventListener("input", getCard);
 
 hamburger_menu.addEventListener("click", () => {
   mobile_nav_links.classList.toggle("hidden");
