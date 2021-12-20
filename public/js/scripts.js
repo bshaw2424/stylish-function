@@ -12,7 +12,12 @@ const search_filter = document.querySelector("#filter-search");
 const card = document.querySelectorAll(".card");
 const title = document.querySelectorAll(".card-content .card-title");
 
-// search_filter.addEventListener("input", getCard);
+search_filter.addEventListener("input", getCard);
+function getCard() {
+  for (cards of card) {
+    console.log(card);
+  }
+}
 
 hamburger_menu.addEventListener("click", () => {
   mobile_nav_links.classList.toggle("hidden");
