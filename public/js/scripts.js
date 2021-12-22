@@ -9,14 +9,23 @@ const message_search = document.getElementById("message-search");
 const mobile_nav_links = document.querySelector(".admin-mobile-nav_links");
 const hamburger_menu = document.querySelector(".hamburger");
 const search_filter = document.querySelector("#filter-search");
-const card = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card");
 const title = document.querySelectorAll(".card-content .card-title");
 
 search_filter.addEventListener("input", getCard);
-function getCard() {
-  for (cards of card) {
-    console.log(card);
+
+function getCard(e) {
+  console.log(search_filter.value, cards, title);
+  const searchValue = search_filter.value.toUpperCase();
+  for (let i = 0; i < cards.length; i++) {
+    const titles = cards[i].querySelector(".card-content .card-title");
+    if (titles.innerText.toUpperCase().indexOf(searchValue) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
   }
+  console.log(searchValue, title);
 }
 
 hamburger_menu.addEventListener("click", () => {
