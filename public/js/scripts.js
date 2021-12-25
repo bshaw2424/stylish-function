@@ -12,30 +12,14 @@ const search_filter = document.querySelector("#filter-search");
 const cards = document.querySelectorAll(".card");
 const title = document.querySelectorAll(".card-content .card-title");
 
-search_filter.addEventListener("input", getCard);
-
-function getCard(e) {
-  console.log(search_filter.value, cards, title);
-  const searchValue = search_filter.value.toUpperCase();
-  for (let i = 0; i < cards.length; i++) {
-    const titles = cards[i].querySelector(".card-content .card-title");
-    if (titles.innerText.toUpperCase().indexOf(searchValue) > -1) {
-      cards[i].style.display = "";
-    } else {
-      cards[i].style.display = "none";
-    }
-  }
-  console.log(searchValue, title);
-}
-
 hamburger_menu.addEventListener("click", () => {
   mobile_nav_links.classList.toggle("hidden");
   document.body.classList.toggle("scroll");
 });
 
-messageCheckBox.forEach(function (messageItem) {
+messageCheckBox.forEach(messageItem => {
   messageItem.addEventListener("mouseenter", e => {
-    const deleteIcon = e.target.querySelector("#message-delete-button button");
+    const deleteIcon = e.target.querySelector(".message-delete-button button");
     deleteIcon.style.visibility = "visible";
   });
 
@@ -74,6 +58,18 @@ const clickedUnclickedMessageCounter = () => {
     ? (message_counter.innerText = " - ")
     : (message_counter.innerText = counter);
 };
+
+search_filter.addEventListener("input", () => {
+  const searchValue = search_filter.value.toUpperCase();
+  for (let i = 0; i < cards.length; i++) {
+    const titles = cards[i].querySelector(".card-content .card-title");
+    if (titles.innerText.toUpperCase().indexOf(searchValue) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+});
 
 const checkboxStatusChange = e => {
   messagebox.forEach(message => {
