@@ -12,25 +12,36 @@ const search_filter = document.querySelector("#filter-search");
 const cards = document.querySelectorAll(".card");
 const title = document.querySelectorAll(".card-content .card-title");
 
-hamburger_menu.addEventListener("click", () => {
+hamburger_menu.addEventListener("click", hamburgerMenuToggleButton);
+
+function hamburgerMenuToggleButton() {
   mobile_nav_links.classList.toggle("hidden");
   document.body.classList.toggle("scroll");
-});
+}
 
-messageCheckBox.forEach(messageItem => {
-  messageItem.addEventListener("mouseenter", e => {
-    const deleteIcon = e.target.querySelector(".message-delete-button button");
-    deleteIcon.style.visibility = "visible";
+function visibleDeleteButtonOnHover() {
+  messageCheckBox.forEach(messageItem => {
+    messageItem.addEventListener("mouseenter", e => {
+      const deleteIcon = e.target.querySelector(".message-center_delete");
+      deleteIcon.style.visibility = "visible";
+    });
   });
+}
+visibleDeleteButtonOnHover();
 
-  messageItem.addEventListener("mouseleave", e => {
-    const deleteIcon = e.target.querySelector("#message-delete-button button");
-    deleteIcon.style.visibility = "hidden";
+function hiddenVisibilityDeleteButtonOnHover() {
+  messageCheckBox.forEach(messageItem => {
+    messageItem.addEventListener("mouseleave", e => {
+      const deleteIcon = e.target.querySelector(".message-center_delete");
+      deleteIcon.style.visibility = "hidden";
+    });
   });
-});
-
+}
+hiddenVisibilityDeleteButtonOnHover();
 // check and uncheck message checkbox
-delete_all_checkbox.addEventListener("change", function (e) {
+delete_all_checkbox.addEventListener("change", deleteAllCheckboxButton);
+
+function deleteAllCheckboxButton(e) {
   if (e.target.checked === false) {
     checkAllCheckBoxes(false);
     clickedUnclickedMessageCounter();
@@ -38,7 +49,7 @@ delete_all_checkbox.addEventListener("change", function (e) {
     checkAllCheckBoxes();
     clickedUnclickedMessageCounter();
   }
-});
+}
 
 // checkbox click/unclick counter
 messagebox.forEach(checkbox => {
@@ -59,7 +70,9 @@ const clickedUnclickedMessageCounter = () => {
     : (message_counter.innerText = counter);
 };
 
-search_filter.addEventListener("input", () => {
+search_filter.addEventListener("input", cardSearchFilter);
+
+function cardSearchFilter() {
   const searchValue = search_filter.value.toUpperCase();
   for (let i = 0; i < cards.length; i++) {
     const titles = cards[i].querySelector(".card-content .card-title");
@@ -69,7 +82,8 @@ search_filter.addEventListener("input", () => {
       cards[i].style.display = "none";
     }
   }
-});
+}
+cardSearchFilter();
 
 const checkboxStatusChange = e => {
   messagebox.forEach(message => {
