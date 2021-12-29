@@ -198,6 +198,18 @@ button {
 .filter-search {
   margin: 0.75rem 0;
 }
+.show {
+  display: block;
+}
+.visibility {
+  visibility: visible;
+}
+.no-visibility {
+  visibility: hidden;
+}
+.hide {
+  display: none;
+}
 .hidden {
   transform: translateX(-100%);
 }

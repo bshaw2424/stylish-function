@@ -2709,6 +2709,22 @@ button {
   margin: 0.75rem 0;
 }
 
+.show {
+  display: block;
+}
+
+.visibility {
+  visibility: visible;
+}
+
+.no-visibility {
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
 .hidden {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
