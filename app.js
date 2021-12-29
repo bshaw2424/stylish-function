@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const database = require("./mongoDatabase");
 const path = require("path");
-const asyncError = require("./utility/error");
+const AsyncError = require("./utility/error");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -63,5 +63,5 @@ app.use("/articles/:slug/products", indexProductRoutes);
 
 app.use("/", staticRoutes);
 app.use(errorRoutes.errorMessage);
-app.use(errorRoutes.asyncError);
+app.use(errorRoutes.AsyncError);
 app.listen(PORT, () => console.log(`Server on PORT ${PORT}`));
