@@ -42,25 +42,22 @@ hiddenVisibilityDeleteButtonOnHover();
 delete_all_checkbox.addEventListener("change", deleteAllCheckboxButton);
 
 function deleteAllCheckboxButton(e) {
-  if (e.target.checked === false) {
-    checkAllCheckBoxes(false);
-    clickedUnclickedMessageCounter();
-  } else {
-    checkAllCheckBoxes();
-    clickedUnclickedMessageCounter();
-  }
+  e.target.checked === false ? checkAllCheckBoxes(false) : checkAllCheckBoxes();
+  clickedUnclickedMessageCounter();
 }
 
-// checkbox click/unclick counter
-messagebox.forEach(checkbox => {
-  checkbox.addEventListener("change", e => clickedUnclickedMessageCounter());
-});
+function checkedBoxUncheckedCounter() {
+  messagebox.forEach(checkbox => {
+    checkbox.addEventListener("change", e => clickedUnclickedMessageCounter());
+  });
+}
+checkedBoxUncheckedCounter();
 
-const checkAllCheckBoxes = (checked = true) => {
+function checkAllCheckBoxes(checked = true) {
   messagebox.forEach(checkedbox => (checkedbox.checked = checked));
-};
+}
 
-const clickedUnclickedMessageCounter = () => {
+function clickedUnclickedMessageCounter() {
   let counter = 0;
   for (let message of messagebox) {
     message.checked === true ? counter++ : null;
@@ -68,22 +65,7 @@ const clickedUnclickedMessageCounter = () => {
   counter === 0
     ? (message_counter.innerText = " - ")
     : (message_counter.innerText = counter);
-};
-
-search_filter.addEventListener("input", cardSearchFilter);
-
-function cardSearchFilter() {
-  const searchValue = search_filter.value.toUpperCase();
-  for (let i = 0; i < cards.length; i++) {
-    const titles = cards[i].querySelector(".card-content .card-title");
-    if (titles.innerText.toUpperCase().indexOf(searchValue) > -1) {
-      cards[i].style.display = "";
-    } else {
-      cards[i].style.display = "none";
-    }
-  }
 }
-cardSearchFilter();
 
 const checkboxStatusChange = e => {
   messagebox.forEach(message => {
@@ -96,3 +78,20 @@ const checkboxStatusChange = e => {
   });
 };
 checkboxStatusChange();
+
+search_filter.addEventListener("input", cardFilter);
+
+function cardFilter() {
+  const inputSearchValue = search_filter.value.toUpperCase();
+
+  for (let card of cards) {
+    const titles = card.querySelector(".card-content .card-title");
+    const upperCaseTitles = titles.innerText.toUpperCase();
+
+    if (upperCaseTitles.indexOf(inputSearchValue) > -1) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  }
+}
