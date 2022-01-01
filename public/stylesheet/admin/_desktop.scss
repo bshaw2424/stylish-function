@@ -102,6 +102,25 @@
   max-width: 100%;
 }
 
+// login form
+.admin-login-form {
+  width: 70%;
+  form,
+  form h1,
+  .go-button {
+    width: 100%;
+  }
+  h1 {
+    background-color: $go-button;
+    color: $white;
+    border-radius: 0.5rem;
+  }
+  .go-button {
+    margin: 0.75rem auto;
+    width: 70%;
+  }
+}
+
 .button-container {
   @include flex();
   padding: 0;

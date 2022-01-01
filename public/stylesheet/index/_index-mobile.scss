@@ -8,6 +8,12 @@
   margin-bottom: 0;
 }
 
+.index-navigation-links {
+  top: 66px;
+  width: 70%;
+  display: none;
+}
+
 // index hero section
 .hero-section_image-container {
   position: relative;
@@ -70,13 +76,11 @@
 }
 
 .button-container {
-  padding: 1rem 0;
   width: 100%;
   margin-bottom: 1rem;
-  @include flex-align(center, center);
   a {
     display: inline-block;
-    width: 100%;
+    min-width: 100%;
     background-color: $go-button;
     &:hover {
       background: $go-button-hover;

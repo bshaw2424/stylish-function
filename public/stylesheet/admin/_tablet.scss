@@ -77,6 +77,24 @@
   }
 }
 
+// login form
+.admin-login-form {
+  width: 100%;
+  form,
+  form h1,
+  .go-button {
+    width: inherit;
+  }
+  h1 {
+    background-color: $go-button;
+    color: $white;
+    border-radius: 0.5rem;
+  }
+  .go-button {
+    margin: 0.75rem 0;
+  }
+}
+
 // mobile admin forms
 .form-group {
   width: 100%;

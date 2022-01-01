@@ -1,10 +1,10 @@
 @media screen and (max-width: 480px) {
   @import "../navigation/mobile-navbar";
-  @import "../index/index-mobile";
   @import "../admin/mobile-edit";
-  @import "../articles/mobile";
   @import "../showpage/mobile";
   @import "../static/contactUs-mobile";
   @import "../admin/tablet";
   @import "../admin/mobile";
+  @import "../articles/mobile";
+  @import "../index/index-mobile";
 }

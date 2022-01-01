@@ -204,6 +204,16 @@ button {
 .visibility {
   visibility: visible;
 }
+.new-div {
+  outline: 1px solid black;
+  background: gray;
+  margin-top: 3rem;
+  color: white;
+  width: 100%;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.2rem;
+}
 .no-visibility {
   visibility: hidden;
 }

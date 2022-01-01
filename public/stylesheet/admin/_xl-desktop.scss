@@ -102,6 +102,27 @@
 .form {
   @include flex-direction(column);
   max-width: 100%;
+  h1 {
+    width: 100%;
+  }
+}
+
+// login form
+.admin-login-form {
+  width: 50%;
+  form,
+  form h1,
+  .go-button {
+    width: 100%;
+  }
+  h1 {
+    background-color: $go-button;
+    color: $white;
+    border-radius: 0.5rem;
+  }
+  .go-button {
+    margin: 0.75rem 0;
+  }
 }
 
 .button-container {
