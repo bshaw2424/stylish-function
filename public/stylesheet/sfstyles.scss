@@ -204,6 +204,11 @@ button {
 .visibility {
   visibility: visible;
 }
+.preloader {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
 .new-div {
   outline: 1px solid black;
   background: gray;

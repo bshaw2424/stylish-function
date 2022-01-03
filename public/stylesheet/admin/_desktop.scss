@@ -56,23 +56,24 @@
 .index-container {
   margin: auto;
   .product-container {
-    @include flex();
+    margin: 3rem auto;
+    @include flex-direction(column);
     .card-image {
-      max-width: 55%;
+      min-width: 40%;
       img {
         @include images(100%, 100%, cover);
         align-self: flex-end;
       }
     }
     .card-content {
-      margin-left: 2rem;
       .product-description {
         margin: 0;
       }
       .card-details {
+        @include flex-direction(column);
         .card-title {
           margin: 0;
-          font-size: 2.5em;
+          font-size: 2rem;
           margin-bottom: 0.75rem;
         }
         .card-price {
@@ -81,12 +82,15 @@
       }
       .button-container {
         @include flex-direction(column);
-        margin-left: 1rem;
         min-width: 100%;
         a {
           display: inline-block;
           width: 100%;
         }
+      }
+      .card-details,
+      .button-container {
+        border: none;
       }
     }
   }

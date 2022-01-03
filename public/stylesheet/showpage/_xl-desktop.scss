@@ -37,17 +37,33 @@
 .product-container {
   margin: 5rem auto;
   .product {
-    @include flex-direction(column);
-    max-width: 50%;
-    margin: auto;
+    @include flex();
+
     .card-content {
       @include flex-direction(column);
+      padding-left: 2rem;
       border: none;
+      justify-content: unset;
+      .card-details {
+        @include flex-direction(column);
+        border: none;
+      }
+      .button-container {
+        border: none;
+        padding-top: 1rem;
+        .go-button {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+      .product_description {
+        margin: 0;
+      }
     }
     .card-image {
       @include flex-align(center, center);
       margin-bottom: 1rem;
-      width: 100%;
+      min-width: 60%;
       border: none;
       img {
         width: 100%;
@@ -55,6 +71,7 @@
         object-fit: cover;
       }
     }
+
     div {
       display: flex;
       justify-content: space-between;
@@ -71,17 +88,6 @@
         font-size: 1.5rem;
         display: inline-block;
         padding: 5px 0;
-      }
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    .button-container {
-      border-bottom: none;
-      padding-top: 1rem;
-      .go-button {
-        width: 50%;
-        margin: 0 auto;
       }
     }
   }
