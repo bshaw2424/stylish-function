@@ -76,14 +76,10 @@
 }
 
 .button-container {
-  width: 100%;
   margin-bottom: 1rem;
   a {
     display: inline-block;
-    min-width: 100%;
-    background-color: $go-button;
     &:hover {
-      background: $go-button-hover;
       padding: 0;
       @include box-shadow(none);
     }

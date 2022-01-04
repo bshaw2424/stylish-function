@@ -22,10 +22,10 @@
   h1 {
     @include text-align(center);
     margin: 1rem 0;
-    padding: 0.75rem 0;
+    padding: 1rem 0;
     width: 100%;
-    background-color: #333;
-    color: $white;
+    border-bottom: 1px solid $border;
+    border-top: 1px solid $border;
   }
 
   .card-container {
@@ -44,13 +44,11 @@
         margin-left: 1rem;
         .card-title {
           margin: 0;
-          padding-bottom: 0.75rem;
-          border-bottom: 1px solid $border;
-          font-size: 2em;
+          font-size: 2rem;
           @include text-align(justify);
         }
         .card-description {
-          padding-top: 0.75rem;
+          padding-top: 0.5rem;
         }
       }
     }

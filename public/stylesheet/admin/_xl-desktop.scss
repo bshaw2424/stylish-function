@@ -8,15 +8,15 @@
 .title-container {
   h1 {
     @include text-align(center);
-    margin: 0.75rem 0;
+    margin: 1rem 0;
   }
 }
 
 .filter-search {
   padding: 1rem 0.75rem;
   margin-bottom: 1rem;
-  outline: 1px solid $border;
-  border-radius: 0.5rem;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
   @include flex-space-between(space-between, center);
   #filter-search,
   .go-button {
