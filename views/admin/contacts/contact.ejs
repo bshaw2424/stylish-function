@@ -67,7 +67,7 @@
               <%= message.created_on.toLocaleDateString() %>
             </div>
             <form
-              id="message-delete-button"
+              class="message-delete-button"
               action="/admin/messages/<%= message._id %>?_method=DELETE"
               method="POST"
             >
