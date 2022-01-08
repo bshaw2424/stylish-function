@@ -7,23 +7,16 @@
       <h1><a href="/admin/articles"><%= articles.title %></a></h1>
     </div>
     <div class="filter-search">
-      <input
-        type="text"
-        name="filter-search"
-        id="filter-search"
-        class="browser-default"
-        placeholder="filter seach"
-      />
-
+      <span class="product-count"
+        >Product(s) Total - <%= articles.products.length %>
+      </span>
       <a
         href="/admin/articles/<%= articles.slug %>/products/new"
         class="btn go-button"
         >Add Product</a
       >
     </div>
-    <span class="product-count"
-      >Number of Products - <%= articles.products.length %></span
-    >
+
     <!-- <a href="/admin/articles/" class="btn btn-small">Back</a> -->
     <div class="article-container">
       <div class="row">
