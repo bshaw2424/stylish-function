@@ -2,6 +2,7 @@
 
 <section class="message-page col s12">
   <% include ../../admin/admin-nav %>
+  <!-- filter section -->
   <div class="message-center-header container">
     <div class="message-center-container title-container">
       <h1 class="message-center_h1">Messages</h1>
@@ -39,48 +40,48 @@
         delete
       </button>
     </div>
-    <form id="contact-messages" action="/admin/messages/post" method="POST">
-      <div class="collection container">
-        <% messages.forEach(message =>{ %>
-        <a
-          href="/admin/messages/<%= message._id %>"
-          id="message-container"
-          class="collection-item"
-        >
-          <div class="collection-item-info">
-            <div class="collection-group">
-              <label for="<%= message.name %>">
-                <input
-                  type="checkbox"
-                  class="message-checkbox"
-                  id="<%= message.name %>"
-                  name="message"
-                  value="<%= message.message_value %>"
-                />
-                <span><%= message.name %></span>
-              </label>
-            </div>
-            <div class="collection-group collection-group_subject">
-              <%= message.subject %>
-            </div>
-            <div class="collection-group collection-group_date">
-              <%= message.created_on.toLocaleDateString() %>
-            </div>
-            <form
-              class="message-delete-button"
-              action="/admin/messages/<%= message._id %>?_method=DELETE"
-              method="POST"
-            >
-              <button class="material-icons message-center_delete">
-                delete
-              </button>
-            </form>
+
+    <!-- individual message body section -->
+    <!-- <form id="contact-messages" action="/admin/messages/post" method="POST"> -->
+    <div class="collection container">
+      <% messages.forEach(message =>{ %>
+      <a
+        href="/admin/messages/<%= message._id %>"
+        id="message-container"
+        class="collection-item"
+      >
+        <div class="collection-item-info">
+          <div class="collection-group">
+            <label for="<%= message.name %>">
+              <input
+                type="checkbox"
+                class="message-checkbox"
+                id="<%= message.name %>"
+                name="message"
+                value="<%= message.message_value %>"
+              />
+              <span><%= message.name %></span>
+            </label>
           </div>
-        </a>
-        <% }) %>
-        <!-- end of message body container -->
-      </div>
-    </form>
+          <div class="collection-group collection-group_subject">
+            <%= message.subject %>
+          </div>
+          <div class="collection-group collection-group_date">
+            <%= message.created_on.toLocaleDateString() %>
+          </div>
+          <form
+            class="message-delete-button"
+            action="/admin/messages/<%= message._id %>?_method=DELETE"
+            method="POST"
+          >
+            <button class="material-icons message-center_delete">delete</button>
+          </form>
+        </div>
+      </a>
+      <% }) %>
+      <!-- end of message body container -->
+    </div>
+    <!-- </form> -->
     <!-- end of collection container -->
   </div>
 </section>
