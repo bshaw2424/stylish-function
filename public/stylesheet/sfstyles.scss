@@ -111,6 +111,14 @@ textarea {
   border-radius: 0.5rem;
 }
 
+input,
+textarea {
+  border: 1px solid $border;
+  &:focus {
+    border: 1px solid $go-button;
+  }
+}
+
 .go-button {
   background-color: $go-button;
   &:hover {
@@ -187,7 +195,7 @@ textarea {
   padding: 10px;
 }
 .text-area {
-  height: 8em;
+  height: 8rem;
   width: 100%;
   resize: none;
 }
@@ -205,7 +213,6 @@ textarea {
   text-align: center;
   margin: 1rem 0;
   width: 100%;
-  border-radius: 0.5rem;
   padding: 0.75rem 0;
   border-bottom: 1px solid $border;
 }
@@ -223,11 +230,6 @@ textarea {
 }
 .visibility {
   visibility: visible;
-}
-.preloader {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
 }
 .new-div {
   outline: 1px solid black;
