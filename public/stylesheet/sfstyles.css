@@ -277,6 +277,19 @@ h4,
   margin-bottom: 1rem;
 }
 
+.message-center-header .delete-container .check-all-button-message-counter,
+.message-center-header .delete-container label span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .message-center-header .delete-container label span {
   color: white;
 }
@@ -307,7 +320,6 @@ h4,
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  visibility: hidden;
   color: #0088cc;
 }
 
@@ -2860,8 +2872,12 @@ textarea:focus {
   display: block;
 }
 
-.visibility {
+.visible {
   visibility: visible;
+}
+
+.no-visibility {
+  visibility: hidden;
 }
 
 .new-div {
@@ -2873,10 +2889,6 @@ textarea:focus {
   text-transform: capitalize;
   text-align: center;
   font-size: 1.2rem;
-}
-
-.no-visibility {
-  visibility: hidden;
 }
 
 .hide {

@@ -228,8 +228,11 @@ textarea {
 .show {
   display: block;
 }
-.visibility {
+.visible {
   visibility: visible;
+}
+.no-visibility {
+  visibility: hidden;
 }
 .new-div {
   outline: 1px solid black;
@@ -241,9 +244,7 @@ textarea {
   text-align: center;
   font-size: 1.2rem;
 }
-.no-visibility {
-  visibility: hidden;
-}
+
 .hide {
   display: none;
 }
@@ -256,6 +257,7 @@ textarea {
 .body-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
+
 .logout {
   width: 100%;
   border-top: 1px solid $border;
