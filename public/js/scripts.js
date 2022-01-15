@@ -1,62 +1,46 @@
 const messageDeleteButtons = document.querySelectorAll(
   ".message-delete-button .material-icons",
 );
-const collection_items = document.querySelectorAll(".collection-item");
-// messages
-const message_counter = document.querySelector("#message-checkbox-counter");
 const messageCheckBoxes = document.querySelectorAll(".message-checkbox");
-const checkAllButton = document.querySelector("#delete-all");
+const collection_items = document.querySelectorAll(".collection-item");
+const cardTitles = document.querySelectorAll(".card-content .card-title");
 
-// IIFE function calls
+const filterInput = document.getElementById("filter-search");
+
 (() => {
-  collectionsToShowAndHideDeleteIcon();
-  checkboxValueTrueOrFalseStatus();
+  collectionsButtonShowOnHover();
+  collectionsButtonHideOnHover();
 })();
 
-function collectionsToShowAndHideDeleteIcon() {
+function collectionsButtonShowOnHover() {
   for (let i = 0; i < collection_items.length; i++) {
-    let collections = collection_items[i];
-    let deleteButtons = messageDeleteButtons[i];
-    collections.addEventListener("mouseenter", () => {
-      deleteButtons.style.visibility = "visible";
-    });
-
-    collections.addEventListener("mouseleave", () => {
-      deleteButtons.style.visibility = "hidden";
+    const collection = collection_items[i];
+    const deleteButton = messageDeleteButtons[i];
+    collection.addEventListener("mouseenter", () => {
+      deleteButton.style.visibility = "visible";
     });
   }
 }
 
-function checkboxValueTrueOrFalseStatus() {
-  let counter = 0;
-  // get individual checkboxes
-  for (checkboxes of messageCheckBoxes) {
-    checkboxes.addEventListener("change", e => {
-      if (e.target.checked) {
-        message_counter.innerText = ++counter;
-      } else {
-        message_counter.innerText = --counter;
-        if (counter === 0) {
-          message_counter.innerText = "-";
-        }
-      }
+function collectionsButtonHideOnHover() {
+  for (let i = 0; i < collection_items.length; i++) {
+    const collection = collection_items[i];
+    const deleteButton = messageDeleteButtons[i];
+    collection.addEventListener("mouseleave", () => {
+      deleteButton.style.visibility = "hidden";
     });
   }
 }
 
-function checkboxCounter() {
-  let count = 0;
-  checkAllButton.addEventListener("change", () => {
-    for (let checkboxes of messageCheckBoxes) {
-      if (checkAllButton.checked) {
-        checkboxes.checked = true;
-        message_counter.innerText = messageCheckBoxes.length;
-      } else {
-        checkboxes.checked = false;
-        message_counter.innerText = "-";
-      }
-    }
-  });
-  checkboxValueTrueOrFalseStatus();
-}
-checkboxCounter();
+filterInput.addEventListener("input", e => {
+  const titles = Array.from(cardTitles);
+  for (let title of titles) {
+    console.log(title.innerText);
+  }
+});
+
+// cardTitles.forEach(item => {
+//   item.addEventListener("mouseenter", e => {
+//     alert(e.target.innerText);
+//   });
+// });
