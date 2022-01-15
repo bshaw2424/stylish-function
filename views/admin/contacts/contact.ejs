@@ -18,12 +18,8 @@
 
     <!-- collection container -->
     <div class="delete-container collection with-header">
-      <div>
-        <label for="delete-all">
-          <input type="checkbox" id="delete-all" />
-          <span></span>
-        </label>
-        <span id="message-checkbox-counter">-</span>
+      <div class="check-all-button-message-counter">
+        <span>Messages: <%= messages.length %></span>
       </div>
       <input
         type="text"
@@ -32,17 +28,9 @@
         class="browser-default"
         placeholder="Search by Name or Subject"
       />
-      <button
-        class="material-icons btn"
-        id="delete-all-icon"
-        form="contact-messages"
-      >
-        delete
-      </button>
     </div>
 
     <!-- individual message body section -->
-    <!-- <form id="contact-messages" action="/admin/messages/post" method="POST"> -->
     <div class="collection container">
       <% messages.forEach(message =>{ %>
       <a
@@ -52,16 +40,7 @@
       >
         <div class="collection-item-info">
           <div class="collection-group">
-            <label for="<%= message.name %>">
-              <input
-                type="checkbox"
-                class="message-checkbox"
-                id="<%= message.name %>"
-                name="message"
-                value="<%= message.message_value %>"
-              />
-              <span><%= message.name %></span>
-            </label>
+            <span><%= message.name %></span>
           </div>
           <div class="collection-group collection-group_subject">
             <%= message.subject %>
@@ -74,14 +53,16 @@
             action="/admin/messages/<%= message._id %>?_method=DELETE"
             method="POST"
           >
-            <button class="material-icons message-center_delete">delete</button>
+            <button class="material-icons no-visibility message-center_delete">
+              delete
+            </button>
           </form>
         </div>
       </a>
       <% }) %>
       <!-- end of message body container -->
     </div>
-    <!-- </form> -->
     <!-- end of collection container -->
   </div>
 </section>
+<% include ../../partials/footer %>
