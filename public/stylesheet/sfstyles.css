@@ -299,7 +299,6 @@ h4,
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 6px 8px;
   height: 2.4rem;
 }
 
@@ -2688,6 +2687,22 @@ h6 {
   color: #333333;
 }
 
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+::-ms-input-placeholder {
+  text-align: center;
+}
+
+::placeholder {
+  text-align: center;
+}
+
 .hero-section_image-container {
   position: relative;
 }
@@ -2739,6 +2754,7 @@ button {
 input,
 textarea {
   border-radius: 0.5rem;
+  padding: 0 10px;
 }
 
 input,

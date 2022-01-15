@@ -70,6 +70,12 @@ h6 {
   color: $title-text;
 }
 
+// .message-center-header .delete-container input {
+//   width: 0px;
+// }
+::placeholder {
+  @include text-align(center);
+}
 .hero-section_image-container {
   position: relative;
   img {
@@ -109,6 +115,7 @@ button {
 input,
 textarea {
   border-radius: 0.5rem;
+  padding: 0 10px;
 }
 
 input,
