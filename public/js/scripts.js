@@ -4,6 +4,7 @@ const messageDeleteButtons = document.querySelectorAll(
 const messageCheckBoxes = document.querySelectorAll(".message-checkbox");
 const collection_items = document.querySelectorAll(".collection-item");
 const cardTitles = document.querySelectorAll(".card-content .card-title");
+const card = document.querySelectorAll(".article-container .col");
 
 const filterInput = document.getElementById("filter-search");
 
@@ -32,15 +33,34 @@ function collectionsButtonHideOnHover() {
   }
 }
 
-filterInput.addEventListener("input", e => {
-  const titles = Array.from(cardTitles);
-  for (let title of titles) {
-    console.log(title.innerText);
-  }
-});
+function nextMessage() {
+  console.log("article was not found");
+}
 
-// cardTitles.forEach(item => {
-//   item.addEventListener("mouseenter", e => {
-//     alert(e.target.innerText);
-//   });
-// });
+filterInput.addEventListener("input", e => {
+  const titles = Array.from(cardTitles).slice();
+  const cards = Array.from(card).slice();
+
+  let targetValue = e.target.value.toLowerCase();
+
+  let results = [];
+  let cardDisplay = [];
+
+  for (let i = 0; i < titles.length; i++) {
+    results.push(titles[i]);
+    cardDisplay.push(cards[i]);
+  }
+
+  const findCards = results.filter((item, index) => {
+    console.log(results.length);
+
+    if (item.innerText.toLowerCase().includes(targetValue)) {
+      cardDisplay[index].style.display = "";
+    } else {
+      cardDisplay[index].style.display = "none";
+      console.log(cardDisplay.length);
+    }
+  });
+
+  return findCards;
+});
