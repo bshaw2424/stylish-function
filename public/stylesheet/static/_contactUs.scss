@@ -9,6 +9,9 @@
   padding: 0 3rem;
   .contact-page_header {
     padding: 1rem 2rem;
+    p {
+      @include text-align(center);
+    }
     #contact-title {
       margin: 0;
       padding-bottom: 0.5rem;
