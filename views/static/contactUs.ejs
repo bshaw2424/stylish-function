@@ -57,5 +57,17 @@
     </form>
   </div>
 </section>
-
+<!-- <script>
+  const button = document.querySelector("#contact-send-button");
+  const form = document.querySelector(".contact-page_form");
+  form.addEventListener("submit", e => {
+    const parentElement = document.querySelector(".contact-page");
+    const container = document.querySelector(".container");
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("new-div");
+    const text = document.createTextNode("message successfully sent");
+    button.setAttribute("disabled", "");
+    newDiv.appendChild(text);
+  });
+</script> -->
 <% include ../partials/footer %>

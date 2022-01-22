@@ -5,6 +5,9 @@ module.exports.affiliateDisclaimer = (req, res) =>
 
 module.exports.contactUs = (req, res) => res.render("pages/static/contactUs");
 
+module.exports.contactUsSuccess = (req, res) =>
+  res.render("pages/static/success");
+
 module.exports.privacyDisclosure = (req, res) =>
   res.render("pages/static/privacy-disclosure");
 
