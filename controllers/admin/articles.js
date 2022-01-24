@@ -44,22 +44,20 @@ module.exports.edit = async (req, res, next) => {
   res.render("admin/articles/edit", { articles });
 };
 
-module.exports.update = async (req, res, next) => {
+module.exports.update = async (req, res) => {
   const { slug } = req.params;
   const { Article } = req.body;
 
-  const article = await ArticleModel.findByIdAndUpdate(
-    slug,
+  const article = await ArticleModel.findOneAndUpdate(
+    { slug: slug },
     {
       ...Article,
     },
     { new: true },
   );
-  article.image.url = req.file.path;
-  article.image.filename = req.file.filename;
-  if (!article) {
-    throw new AsyncError("Can Not Article", 404);
-  }
+  // article.image.url = req.file.path;
+  // article.image.filename = req.file.filename;
+
   await article.save();
   res.redirect("/admin/articles");
 };

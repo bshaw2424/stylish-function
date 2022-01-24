@@ -19,7 +19,7 @@ module.exports.post = async (req, res, next) => {
     throw new asyncError("Something Went Wrong Creating Message", 404);
   }
   await newMessage.save();
-  res.redirect("/contact-us");
+  res.redirect("/contact-us/success");
 };
 
 module.exports.update = (req, res) => {
