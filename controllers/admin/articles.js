@@ -55,8 +55,19 @@ module.exports.update = async (req, res) => {
     },
     { new: true },
   );
-  // article.image.url = req.file.path;
-  // article.image.filename = req.file.filename;
+
+  await article.save();
+  res.redirect("/admin/articles");
+};
+
+module.exports.photoUpdate = async (req, res) => {
+  const { slug } = req.params;
+  // const { Article } = req.body;
+
+  const article = await ArticleModel.findOneAndUpdate({ slug: slug });
+
+  article.image.url = req.file.path;
+  article.image.filename = req.file.filename;
 
   await article.save();
   res.redirect("/admin/articles");
