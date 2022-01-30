@@ -1048,7 +1048,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
   }
   .card-image .overlay-icon {
     position: absolute;
@@ -1091,10 +1091,6 @@ h2 {
   .image-update .image-update_container form {
     margin: 1rem auto;
     width: 70%;
-  }
-  .image-update .image-update_container form .photo-update-container {
-    width: 100%;
-    margin-bottom: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1104,6 +1100,15 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container form .photo-update-container {
+    width: 70%;
+    margin-bottom: 1rem;
+    border: none;
   }
   .image-update .image-update_container form .photo-update-container input {
     display: inline-block;
