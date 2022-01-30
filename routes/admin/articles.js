@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
-const { asyncError } = require("../../utility/error");
+const { AsyncError } = require("../../utility/error");
 const session = require("express-session");
 const { checkAuthentication } = require("../../middleware");
 const multer = require("multer");
@@ -11,22 +11,36 @@ const Article = require("../../controllers/admin/articles");
 
 router
   .route("/")
-  .get(checkAuthentication, asyncError(Article.index))
+  .get(checkAuthentication, AsyncError(Article.index))
   .post(
     upload.single("Article[image]"),
     checkAuthentication,
-    asyncError(Article.post),
+    AsyncError(Article.post),
   );
 router.get("/new", checkAuthentication, Article.create);
+
 router
   .route("/:slug")
-  .get(checkAuthentication, asyncError(Article.showPage))
-  .put(
-    upload.single("Article[image]"),
-    checkAuthentication,
-    asyncError(Article.update),
-  )
-  .delete(checkAuthentication, asyncError(Article.delete));
-router.get("/:slug/edit", checkAuthentication, asyncError(Article.edit));
+  .get(checkAuthentication, AsyncError(Article.showPage))
+  .put(checkAuthentication, AsyncError(Article.update))
+
+  .delete(checkAuthentication, AsyncError(Article.delete));
+
+//edit routes
+router.get("/:slug/edit", checkAuthentication, AsyncError(Article.edit));
+
+router.get(
+  "/:slug/photo-edit",
+  checkAuthentication,
+  AsyncError(Article.photoEdit),
+);
+
+//photo update
+router.put(
+  "/:slug/photo",
+  upload.single("Article[image]"),
+  checkAuthentication,
+  AsyncError(Article.photoUpdate),
+);
 
 module.exports = router;
