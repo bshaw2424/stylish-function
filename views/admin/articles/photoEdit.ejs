@@ -6,13 +6,16 @@
       <img src="<%= articles.image.url %>" alt="" />
     </div>
     <form
-      action="/admin/articles/<%= articles.slug %>?_method=PUT"
-      action="POST"
+      action="/admin/articles/<%= articles.slug %>/photo?_method=PUT"
+      method="POST"
       enctype="multipart/form-data"
     >
-      <div class="photo-update-container">
-        <input type="file" />
-      </div>
+      <input
+        class="photo-update-container"
+        type="file"
+        name="Article[image]"
+        required
+      />
       <div class="button-container">
         <button type="submit" class="go-button btn">update</button>
         <a href="/admin/articles" class="static-button btn">cancel</a>
