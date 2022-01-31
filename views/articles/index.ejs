@@ -4,10 +4,12 @@
   <div class="article-section">
     <h1>Articles</h1>
     <div class="row">
-      <% articles.forEach(article => { %>
+      <% for(const article of articles) { %>
       <div class="article-container">
         <div class="card article-container_card">
-          <div class="card-image article-container_image-container">
+          <div
+            class="card-image admin-card-image article-container_image-container"
+          >
             <img src="../../images/sm-arm-chair.jpg" alt="" />
           </div>
           <div class="card-content article-container_content">
@@ -18,7 +20,7 @@
           </div>
         </div>
       </div>
-      <% }) %>
+      <% } %>
     </div>
   </div>
 </section>
