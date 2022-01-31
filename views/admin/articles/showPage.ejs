@@ -20,11 +20,18 @@
     <!-- <a href="/admin/articles/" class="btn btn-small">Back</a> -->
     <div class="article-container">
       <div class="row">
-        <% for(let product of articles.products) { %>
+        <% for(const product of articles.products) { %>
         <div class="col s12 m6 l4">
           <div class="card">
-            <div class="card-image">
+            <div class="card-image admin-card-image">
               <img src="<%= product.image.url %>" alt="<%= product.image %>" />
+              <div class="overlay-icon">
+                <a
+                  href="/admin/articles/<%= articles.slug %>/products/<%= product.slug %>/photo-edit"
+                  class="btn"
+                  >update photo</a
+                >
+              </div>
             </div>
             <div class="card-content">
               <h3 class="card-title">

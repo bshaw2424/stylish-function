@@ -10,7 +10,10 @@
         <div class="card-details">
           <h3 class="card-title"><%= product.title %></h3>
           <span class="card-price">
-            <strong>$<%= product.price %></strong>
+            <strong>
+              $<%=
+              priceConvert.convertPriceWithComma(product.price.toFixed(2))%>
+            </strong>
           </span>
         </div>
         <p class="product-description"><%= product.description %></p>

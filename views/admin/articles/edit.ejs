@@ -5,9 +5,8 @@
   <div class="container">
     <form
       class="form form-group"
-      action="/admin/articles/<%= articles._id %>?_method=PUT"
+      action="/admin/articles/<%= articles.slug %>?_method=PATCH"
       method="POST"
-      enctype="multipart/form-data"
     >
       <div class="title-container">
         <i class="material-icons hide-on-large-only">menu</i>
@@ -21,15 +20,6 @@
           class="browser-default form-field"
           name="Article[title]"
           value="<%= articles.title %>"
-          required
-        />
-        <label for="main-image">Image</label>
-        <input
-          id="main-image"
-          class="browser-default form-field"
-          type="file"
-          name="Article[image]"
-          value="<%= articles.image %>"
           required
         />
         <label for="article-sub-description">Sub Description</label>
@@ -50,11 +40,10 @@
           required
         >
           <%= articles.description %>
-          </textarea
-        >
+        </textarea>
       </div>
       <div class="button-container">
-        <button type="submit" class="btn go-button">save</button>
+        <button type="submit" class="btn go-button">update</button>
         <a href="/admin/articles" class="static-button btn">cancel</a>
       </div>
     </form>

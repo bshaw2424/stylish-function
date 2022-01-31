@@ -4,7 +4,7 @@
   <% include ../../admin/admin-nav %>
   <div class="container">
     <form
-      action="/admin/articles/<%= article.slug %>/products/<%= product.product_slug %>?_method=PUT"
+      action="/admin/articles/<%= article.slug %>/products/<%= product.slug %>?_method=PATCH"
       method="POST"
       class="form form-group"
       enctype="multipart/form-data"
@@ -31,15 +31,6 @@
           class="browser-default form-field"
           value="<%= product.price %>"
         />
-
-        <!-- <label for="product-image">Product Image</label>
-        <input
-          type="file"
-          name="Product[image]"
-          id="product-image"
-          class="browser-default form-field"
-          value="<%= product.image %>"
-        /> -->
 
         <label for="product-description">Product Description</label>
         <textarea

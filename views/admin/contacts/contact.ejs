@@ -6,14 +6,6 @@
   <div class="message-center-header container">
     <div class="message-center-container title-container">
       <h1 class="message-center_h1">Messages</h1>
-      <div class="input-field">
-        <select class="browser-default" id="message-filter">
-          <option class="disabled">Sort By:</option>
-          <option value="oldest">Oldest</option>
-          <option value="newest">Newest</option>
-        </select>
-        <!-- <label for="message-filter">Sort By:</label> -->
-      </div>
     </div>
 
     <!-- collection container -->
@@ -21,13 +13,16 @@
       <div class="check-all-button-message-counter">
         <span>Messages: <%= messages.length %></span>
       </div>
-      <input
-        type="text"
-        name="message-search"
-        id="message-search"
-        class="browser-default"
-        placeholder="Search by Name or Subject"
-      />
+      <div class="input-field">
+        <div>
+          <select class="browser-default" id="message-filter">
+            <option class="disabled">Sort By:</option>
+            <option value="oldest">Oldest</option>
+            <option value="newest">Newest</option>
+          </select>
+          <!-- <label for="message-filter">Sort By:</label> -->
+        </div>
+      </div>
     </div>
 
     <!-- individual message body section -->

@@ -17,11 +17,18 @@
     </div>
     <div class="article-container">
       <div class="row">
-        <% for(let article of articles) { %>
+        <% for(const article of articles) { %>
         <div class="col s12 m6 l4 xl4">
-          <div class="card show">
-            <div class="card-image">
+          <div class="card">
+            <div class="card-image admin-card-image">
               <img src="<%= article.image.url %>" alt="<%= article.image %>" />
+              <div class="overlay-icon">
+                <a
+                  href="/admin/articles/<%= article.slug %>/photo-edit"
+                  class="btn"
+                  >update photo</a
+                >
+              </div>
             </div>
             <div class="card-content">
               <a href="/admin/articles/<%= article.slug %>" class="card-title">
@@ -49,3 +56,4 @@
     </div>
   </div>
 </section>
+<% include ../../partials/footer %>
