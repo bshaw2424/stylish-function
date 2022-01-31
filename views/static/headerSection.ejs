@@ -1,4 +1,5 @@
-<%- include('../partials/nav') %> <%- include('../partials/mobileNav') %>
+<%- include('../partials/nav') %>
+
 <section class="hero-section">
   <div class="hero-section_container">
     <div class="hero-section_image-container">
@@ -19,7 +20,7 @@
   <div class="container">
     <h1>Articles</h1>
     <div class="row">
-      <% articles.forEach(article => { %>
+      <% for(const article of articles) { %>
       <div class="card-container">
         <div class="card index-articles_card">
           <div class="card-image index-articles_card-image">
@@ -28,14 +29,17 @@
           <div class="card-content index-articles_card-content">
             <p class="card-title index-article-section_card-title">
               <a href="/articles/<%= article.slug %>"> <%= article.title %> </a>
+              <p class="published-date"
+                ><%= article.created_on.toLocaleDateString() %></p
+              >
             </p>
             <p class="card-description index-articles_card-description">
-              <%= article.description %>
+              <%= article.sub_description %>
             </p>
           </div>
         </div>
       </div>
-      <% }) %>
+      <% } %>
     </div>
     <div class="button-container index-articles_button-container">
       <a class="go-button btn" href="/articles">see more articles</a>
