@@ -1,26 +1,24 @@
 const ArticleModel = require("../../models/Article");
 const ProductModel = require("../../models/Product");
 const { asyncError } = require("../../utility/error");
+// function to covert price with a comma
 const priceConvert = require("../../functions");
 
+// products associated to article
 module.exports.index = async (req, res, next) => {
   const { slug } = req.params;
   const products = await ArticleModel.findOne({ slug }).populate("products");
-  if (!products) {
-    throw new asyncError("Product Not Found", 404);
-  }
   res.render("admin/products/index", { products });
 };
 
+// form to create a new product for associated article
 module.exports.new = async (req, res, next) => {
   const { slug } = req.params;
   const article = await ArticleModel.findOne({ slug });
-  if (!article) {
-    throw new asyncError("Something Went Wrong Creating The Product", 404);
-  }
   res.render("admin/products/create", { article });
 };
 
+// creates and add new product associated to article to database
 module.exports.create = async (req, res, next) => {
   const { slug } = req.params;
   const { Product } = req.body;
@@ -44,24 +42,28 @@ module.exports.create = async (req, res, next) => {
 module.exports.showPage = async (req, res, next) => {
   const { product_slug } = req.params;
   const product = await ProductModel.findOne({ slug: product_slug });
-  if (!product) {
-    throw new asyncError("Product Page Not Found", 404);
-  }
   res.render("admin/products/showPage", { product, priceConvert });
 };
 
+// edit form to update product body
 module.exports.edit = async (req, res, next) => {
   const { slug, product_slug } = req.params;
   const product = await ProductModel.findOne({ slug: product_slug });
   const article = await ArticleModel.findOne({ slug: slug });
-  if (!product || !article) {
-    throw new asyncError("Product Not Found", 404);
-  }
   res.render("admin/products/edit", { article, product });
 };
 
-module.exports.update = async (req, res, next) => {
+// edit form to update product photo
+module.exports.photoEdit = async (req, res) => {
   const { slug, product_slug } = req.params;
+  const product = await ProductModel.findOne({ slug: product_slug });
+  const article = await ArticleModel.findOne({ slug });
+  res.render("admin/products/productPhotoEdit", { article, product });
+};
+
+// updates product body and save to database
+module.exports.update = async (req, res, next) => {
+  const { product_slug } = req.params;
   const { Product } = req.body;
   const product = await ProductModel.findOneAndUpdate(
     { slug: product_slug },
@@ -70,23 +72,38 @@ module.exports.update = async (req, res, next) => {
     },
     { new: true },
   );
-  // product.image.url = req.file.path;
-  // product.image.filename = req.file.filename;
-  if (!product) {
-    throw new asyncError("Message Not Found", 404);
-  }
+
   await product.save();
   res.redirect(`/admin/articles/${slug}`);
 };
 
+// updates product photo and save to database
+module.exports.productPhotoUpdate = async (req, res) => {
+  const { slug, product_slug } = req.params;
+
+  //photo file upload path/filename saved to variables
+  const url = req.file.path;
+  const path = req.file.filename;
+
+  const product = await ProductModel.findOneAndUpdate(
+    { slug: product_slug },
+    { new: true },
+  );
+
+  product.image.url = url;
+  product.image.filename = path;
+
+  await product.save();
+  res.redirect(`/admin/articles/${slug}`);
+};
+
+// delete product from associated article
 module.exports.delete = async (req, res, next) => {
   const { slug, product_slug } = req.params;
-  const article = await ArticleModel.findOne({ slug: slug });
-  const product = await ProductModel.findOneAndDelete({
+  await ArticleModel.findOne({ slug: slug });
+  await ProductModel.findOneAndDelete({
     slug: product_slug,
   });
-  if (!article || !product) {
-    throw new asyncError("Something Went Wrong Deleting Product", 404);
-  }
+
   res.redirect(`/admin/articles/${slug}`);
 };

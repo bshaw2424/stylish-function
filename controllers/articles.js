@@ -1,7 +1,8 @@
 const ArticleModel = require("../models/Article");
 
-module.exports.index = async (req, res, next) => {
+module.exports.index = async (req, res) => {
   const articles = await ArticleModel.find();
+
   res.render("articles/index", { articles });
 };
 

@@ -1,10 +1,11 @@
 const ArticleModel = require("../models/Article");
 
 module.exports.index = async (req, res) => {
-  const articles = await ArticleModel.find({});
-  if (!articles) {
-    throw new asyncError("Articles Not Found", 404);
-  }
+  const articles = await ArticleModel.find()
+
+    .sort({ created_on: "DESC" }) //sort by newest article
+    .limit(4); //show only first four articles
+
   res.render("pages/index", { articles });
 };
 

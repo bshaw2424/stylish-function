@@ -31,9 +31,6 @@ module.exports.post = async (req, res) => {
 module.exports.showPage = async (req, res, next) => {
   const { slug } = req.params;
   const articles = await ArticleModel.findOne({ slug }).populate("products");
-  if (!articles) {
-    throw new AsyncError("Can Not Find Article", 404);
-  }
   res.render("admin/articles/showPage", { articles });
 };
 
