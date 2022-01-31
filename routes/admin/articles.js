@@ -22,8 +22,7 @@ router.get("/new", checkAuthentication, Article.create);
 router
   .route("/:slug")
   .get(checkAuthentication, AsyncError(Article.showPage))
-  .put(checkAuthentication, AsyncError(Article.update))
-
+  .patch(checkAuthentication, AsyncError(Article.update))
   .delete(checkAuthentication, AsyncError(Article.delete));
 
 //edit routes
@@ -36,7 +35,7 @@ router.get(
 );
 
 //photo update
-router.put(
+router.patch(
   "/:slug/photo",
   upload.single("Article[image]"),
   checkAuthentication,
