@@ -29,7 +29,7 @@
   }
 }
 
-.card-image {
+.admin-card-image {
   display: relative;
   &::after {
     content: "";
@@ -48,9 +48,7 @@
     a {
       display: inline-block;
       color: $white;
-      .material-icons {
-        font-size: 2.5rem;
-      }
+      background-color: $go-button;
     }
   }
 }

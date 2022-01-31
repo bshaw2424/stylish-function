@@ -1038,10 +1038,10 @@ h2 {
   .filter-search #filter-search {
     height: 36px;
   }
-  .card-image {
+  .admin-card-image {
     display: relative;
   }
-  .card-image::after {
+  .admin-card-image::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -1050,18 +1050,16 @@ h2 {
     left: 0;
     background: rgba(0, 0, 0, 0.3);
   }
-  .card-image .overlay-icon {
+  .admin-card-image .overlay-icon {
     position: absolute;
     bottom: 0.5rem;
     right: 0.75rem;
     z-index: 1;
   }
-  .card-image .overlay-icon a {
+  .admin-card-image .overlay-icon a {
     display: inline-block;
     color: white;
-  }
-  .card-image .overlay-icon a .material-icons {
-    font-size: 2.5rem;
+    background-color: #0088cc;
   }
   .image-update .image-update_container {
     display: -webkit-box;
@@ -2936,7 +2934,7 @@ textarea:focus {
 
 .product-count {
   display: inline-block;
-  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
 }
 
 .about-us_heading {
