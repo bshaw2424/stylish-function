@@ -4,6 +4,10 @@
 }
 
 .index-navigation-container {
+  .index-navigation-links {
+    -webkit-transform: none;
+    transform: none;
+  }
   //@include flex-space-between(space-between, center);
   @include flex-direction(column);
   width: 100%;

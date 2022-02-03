@@ -57,14 +57,6 @@
   z-index: 1;
   min-height: 100%;
   width: 80%;
-  &::before {
-    content: "";
-    position: relative;
-    background: rgba(0, 0, 0, 0.1);
-    min-height: inhert;
-    min-width: 100%;
-    z-index: 9;
-  }
   a {
     color: $title-text;
     &:hover {

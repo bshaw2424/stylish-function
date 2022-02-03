@@ -2,15 +2,18 @@
   h1 {
     @include text-align(center);
     padding: 1rem 0;
-    border-top: 1px solid $border;
-    border-bottom: 1px solid $border;
+    margin: 2rem 0.75rem;
+    background-color: #333;
+    color: $white;
+    max-width: 100%;
+    font-size: 3.5rem;
   }
 
   .article-container {
     .card {
       @include flex();
       .card-image {
-        height: 12.5em;
+        height: 250px;
         width: 100%;
         img {
           @include images(100%, 100%, cover);

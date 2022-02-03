@@ -19,13 +19,14 @@
 }
 
 .index-articles {
+  margin: 2rem 0;
   h1 {
     @include text-align(center);
-    margin: 1rem 0;
-    padding: 1rem 0;
+    margin: 2rem 0.75rem;
+    padding: 1rem;
     width: 100%;
-    border-bottom: 1px solid $border;
-    border-top: 1px solid $border;
+    background-color: #333;
+    color: $white;
   }
 
   .card-container {
@@ -33,7 +34,7 @@
     .card {
       @include flex();
       .card-image {
-        height: 200px;
+        height: 250px;
         width: 100%;
         img {
           @include images(100%, 100%, cover);
@@ -54,12 +55,13 @@
     }
   }
   .button-container {
-    padding: 1rem 0;
+    padding-top: 2rem;
     width: 100%;
     @include flex-align(center, center);
     border-top: 1px solid $border;
     a {
       width: 50%;
+      font-size: 1.2rem;
     }
   }
 }
