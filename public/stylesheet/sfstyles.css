@@ -457,8 +457,8 @@ h4,
 }
 
 h2 {
-  outline: 1px solid rgba(0, 0, 0, 0.3);
   padding: 1rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   margin: 0;
   text-align: center;
 }
@@ -1025,6 +1025,7 @@ h2 {
   .title-container h1 {
     text-align: center;
     margin: 1rem 0;
+    font-size: 3.5rem;
   }
   .filter-search {
     padding: 1rem 0.75rem;
@@ -1128,10 +1129,7 @@ h2 {
   }
   .article-container .button-container {
     width: 100%;
-    margin: 1rem 0;
     padding: 1rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1150,37 +1148,7 @@ h2 {
   .product-count {
     padding-left: 0.75rem;
   }
-  .index-container .product-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .index-container .product-container .card-image {
-    max-width: 55%;
-  }
-  .index-container .product-container .card-image img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-  }
-  .index-container .product-container .card-content {
-    margin-left: 2rem;
-  }
-  .index-container .product-container .card-content .product-description {
-    margin-bottom: 1rem;
-  }
-  .index-container .product-container .card-content .card-details .card-title {
-    margin: 0;
-    font-size: 2.5em;
-    margin-bottom: 0.75rem;
-  }
-  .index-container .product-container .card-content .card-details .card-price {
-    font-size: 1.5em;
-  }
-  .index-container .product-container .card-content .button-container {
+  .index-container .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1188,10 +1156,32 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-left: 1rem;
+    margin: 3rem auto;
+    display: flex;
+  }
+  .index-container .container .card-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .index-container .container .card-content .product-description {
+    margin-bottom: 1rem;
+  }
+  .index-container .container .card-content .card-details .card-title {
+    margin: 0;
+    font-size: 2.5em;
+    margin-bottom: 0.75rem;
+  }
+  .index-container .container .card-content .card-details .card-price {
+    font-size: 1.5em;
+  }
+  .index-container .container .card-content .button-container {
     min-width: 100%;
   }
-  .index-container .product-container .card-content .button-container a {
+  .index-container .container .card-content .button-container a {
     display: inline-block;
     width: 100%;
   }
@@ -1210,6 +1200,9 @@ h2 {
   }
   .form h1 {
     width: 100%;
+    border: none;
+    padding: 0;
+    font-size: 3.5rem;
   }
   .admin-login-form {
     width: 50%;
@@ -1243,6 +1236,70 @@ h2 {
   .button-container .go-button {
     margin-right: 2rem;
     width: 50%;
+  }
+  .image-update {
+    width: 100%;
+  }
+  .image-update .image-update_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .image-update .image-update_container .image-container {
+    width: 100%;
+    height: 525px;
+  }
+  .image-update .image-update_container .image-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .image-update .image-update_container form {
+    margin: 1rem auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container form .photo-update-container {
+    display: inline-block;
+    width: 100%;
+    margin: 1rem auto;
+    border: none;
+  }
+  .image-update .image-update_container form .photo-update-container input {
+    display: inline-block;
+    width: 50%;
+    padding: 0.5rem 0;
+    border: none;
+  }
+  .image-update .image-update_container form .button-container {
+    width: 100%;
   }
 }
 
@@ -1581,10 +1638,7 @@ h2 {
   }
   .article-container .button-container {
     width: 100%;
-    margin: 1rem 0;
     padding: 1rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1603,11 +1657,7 @@ h2 {
   .product-count {
     padding-left: 0.75rem;
   }
-  .index-container {
-    margin: auto;
-  }
-  .index-container .product-container {
-    margin: 3rem auto;
+  .index-container .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1616,10 +1666,10 @@ h2 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .index-container .product-container .card-image {
+  .index-container .container .card-image {
     min-width: 40%;
   }
-  .index-container .product-container .card-image img {
+  .index-container .container .card-image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -1627,10 +1677,10 @@ h2 {
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
-  .index-container .product-container .card-content .product-description {
+  .index-container .container .card-content .product-description {
     margin: 0;
   }
-  .index-container .product-container .card-content .card-details {
+  .index-container .container .card-content .card-details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1639,30 +1689,30 @@ h2 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .index-container .product-container .card-content .card-details .card-title {
+  .index-container .container .card-content .card-details .card-title {
     margin: 0;
     font-size: 2rem;
     margin-bottom: 0.75rem;
   }
-  .index-container .product-container .card-content .card-details .card-price {
+  .index-container .container .card-content .card-details .card-price {
     font-size: 1.5em;
   }
-  .index-container .product-container .card-content .button-container {
+  .index-container .container .card-content .button-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     min-width: 100%;
   }
-  .index-container .product-container .card-content .button-container a {
+  .index-container .container .card-content .button-container a {
     display: inline-block;
     width: 100%;
   }
-  .index-container .product-container .card-content .card-details,
-  .index-container .product-container .card-content .button-container {
+  .index-container .container .card-content .card-details,
+  .index-container .container .card-content .button-container {
     border: none;
   }
   .form-group {
@@ -1677,6 +1727,12 @@ h2 {
         -ms-flex-direction: column;
             flex-direction: column;
     max-width: 100%;
+    margin: 5rem auto;
+  }
+  .form h1 {
+    border: none;
+    padding: 0;
+    font-size: 3.5rem;
   }
   .admin-login-form {
     width: 70%;
@@ -1700,7 +1756,7 @@ h2 {
     display: -ms-flexbox;
     display: flex;
     padding: 0;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
   }
   .button-container a {
@@ -1711,6 +1767,71 @@ h2 {
   .button-container .go-button {
     margin-right: 2rem;
     width: 50%;
+  }
+  .image-update {
+    width: 100%;
+  }
+  .image-update .image-update_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .image-update .image-update_container .image-container {
+    width: 100%;
+    height: 525px;
+  }
+  .image-update .image-update_container .image-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .image-update .image-update_container form {
+    margin: 1rem auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container form .photo-update-container {
+    display: inline-block;
+    width: 100%;
+    margin: 1rem auto;
+    border: none;
+  }
+  .image-update .image-update_container form .photo-update-container input {
+    display: inline-block;
+    width: 50%;
+    padding: 0.5rem 0;
+    border: none;
+  }
+  .image-update .image-update_container form .button-container {
+    width: 100%;
   }
 }
 
@@ -2066,29 +2187,23 @@ h2 {
   .product-count {
     padding-left: 0.75rem;
   }
-  .index-container .product-container .card-image img {
+  .index-container .card-image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .index-container .product-container .card-content .card-details .card-title {
+  .index-container .card-content .card-details .card-title {
     font-size: 2em;
     margin: 0.75rem 0;
   }
-  .index-container .product-container .card-content .card-details .card-price {
+  .index-container .card-content .card-details .card-price {
     font-size: 1.5em;
     margin: 0.75rem 0;
   }
-  .index-container .product-container .button-container {
+  .index-container .button-container {
     min-width: 100%;
     padding: 1rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  }
-  .index-container .product-container .button-container a {
-    display: inline-block;
-    min-width: 100%;
   }
   .admin-login-form {
     width: 100%;
@@ -2163,6 +2278,71 @@ h2 {
   .admin-mobile-nav_links li a:not(.btn):hover {
     color: gray;
     text-decoration: underline;
+  }
+  .image-update {
+    width: 100%;
+  }
+  .image-update .image-update_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .image-update .image-update_container .image-container {
+    width: 100%;
+    height: 525px;
+  }
+  .image-update .image-update_container .image-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .image-update .image-update_container form {
+    margin: 1rem auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container form .photo-update-container {
+    display: inline-block;
+    width: 100%;
+    margin: 1rem auto;
+    border: none;
+  }
+  .image-update .image-update_container form .photo-update-container input {
+    display: inline-block;
+    width: 50%;
+    padding: 0.5rem 0;
+    border: none;
+  }
+  .image-update .image-update_container form .button-container {
+    width: 100%;
   }
 }
 
@@ -2386,29 +2566,23 @@ h2 {
   .product-count {
     padding-left: 0.75rem;
   }
-  .index-container .product-container .card-image img {
+  .index-container .card-image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .index-container .product-container .card-content .card-details .card-title {
+  .index-container .card-content .card-details .card-title {
     font-size: 2em;
     margin: 0.75rem 0;
   }
-  .index-container .product-container .card-content .card-details .card-price {
+  .index-container .card-content .card-details .card-price {
     font-size: 1.5em;
     margin: 0.75rem 0;
   }
-  .index-container .product-container .button-container {
+  .index-container .button-container {
     min-width: 100%;
     padding: 1rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  }
-  .index-container .product-container .button-container a {
-    display: inline-block;
-    min-width: 100%;
   }
   .admin-login-form {
     width: 100%;
@@ -2484,9 +2658,75 @@ h2 {
     color: gray;
     text-decoration: underline;
   }
+  .image-update {
+    width: 100%;
+  }
+  .image-update .image-update_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .image-update .image-update_container .image-container {
+    width: 100%;
+    height: 525px;
+  }
+  .image-update .image-update_container .image-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .image-update .image-update_container form {
+    margin: 1rem auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container form .photo-update-container {
+    display: inline-block;
+    width: 100%;
+    margin: 1rem auto;
+    border: none;
+  }
+  .image-update .image-update_container form .photo-update-container input {
+    display: inline-block;
+    width: 50%;
+    padding: 0.5rem 0;
+    border: none;
+  }
+  .image-update .image-update_container form .button-container {
+    width: 100%;
+  }
   .title-container h1 {
     text-align: center;
-    margin: 0.75rem 0;
+    margin-top: 1rem;
+    border: none;
   }
   .filter-search {
     display: -webkit-box;
@@ -2507,10 +2747,10 @@ h2 {
   }
   .article-container .button-container {
     width: 100%;
-    margin: 1rem 0;
     padding: 1rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 0;
+    border-top: none;
+    border-bottom: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2529,31 +2769,38 @@ h2 {
   .product-count {
     padding-left: 0.75rem;
   }
-  .index-container {
-    margin: 2rem auto;
+  .index-container .card-image {
+    height: 350px;
   }
-  .index-container .product-container .card-image img {
+  .index-container .card-image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    position: relative;
   }
-  .index-container .product-container .card-content .card-details .card-title {
+  .index-container .card-image .overlay-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .index-container .card-image .overlay-icon a {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+  .index-container .card-content .card-details .card-title {
     font-size: 2rem;
     margin: 0.75rem 0;
   }
-  .index-container .product-container .card-content .card-details .card-price {
+  .index-container .card-content .card-details .card-price {
     font-size: 1.5em;
     margin: 0.75rem 0;
   }
-  .index-container .product-container .button-container {
-    min-width: 100%;
-    padding: 1rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  }
-  .index-container .product-container .button-container a {
-    display: inline-block;
+  .index-container .button-container {
     min-width: 100%;
   }
   .form-group {
@@ -2565,6 +2812,9 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .form-group .admin-index-title {
+    margin: 1rem 0;
   }
   .button-container {
     display: -webkit-box;
@@ -2586,11 +2836,6 @@ h2 {
   .admin-login-form form h1,
   .admin-login-form .go-button {
     width: inherit;
-  }
-  .admin-login-form h1 {
-    background-color: #0088cc;
-    color: white;
-    border-radius: 0.5rem;
   }
   .admin-login-form .go-button {
     margin: 0.75rem 0;
@@ -2629,6 +2874,67 @@ h2 {
   .admin-mobile-nav_links li a:not(.btn):hover {
     color: gray;
     text-decoration: underline;
+  }
+  .image-update .image-update_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .image-update .image-update_container .image-container {
+    max-width: 100%;
+    height: 525px;
+  }
+  .image-update .image-update_container .image-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .image-update .image-update_container form {
+    margin: 1rem auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-update .image-update_container form .photo-update-container {
+    width: 70%;
+    margin-bottom: 1rem;
+    border: none;
+  }
+  .image-update .image-update_container form .photo-update-container input {
+    display: inline-block;
+    width: 50%;
+    padding: 0.5rem 0;
+    border: none;
+  }
+  .image-update .image-update_container form .button-container {
+    width: 100%;
   }
   .article-section h1 {
     text-align: center;
@@ -2929,7 +3235,7 @@ textarea:focus {
 }
 
 .input-field {
-  height: 34px;
+  display: inline-block;
 }
 
 .product-count {
@@ -3054,5 +3360,32 @@ textarea:focus {
 
 .admin-mobile-nav a {
   text-transform: uppercase;
+}
+
+.card-image {
+  height: 350px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.card-image .overlay-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.card-image .overlay-icon a {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
 }
 /*# sourceMappingURL=sfstyles.css.map */

@@ -207,7 +207,7 @@ textarea {
 }
 
 .input-field {
-  height: 34px;
+  display: inline-block;
 }
 
 .product-count {
@@ -304,5 +304,26 @@ textarea {
   }
   a {
     text-transform: uppercase;
+  }
+}
+
+.card-image {
+  height: 350px;
+  img {
+    @include images(100%, 100%, cover);
+    position: relative;
+  }
+  .overlay-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    a {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 0.75rem;
+    }
   }
 }

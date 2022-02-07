@@ -148,7 +148,7 @@
     margin: 0;
     width: 100%;
     padding: 0 0 6px 0;
-    text-align: center;
+    @include text-align(center);
   }
 
   form {
@@ -159,10 +159,10 @@
   }
 }
 h2 {
-  outline: 1px solid $border;
   padding: 1rem 0;
+  border: 1px solid $border;
   margin: 0;
-  text-align: center;
+  @include text-align(center);
 }
 .message-subject {
   @include flex-align(center, center);

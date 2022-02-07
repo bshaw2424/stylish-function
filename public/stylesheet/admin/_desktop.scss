@@ -29,10 +29,7 @@
 .article-container {
   .button-container {
     width: 100%;
-    margin: 1rem 0;
     padding: 1rem 0;
-    border-top: 1px solid $border;
-    border-bottom: 1px solid $border;
     @include flex();
     a {
       display: inline-block;
@@ -54,9 +51,7 @@
 }
 
 .index-container {
-  margin: auto;
-  .product-container {
-    margin: 3rem auto;
+  .container {
     @include flex-direction(column);
     .card-image {
       min-width: 40%;
@@ -81,7 +76,7 @@
         }
       }
       .button-container {
-        @include flex-direction(column);
+        @include flex-direction(row);
         min-width: 100%;
         a {
           display: inline-block;
@@ -104,9 +99,15 @@
 .form {
   @include flex-direction(column);
   max-width: 100%;
+  margin: 5rem auto;
+  h1 {
+    border: none;
+    padding: 0;
+    font-size: 3.5rem;
+  }
 }
 
-// login form
+// desktop login form
 .admin-login-form {
   width: 70%;
   form,
@@ -128,7 +129,7 @@
 .button-container {
   @include flex();
   padding: 0;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   a {
     display: line-block;
@@ -138,5 +139,46 @@
   .go-button {
     margin-right: 2rem;
     width: 50%;
+  }
+}
+
+.image-update {
+  width: 100%;
+  .image-update_container {
+    @include flex-align(center, center);
+    flex-direction: column;
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .image-container {
+      width: 100%;
+      height: 525px;
+      img {
+        @include images(100%, 100%, cover);
+      }
+    }
+    form {
+      margin: 1rem auto;
+      width: 100%;
+      @include flex-align(center, center);
+      flex-direction: column;
+      .photo-update-container {
+        display: inline-block;
+        width: 100%;
+        margin: 1rem auto;
+        border: none;
+        input {
+          display: inline-block;
+          width: 50%;
+          padding: 0.5rem 0;
+          border: none;
+        }
+      }
+      .button-container {
+        width: 100%;
+      }
+    }
   }
 }
