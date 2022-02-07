@@ -1,7 +1,6 @@
-<% include ../../partials/header %><% include ../../admin/mobile-nav %>
-
+<%- include ../../partials/header %> <%- include ../../admin/mobile-nav %>
 <section class="index-container">
-  <% include ../../admin/admin-nav %>
+  <%- include ../../admin/admin-nav %>
   <div class="container">
     <form
       class="form form-group"
@@ -9,7 +8,6 @@
       method="POST"
     >
       <div class="title-container">
-        <i class="material-icons hide-on-large-only">menu</i>
         <h1><%= articles.title %></h1>
       </div>
       <div class="article-section">
@@ -49,3 +47,4 @@
     </form>
   </div>
 </section>
+<%- include ../../partials/footer %>

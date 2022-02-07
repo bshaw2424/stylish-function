@@ -1,4 +1,4 @@
-<% include ../../partials/header %><% include ../../admin/mobile-nav %>
+<%- include ../../partials/header %><%- include ../../admin/mobile-nav %>
 
 <section class="index-container">
   <% include ../../admin/admin-nav %>
@@ -11,7 +11,6 @@
     >
       <div class="title-container">
         <h1><%= product.title %></h1>
-        <i class="material-icons hide-on-large-only">menu</i>
       </div>
       <div class="product-section">
         <label for="product-title">Product Title</label>
@@ -53,3 +52,4 @@
     </form>
   </div>
 </section>
+<%- include ../../partials/footer %>
