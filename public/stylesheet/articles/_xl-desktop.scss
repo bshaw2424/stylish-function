@@ -2,7 +2,6 @@
   h1 {
     @include text-align(center);
     padding: 1rem 0;
-    margin: 2rem 0.75rem;
     background-color: #333;
     color: $white;
     max-width: 100%;
@@ -10,8 +9,12 @@
   }
 
   .article-container {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
     .card {
       @include flex();
+      padding: 0;
+      margin: 0;
       .card-image {
         height: 250px;
         width: 100%;
@@ -20,11 +23,10 @@
         }
       }
       .card-content {
-        padding: 0;
+        padding: 1rem 0;
         margin-left: 1rem;
         .card-title {
           @include text-align(justify);
-          padding-bottom: 0.5rem;
           margin: 0;
           a {
             font-size: 1.3em;

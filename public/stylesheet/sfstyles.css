@@ -722,7 +722,6 @@ h2 {
   }
   .index-articles h1 {
     text-align: center;
-    margin: 2rem 0.75rem;
     padding: 1rem;
     width: 100%;
     background-color: #333;
@@ -736,11 +735,17 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 2rem 0;
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   }
   .index-articles .card-container .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
   .index-articles .card-container .card .card-image {
     height: 250px;
@@ -753,16 +758,13 @@ h2 {
        object-fit: cover;
   }
   .index-articles .card-container .card .card-content {
-    padding: 0;
+    padding: 1rem 0;
     margin-left: 1rem;
   }
   .index-articles .card-container .card .card-content .card-title {
     margin: 0;
     font-size: 2rem;
     text-align: justify;
-  }
-  .index-articles .card-container .card .card-content .card-description {
-    padding-top: 0.5rem;
   }
   .index-articles .button-container {
     padding-top: 2rem;
@@ -785,16 +787,22 @@ h2 {
   .article-section h1 {
     text-align: center;
     padding: 1rem 0;
-    margin: 2rem 0.75rem;
     background-color: #333;
     color: white;
     max-width: 100%;
     font-size: 3.5rem;
   }
+  .article-section .article-container {
+    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+  }
   .article-section .article-container .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
+    margin: 0;
   }
   .article-section .article-container .card .card-image {
     height: 250px;
@@ -807,12 +815,11 @@ h2 {
        object-fit: cover;
   }
   .article-section .article-container .card .card-content {
-    padding: 0;
+    padding: 1rem 0;
     margin-left: 1rem;
   }
   .article-section .article-container .card .card-content .card-title {
     text-align: justify;
-    padding-bottom: 0.5rem;
     margin: 0;
   }
   .article-section .article-container .card .card-content .card-title a {

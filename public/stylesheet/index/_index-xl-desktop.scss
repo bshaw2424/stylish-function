@@ -22,7 +22,6 @@
   margin: 2rem 0;
   h1 {
     @include text-align(center);
-    margin: 2rem 0.75rem;
     padding: 1rem;
     width: 100%;
     background-color: #333;
@@ -31,8 +30,13 @@
 
   .card-container {
     @include flex-direction(column);
+    margin: 2rem 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     .card {
       @include flex();
+      padding: 0;
+      margin: 0;
+      width: 100%;
       .card-image {
         height: 250px;
         width: 100%;
@@ -41,15 +45,12 @@
         }
       }
       .card-content {
-        padding: 0;
+        padding: 1rem 0;
         margin-left: 1rem;
         .card-title {
           margin: 0;
           font-size: 2rem;
           @include text-align(justify);
-        }
-        .card-description {
-          padding-top: 0.5rem;
         }
       }
     }
