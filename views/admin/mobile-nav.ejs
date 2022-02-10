@@ -1,15 +1,24 @@
 <nav class="admin-mobile-nav hide-on-large-only">
   <i class="material-icons hamburger hide-on-large-only">menu</i>
   <h1 class="admin-mobile-nav_title"><a href="/admin/dashboard">Admin</a></h1>
+
+  <ul class="admin-mobile-nav_links hidden hide-on-large-only">
+    <!-- <li><a href="/admin/dashboard">Home</a></li> -->
+    <li><a href="/admin/articles">Articles</a></li>
+    <li><a href="/admin/messages">Messages</a></li>
+    <li><a href="/">Featured</a></li>
+    <li><a href="/">Main</a></li>
+    <li class="logout">
+      <a class="go-button btn" href="/admin/logout">Logout</a>
+    </li>
+  </ul>
 </nav>
 
-<ul class="admin-mobile-nav_links hidden hide-on-large-only">
-  <!-- <li><a href="/admin/dashboard">Home</a></li> -->
-  <li><a href="/admin/articles">Articles</a></li>
-  <li><a href="/admin/messages">Messages</a></li>
-  <li><a href="/">Featured</a></li>
-  <li><a href="/">Main</a></li>
-  <li class="logout">
-    <a class="go-button btn" href="/admin/logout">Logout</a>
-  </li>
-</ul>
+<script>
+  const adminHamburgerNav = document.querySelector(".hamburger");
+  const adminNavLinks = document.querySelector(".admin-mobile-nav_links");
+
+  adminHamburgerNav.addEventListener("click", () => {
+    adminNavLinks.classList.toggle("hidden");
+  });
+</script>
