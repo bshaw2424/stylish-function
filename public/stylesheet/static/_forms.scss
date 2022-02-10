@@ -36,37 +36,3 @@
 .admin-login {
   height: 100vh;
 }
-
-.admin-login-form {
-  padding: 1rem;
-  height: 100%;
-  @include flex-align(center, center);
-  flex-direction: column;
-  h1 {
-    background: lightgray;
-    width: 70%;
-    text-align: center;
-    padding: 1rem 0;
-    margin: 0;
-  }
-  form {
-    width: 70%;
-    padding: 1rem 3rem;
-    @include flex-direction(column);
-    justify-content: center;
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      display: inline-block;
-    }
-    label {
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-    button {
-      display: inline-block;
-      width: 70%;
-      margin: 1rem 15%;
-    }
-  }
-}

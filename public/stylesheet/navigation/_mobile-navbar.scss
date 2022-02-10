@@ -59,10 +59,5 @@
   width: 80%;
   a {
     color: $title-text;
-    &:hover {
-      text-decoration: underline;
-      background-color: $white;
-      color: $title-text-hover;
-    }
   }
 }

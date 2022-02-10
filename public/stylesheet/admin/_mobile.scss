@@ -104,19 +104,6 @@
   }
 }
 
-// login form
-.admin-login-form {
-  width: 100%;
-  form,
-  form h1,
-  .go-button {
-    width: inherit;
-  }
-
-  .go-button {
-    margin: 0.75rem 0;
-  }
-}
 // mobile nav bar
 .admin-mobile-nav_links {
   width: 70%;
@@ -183,6 +170,39 @@
       .button-container {
         width: 100%;
       }
+    }
+  }
+}
+
+.admin-login-form {
+  padding: 1rem;
+  height: 100%;
+  @include flex-align(center, center);
+  flex-direction: column;
+  h1 {
+    background: $go-button;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  form {
+    width: 100%;
+    @include flex-direction(column);
+    justify-content: center;
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      display: inline-block;
+    }
+    label {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    button {
+      display: inline-block;
+      width: 70%;
+      margin: 1rem 15%;
     }
   }
 }

@@ -611,64 +611,6 @@ h2 {
   height: 100vh;
 }
 
-.admin-login-form {
-  padding: 1rem;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.admin-login-form h1 {
-  background: lightgray;
-  width: 70%;
-  text-align: center;
-  padding: 1rem 0;
-  margin: 0;
-}
-
-.admin-login-form form {
-  width: 70%;
-  padding: 1rem 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.admin-login-form form input[type="text"],
-.admin-login-form form input[type="password"] {
-  width: 100%;
-  display: inline-block;
-}
-
-.admin-login-form form label {
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-.admin-login-form form button {
-  display: inline-block;
-  width: 70%;
-  margin: 1rem 15%;
-}
-
 .footer-section {
   background: #333;
 }
@@ -1204,22 +1146,6 @@ h2 {
     padding: 0;
     font-size: 3.5rem;
   }
-  .admin-login-form {
-    width: 50%;
-  }
-  .admin-login-form form,
-  .admin-login-form form h1,
-  .admin-login-form .go-button {
-    width: 100%;
-  }
-  .admin-login-form h1 {
-    background-color: #0088cc;
-    color: white;
-    border-radius: 0.5rem;
-  }
-  .admin-login-form .go-button {
-    margin: 0.75rem 0;
-  }
   .button-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1300,6 +1226,58 @@ h2 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+  }
+  .admin-login-form {
+    padding: 1rem;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .admin-login-form h1 {
+    background: #0088cc;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+    color: white;
+  }
+  .admin-login-form form {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .admin-login-form form input[type="text"],
+  .admin-login-form form input[type="password"] {
+    width: 100%;
+    display: inline-block;
+  }
+  .admin-login-form form label {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .admin-login-form form button {
+    display: inline-block;
+    width: 70%;
+    margin: 1rem 15%;
   }
 }
 
@@ -1734,23 +1712,6 @@ h2 {
     padding: 0;
     font-size: 3.5rem;
   }
-  .admin-login-form {
-    width: 70%;
-  }
-  .admin-login-form form,
-  .admin-login-form form h1,
-  .admin-login-form .go-button {
-    width: 100%;
-  }
-  .admin-login-form h1 {
-    background-color: #0088cc;
-    color: white;
-    border-radius: 0.5rem;
-  }
-  .admin-login-form .go-button {
-    margin: 0.75rem auto;
-    width: 70%;
-  }
   .button-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1832,6 +1793,58 @@ h2 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+  }
+  .admin-login-form {
+    padding: 1rem;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .admin-login-form h1 {
+    background: #0088cc;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+    color: white;
+  }
+  .admin-login-form form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .admin-login-form form input[type="text"],
+  .admin-login-form form input[type="password"] {
+    width: 100%;
+    display: inline-block;
+  }
+  .admin-login-form form label {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .admin-login-form form button {
+    display: inline-block;
+    width: 70%;
+    margin: 1rem 15%;
   }
 }
 
@@ -1931,11 +1944,6 @@ h2 {
   }
   .index-navigation-links a {
     color: #333333;
-  }
-  .index-navigation-links a:hover {
-    text-decoration: underline;
-    background-color: white;
-    color: gray;
   }
   .index-navigation {
     position: -webkit-sticky;
@@ -2205,22 +2213,6 @@ h2 {
     min-width: 100%;
     padding: 1rem 0;
   }
-  .admin-login-form {
-    width: 100%;
-  }
-  .admin-login-form form,
-  .admin-login-form form h1,
-  .admin-login-form .go-button {
-    width: inherit;
-  }
-  .admin-login-form h1 {
-    background-color: #0088cc;
-    color: white;
-    border-radius: 0.5rem;
-  }
-  .admin-login-form .go-button {
-    margin: 0.75rem 0;
-  }
   .form-group {
     width: 100%;
     display: -webkit-box;
@@ -2343,6 +2335,58 @@ h2 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+  }
+  .admin-login-form {
+    padding: 1rem;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .admin-login-form h1 {
+    background: #0088cc;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+    color: white;
+  }
+  .admin-login-form form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .admin-login-form form input[type="text"],
+  .admin-login-form form input[type="password"] {
+    width: 100%;
+    display: inline-block;
+  }
+  .admin-login-form form label {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .admin-login-form form button {
+    display: inline-block;
+    width: 70%;
+    margin: 1rem 15%;
   }
 }
 
@@ -2443,11 +2487,6 @@ h2 {
   .index-navigation-links a {
     color: #333333;
   }
-  .index-navigation-links a:hover {
-    text-decoration: underline;
-    background-color: white;
-    color: gray;
-  }
   .article-product_description h1 {
     text-align: center;
     margin: 0.75rem 0;
@@ -2521,6 +2560,9 @@ h2 {
     display: inline-block;
     min-width: 100%;
   }
+  .contact-page {
+    padding: 0;
+  }
   .title-container h1 {
     text-align: center;
     margin: 1rem 0;
@@ -2583,22 +2625,6 @@ h2 {
   .index-container .button-container {
     min-width: 100%;
     padding: 1rem 0;
-  }
-  .admin-login-form {
-    width: 100%;
-  }
-  .admin-login-form form,
-  .admin-login-form form h1,
-  .admin-login-form .go-button {
-    width: inherit;
-  }
-  .admin-login-form h1 {
-    background-color: #0088cc;
-    color: white;
-    border-radius: 0.5rem;
-  }
-  .admin-login-form .go-button {
-    margin: 0.75rem 0;
   }
   .form-group {
     width: 100%;
@@ -2722,6 +2748,58 @@ h2 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+  }
+  .admin-login-form {
+    padding: 1rem;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .admin-login-form h1 {
+    background: #0088cc;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+    color: white;
+  }
+  .admin-login-form form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .admin-login-form form input[type="text"],
+  .admin-login-form form input[type="password"] {
+    width: 100%;
+    display: inline-block;
+  }
+  .admin-login-form form label {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .admin-login-form form button {
+    display: inline-block;
+    width: 70%;
+    margin: 1rem 15%;
   }
   .title-container h1 {
     text-align: center;
@@ -2829,17 +2907,6 @@ h2 {
     margin-right: 2rem;
     width: 100%;
   }
-  .admin-login-form {
-    width: 100%;
-  }
-  .admin-login-form form,
-  .admin-login-form form h1,
-  .admin-login-form .go-button {
-    width: inherit;
-  }
-  .admin-login-form .go-button {
-    margin: 0.75rem 0;
-  }
   .admin-mobile-nav_links {
     width: 70%;
     min-height: 100%;
@@ -2935,6 +3002,57 @@ h2 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+  }
+  .admin-login-form {
+    padding: 1rem;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .admin-login-form h1 {
+    background: #0088cc;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  .admin-login-form form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .admin-login-form form input[type="text"],
+  .admin-login-form form input[type="password"] {
+    width: 100%;
+    display: inline-block;
+  }
+  .admin-login-form form label {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .admin-login-form form button {
+    display: inline-block;
+    width: 70%;
+    margin: 1rem 15%;
   }
   .article-section h1 {
     text-align: center;
