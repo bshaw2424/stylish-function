@@ -8,7 +8,7 @@
     -webkit-transform: none;
     transform: none;
   }
-  //@include flex-space-between(space-between, center);
+
   @include flex-direction(column);
   width: 100%;
   margin: 0 auto;

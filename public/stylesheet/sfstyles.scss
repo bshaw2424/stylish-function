@@ -45,7 +45,6 @@
 @import "admin/adminIndexPage";
 
 // index scss
-@import "index/index";
 @import "navigation/indexNavigation";
 
 // static scsss
@@ -70,12 +69,10 @@ h6 {
   color: $title-text;
 }
 
-// .message-center-header .delete-container input {
-//   width: 0px;
-// }
 ::placeholder {
   @include text-align(center);
 }
+
 .hero-section_image-container {
   position: relative;
   img {
@@ -94,7 +91,9 @@ h6 {
     }
   }
 }
+
 .card-title {
+  color: $title-text;
   a {
     color: $title-text;
     &:hover {
@@ -102,6 +101,7 @@ h6 {
     }
   }
 }
+
 .title-container i.material-icons {
   display: block;
 }
@@ -113,7 +113,8 @@ button {
 
 .btn,
 input,
-textarea {
+textarea,
+h1 {
   border-radius: 0.5rem;
   padding: 0 10px;
 }
@@ -155,13 +156,6 @@ textarea {
   @include box-shadow(none);
 }
 
-.card-title {
-  color: $title-text;
-}
-.card-title a:hover {
-  color: $border-color;
-}
-
 .collection-group_subject::first-letter {
   text-transform: capitalize;
 }
@@ -174,9 +168,11 @@ textarea {
 .navigation {
   background: $nav-background;
 }
+
 .copyright {
   color: $aside-text;
 }
+
 .index-navigation-links {
   transition: all 0.3s;
   a {
@@ -191,7 +187,6 @@ textarea {
   }
 }
 
-// admin
 .dash-board-container ul a {
   font-size: 1.3em;
 }
@@ -200,6 +195,7 @@ textarea {
 .input-field {
   padding: 10px;
 }
+
 .text-area {
   height: 8rem;
   width: 100%;
@@ -217,10 +213,7 @@ textarea {
 
 .about-us_heading {
   text-align: center;
-  margin: 1rem 0;
   width: 100%;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid $border;
 }
 .about-us_description {
   margin: 0 auto;
@@ -228,6 +221,17 @@ textarea {
     font-size: 1.3em;
   }
 }
+
+.disclaimer h1,
+.affiliate-disclaimer h1,
+.external-links-disclaimer h1,
+.about-us_heading,
+#contact-title {
+  background: #333;
+  color: white;
+  padding: 1rem 1rem;
+}
+
 .filter-search {
   margin: 0.75rem 0;
 }
@@ -240,19 +244,9 @@ textarea {
 .no-visibility {
   visibility: hidden;
 }
-.new-div {
-  outline: 1px solid black;
-  background: gray;
-  margin-top: 3rem;
-  color: white;
-  width: 100%;
-  text-transform: capitalize;
-  text-align: center;
-  font-size: 1.2rem;
-}
+
 .display-message {
   font-size: 2rem;
-
   text-align: center;
 }
 .hide {

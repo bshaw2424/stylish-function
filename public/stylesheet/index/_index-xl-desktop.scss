@@ -18,6 +18,10 @@
   }
 }
 
+.row {
+  margin-bottom: 0;
+}
+
 .index-articles {
   margin: 2rem 0;
   h1 {
@@ -31,7 +35,6 @@
   .card-container {
     @include flex-direction(column);
     margin: 2rem 0;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     .card {
       @include flex();
       padding: 0;
@@ -45,7 +48,6 @@
         }
       }
       .card-content {
-        padding: 1rem 0;
         margin-left: 1rem;
         .card-title {
           margin: 0;
@@ -57,9 +59,9 @@
   }
   .button-container {
     padding-top: 2rem;
+    border-top: 1px solid $border;
     width: 100%;
     @include flex-align(center, center);
-    border-top: 1px solid $border;
     a {
       width: 50%;
       font-size: 1.2rem;

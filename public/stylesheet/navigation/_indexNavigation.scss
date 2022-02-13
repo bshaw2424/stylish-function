@@ -6,7 +6,7 @@
   top: 0;
   background-color: $white;
   z-index: 3;
-  border-bottom: 1px solid #333;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
   i.material-icons {
     display: inline-block;
     min-height: 100%;
