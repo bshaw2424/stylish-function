@@ -1,12 +1,11 @@
-.index-navigation-container,
-.index-navigation-links {
-  @include flex-direction(column);
-}
+// .index-navigation-container,
+// .index-navigation-links {
+//   @include flex-direction(column);
+// }
 
 .index-navigation {
   position: relative;
   @include flex-space-between(space-between, center);
-  @include box-shadow(none);
   top: 0;
   left: 0;
   background-color: $white;

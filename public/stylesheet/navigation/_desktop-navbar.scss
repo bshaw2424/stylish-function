@@ -3,14 +3,17 @@
   @include flex-space-between(space-between, center);
 }
 
+i.material-icons {
+  display: none;
+}
+
 .index-navigation-container {
   .index-navigation-links {
     -webkit-transform: none;
     transform: none;
   }
 
-  @include flex-direction(column);
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   .index-navigation-links {
     display: block;
