@@ -11,8 +11,10 @@
       width: 100%;
       background: rgba(0, 0, 0, 0.6);
       p {
-        font-size: 3em;
-        max-width: 70%;
+        font-size: 3rem;
+        text-transform: capitalize;
+        padding: 10px 8px;
+        text-align: center;
       }
     }
   }

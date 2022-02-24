@@ -751,8 +751,10 @@ h2 {
     background: rgba(0, 0, 0, 0.6);
   }
   .hero-section_container .hero-section_image-container .hero-section_title-container p {
-    font-size: 3em;
-    max-width: 70%;
+    font-size: 3rem;
+    text-transform: capitalize;
+    padding: 10px 8px;
+    text-align: center;
   }
   .row {
     margin-bottom: 0;
@@ -1320,6 +1322,22 @@ h2 {
     width: 70%;
     margin: 1rem 15%;
   }
+  .hero-section_title-container {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .hero-section_title-container p {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: 60%;
+    padding: 10px 8px;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+  }
+  .hero-section_title-container p .highlight {
+    color: yellow;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -1373,8 +1391,8 @@ h2 {
     margin: 0;
   }
   .hero-section_title-container p {
-    font-size: 2em;
-    max-width: 70%;
+    font-size: 3.4rem;
+    max-width: 60%;
   }
   .index-articles h1 {
     text-align: center;
@@ -2037,8 +2055,8 @@ h2 {
     margin: 0;
   }
   .hero-section_title-container p {
-    font-size: 2em;
-    max-width: 70%;
+    font-size: 3rem;
+    max-width: 60%;
   }
   .index-articles h1 {
     text-align: center;
@@ -3650,5 +3668,23 @@ textarea:focus {
   position: absolute;
   bottom: 0.75rem;
   right: 0.75rem;
+}
+
+.hero-section_title-container {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-section_title-container p {
+  text-transform: capitalize;
+  max-width: 60%;
+  padding: 10px 8px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.hero-section_title-container p .highlight {
+  color: yellow;
 }
 /*# sourceMappingURL=sfstyles.css.map */
