@@ -1,7 +1,6 @@
-<% include ../partials/header %>
-<article class="admin-login">
-  <section class="admin-login-form container">
-    
+<%- include ../partials/header %>
+<section class="admin-login">
+  <div class="admin-login-form container">
     <form action="/admin/login" method="POST" z-depth-1">
       <h1 class="admin-login-form-title">Admin Login</h1>
       <label for="username">Enter Username</label>
@@ -10,5 +9,6 @@
       <input type="password" id="password" name="password" />
       <button type="submit" class="btn go-button">Login</button>
     </form>
-  </section>
-</article>
+  </div>
+</section>
+<%- include ../partials/footer %>

@@ -58,3 +58,31 @@
   </div>
 </section>
 <%- include ../../partials/footer %>
+
+<script>
+  const filterInput = document.querySelector(".filter-search #filter-search");
+  const cardTitles = document.querySelectorAll(".card-content .card-title");
+  const card = document.querySelectorAll(".article-container .col");
+  const filterMessage = document.querySelector(".display-message");
+
+  filterInput.addEventListener("input", e => {
+    // get all the card titles for their respective card parent
+    const titles = Array.from(cardTitles).slice();
+    // the parent card column
+    const cards = Array.from(card).slice();
+    // get input value / set to lowercase
+    const targetValue = e.target.value.toLowerCase().trim();
+
+    for (let i = 0; i < cardTitles.length; i++) {
+      const card_title = cardTitles[i].innerText.toLowerCase();
+      console.log(card_title, targetValue);
+      if (card_title.includes(targetValue)) {
+        cards[i].style.display = "";
+        filterMessage.classList.add("hide");
+      } else {
+        cards[i].style.display = "none";
+        filterMessage.classList.remove("hide");
+      }
+    }
+  });
+</script>

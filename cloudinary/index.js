@@ -13,7 +13,7 @@ const storage = new CloudinaryStorage({
   cloudinary,
   params: {
     folder: "stylish-function",
-    allowedFormats: ["jpg", "png", "jpeg"],
+    allowedFormats: ["jpg", "png", "jpeg", "webp"],
   },
 });
 

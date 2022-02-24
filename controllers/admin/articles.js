@@ -4,9 +4,6 @@ const { AsyncError } = require("../../utility/error");
 //show all admin articles
 module.exports.index = async (req, res, next) => {
   const articles = await ArticleModel.find();
-  if (!articles) {
-    throw new AsyncError("Article Not Found", 404);
-  }
   res.render("admin/articles/index", { articles });
 };
 
