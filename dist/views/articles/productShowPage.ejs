@@ -1,0 +1,28 @@
+<% include ../partials/header %> <% include ../partials/nav %>
+<section class="product-container">
+  <div class="container">
+    <div class="product">
+      <div class="card-image product_image-container">
+        <img src="<%= product.image.url %>" alt="<%= product.title %>" />
+      </div>
+      <div class="card-content product_content">
+        <div class="card-details">
+          <h3 class="card-title"><%= product.title %></h3>
+          <span class="card-price">
+            <strong
+              >$<%=
+              priceConvert.convertPriceWithComma(product.price.toFixed(2))%></strong
+            >
+          </span>
+        </div>
+        <p class="product_description"><%= product.description %></p>
+        <div class="button-container">
+          <a class="go-button btn" href="https://bit.ly/3gaosfY" target="_blank"
+            >Take me there</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% include ../partials/footer %>

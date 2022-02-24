@@ -1,0 +1,39 @@
+<%- include ../../partials/header %> <%- include ../../admin/mobile-nav %>
+<article class="message-page">
+  <% include ../../admin/admin-nav %>
+
+  <section class="message-details container">
+    <!-- start of message-button-container -->
+
+    <!-- end of message-button-container -->
+    <h2 class="message-label message"><%= message.name %></h2>
+    <!-- start of message subject line div -->
+    <div class="collection-group_subject message-subject">
+      <%= message.subject %>
+    </div>
+    <!-- end of message subject line div -->
+    <div class="collection-group collection-group_date">
+      <b>Send Date: </b> <%= message.created_on.toLocaleDateString() %>
+    </div>
+    <!-- start contact message body -->
+    <div class="message-body">
+      <p class="contact-email">
+        <span class="message-label">email:</span> <%= message.email %>
+      </p>
+      <p class="contact-message">
+        <span class="message-label">message:</span> <%= message.message %>
+      </p>
+    </div>
+    <!-- end of contact message body -->
+    <div class="message-showpage-buttons button-container">
+      <form
+        action="/admin/messages/<%= message._id %>?_method=DELETE"
+        method="POST"
+      >
+        <button class="btn delete-button">Delete</button>
+      </form>
+      <a href="/admin/messages" class="btn static-button">cancel</a>
+    </div>
+  </section>
+</article>
+<%- include ../../partials/footer %>

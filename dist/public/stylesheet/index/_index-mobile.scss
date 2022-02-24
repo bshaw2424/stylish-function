@@ -1,0 +1,86 @@
+.index-navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.index-navigation-links {
+  top: 66px;
+  width: 70%;
+}
+
+// index hero section
+.hero-section_image-container {
+  position: relative;
+  width: 100%;
+  img {
+    @include images(inherit, 10%, cover);
+  }
+  .hero-section_title-container {
+    @include flex-align(center, center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    p {
+      color: $white;
+      font-size: 1.8rem;
+      font-family: $heading-text;
+      max-width: 70%;
+    }
+  }
+}
+
+// article section
+.index-articles {
+  h1,
+  .card-content .card-title {
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .card-container {
+    margin-bottom: 2rem;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+    .card {
+      @include flex-direction(column);
+      .card-image {
+        height: 350px;
+        img {
+          @include images(100%, 100%, cover);
+        }
+      }
+      .card-content {
+        padding: 0 8px;
+        .card-title {
+          margin: 0.75rem 0;
+          border: 0;
+        }
+        .card-description {
+          border-top: 1px solid $border;
+          border-bottom: 1px solid $border;
+          padding: 0.75rem 0;
+        }
+      }
+    }
+  }
+}
+
+.button-container {
+  margin-bottom: 1rem;
+  a {
+    display: inline-block;
+    &:hover {
+      padding: 0;
+      @include box-shadow(none);
+    }
+  }
+}
