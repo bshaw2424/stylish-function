@@ -2,10 +2,10 @@
   "name": "style-function",
   "version": "1.0.0",
   "description": "Style Function Modular and Stylish furniture site",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "build": "npm run build"
+    "build": "babel app.js src views/ public -d dist",
+    "start": "nodemon app.js && npm run build && node dist/app.js"
   },
   "author": "Bishop Shaw III",
   "license": "ISC",
@@ -28,5 +28,9 @@
     "path": "^0.12.7",
     "slugify": "^1.5.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11"
+  }
 }

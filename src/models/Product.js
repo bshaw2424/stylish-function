@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 const slugify = require("slugify");
-const Article = require("../models/Article");
+const Article = require("./Article");
 
 const Products = new Schema({
   title: {
