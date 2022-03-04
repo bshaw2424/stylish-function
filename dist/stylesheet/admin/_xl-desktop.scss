@@ -1,0 +1,254 @@
+.row .col {
+  padding: 0;
+}
+.row {
+  border-bottom: none;
+}
+
+.title-container {
+  h1 {
+    @include text-align(center);
+    margin: 1rem 0;
+    font-size: 3.5rem;
+  }
+}
+
+.filter-search {
+  padding: 1rem 0.75rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  @include flex-space-between(space-between, center);
+  #filter-search,
+  .go-button {
+    margin-bottom: 0.75rem;
+    width: 35%;
+    margin: 0;
+  }
+  #filter-search {
+    height: 36px;
+  }
+}
+
+.admin-card-image {
+  display: relative;
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .overlay-icon {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.75rem;
+    z-index: 1;
+    a {
+      display: inline-block;
+      color: $white;
+      background-color: $go-button;
+    }
+  }
+}
+
+.image-update {
+  .image-update_container {
+    @include flex-align(center, center);
+    flex-direction: column;
+    .image-container {
+      max-width: 70%;
+      height: 525px;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    form {
+      margin: 1rem auto;
+      width: 70%;
+      @include flex-align(center, center);
+      flex-direction: column;
+      .photo-update-container {
+        width: 70%;
+        margin-bottom: 1rem;
+        border: none;
+        input {
+          display: inline-block;
+          width: 50%;
+          padding: 0.5rem 0;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.article-container {
+  .button-container {
+    width: 100%;
+    padding: 1rem 0;
+    @include flex();
+    a {
+      display: inline-block;
+      min-width: 50%;
+      margin-right: 2rem;
+    }
+    form {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// products section
+.product-count {
+  padding-left: 0.75rem;
+}
+
+.index-container {
+  .container {
+    @include flex-direction(column);
+    margin: 3rem auto;
+    @include flex();
+    .card-image {
+      img {
+        @include images(100%, 100%, cover);
+        align-self: flex-end;
+      }
+    }
+    .card-content {
+      .product-description {
+        margin-bottom: 1rem;
+      }
+      .card-details {
+        .card-title {
+          margin: 0;
+          font-size: 2.5em;
+          margin-bottom: 0.75rem;
+        }
+        .card-price {
+          font-size: 1.5em;
+        }
+      }
+      .button-container {
+        min-width: 100%;
+        a {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// forms
+.form-group {
+  width: 100%;
+}
+
+.form {
+  @include flex-direction(column);
+  max-width: 100%;
+  h1 {
+    width: 100%;
+    border: none;
+    padding: 0;
+    font-size: 3.5rem;
+  }
+}
+
+.button-container {
+  @include flex();
+  padding: 0;
+  width: 50%;
+  margin: 0 auto;
+  a {
+    display: line-block;
+    min-width: 50%;
+    border: 1px solid $border;
+  }
+  .go-button {
+    margin-right: 2rem;
+    width: 50%;
+  }
+}
+
+.image-update {
+  width: 100%;
+  .image-update_container {
+    @include flex-align(center, center);
+    flex-direction: column;
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .image-container {
+      width: 100%;
+      height: 525px;
+      img {
+        @include images(100%, 100%, cover);
+      }
+    }
+    form {
+      margin: 1rem auto;
+      @include flex-align(center, center);
+      flex-direction: column;
+      .photo-update-container {
+        display: inline-block;
+        width: 100%;
+        margin: 1rem auto;
+        border: none;
+        input {
+          display: inline-block;
+          width: 50%;
+          padding: 0.5rem 0;
+          border: none;
+        }
+      }
+      .button-container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.admin-login-form {
+  padding: 1rem;
+  height: 100%;
+  @include flex-align(center, center);
+  flex-direction: column;
+  h1 {
+    background: $go-button;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+    color: $white;
+  }
+  form {
+    width: 70%;
+    @include flex-direction(column);
+    justify-content: center;
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      display: inline-block;
+    }
+    label {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    button {
+      display: inline-block;
+      width: 70%;
+      margin: 1rem 15%;
+    }
+  }
+}

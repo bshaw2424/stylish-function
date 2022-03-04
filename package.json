@@ -4,8 +4,9 @@
   "description": "Style Function Modular and Stylish furniture site",
   "main": "app.js",
   "scripts": {
-    "build": "babel app.js src views/ public -d dist",
-    "start": "nodemon app.js && npm run build && node dist/app.js"
+    "build": "babel app.js src views/ public -d dist --copy-files",
+    "start": "npm run build && node dist/app.js",
+    "app": "nodemon app.js"
   },
   "author": "Bishop Shaw III",
   "license": "ISC",
