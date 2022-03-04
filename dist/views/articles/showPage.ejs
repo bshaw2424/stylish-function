@@ -1,0 +1,31 @@
+<% include ../partials/header %> <%- include('../partials/nav') %>
+<section class="article-product">
+  <div class="container">
+    <div class="article-product_description">
+      <h1><%= articles.title %></h1>
+      <p><%= articles.description %></p>
+    </div>
+    <div class="row">
+      <% for(const product of articles.products){ %>
+      <div class="col s12 m6 l6 xl4">
+        <div class="card article-product_card">
+          <div class="card-image article-product_image-container">
+            <img src="<%= product.image.url %>" alt="" />
+          </div>
+          <div class="card-content article-product_content">
+            <h3 class="card-title">
+              <a
+                href="/articles/<%= articles.slug %>/products/<%= product.slug %>"
+              >
+                <%= product.title %>
+              </a>
+            </h3>
+            <p class="product-description"><%= product.description %></p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<% include ../partials/footer %>
