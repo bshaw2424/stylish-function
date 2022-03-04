@@ -4,7 +4,7 @@
   "description": "Style Function Modular and Stylish furniture site",
   "main": "app.js",
   "scripts": {
-    "build": "babel app.js views/ public -d dist --copy-files",
+    "build": "babel app.js views/ public -d dist",
     "start": "npm run build && node dist/app.js",
     "app": "nodemon app.js"
   },
