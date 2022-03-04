@@ -1,0 +1,171 @@
+.message-page {
+  @include flex;
+}
+
+.message-center-header {
+  max-height: 100vh;
+  .message-center-container {
+    @include flex-space-between(space-between, center);
+    padding: 1rem 0;
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      padding: 0;
+    }
+    .message-filter-container {
+      @include flex-direction(column);
+      justify-content: center;
+    }
+    .input-field {
+      min-width: 30%;
+      margin: 0;
+      height: 100%;
+      #message-filter {
+        padding: 0;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .delete-container {
+    height: 20px;
+    height: 3rem;
+    @include flex-space-between(space-between, center);
+    padding: 1.5rem 20px;
+    margin-bottom: 1rem;
+    .check-all-button-message-counter,
+    label span {
+      @include flex-align(center, center);
+    }
+    label {
+      span {
+        color: $white;
+      }
+    }
+    input {
+      width: 50%;
+      align-self: center;
+      height: 2.4rem;
+    }
+    button {
+      background: none;
+      color: $nav-text;
+      @include box-shadow(none);
+    }
+  }
+}
+
+.collection {
+  min-width: 100%;
+  form {
+    button {
+      border: 0;
+      font-size: 1.75rem;
+      background: none;
+      @include box-shadow(none);
+      color: $go-button;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .collection-item {
+    @include flex-space-between(space-between, center);
+    .collection-item-info {
+      width: 100%;
+      @include flex-align(center, center);
+      .collection-group {
+        width: 100%;
+      }
+      .collection-group_date {
+        text-align: center;
+      }
+      form {
+        button {
+          padding-right: 15px;
+          color: $nav-text;
+        }
+      }
+    }
+  }
+}
+
+// contact show page section
+.message-details {
+  margin: auto;
+  height: 100%;
+  .collection-group_date {
+    text-align: center;
+    @include border(border, 1px, solid, black);
+    padding: 4px;
+    b {
+      font-size: 1.2rem;
+    }
+  }
+  p {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    @include flex-direction(column);
+    .message-label {
+      display: inline-block;
+      max-width: 100%;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      text-transform: $text-capitalize;
+      font-weight: 700;
+    }
+  }
+  .message-body {
+    padding: 8px 0;
+  }
+  .message-showpage-buttons {
+    @include flex-align(center, center);
+    padding: 1rem 0;
+    min-width: 100%;
+    border-top: 1px solid $border;
+    a {
+      display: inline-block;
+      max-width: 50%;
+      outline: 1px solid $border;
+    }
+    form {
+      width: 50%;
+      margin-right: 2rem;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.message-button-container {
+  @include flex;
+  align-items: center;
+  padding: 10px;
+  h1 {
+    margin: 0;
+    width: 100%;
+    padding: 0 0 6px 0;
+    @include text-align(center);
+  }
+
+  form {
+    button {
+      color: $nav-text;
+      cursor: pointer;
+    }
+  }
+}
+h2 {
+  padding: 1rem 0;
+  border: 1px solid $border;
+  margin: 0;
+  @include text-align(center);
+}
+.message-subject {
+  @include flex-align(center, center);
+  margin: 0.75rem 0;
+  font-size: 1.2rem;
+}

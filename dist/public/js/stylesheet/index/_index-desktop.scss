@@ -1,0 +1,61 @@
+.index-navigation .index-navigation-container .logo img {
+  width: 100%;
+}
+
+.row {
+  margin: 0;
+}
+
+.hero-section_title-container {
+  p {
+    font-size: 3.4rem;
+    max-width: 60%;
+  }
+}
+
+.index-articles {
+  h1 {
+    @include text-align(center);
+    margin: 1rem 0;
+    padding: 0.75rem 0;
+    background-color: #333;
+    color: $white;
+  }
+
+  .card-container {
+    @include flex-direction(column);
+    .card {
+      @include flex();
+      .card-image {
+        height: 200px;
+        width: 100%;
+        img {
+          @include images(100%, 100%, cover);
+        }
+      }
+      .card-content {
+        padding: 0;
+        margin-left: 1rem;
+        .card-title {
+          margin: 0;
+          padding-bottom: 0.75rem;
+          border-bottom: 1px solid $border;
+          font-size: 2em;
+          @include text-align(justify);
+        }
+        .card-description {
+          padding-top: 0.75rem;
+        }
+      }
+    }
+  }
+  .button-container {
+    padding: 1rem 0;
+    width: 100%;
+    @include flex-align(center, center);
+    border-top: 1px solid $border;
+    a {
+      width: 70%;
+    }
+  }
+}
