@@ -78,6 +78,7 @@ h6 {
   img {
     max-width: 100%;
   }
+
   .hero-section_title-container {
     position: absolute;
     top: 0;
@@ -328,7 +329,6 @@ textarea {
   background: rgba(0, 0, 0, 0.6);
   p {
     text-transform: capitalize;
-    max-width: 60%;
     padding: 10px 8px;
     text-align: center;
     font-family: $heading-text;
@@ -336,4 +336,8 @@ textarea {
       color: yellow;
     }
   }
+}
+
+.index-navigation {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }

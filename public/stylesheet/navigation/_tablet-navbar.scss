@@ -6,7 +6,8 @@
 .index-navigation {
   position: relative;
   @include flex-space-between(space-between, center);
-  top: 0;
+  top: 56px;
+  display: none;
   left: 0;
   background-color: $white;
   z-index: 3;

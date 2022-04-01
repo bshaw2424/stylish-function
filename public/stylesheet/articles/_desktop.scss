@@ -15,7 +15,7 @@
     .card {
       @include flex();
       .card-image {
-        height: 10em;
+        height: 100%;
         width: 100%;
         img {
           @include images(100%, 100%, cover);

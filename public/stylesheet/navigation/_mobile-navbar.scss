@@ -7,7 +7,7 @@
   position: relative;
   @include flex-space-between(space-between, center);
   @include box-shadow(none);
-  top: 0;
+  top: 56px;
   left: 0;
   background-color: $white;
   z-index: 3;
@@ -30,6 +30,24 @@
   .index-navigation-container {
     @include flex-align(center, center);
     width: 100%;
+    .index-navigation-links {
+      li {
+        border-bottom: 1px solid black;
+        min-width: 100%;
+        &:hover {
+          background-color: #333;
+          color: white;
+          text-decoration: none;
+        }
+        a {
+          width: 100%;
+          font-size: 1.5rem;
+          padding: 0 1rem;
+          text-decoration: none;
+          @include text-align(center);
+        }
+      }
+    }
     .logo {
       margin: 0 auto;
       margin-right: 0;

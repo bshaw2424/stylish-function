@@ -11,7 +11,7 @@
     .card {
       @include flex();
       .card-image {
-        height: 10em;
+        height: 100%;
         width: 100%;
         img {
           @include images(100%, 100%, cover);
@@ -20,7 +20,7 @@
       .card-content {
         margin-left: 1rem;
         .card-title {
-          @include text-align(justify);
+          @include text-align(space-between, center);
           border-bottom: 1px solid $border;
           padding-bottom: 0.5rem;
           margin: 0;

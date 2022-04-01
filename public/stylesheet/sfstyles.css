@@ -1965,7 +1965,7 @@ h2 {
             align-items: center;
     -webkit-box-shadow: none;
             box-shadow: none;
-    top: 0;
+    top: 56px;
     left: 0;
     background-color: white;
     z-index: 3;
@@ -2002,6 +2002,22 @@ h2 {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+  }
+  .index-navigation .index-navigation-container .index-navigation-links li {
+    border-bottom: 1px solid black;
+    min-width: 100%;
+  }
+  .index-navigation .index-navigation-container .index-navigation-links li:hover {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+  }
+  .index-navigation .index-navigation-container .index-navigation-links li a {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    text-align: center;
   }
   .index-navigation .index-navigation-container .logo {
     margin: 0 auto;
@@ -2056,12 +2072,11 @@ h2 {
   }
   .hero-section_title-container p {
     font-size: 3rem;
-    max-width: 60%;
+    max-width: 100%;
   }
   .index-articles h1 {
     text-align: center;
-    margin: 0.75rem 0;
-    border: 1px solid black;
+    margin: 2rem 0;
     padding: 1rem 0;
     background-color: #333;
     color: white;
@@ -2544,7 +2559,7 @@ h2 {
             align-items: center;
     -webkit-box-shadow: none;
             box-shadow: none;
-    top: 0;
+    top: 56px;
     left: 0;
     background-color: white;
     z-index: 3;
@@ -2581,6 +2596,22 @@ h2 {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+  }
+  .index-navigation .index-navigation-container .index-navigation-links li {
+    border-bottom: 1px solid black;
+    min-width: 100%;
+  }
+  .index-navigation .index-navigation-container .index-navigation-links li:hover {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+  }
+  .index-navigation .index-navigation-container .index-navigation-links li a {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    text-align: center;
   }
   .index-navigation .index-navigation-container .logo {
     margin: 0 auto;
@@ -3232,8 +3263,20 @@ h2 {
     padding: 0 8px;
   }
   .article-container .card-content .card-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0.75rem 0;
     text-align: center;
+  }
+  .article-container .card-content .card-title .article-date {
+    font-size: 1.2rem;
   }
   .article-container .card-content .article-description {
     border-top: 1px solid rgba(0, 0, 0, 0.3);
@@ -3253,17 +3296,24 @@ h2 {
     top: 66px;
     width: 70%;
   }
-  .hero-section_image-container {
+  .hero-section {
+    height: 480px;
+  }
+  .hero-section .hero-section_container {
+    height: 100%;
+  }
+  .hero-section .hero-section_container .hero-section_image-container {
     position: relative;
     width: 100%;
+    height: 100%;
   }
-  .hero-section_image-container img {
+  .hero-section .hero-section_container .hero-section_image-container img {
     width: inherit;
-    height: 10%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .hero-section_image-container .hero-section_title-container {
+  .hero-section .hero-section_container .hero-section_image-container .hero-section_title-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3280,11 +3330,12 @@ h2 {
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
   }
-  .hero-section_image-container .hero-section_title-container p {
+  .hero-section .hero-section_container .hero-section_image-container .hero-section_title-container p {
     color: white;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+    padding: 0 2rem;
     font-family: "Nunito", sans-serif;
-    max-width: 70%;
+    max-width: 100%;
   }
   .index-articles h1,
   .index-articles .card-content .card-title {
@@ -3330,10 +3381,11 @@ h2 {
   .button-container {
     margin-bottom: 1rem;
   }
-  .button-container a {
+  .button-container .go-button {
     display: inline-block;
+    margin: 0 0 1rem 0;
   }
-  .button-container a:hover {
+  .button-container .go-button:hover {
     padding: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -3678,7 +3730,6 @@ textarea:focus {
 
 .hero-section_title-container p {
   text-transform: capitalize;
-  max-width: 60%;
   padding: 10px 8px;
   text-align: center;
   font-family: "Nunito", sans-serif;
@@ -3686,5 +3737,10 @@ textarea:focus {
 
 .hero-section_title-container p .highlight {
   color: yellow;
+}
+
+.index-navigation {
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=sfstyles.css.map */

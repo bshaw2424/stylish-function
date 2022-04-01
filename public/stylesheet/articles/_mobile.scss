@@ -9,8 +9,12 @@
   .card-content {
     padding: 0 8px;
     .card-title {
+      @include flex-align(space-between, center);
       margin: 0.75rem 0;
       text-align: center;
+      .article-date {
+        font-size: 1.2rem;
+      }
     }
     .article-description {
       border-top: 1px solid $border;
