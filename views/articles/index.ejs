@@ -11,10 +11,17 @@
             <img src="<%= article.image.url %>" alt="" />
           </div>
           <div class="card-content article-container_content">
-            <h3 class="card-title">
-              <a href="/articles/<%= article.slug %>"> <%= article.title %> </a>
-            </h3>
-            <%= article.created_on.toLocaleDateString() %>
+            <div class="card-title">
+              <h3>
+                <a href="/articles/<%= article.slug %>">
+                  <%= article.title %>
+                </a>
+              </h3>
+              <span class="article-date">
+                <%= article.created_on.toLocaleDateString() %>
+              </span>
+            </div>
+
             <p class="article-description"><%= article.description %></p>
           </div>
         </div>
