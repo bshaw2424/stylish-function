@@ -1,7 +1,18 @@
+.container{
+  margin-top: 2rem;
+  .row{
+    margin-top: 1rem;
+  }
+}
+
 .article-section {
   h1 {
     @include text-align(center);
-    margin: 1rem 0;
+    font-size: 3.5rem;
+    margin: 0;
+    background: #333;
+    color: $white;
+    padding: 1.5rem 0;
   }
 }
 
@@ -10,11 +21,15 @@
     padding: 0 8px;
     .card-title {
       @include flex-align(space-between, center);
-      margin: 0.75rem 0;
+     
       text-align: center;
-      .article-date {
-        font-size: 1.2rem;
-      }
+     h3{
+       width: 100%;
+       margin: 0;
+       a{
+         font-size: 2rem;
+       }
+     }
     }
     .article-description {
       border-top: 1px solid $border;
