@@ -24,6 +24,7 @@
 }
 
 .index-articles {
+  display: none;
   h1 {
     @include text-align(center);
     margin: 2rem 0;
@@ -50,10 +51,8 @@
           @include flex-center(space-between, center);
           margin: 0;
           padding-bottom: 0.75rem;
-          display: none;
           border-bottom: 1px solid $border;
           font-size: 2rem;
-          @include text-align(justify);
         }
         .card-description {
           padding-top: 0.75rem;

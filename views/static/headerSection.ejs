@@ -1,4 +1,3 @@
-
 <%- include('../partials/nav') %>
 <section class="hero-section">
   <div class="hero-section_container">
@@ -10,7 +9,9 @@
       />
       <div class="hero-section_title-container">
         <p>
-           <span class="highlight">functional</span> style with <span class="highlight">space saving</span> solutions for a more simple home. 
+          <span class="highlight">functional</span> style with
+          <span class="highlight">space saving</span> solutions for a more
+          simple home.
         </p>
       </div>
     </div>
@@ -29,9 +30,6 @@
           <div class="card-content index-articles_card-content">
             <p class="card-title index-article-section_card-title">
               <a href="/articles/<%= article.slug %>"> <%= article.title %> </a>
-              <p class="published-date"
-                ><%= article.created_on.toLocaleDateString() %></p
-              >
             </p>
             <p class="card-description index-articles_card-description">
               <%= article.sub_description %>
