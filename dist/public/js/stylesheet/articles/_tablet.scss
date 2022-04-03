@@ -1,4 +1,5 @@
 .article-section {
+  display: none;
   h1 {
     @include text-align(center);
     margin: 1rem 0;
