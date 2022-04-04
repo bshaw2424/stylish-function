@@ -5,8 +5,7 @@
 
 .contact-page {
   max-width: 100%;
-  margin: 1rem auto;
-  padding: 0 3rem;
+  @include flex-align(center, center);
   .contact-page_header {
     padding: 2rem 0;
     p {

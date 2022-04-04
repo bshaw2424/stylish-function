@@ -1,3 +1,20 @@
+@import "../variables";
+
+.contact-page {
+  margin: 3rem 0;
+  padding-top: 2rem;
+  .container {
+    .contact-page_header {
+      padding: 0;
+      p {
+        margin: 2rem 0;
+        font-size: 1.5rem;
+        font-family: $text-font;
+      }
+    }
+  }
+}
+
 .button-container {
   @include flex-align(center, center);
   min-width: 100%;

@@ -16,7 +16,7 @@
 .index-articles {
   h1 {
     @include text-align(center);
-    margin: 1rem 0;
+    margin: 2rem 0;
     padding: 0.75rem 0;
     background-color: #333;
     color: $white;
@@ -24,8 +24,11 @@
 
   .card-container {
     @include flex-direction(column);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    margin: 2rem 0;
     .card {
       @include flex();
+      padding: 0;
       .card-image {
         height: 200px;
         width: 100%;
@@ -34,26 +37,24 @@
         }
       }
       .card-content {
-        padding: 0;
-        margin-left: 1rem;
+        padding: 0 2rem;
         .card-title {
           margin: 0;
-          padding-bottom: 0.75rem;
+          padding: 0.75rem 0;
           border-bottom: 1px solid $border;
           font-size: 2em;
           @include text-align(justify);
         }
         .card-description {
-          padding-top: 0.75rem;
+          padding: 0.75rem 0;
         }
       }
     }
   }
   .button-container {
-    padding: 1rem 0;
     width: 100%;
+    margin-bottom: 2rem;
     @include flex-align(center, center);
-    border-top: 1px solid $border;
     a {
       width: 70%;
     }

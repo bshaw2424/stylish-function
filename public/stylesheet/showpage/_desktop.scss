@@ -1,12 +1,17 @@
-.article-product_description {
-  h1 {
-    @include text-align(center);
-    margin: 1rem auto;
-  }
-  p {
-    padding: 0.75rem;
-    border-top: 1px solid $border;
-    border-bottom: 1px solid $border;
+.article-product {
+  margin: 4rem 0 0 0;
+  .article-product_description {
+    h1 {
+      @include text-align(center);
+      margin: 1rem auto;
+      color: $white;
+      padding: 1.5rem 0;
+    }
+    p {
+      border-bottom: 1px solid $border;
+      padding-bottom: 1rem;
+      font-size: 1.3rem;
+    }
   }
 }
 

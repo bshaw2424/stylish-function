@@ -6,6 +6,7 @@
 
 .row {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .index-navigation-links {
@@ -47,10 +48,15 @@
 
 // article section
 .index-articles {
-  h1,
+  h1 {
+    padding: 2rem 0;
+    color: white;
+  }
   .card-content .card-title {
     text-align: center;
     margin: 1rem;
+    padding: 0;
+    font-size: 2rem;
   }
 
   .card-container {
@@ -86,7 +92,7 @@
   margin-bottom: 1rem;
   .go-button {
     display: inline-block;
-    margin: 0 0 1rem 0;
+    margin: 0;
     &:hover {
       padding: 0;
       @include box-shadow(none);

@@ -5,7 +5,7 @@
     background-color: #333;
     color: $white;
     max-width: 100%;
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .article-container {
@@ -22,13 +22,19 @@
         }
       }
       .card-content {
-        margin-left: 1rem;
+        padding: 0 2rem;
         .card-title {
           @include text-align(justify);
           margin: 0;
-          a {
-            font-size: 1.3em;
+          h3 {
+            margin: 0;
+            a {
+              font-size: 2.5rem;
+            }
           }
+        }
+        .article-description {
+          padding: 0.75rem 0;
         }
       }
     }

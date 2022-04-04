@@ -1,3 +1,5 @@
+@import "../variables";
+
 .index-navigation {
   position: sticky;
   top: 0;
@@ -24,7 +26,6 @@
 }
 
 .index-articles {
-  display: none;
   h1 {
     @include text-align(center);
     margin: 2rem 0;
@@ -48,7 +49,7 @@
         padding: 0;
         margin-left: 1rem;
         .card-title {
-          @include flex-center(space-between, center);
+          @include flex-space-between(space-between, center);
           margin: 0;
           padding-bottom: 0.75rem;
           border-bottom: 1px solid $border;
@@ -62,12 +63,10 @@
   }
   .button-container {
     min-width: 100%;
-    padding: 1rem 0;
     border-top: 1px solid $border;
-
     a {
       width: 70%;
-      margin: 0 auto;
+      margin: 2rem auto;
     }
   }
 }

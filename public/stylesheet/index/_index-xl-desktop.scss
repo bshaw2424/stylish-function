@@ -50,18 +50,20 @@
         }
       }
       .card-content {
-        margin-left: 1rem;
+        padding: 0 2rem;
         .card-title {
           margin: 0;
+          padding: 1rem 0;
           font-size: 2rem;
           @include text-align(justify);
         }
       }
+      .card-description {
+        padding: 1rem 0;
+      }
     }
   }
   .button-container {
-    padding-top: 2rem;
-    border-top: 1px solid $border;
     width: 100%;
     @include flex-align(center, center);
     a {
