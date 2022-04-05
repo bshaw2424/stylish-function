@@ -197,3 +197,26 @@
     }
   }
 }
+
+//admin product showpage
+.index-container {
+  height: 850px;
+  .container {
+    @include flex-space-between(center, center);
+    .card-content {
+      margin-top: 1rem;
+      .card-title {
+        @include text-align(center);
+        border: none;
+      }
+      .card-details {
+        @include flex-space-between(space-between, center);
+        flex-direction: row;
+        border-bottom: 1px solid #333;
+      }
+      .product-description {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

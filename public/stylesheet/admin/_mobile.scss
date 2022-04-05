@@ -9,8 +9,10 @@
 .filter-search {
   @include flex-direction(column);
   padding: 0 0.75rem;
-  #filter-search,
-  .go-button {
+  a {
+    width: 100%;
+  }
+  #filter-search {
     margin-bottom: 0.75rem;
   }
   #filter-search {
@@ -46,6 +48,10 @@
 }
 
 .index-container {
+  .container {
+    flex-direction: column;
+    margin-top: 0;
+  }
   .card-image {
     height: 350px;
     img {
@@ -105,18 +111,31 @@
 }
 
 // mobile nav bar
+.slider-overlay {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: -2;
+  transition: 2s ease-in-out;
+  overflow: hidden;
+}
 .admin-mobile-nav_links {
   width: 70%;
   min-height: 100%;
   border: 1px solid $title-text-hover;
   transition: all 0.4s;
-  position: fixed;
+  position: sticky;
   @include flex-direction(column);
-  top: 5rem;
+  top: 56px;
   left: 0;
   z-index: 1;
   background: $white;
-
+  h1 {
+    display: none;
+  }
   li {
     padding-left: 1rem;
     line-height: 2.5;
@@ -203,6 +222,25 @@
       display: inline-block;
       width: 70%;
       margin: 1rem 15%;
+    }
+  }
+}
+
+//admin product showpage
+.index-container {
+  .container {
+    @include flex-space-between(center, center);
+    .card-content {
+      .card-title {
+        @include text-align(center);
+        border: none;
+        a {
+          width: 100%;
+        }
+      }
+      .card-details {
+        border-bottom: 1px solid #333;
+      }
     }
   }
 }

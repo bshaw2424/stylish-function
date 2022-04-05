@@ -2,57 +2,54 @@
   @include flex;
 }
 
-.message-center-header {
-  max-height: 100vh;
-  .message-center-container {
-    @include flex-space-between(space-between, center);
-    padding: 1rem 0;
-    h1 {
-      font-size: 3rem;
-      margin: 0;
+.message-center-container {
+  @include flex-space-between(space-between, center);
+  padding: 1rem 0;
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+  .message-filter-container {
+    @include flex-direction(column);
+    justify-content: center;
+  }
+  .input-field {
+    min-width: 30%;
+    margin: 0;
+    height: 100%;
+    #message-filter {
       padding: 0;
-    }
-    .message-filter-container {
-      @include flex-direction(column);
-      justify-content: center;
-    }
-    .input-field {
-      min-width: 30%;
-      margin: 0;
-      height: 100%;
-      #message-filter {
-        padding: 0;
-        &:hover {
-          cursor: pointer;
-        }
+      &:hover {
+        cursor: pointer;
       }
     }
   }
-  .delete-container {
-    height: 20px;
-    height: 3rem;
-    @include flex-space-between(space-between, center);
-    padding: 1.5rem 20px;
-    margin-bottom: 1rem;
-    .check-all-button-message-counter,
-    label span {
-      @include flex-align(center, center);
+}
+.delete-container {
+  height: 20px;
+  height: 3rem;
+  @include flex-space-between(space-between, center);
+  padding: 1.5rem 20px;
+  margin-bottom: 1rem;
+  .check-all-button-message-counter,
+  label span {
+    @include flex-align(center, center);
+  }
+  label {
+    span {
+      color: $white;
     }
-    label {
-      span {
-        color: $white;
-      }
-    }
-    input {
-      width: 50%;
-      align-self: center;
-      height: 2.4rem;
-    }
-    button {
-      background: none;
-      color: $nav-text;
-      @include box-shadow(none);
-    }
+  }
+  input {
+    width: 50%;
+    align-self: center;
+    height: 2.4rem;
+  }
+  button {
+    background: none;
+    color: $nav-text;
+    @include box-shadow(none);
   }
 }
 

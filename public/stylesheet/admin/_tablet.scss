@@ -1,23 +1,37 @@
+@import "../variables";
+
 .title-container {
   h1 {
     @include text-align(center);
     margin: 1rem 0;
+    background-color: white;
+    a {
+      background-color: none;
+    }
   }
 }
 
 .filter-search {
-  @include flex-direction(column);
+  @include flex-space-between(space-between, center);
+  min-width: 100%;
+  border: 1px solid #333;
   padding: 0 0.75rem;
-  #filter-search,
-  .go-button {
+  a {
+    display: inline-block;
+    margin: 1rem 0;
+    width: 35%;
+  }
+  #filter-search {
     margin-bottom: 0.75rem;
   }
   #filter-search {
     height: 36px;
+    width: 100%;
   }
 }
 
 .article-container {
+  margin-top: 1rem;
   .button-container {
     width: 100%;
     margin: 1rem 0;
@@ -45,6 +59,9 @@
 }
 
 .index-container {
+  .container {
+    padding: 1rem;
+  }
   .card-image {
     img {
       @include images(100%, 100%, cover);
@@ -188,6 +205,23 @@
       display: inline-block;
       width: 70%;
       margin: 1rem 15%;
+    }
+  }
+}
+
+//admin product showpage
+.index-container {
+  .container {
+    @include flex-space-between(center, center);
+    flex-direction: column;
+    .card-content {
+      .card-title {
+        @include text-align(center);
+        border: none;
+      }
+      .card-details {
+        border-bottom: 1px solid #333;
+      }
     }
   }
 }

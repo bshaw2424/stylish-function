@@ -48,7 +48,8 @@
 @import "navigation/indexNavigation";
 
 // static scsss
-@import "static/messages";
+@import "messages/messages-mobile";
+@import "messages/messages-tablet";
 @import "static/contactUs";
 @import "static/forms";
 @import "static/aboutUs";

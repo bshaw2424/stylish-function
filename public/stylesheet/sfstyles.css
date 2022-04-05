@@ -30,7 +30,7 @@ h6,
 a {
   color: #333;
   text-transform: capitalize;
-  font-family: "Oswald", sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 .back {
@@ -108,7 +108,11 @@ h4,
 }
 
 .dash-board-nav .dash-board-container h1 {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0 0;
+  background-color: white;
+  border-radius: 0;
+  padding: 0;
+  margin-top: 2.5rem;
 }
 
 .dash-board-nav .dash-board-container ul, .dash-board-nav .dash-board-container .footer-navigation .copyright, .footer-navigation .dash-board-nav .dash-board-container .copyright {
@@ -206,128 +210,156 @@ h4,
           align-items: center;
 }
 
-.message-page {
+.message-center-header .container {
+  margin-top: 0;
+}
+
+.message-center-header .container .message-center_h1 {
+  color: white;
+  margin: 2rem 0;
+  padding: 1rem 0;
+}
+
+.message-center-header .container .delete-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.message-center-header .container .delete-container .input-field {
+  margin: 0;
+  padding: 0;
+}
+
+.message-center-header .container .delete-container .check-all-button-message-counter {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0.75rem 0;
+}
+
+.message-center-header .container .collection a .collection-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.message-center-header .container .collection a .collection-item-info form {
+  display: none;
+}
+
+.message-page .message-details {
+  margin: 0;
+}
+
+.message-page .message-details .container h2 {
+  text-align: center;
+}
+
+.message-page .message-details .container .message-subject {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.message-page .message-details .container .message-subject .contact-showpage-subject b {
+  padding-right: 0.5rem;
+  display: block;
+}
+
+.message-page .message-details .container .collection-group_container {
+  border: 1px solid #333;
+  padding: 0.75rem 1.5rem;
+}
+
+.message-page .message-details .container .collection-group_container .contact-email {
+  margin: 0;
+}
+
+.message-page .message-details .container .collection-group_container .contact-showpage-date b {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.message-page .message-details .container .contact-message {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.message-page .message-details .container .button-container form,
+.message-page .message-details .container .button-container button {
+  width: 100%;
+}
+
+.message-page .message-details .container .button-container .static-button {
+  margin-left: 1.5rem;
+}
+
+.footer-navigation .container ul, .footer-navigation .container .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer-navigation .container ul li, .footer-navigation .container .copyright li {
+  padding-bottom: 0.5rem;
 }
 
 .message-center-header {
-  max-height: 100vh;
+  height: 960px;
 }
 
-.message-center-header .message-center-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1rem 0;
-}
-
-.message-center-header .message-center-container h1 {
-  font-size: 3rem;
-  margin: 0;
-  padding: 0;
-}
-
-.message-center-header .message-center-container .message-filter-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.message-center-header .message-center-container .input-field {
-  min-width: 30%;
-  margin: 0;
-  height: 100%;
-}
-
-.message-center-header .message-center-container .input-field #message-filter {
-  padding: 0;
-}
-
-.message-center-header .message-center-container .input-field #message-filter:hover {
-  cursor: pointer;
-}
-
-.message-center-header .delete-container {
-  height: 20px;
-  height: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1.5rem 20px;
-  margin-bottom: 1rem;
-}
-
-.message-center-header .delete-container .check-all-button-message-counter,
-.message-center-header .delete-container label span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.message-center-header .delete-container label span {
+.message-center-header .container .message-center_h1 {
   color: white;
+  margin: 2rem 0;
+  padding: 1rem 0;
 }
 
-.message-center-header .delete-container input {
-  width: 50%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  height: 2.4rem;
+.message-center-header .container .delete-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 1.5rem;
 }
 
-.message-center-header .delete-container button {
-  background: none;
-  color: #333;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.message-center-header .container .delete-container .input-field {
+  margin: 0;
+  padding: 0;
+  width: 30%;
 }
 
-.collection {
-  min-width: 100%;
+.message-center-header .container .delete-container .check-all-button-message-counter {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0.75rem 0;
 }
 
-.collection form button {
-  border: 0;
-  font-size: 1.75rem;
-  background: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: #0088cc;
-}
-
-.collection form button:hover {
-  cursor: pointer;
-}
-
-.collection .collection-item {
+.message-center-header .container .collection a .collection-item-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,143 +371,74 @@ h4,
           align-items: center;
 }
 
-.collection .collection-item .collection-item-info {
-  width: 100%;
+.message-center-header .container .collection a .collection-item-info form {
+  display: none;
+}
+
+.message-page .message-details .container {
+  height: 800px;
+  margin-top: 5rem;
+}
+
+.message-page .message-details .container h2 {
+  text-align: center;
+}
+
+.message-page .message-details .container .message-subject {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.message-page .message-details .container .message-subject .contact-showpage-subject b {
+  padding-right: 0.5rem;
+  display: block;
+}
+
+.message-page .message-details .container .collection-group_container {
+  border: 1px solid #333;
+  padding: 0.75rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.collection .collection-item .collection-item-info .collection-group {
+.message-page .message-details .container .collection-group_container .contact-email {
+  margin: 0;
+}
+
+.message-page .message-details .container .collection-group_container .contact-showpage-date b {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.message-page .message-details .container .contact-message {
+  margin: 1.5rem 0;
+  text-align: justify;
+}
+
+.message-page .message-details .container .button-container form,
+.message-page .message-details .container .button-container button {
   width: 100%;
 }
 
-.collection .collection-item .collection-item-info .collection-group_date {
-  text-align: center;
+.message-page .message-details .container .button-container .static-button {
+  margin-left: 1.5rem;
 }
 
-.collection .collection-item .collection-item-info form button {
-  padding-right: 15px;
-  color: #333;
-}
-
-.message-details {
-  margin: auto;
-  height: 100%;
-}
-
-.message-details .collection-group_date {
-  text-align: center;
-  border: 1px solid black;
-  padding: 4px;
-}
-
-.message-details .collection-group_date b {
-  font-size: 1.2rem;
-}
-
-.message-details p {
-  font-size: 1rem;
-  margin: 0 0 1rem 0;
+.footer-navigation .container ul, .footer-navigation .container .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.message-details p .message-label {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  font-weight: 700;
-}
-
-.message-details .message-body {
-  padding: 8px 0;
-}
-
-.message-details .message-showpage-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1rem 0;
-  min-width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.message-details .message-showpage-buttons a {
-  display: inline-block;
-  max-width: 50%;
-  outline: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.message-details .message-showpage-buttons form {
-  width: 50%;
-  margin-right: 2rem;
-}
-
-.message-details .message-showpage-buttons form button {
-  width: 100%;
-}
-
-.message-button-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-}
-
-.message-button-container h1 {
-  margin: 0;
-  width: 100%;
-  padding: 0 0 6px 0;
-  text-align: center;
-}
-
-.message-button-container form button {
-  color: #333;
-  cursor: pointer;
-}
-
-h2 {
-  padding: 1rem 0;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  margin: 0;
-  text-align: center;
-}
-
-.message-subject {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0.75rem 0;
-  font-size: 1.2rem;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .contact-us,
@@ -661,7 +624,7 @@ h2 {
 }
 
 .about-us .about-us_description p {
-  font-family: "Oswald", sans-serif;
+  font-family: "roboto", sans-serif;
   font-size: 1.4rem;
 }
 
@@ -1042,7 +1005,7 @@ h1 {
   .contact-page .container .contact-page_header p {
     margin: 2rem 0;
     font-size: 1.5rem;
-    font-family: "Oswald", sans-serif;
+    font-family: "roboto", sans-serif;
   }
   .button-container {
     display: -webkit-box;
@@ -1386,6 +1349,41 @@ h1 {
     width: 70%;
     margin: 1rem 15%;
   }
+  .index-container {
+    height: 850px;
+  }
+  .index-container .container .card-content {
+    margin-top: 1rem;
+  }
+  .index-container .container .card-content .button-container a {
+    display: inline-block;
+    width: 50%;
+    margin: 1.5rem 0;
+    border: none;
+  }
+  .index-container .container .card-content .card-title {
+    text-align: center;
+    border: none;
+  }
+  .index-container .container .card-content .card-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-bottom: 1px solid #333;
+  }
+  .index-container .container .card-content .product-description {
+    margin-top: 1rem;
+  }
   .hero-section_title-container {
     height: 100%;
     width: 100%;
@@ -1401,6 +1399,120 @@ h1 {
   }
   .hero-section_title-container p .highlight {
     color: yellow;
+  }
+  .message-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .message-page .message-center-header {
+    width: 100%;
+    margin: 3rem 0;
+  }
+  .message-page .message-center-header .container {
+    margin-top: 0;
+  }
+  .message-page .message-center-header .container .message-center_h1 {
+    color: white;
+    margin: 2rem 0;
+    padding: 1rem 0;
+  }
+  .message-page .message-center-header .container .delete-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 1.5rem;
+  }
+  .message-page .message-center-header .container .delete-container .input-field {
+    margin: 0;
+    padding: 0;
+    width: 30%;
+  }
+  .message-page .message-center-header .container .delete-container .check-all-button-message-counter {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+  .message-page .message-center-header .container .collection a .collection-item-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .message-page .message-center-header .container .collection a .collection-item-info div {
+    width: 100%;
+  }
+  .message-page .message-center-header .container .collection a .collection-item-info form {
+    display: block;
+  }
+  .message-page {
+    position: relative;
+  }
+  .message-page .message-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .message-page .message-details .container h2 {
+    text-align: center;
+  }
+  .message-page .message-details .container .message-subject {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  .message-page .message-details .container .message-subject .contact-showpage-subject b {
+    padding-right: 0.5rem;
+    display: block;
+  }
+  .message-page .message-details .container .message-subject .contact-showpage-subject .contact-email {
+    display: none;
+  }
+  .message-page .message-details .container .collection-group_container {
+    border: 1px solid #333;
+    padding: 0.75rem 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .message-page .message-details .container .collection-group_container .contact-email {
+    margin: 0;
+  }
+  .message-page .message-details .container .collection-group_container .contact-showpage-date b {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .message-page .message-details .container .contact-message {
+    margin: 1.5rem 0;
+    text-align: justify;
+  }
+  .message-page .message-details .container .button-container form,
+  .message-page .message-details .container .button-container button {
+    width: 100%;
+  }
+  .message-page .message-details .container .button-container .static-button {
+    margin-left: 1.5rem;
   }
 }
 
@@ -1724,7 +1836,7 @@ h1 {
     text-align: left;
     margin: 2rem 0;
     font-size: 1.5rem;
-    font-family: "Oswald", sans-serif;
+    font-family: "roboto", sans-serif;
   }
   .button-container {
     display: -webkit-box;
@@ -2048,6 +2160,158 @@ h1 {
     width: 70%;
     margin: 1rem 15%;
   }
+  .index-container {
+    height: 850px;
+  }
+  .index-container .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .index-container .container .card-content {
+    margin-top: 1rem;
+  }
+  .index-container .container .card-content .card-title {
+    text-align: center;
+    border: none;
+  }
+  .index-container .container .card-content .card-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-bottom: 1px solid #333;
+  }
+  .index-container .container .card-content .product-description {
+    margin-top: 1rem;
+  }
+  .message-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .message-page .message-center-header {
+    width: 100%;
+    margin: 3rem 0;
+  }
+  .message-page .message-center-header .container {
+    margin-top: 0;
+    width: 80%;
+  }
+  .message-page .message-center-header .container .message-center_h1 {
+    color: white;
+    margin: 2rem 0;
+    padding: 1rem 0;
+  }
+  .message-page .message-center-header .container .delete-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 1.5rem;
+  }
+  .message-page .message-center-header .container .delete-container .input-field {
+    margin: 0;
+    padding: 0;
+    width: 30%;
+  }
+  .message-page .message-center-header .container .delete-container .check-all-button-message-counter {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+  .message-page .message-center-header .container .collection a .collection-item-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .message-page .message-center-header .container .collection a .collection-item-info div {
+    width: 100%;
+  }
+  .message-page .message-center-header .container .collection a .collection-item-info form {
+    display: none;
+  }
+  .message-page {
+    position: relative;
+  }
+  .message-page .message-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .message-page .message-details .container h2 {
+    text-align: center;
+  }
+  .message-page .message-details .container .message-subject {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  .message-page .message-details .container .message-subject .contact-showpage-subject b {
+    padding-right: 0.5rem;
+    display: block;
+  }
+  .message-page .message-details .container .collection-group_container {
+    border: 1px solid #333;
+    padding: 0.75rem 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .message-page .message-details .container .collection-group_container .contact-email {
+    margin: 0;
+  }
+  .message-page .message-details .container .collection-group_container .contact-showpage-date b {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .message-page .message-details .container .contact-message {
+    margin: 1.5rem 0;
+    text-align: justify;
+  }
+  .message-page .message-details .container .button-container form,
+  .message-page .message-details .container .button-container button {
+    width: 100%;
+  }
+  .message-page .message-details .container .button-container .static-button {
+    margin-left: 1.5rem;
+  }
 }
 
 h1 {
@@ -2056,7 +2320,7 @@ h1 {
 
 .card-title h3 a,
 .card-title p {
-  font-family: "Oswald", sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -2414,7 +2678,7 @@ h1 {
     text-align: left;
     margin: 2rem 0;
     font-size: 1.5rem;
-    font-family: "Oswald", sans-serif;
+    font-family: "roboto", sans-serif;
   }
   .success-page .success-body {
     margin: 0 1rem;
@@ -2456,23 +2720,39 @@ h1 {
   .title-container h1 {
     text-align: center;
     margin: 1rem 0;
+    background-color: white;
+  }
+  .title-container h1 a {
+    background-color: none;
   }
   .filter-search {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 100%;
+    border: 1px solid #333;
     padding: 0 0.75rem;
   }
-  .filter-search #filter-search,
-  .filter-search .go-button {
+  .filter-search a {
+    display: inline-block;
+    margin: 1rem 0;
+    width: 35%;
+  }
+  .filter-search #filter-search {
     margin-bottom: 0.75rem;
   }
   .filter-search #filter-search {
     height: 36px;
+    width: 100%;
+  }
+  .article-container {
+    margin-top: 1rem;
   }
   .article-container .button-container {
     width: 100%;
@@ -2497,6 +2777,9 @@ h1 {
   }
   .product-count {
     padding-left: 0.75rem;
+  }
+  .index-container .container {
+    padding: 1rem;
   }
   .index-container .card-image img {
     width: 100%;
@@ -2690,6 +2973,131 @@ h1 {
     display: inline-block;
     width: 70%;
     margin: 1rem 15%;
+  }
+  .index-container .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .index-container .container .card-content .card-title {
+    text-align: center;
+    border: none;
+  }
+  .index-container .container .card-content .card-details {
+    border-bottom: 1px solid #333;
+  }
+  .message-center-header {
+    height: 960px;
+  }
+  .message-center-header .container .message-center_h1 {
+    color: white;
+    margin: 2rem 0;
+    padding: 1rem 0;
+  }
+  .message-center-header .container .delete-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 1.5rem;
+  }
+  .message-center-header .container .delete-container .input-field {
+    margin: 0;
+    padding: 0;
+    width: 30%;
+  }
+  .message-center-header .container .delete-container .check-all-button-message-counter {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+  .message-center-header .container .collection a .collection-item-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .message-center-header .container .collection a .collection-item-info form {
+    display: none;
+  }
+  .message-page .message-details .container {
+    height: 800px;
+    margin-top: 5rem;
+  }
+  .message-page .message-details .container h2 {
+    text-align: center;
+  }
+  .message-page .message-details .container .message-subject {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  .message-page .message-details .container .message-subject .contact-showpage-subject b {
+    padding-right: 0.5rem;
+    display: block;
+  }
+  .message-page .message-details .container .collection-group_container {
+    border: 1px solid #333;
+    padding: 0.75rem 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .message-page .message-details .container .collection-group_container .contact-email {
+    margin: 0;
+  }
+  .message-page .message-details .container .collection-group_container .contact-showpage-date b {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .message-page .message-details .container .contact-message {
+    margin: 1.5rem 0;
+    text-align: justify;
+  }
+  .message-page .message-details .container .button-container form,
+  .message-page .message-details .container .button-container button {
+    width: 100%;
+  }
+  .message-page .message-details .container .button-container .static-button {
+    margin-left: 1.5rem;
+  }
+  .footer-navigation .container ul, .footer-navigation .container .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -2945,23 +3353,39 @@ h1 {
   .title-container h1 {
     text-align: center;
     margin: 1rem 0;
+    background-color: white;
+  }
+  .title-container h1 a {
+    background-color: none;
   }
   .filter-search {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: 100%;
+    border: 1px solid #333;
     padding: 0 0.75rem;
   }
-  .filter-search #filter-search,
-  .filter-search .go-button {
+  .filter-search a {
+    display: inline-block;
+    margin: 1rem 0;
+    width: 35%;
+  }
+  .filter-search #filter-search {
     margin-bottom: 0.75rem;
   }
   .filter-search #filter-search {
     height: 36px;
+    width: 100%;
+  }
+  .article-container {
+    margin-top: 1rem;
   }
   .article-container .button-container {
     width: 100%;
@@ -2986,6 +3410,9 @@ h1 {
   }
   .product-count {
     padding-left: 0.75rem;
+  }
+  .index-container .container {
+    padding: 1rem;
   }
   .index-container .card-image img {
     width: 100%;
@@ -3180,6 +3607,28 @@ h1 {
     width: 70%;
     margin: 1rem 15%;
   }
+  .index-container .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .index-container .container .card-content .card-title {
+    text-align: center;
+    border: none;
+  }
+  .index-container .container .card-content .card-details {
+    border-bottom: 1px solid #333;
+  }
   .title-container h1 {
     text-align: center;
     margin-top: 1rem;
@@ -3195,8 +3644,10 @@ h1 {
             flex-direction: column;
     padding: 0 0.75rem;
   }
-  .filter-search #filter-search,
-  .filter-search .go-button {
+  .filter-search a {
+    width: 100%;
+  }
+  .filter-search #filter-search {
     margin-bottom: 0.75rem;
   }
   .filter-search #filter-search {
@@ -3225,6 +3676,13 @@ h1 {
   }
   .product-count {
     padding-left: 0.75rem;
+  }
+  .index-container .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
   }
   .index-container .card-image {
     height: 350px;
@@ -3286,13 +3744,26 @@ h1 {
     margin-right: 2rem;
     width: 100%;
   }
+  .slider-overlay {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: -2;
+    -webkit-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
+    overflow: hidden;
+  }
   .admin-mobile-nav_links {
     width: 70%;
     min-height: 100%;
     border: 1px solid gray;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3300,10 +3771,13 @@ h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 5rem;
+    top: 56px;
     left: 0;
     z-index: 1;
     background: white;
+  }
+  .admin-mobile-nav_links h1 {
+    display: none;
   }
   .admin-mobile-nav_links li {
     padding-left: 1rem;
@@ -3432,6 +3906,27 @@ h1 {
     display: inline-block;
     width: 70%;
     margin: 1rem 15%;
+  }
+  .index-container .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .index-container .container .card-content .card-title {
+    text-align: center;
+    border: none;
+  }
+  .index-container .container .card-content .card-title a {
+    width: 100%;
+  }
+  .index-container .container .card-content .card-details {
+    border-bottom: 1px solid #333;
   }
   .container {
     margin-top: 2rem;
@@ -3586,6 +4081,97 @@ h1 {
     padding: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .message-center-header .container {
+    margin-top: 0;
+  }
+  .message-center-header .container .message-center_h1 {
+    color: white;
+    margin: 2rem 0;
+    padding: 1rem 0;
+  }
+  .message-center-header .container .delete-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .message-center-header .container .delete-container .input-field {
+    margin: 0;
+    padding: 0;
+  }
+  .message-center-header .container .delete-container .check-all-button-message-counter {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+  .message-center-header .container .collection a .collection-item-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .message-center-header .container .collection a .collection-item-info form {
+    display: none;
+  }
+  .message-page .message-details {
+    margin: 0;
+  }
+  .message-page .message-details .container h2 {
+    text-align: center;
+  }
+  .message-page .message-details .container .message-subject {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  .message-page .message-details .container .message-subject .contact-showpage-subject b {
+    padding-right: 0.5rem;
+    display: block;
+  }
+  .message-page .message-details .container .collection-group_container {
+    border: 1px solid #333;
+    padding: 0.75rem 1.5rem;
+  }
+  .message-page .message-details .container .collection-group_container .contact-email {
+    margin: 0;
+  }
+  .message-page .message-details .container .collection-group_container .contact-showpage-date b {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .message-page .message-details .container .contact-message {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .message-page .message-details .container .button-container form,
+  .message-page .message-details .container .button-container button {
+    width: 100%;
+  }
+  .message-page .message-details .container .button-container .static-button {
+    margin-left: 1.5rem;
+  }
+  .footer-navigation .container ul, .footer-navigation .container .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer-navigation .container ul li, .footer-navigation .container .copyright li {
+    padding-bottom: 0.5rem;
   }
 }
 
