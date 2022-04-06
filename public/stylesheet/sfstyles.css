@@ -137,6 +137,22 @@ h4,
   display: flex;
 }
 
+.index-container .index-display h1 {
+  background-color: white;
+  font-size: 2rem;
+  text-align: justify;
+  margin: 1rem 0;
+}
+
+.index-container .index-display span {
+  font-size: 1.5rem;
+}
+
+.index-container .index-display h1,
+.index-container .index-display span {
+  padding: 0 2rem;
+}
+
 .index-navigation {
   position: relative;
   height: 100%;
@@ -300,7 +316,7 @@ h4,
 }
 
 .message-page .message-details .container .button-container .static-button {
-  margin-left: 1.5rem;
+  margin-left: 0;
 }
 
 .footer-navigation .container ul, .footer-navigation .container .copyright {
@@ -422,6 +438,16 @@ h4,
   text-align: justify;
 }
 
+.message-page .message-details .container .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .message-page .message-details .container .button-container form,
 .message-page .message-details .container .button-container button {
   width: 100%;
@@ -429,6 +455,7 @@ h4,
 
 .message-page .message-details .container .button-container .static-button {
   margin-left: 1.5rem;
+  width: 100%;
 }
 
 .footer-navigation .container ul, .footer-navigation .container .copyright {
@@ -547,6 +574,8 @@ h4,
 
 .success-page .success-body h1 {
   margin: 0;
+  color: white;
+  padding: 1rem;
 }
 
 .success-page .success-body p {
@@ -554,7 +583,7 @@ h4,
 }
 
 .success-page .success-body div {
-  width: 26%;
+  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -564,6 +593,14 @@ h4,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.success-page .success-body div a {
+  width: 100%;
+}
+
+.success-page .success-body div a:first-child {
+  margin-right: 1rem;
 }
 
 .form-group {
@@ -1038,12 +1075,13 @@ h1 {
     text-align: center;
     margin: 1rem 0;
     font-size: 3.5rem;
+    padding: 1.5rem 0;
+    color: white;
   }
   .filter-search {
     padding: 1rem 0.75rem;
     margin-bottom: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1139,23 +1177,26 @@ h1 {
     padding: 0.5rem 0;
     border: none;
   }
+  .article-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .article-container .button-container {
     width: 100%;
-    padding: 1rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .article-container .button-container a {
     display: inline-block;
-    min-width: 50%;
-    margin-right: 2rem;
+    width: 90%;
   }
   .article-container .button-container form {
     width: 100%;
   }
   .article-container .button-container form button {
-    width: 100%;
+    width: 90%;
+    margin-left: 1rem;
   }
   .product-count {
     padding-left: 0.75rem;
@@ -1191,7 +1232,7 @@ h1 {
     font-size: 1.5em;
   }
   .index-container .container .card-content .button-container {
-    min-width: 100%;
+    width: 100%;
   }
   .index-container .container .card-content .button-container a {
     display: inline-block;
@@ -1210,10 +1251,13 @@ h1 {
             flex-direction: column;
     max-width: 100%;
   }
-  .form h1 {
+  .form .title-container {
+    margin-bottom: 1.5rem;
+  }
+  .form .title-container h1 {
     width: 100%;
     border: none;
-    padding: 0;
+    padding: 1.5rem 0;
     font-size: 3.5rem;
   }
   .button-container {
@@ -1222,11 +1266,11 @@ h1 {
     display: flex;
     padding: 0;
     width: 50%;
-    margin: 0 auto;
+    margin: 1.5 auto;
   }
   .button-container a {
     display: line-block;
-    min-width: 50%;
+    width: 50%;
     border: 1px solid rgba(0, 0, 0, 0.3);
   }
   .button-container .go-button {
@@ -1348,9 +1392,6 @@ h1 {
     display: inline-block;
     width: 70%;
     margin: 1rem 15%;
-  }
-  .index-container {
-    height: 850px;
   }
   .index-container .container .card-content {
     margin-top: 1rem;
@@ -1900,15 +1941,20 @@ h1 {
   .row .col {
     padding: 0;
   }
-  .title-container h1 {
+  .container .title-container {
+    width: 100%;
+  }
+  .container .title-container h1 {
     text-align: center;
-    margin: 0.75rem 0;
+    color: white;
+    padding: 1.5rem 0;
   }
   .filter-search {
     padding: 1rem 0.75rem;
     margin-bottom: 1rem;
     outline: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 0.5rem;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1928,22 +1974,30 @@ h1 {
   .filter-search #filter-search {
     height: 36px;
   }
-  .article-container .button-container {
+  .article-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .article-container .card {
+    padding-bottom: 0;
+    margin-bottom: 2rem;
+  }
+  .article-container .card .button-container {
     width: 100%;
     padding: 1rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .article-container .button-container a {
+  .article-container .card .button-container a {
     display: inline-block;
-    min-width: 50%;
-    margin-right: 2rem;
+    width: 100%;
+    margin-right: 1.5rem;
   }
-  .article-container .button-container form {
+  .article-container .card .button-container form {
     width: 100%;
   }
-  .article-container .button-container form button {
+  .article-container .card .button-container form button {
     width: 100%;
   }
   .product-count {
@@ -1968,6 +2022,9 @@ h1 {
        object-fit: cover;
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+  .index-container .container .card-content a {
+    padding: 0;
   }
   .index-container .container .card-content .product-description {
     margin: 0;
@@ -2159,9 +2216,6 @@ h1 {
     display: inline-block;
     width: 70%;
     margin: 1rem 15%;
-  }
-  .index-container {
-    height: 850px;
   }
   .index-container .container {
     display: -webkit-box;
@@ -2717,13 +2771,22 @@ h1 {
     margin-bottom: 1rem;
     width: 70%;
   }
+  .container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .title-container {
+    margin-bottom: 1rem;
+    background: #333;
+    width: 100%;
+  }
   .title-container h1 {
     text-align: center;
-    margin: 1rem 0;
-    background-color: white;
+    padding: 0;
   }
   .title-container h1 a {
     background-color: none;
+    color: white;
   }
   .filter-search {
     display: -webkit-box;
@@ -2742,16 +2805,16 @@ h1 {
   .filter-search a {
     display: inline-block;
     margin: 1rem 0;
-    width: 35%;
-  }
-  .filter-search #filter-search {
-    margin-bottom: 0.75rem;
+    width: 50%;
+    margin-left: 2.5rem;
   }
   .filter-search #filter-search {
     height: 36px;
-    width: 100%;
+    width: 50%;
   }
   .article-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     margin-top: 1rem;
   }
   .article-container .button-container {
@@ -2779,13 +2842,18 @@ h1 {
     padding-left: 0.75rem;
   }
   .index-container .container {
-    padding: 1rem;
+    padding: 0;
   }
   .index-container .card-image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .index-container .card-content a {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0;
   }
   .index-container .card-content .card-details .card-title {
     font-size: 2em;
@@ -2809,16 +2877,20 @@ h1 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .button-container {
+  .form-group .title-container h1 {
+    color: white;
+    border: none;
+  }
+  .form-group .button-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 0;
   }
-  .button-container a {
+  .form-group .button-container a {
     min-width: 50%;
   }
-  .button-container .go-button {
+  .form-group .button-container .go-button {
     margin-right: 2rem;
     width: 50%;
   }
@@ -3083,12 +3155,22 @@ h1 {
     margin: 1.5rem 0;
     text-align: justify;
   }
+  .message-page .message-details .container .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .message-page .message-details .container .button-container form,
   .message-page .message-details .container .button-container button {
     width: 100%;
   }
   .message-page .message-details .container .button-container .static-button {
     margin-left: 1.5rem;
+    width: 100%;
   }
   .footer-navigation .container ul, .footer-navigation .container .copyright {
     display: -webkit-box;
@@ -3350,13 +3432,22 @@ h1 {
     margin-bottom: 1rem;
     width: 90%;
   }
+  .container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .title-container {
+    margin-bottom: 1rem;
+    background: #333;
+    width: 100%;
+  }
   .title-container h1 {
     text-align: center;
-    margin: 1rem 0;
-    background-color: white;
+    padding: 0;
   }
   .title-container h1 a {
     background-color: none;
+    color: white;
   }
   .filter-search {
     display: -webkit-box;
@@ -3375,16 +3466,16 @@ h1 {
   .filter-search a {
     display: inline-block;
     margin: 1rem 0;
-    width: 35%;
-  }
-  .filter-search #filter-search {
-    margin-bottom: 0.75rem;
+    width: 50%;
+    margin-left: 2.5rem;
   }
   .filter-search #filter-search {
     height: 36px;
-    width: 100%;
+    width: 50%;
   }
   .article-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     margin-top: 1rem;
   }
   .article-container .button-container {
@@ -3412,13 +3503,18 @@ h1 {
     padding-left: 0.75rem;
   }
   .index-container .container {
-    padding: 1rem;
+    padding: 0;
   }
   .index-container .card-image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .index-container .card-content a {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0;
   }
   .index-container .card-content .card-details .card-title {
     font-size: 2em;
@@ -3442,16 +3538,20 @@ h1 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .button-container {
+  .form-group .title-container h1 {
+    color: white;
+    border: none;
+  }
+  .form-group .button-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 0;
   }
-  .button-container a {
+  .form-group .button-container a {
     min-width: 50%;
   }
-  .button-container .go-button {
+  .form-group .button-container .go-button {
     margin-right: 2rem;
     width: 50%;
   }
@@ -3648,10 +3748,14 @@ h1 {
     width: 100%;
   }
   .filter-search #filter-search {
-    margin-bottom: 0.75rem;
+    margin: 0.75rem 0;
   }
   .filter-search #filter-search {
     height: 36px;
+  }
+  .article-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .article-container .button-container {
     width: 100%;
@@ -3683,18 +3787,23 @@ h1 {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
   }
-  .index-container .card-image {
+  .index-container .card {
+    margin: 0 0 2.5rem 0;
+  }
+  .index-container .card .card-image {
     height: 350px;
   }
-  .index-container .card-image img {
+  .index-container .card .card-image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     position: relative;
   }
-  .index-container .card-image .overlay-icon {
+  .index-container .card .card-image .overlay-icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -3702,21 +3811,35 @@ h1 {
     width: 100%;
     background: rgba(0, 0, 0, 0.4);
   }
-  .index-container .card-image .overlay-icon a {
+  .index-container .card .card-image .overlay-icon a {
     position: absolute;
     bottom: 0.75rem;
     right: 0.75rem;
   }
-  .index-container .card-content .card-details .card-title {
+  .index-container .card .card-content a {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0;
+  }
+  .index-container .card .card-content .card-details .card-title {
     font-size: 2rem;
     margin: 0.75rem 0;
   }
-  .index-container .card-content .card-details .card-price {
+  .index-container .card .card-content .card-details .card-price {
     font-size: 1.5em;
     margin: 0.75rem 0;
   }
-  .index-container .button-container {
+  .index-container .card .button-container {
     min-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .form-group {
     width: 100%;
@@ -3728,20 +3851,34 @@ h1 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .form-group .admin-index-title {
+  .form-group h1 {
     margin: 1rem 0;
+    background-color: #333;
+    color: white;
+    padding: 1.5rem 0;
+  }
+  .form-group #main-image {
+    border: none;
+  }
+  .form-group label {
+    padding-bottom: 0.1rem;
   }
   .button-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 0;
   }
   .button-container a {
-    min-width: 50%;
+    width: 100%;
+    margin-top: 1.5rem;
   }
   .button-container .go-button {
-    margin-right: 2rem;
+    display: none;
     width: 100%;
   }
   .slider-overlay {
@@ -4156,7 +4293,7 @@ h1 {
     width: 100%;
   }
   .message-page .message-details .container .button-container .static-button {
-    margin-left: 1.5rem;
+    margin-left: 0;
   }
   .footer-navigation .container ul, .footer-navigation .container .copyright {
     display: -webkit-box;
@@ -4182,6 +4319,23 @@ h4,
 h5,
 h6 {
   color: #333333;
+}
+
+form h1 {
+  color: white;
+  padding: 1.5rem 0;
+}
+
+form label {
+  padding-bottom: 0.5rem;
+}
+
+form #main-image {
+  border: none;
+}
+
+form .button-container {
+  margin: 1.5rem 0;
 }
 
 ::-webkit-input-placeholder {

@@ -10,14 +10,15 @@
     @include text-align(center);
     margin: 1rem 0;
     font-size: 3.5rem;
+    padding: 1.5rem 0;
+    color: $white;
   }
 }
 
 .filter-search {
   padding: 1rem 0.75rem;
   margin-bottom: 1rem;
-  border-top: 1px solid $border;
-  border-bottom: 1px solid $border;
+  border: 1px solid $border;
   @include flex-space-between(space-between, center);
   #filter-search,
   .go-button {
@@ -88,19 +89,19 @@
 }
 
 .article-container {
+  box-shadow: none;
   .button-container {
     width: 100%;
-    padding: 1rem 0;
     @include flex();
     a {
       display: inline-block;
-      min-width: 50%;
-      margin-right: 2rem;
+      width: 90%;
     }
     form {
       width: 100%;
       button {
-        width: 100%;
+        width: 90%;
+        margin-left: 1rem;
       }
     }
   }
@@ -116,6 +117,7 @@
     @include flex-direction(column);
     margin: 3rem auto;
     @include flex();
+
     .card-image {
       img {
         @include images(100%, 100%, cover);
@@ -137,7 +139,7 @@
         }
       }
       .button-container {
-        min-width: 100%;
+        width: 100%;
         a {
           display: inline-block;
           width: 100%;
@@ -155,11 +157,14 @@
 .form {
   @include flex-direction(column);
   max-width: 100%;
-  h1 {
-    width: 100%;
-    border: none;
-    padding: 0;
-    font-size: 3.5rem;
+  .title-container {
+    margin-bottom: 1.5rem;
+    h1 {
+      width: 100%;
+      border: none;
+      padding: 1.5rem 0;
+      font-size: 3.5rem;
+    }
   }
 }
 
@@ -167,12 +172,13 @@
   @include flex();
   padding: 0;
   width: 50%;
-  margin: 0 auto;
+  margin: 1.5 auto;
   a {
     display: line-block;
-    min-width: 50%;
+    width: 50%;
     border: 1px solid $border;
   }
+
   .go-button {
     margin-right: 2rem;
     width: 50%;
@@ -255,7 +261,6 @@
 
 //admin product showpage
 .index-container {
-  height: 850px;
   .container {
     .card-content {
       .button-container {

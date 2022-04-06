@@ -1,12 +1,19 @@
 @import "../variables";
 
+.container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 .title-container {
+  margin-bottom: 1rem;
+  background: #333;
+  width: 100%;
   h1 {
     @include text-align(center);
-    margin: 1rem 0;
-    background-color: white;
+    padding: 0;
     a {
       background-color: none;
+      color: $white;
     }
   }
 }
@@ -19,18 +26,17 @@
   a {
     display: inline-block;
     margin: 1rem 0;
-    width: 35%;
-  }
-  #filter-search {
-    margin-bottom: 0.75rem;
+    width: 50%;
+    margin-left: 2.5rem;
   }
   #filter-search {
     height: 36px;
-    width: 100%;
+    width: 50%;
   }
 }
 
 .article-container {
+  box-shadow: none;
   margin-top: 1rem;
   .button-container {
     width: 100%;
@@ -60,7 +66,7 @@
 
 .index-container {
   .container {
-    padding: 1rem;
+    padding: 0;
   }
   .card-image {
     img {
@@ -68,6 +74,11 @@
     }
   }
   .card-content {
+    a {
+      display: inline-block;
+      margin: 0 1rem;
+      padding: 0;
+    }
     .card-details {
       .card-title {
         font-size: 2em;
@@ -89,17 +100,22 @@
 .form-group {
   width: 100%;
   @include flex-direction(column);
-}
-
-.button-container {
-  @include flex();
-  padding: 0;
-  a {
-    min-width: 50%;
+  .title-container {
+    h1 {
+      color: $white;
+      border: none;
+    }
   }
-  .go-button {
-    margin-right: 2rem;
-    width: 50%;
+  .button-container {
+    @include flex();
+    padding: 0;
+    a {
+      min-width: 50%;
+    }
+    .go-button {
+      margin-right: 2rem;
+      width: 50%;
+    }
   }
 }
 

@@ -70,7 +70,21 @@ h5,
 h6 {
   color: $title-text;
 }
-
+form {
+  h1 {
+    color: $white;
+    padding: 1.5rem 0;
+  }
+  label {
+    padding-bottom: 0.5rem;
+  }
+  #main-image {
+    border: none;
+  }
+  .button-container {
+    margin: 1.5rem 0;
+  }
+}
 ::placeholder {
   @include text-align(center);
 }

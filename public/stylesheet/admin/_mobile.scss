@@ -1,3 +1,5 @@
+@import "../variables";
+
 .title-container {
   h1 {
     @include text-align(center);
@@ -13,7 +15,7 @@
     width: 100%;
   }
   #filter-search {
-    margin-bottom: 0.75rem;
+    margin: 0.75rem 0;
   }
   #filter-search {
     height: 36px;
@@ -21,6 +23,7 @@
 }
 
 .article-container {
+  box-shadow: none;
   .button-container {
     width: 100%;
     padding: 1rem 0;
@@ -51,41 +54,55 @@
   .container {
     flex-direction: column;
     margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
   }
-  .card-image {
-    height: 350px;
-    img {
-      @include images(100%, 100%, cover);
-      position: relative;
-    }
-    .overlay-icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      a {
+  .card {
+    margin: 0 0 2.5rem 0;
+
+    .card-image {
+      height: 350px;
+      img {
+        @include images(100%, 100%, cover);
+        position: relative;
+      }
+      .overlay-icon {
         position: absolute;
-        bottom: 0.75rem;
-        right: 0.75rem;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        a {
+          position: absolute;
+          bottom: 0.75rem;
+          right: 0.75rem;
+        }
       }
     }
-  }
-  .card-content {
-    .card-details {
-      .card-title {
-        font-size: 2rem;
-        margin: 0.75rem 0;
+    .card-content {
+      a {
+        display: inline-block;
+        @include text-align(center);
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0;
       }
-      .card-price {
-        font-size: 1.5em;
-        margin: 0.75rem 0;
+      .card-details {
+        .card-title {
+          font-size: 2rem;
+          margin: 0.75rem 0;
+        }
+        .card-price {
+          font-size: 1.5em;
+          margin: 0.75rem 0;
+        }
       }
     }
-  }
-  .button-container {
-    min-width: 100%;
+    .button-container {
+      min-width: 100%;
+      @include flex-direction(column);
+    }
   }
 }
 
@@ -93,19 +110,29 @@
 .form-group {
   width: 100%;
   @include flex-direction(column);
-  .admin-index-title {
+  h1 {
     margin: 1rem 0;
+    background-color: #333;
+    color: $white;
+    padding: 1.5rem 0;
+  }
+  #main-image {
+    border: none;
+  }
+  label {
+    padding-bottom: 0.1rem;
   }
 }
 
 .button-container {
-  @include flex();
+  @include flex-direction(column);
   padding: 0;
   a {
-    min-width: 50%;
+    width: 100%;
+    margin-top: 1.5rem;
   }
   .go-button {
-    margin-right: 2rem;
+    display: none;
     width: 100%;
   }
 }

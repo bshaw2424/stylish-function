@@ -1,11 +1,16 @@
+@import "../variables";
 .row .col {
   padding: 0;
 }
 
-.title-container {
-  h1 {
-    @include text-align(center);
-    margin: 0.75rem 0;
+.container {
+  .title-container {
+    width: 100%;
+    h1 {
+      @include text-align(center);
+      color: $white;
+      padding: 1.5rem 0;
+    }
   }
 }
 
@@ -14,6 +19,7 @@
   margin-bottom: 1rem;
   outline: 1px solid $border;
   border-radius: 0.5rem;
+  width: 100%;
   @include flex-space-between(space-between, center);
   #filter-search,
   .go-button {
@@ -27,19 +33,24 @@
 }
 
 .article-container {
-  .button-container {
-    width: 100%;
-    padding: 1rem 0;
-    @include flex();
-    a {
-      display: inline-block;
-      min-width: 50%;
-      margin-right: 2rem;
-    }
-    form {
+  box-shadow: none;
+  .card {
+    padding-bottom: 0;
+    margin-bottom: 2rem;
+    .button-container {
       width: 100%;
-      button {
+      padding: 1rem 0;
+      @include flex();
+      a {
+        display: inline-block;
         width: 100%;
+        margin-right: 1.5rem;
+      }
+      form {
+        width: 100%;
+        button {
+          width: 100%;
+        }
       }
     }
   }
@@ -61,6 +72,9 @@
       }
     }
     .card-content {
+      a {
+        padding: 0;
+      }
       .product-description {
         margin: 0;
       }
@@ -200,7 +214,6 @@
 
 //admin product showpage
 .index-container {
-  height: 850px;
   .container {
     @include flex-space-between(center, center);
     .card-content {

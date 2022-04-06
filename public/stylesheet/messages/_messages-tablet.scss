@@ -71,6 +71,7 @@
         @include text-align(justify);
       }
       .button-container {
+        @include flex-direction(row);
         form,
         button {
           width: 100%;
@@ -78,6 +79,7 @@
 
         .static-button {
           margin-left: 1.5rem;
+          width: 100%;
         }
       }
     }
