@@ -2,8 +2,10 @@
 <section class="index-container">
   <% include ../admin/admin-nav %>
   <div class="container">
-    <h1>Welcome <%= locals.username.username %></h1>
-    <span>Articles: <%= articles.length %></span>
+    <div class="index-display">
+      <h1>Welcome <%= locals.username.username %></h1>
+      <span>Articles: <%= articles.length %></span>
+    </div>
   </div>
 </section>
 <%- include ../partials/footer %>
