@@ -1,0 +1,48 @@
+
+<%- include('../partials/nav') %>
+<section class="hero-section">
+  <div class="hero-section_container">
+    <div class="hero-section_image-container">
+      <img
+        class="hero-section_image"
+        src="../../images/website-hero-picture.jpg"
+        alt="functional sofa setup"
+      />
+      <div class="hero-section_title-container">
+        <p>
+           <span class="highlight">functional</span> style with <span class="highlight">space saving</span> solutions for a more simple home. 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="index-articles">
+  <div class="container">
+    <h1>Recent Articles</h1>
+    <div class="row">
+      <% for(const article of articles) { %>
+      <div class="card-container">
+        <div class="card index-articles_card">
+          <div class="card-image index-articles_card-image">
+            <img src="<%= article.image.url %>" alt="" />
+          </div>
+          <div class="card-content index-articles_card-content">
+            <p class="card-title index-article-section_card-title">
+              <a href="/articles/<%= article.slug %>"> <%= article.title %> </a>
+              <p class="published-date"
+                ><%= article.created_on.toLocaleDateString() %></p
+              >
+            </p>
+            <p class="card-description index-articles_card-description">
+              <%= article.sub_description %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <div class="button-container index-articles_button-container">
+      <a class="go-button btn" href="/articles">see more articles</a>
+    </div>
+  </div>
+</section>
