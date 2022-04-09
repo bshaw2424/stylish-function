@@ -1,0 +1,7 @@
+<h1><%= show.title %></h1>
+
+<%= show._id %>
+<img src="<%= show.main_image %>" />
+<form action="/featured/<%= show._id %>?_method=DELETE" method="POST">
+ <button type="submit">Delete</button>
+</form>
