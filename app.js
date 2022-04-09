@@ -6,26 +6,26 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
-const database = require("./dist/mongoDatabase");
+const database = require("./mongoDatabase");
 const path = require("path");
-const AsyncError = require("./dist/utility/error");
+const AsyncError = require("./utility/error");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-const User = require("./dist/models/AdminUsers");
+const User = require("./models/AdminUsers");
 const PORT = process.env.PORT || 8080;
 
 // imported routes
-const adminIndexRoutes = require("./dist/routes/admin");
-const articleRoutes = require("./dist/routes/admin/articles");
-const productRoutes = require("./dist/routes/admin/products");
-const indexProductRoutes = require("./dist/routes/index/products");
-const contactRoutes = require("./dist/routes/admin/contact");
-const userRoutes = require("./dist/routes/admin/users");
-const staticRoutes = require("./dist/routes/index/static");
-const mainArticleRoutes = require("./dist/routes/index/articles");
-const errorRoutes = require("./dist/utility/error");
-const bcrypt = require("./dist/bcrypt");
+const adminIndexRoutes = require("./routes/admin");
+const articleRoutes = require("./routes/admin/articles");
+const productRoutes = require("./routes/admin/products");
+const indexProductRoutes = require("./routes/index/products");
+const contactRoutes = require("./routes/admin/contact");
+const userRoutes = require("./routes/admin/users");
+const staticRoutes = require("./routes/index/static");
+const mainArticleRoutes = require("./routes/index/articles");
+const errorRoutes = require("./utility/error");
+const bcrypt = require("./bcrypt");
 
 // middleware
 app.use(express.static("public"));
