@@ -46,11 +46,11 @@
         }
       }
       .card-content {
-        padding: 0 2rem;
+        padding: 1rem 1rem 1.5rem;
         .card-title {
           margin: 0;
-          padding: 1rem 0;
           font-size: 2rem;
+          border: none;
           @include text-align(justify);
         }
       }

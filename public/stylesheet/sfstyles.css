@@ -839,12 +839,12 @@ h1 {
        object-fit: cover;
   }
   .index-articles .card-container .card .card-content {
-    padding: 0 2rem;
+    padding: 1rem 1rem 1.5rem;
   }
   .index-articles .card-container .card .card-content .card-title {
     margin: 0;
-    padding: 1rem 0;
     font-size: 2rem;
+    border: none;
     text-align: justify;
   }
   .index-articles .button-container {
@@ -1647,6 +1647,7 @@ h1 {
     padding: 1rem 1rem 1.5rem;
   }
   .index-articles .card-container .card .card-content .card-title {
+    border: none;
     margin: 0;
     font-size: 2em;
     text-align: justify;
@@ -2530,7 +2531,7 @@ h1 {
        object-fit: cover;
   }
   .index-articles .container .card-container .card .card-content {
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 1rem 1.5rem;
   }
   .index-articles .container .card-container .card .card-content .card-title {
     display: -webkit-box;
@@ -2543,6 +2544,9 @@ h1 {
         -ms-flex-align: center;
             align-items: center;
     font-size: 2rem;
+    border-bottom: none;
+    margin-top: 0;
+    padding: 0;
   }
   .index-articles .container .button-container {
     width: 70%;

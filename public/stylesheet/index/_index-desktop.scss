@@ -35,6 +35,7 @@
       .card-content {
         padding: 1rem 1rem 1.5rem;
         .card-title {
+          border: none;
           margin: 0;
           font-size: 2em;
           @include text-align(justify);
