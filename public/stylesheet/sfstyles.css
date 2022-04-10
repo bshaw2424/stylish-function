@@ -4206,6 +4206,7 @@ h1 {
   }
   .index-articles .container h1 {
     margin: 1rem 0;
+    padding: 0;
     font-size: 2.5rem;
   }
   .index-articles .container .card-container {
