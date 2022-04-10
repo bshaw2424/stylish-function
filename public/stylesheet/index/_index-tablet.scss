@@ -26,43 +26,42 @@
 }
 
 .index-articles {
-  h1 {
-    @include text-align(center);
-    margin: 2rem 0;
-    padding: 1rem 0;
-    background-color: #333;
-    color: $white;
-  }
+  .container {
+    margin-top: 0;
+    h1 {
+      @include text-align(center);
+    }
 
-  .card-container {
-    @include flex-direction(column);
-    margin-bottom: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    .card {
-      margin: 0;
-      @include flex();
-      .card-image {
-        height: 200px;
-        width: 100%;
-        img {
-          @include images(100%, 100%, cover);
+    .card-container {
+      @include flex-direction(column);
+      margin-bottom: 2rem;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      .card {
+        margin: 0;
+        @include flex();
+        .card-image {
+          height: 200px;
+          width: 100%;
+          img {
+            @include images(100%, 100%, cover);
+          }
         }
-      }
-      .card-content {
-        padding: 0.75rem 1.5rem;
-        .card-title {
-          @include flex-space-between(space-between, center);
-          font-size: 2rem;
+        .card-content {
+          padding: 0.75rem 1.5rem;
+          .card-title {
+            @include flex-space-between(space-between, center);
+            font-size: 2rem;
+          }
         }
       }
     }
-  }
-  .button-container {
-    width: 70%;
-    margin: 0 auto;
-    a {
-      width: 100%;
-      margin: 1rem auto;
+    .button-container {
+      width: 70%;
+      margin: 0 auto;
+      a {
+        width: 100%;
+        margin: 1rem auto;
+      }
     }
   }
 }

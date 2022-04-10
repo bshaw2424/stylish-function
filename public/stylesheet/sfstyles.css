@@ -810,10 +810,6 @@ h1 {
   }
   .index-articles h1 {
     text-align: center;
-    padding: 1rem;
-    width: 100%;
-    background-color: #333;
-    color: white;
   }
   .index-articles .card-container {
     display: -webkit-box;
@@ -851,9 +847,6 @@ h1 {
     padding: 1rem 0;
     font-size: 2rem;
     text-align: justify;
-  }
-  .index-articles .card-container .card .card-description {
-    padding: 1rem 0;
   }
   .index-articles .button-container {
     width: 100%;
@@ -1623,10 +1616,6 @@ h1 {
   }
   .index-articles h1 {
     text-align: center;
-    margin: 2rem 0;
-    padding: 0.75rem 0;
-    background-color: #333;
-    color: white;
   }
   .index-articles .card-container {
     display: -webkit-box;
@@ -2529,14 +2518,13 @@ h1 {
     font-size: 3rem;
     max-width: 100%;
   }
-  .index-articles h1 {
-    text-align: center;
-    margin: 2rem 0;
-    padding: 1rem 0;
-    background-color: #333;
-    color: white;
+  .index-articles .container {
+    margin-top: 0;
   }
-  .index-articles .card-container {
+  .index-articles .container h1 {
+    text-align: center;
+  }
+  .index-articles .container .card-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2548,26 +2536,26 @@ h1 {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
-  .index-articles .card-container .card {
+  .index-articles .container .card-container .card {
     margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .index-articles .card-container .card .card-image {
+  .index-articles .container .card-container .card .card-image {
     height: 200px;
     width: 100%;
   }
-  .index-articles .card-container .card .card-image img {
+  .index-articles .container .card-container .card .card-image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .index-articles .card-container .card .card-content {
+  .index-articles .container .card-container .card .card-content {
     padding: 0.75rem 1.5rem;
   }
-  .index-articles .card-container .card .card-content .card-title {
+  .index-articles .container .card-container .card .card-content .card-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2579,11 +2567,11 @@ h1 {
             align-items: center;
     font-size: 2rem;
   }
-  .index-articles .button-container {
+  .index-articles .container .button-container {
     width: 70%;
     margin: 0 auto;
   }
-  .index-articles .button-container a {
+  .index-articles .container .button-container a {
     width: 100%;
     margin: 1rem auto;
   }
@@ -4213,17 +4201,20 @@ h1 {
     font-family: "Nunito", sans-serif;
     max-width: 100%;
   }
-  .index-articles h1 {
-    padding: 2rem 0;
-    color: white;
+  .index-articles .container {
+    margin-top: 0;
   }
-  .index-articles .card-container {
+  .index-articles .container h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+  .index-articles .container .card-container {
     margin-bottom: 2rem;
   }
-  .index-articles .card-container:nth-last-child(1) {
+  .index-articles .container .card-container:nth-last-child(1) {
     margin-bottom: 0;
   }
-  .index-articles .card-container .card {
+  .index-articles .container .card-container .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4232,19 +4223,19 @@ h1 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .index-articles .card-container .card .card-image {
+  .index-articles .container .card-container .card .card-image {
     height: 350px;
   }
-  .index-articles .card-container .card .card-image img {
+  .index-articles .container .card-container .card .card-image img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .index-articles .card-container .card .card-content {
+  .index-articles .container .card-container .card .card-content {
     padding: 1rem 1rem 1.5rem;
   }
-  .index-articles .card-container .card .card-content .card-title {
+  .index-articles .container .card-container .card .card-content .card-title {
     border: 0;
   }
   .button-container {
@@ -4362,8 +4353,9 @@ h6 {
 }
 
 h1 {
-  background: #333;
-  color: white;
+  letter-spacing: 0.4rem;
+  background: none;
+  margin: 1rem 0;
 }
 
 form h1 {

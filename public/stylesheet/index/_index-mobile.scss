@@ -46,30 +46,33 @@
   }
 }
 
-// article section
+// mobile article section
 .index-articles {
-  h1 {
-    padding: 2rem 0;
-    color: white;
-  }
-
-  .card-container {
-    margin-bottom: 2rem;
-    &:nth-last-child(1) {
-      margin-bottom: 0;
+  .container {
+    margin-top: 0;
+    h1 {
+      margin: 1rem 0;
+      font-size: 2.5rem;
     }
-    .card {
-      @include flex-direction(column);
-      .card-image {
-        height: 350px;
-        img {
-          @include images(100%, 100%, cover);
-        }
+
+    .card-container {
+      margin-bottom: 2rem;
+      &:nth-last-child(1) {
+        margin-bottom: 0;
       }
-      .card-content {
-        padding: 1rem 1rem 1.5rem;
-        .card-title {
-          border: 0;
+      .card {
+        @include flex-direction(column);
+        .card-image {
+          height: 350px;
+          img {
+            @include images(100%, 100%, cover);
+          }
+        }
+        .card-content {
+          padding: 1rem 1rem 1.5rem;
+          .card-title {
+            border: 0;
+          }
         }
       }
     }

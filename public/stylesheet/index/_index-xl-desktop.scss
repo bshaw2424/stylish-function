@@ -28,10 +28,6 @@
   margin: 2rem 0;
   h1 {
     @include text-align(center);
-    padding: 1rem;
-    width: 100%;
-    background-color: #333;
-    color: $white;
   }
 
   .card-container {
@@ -57,9 +53,6 @@
           font-size: 2rem;
           @include text-align(justify);
         }
-      }
-      .card-description {
-        padding: 1rem 0;
       }
     }
   }

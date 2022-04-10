@@ -71,8 +71,9 @@ h6 {
   color: $title-text;
 }
 h1 {
-  background: #333;
-  color: $white;
+  letter-spacing: 0.4rem;
+  background: none;
+  margin: 1rem 0;
 }
 form {
   h1 {
@@ -89,6 +90,7 @@ form {
     margin: 1.5rem 0;
   }
 }
+
 ::placeholder {
   @include text-align(center);
 }
