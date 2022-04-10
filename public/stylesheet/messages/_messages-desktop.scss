@@ -9,9 +9,8 @@
       margin-top: 0;
       width: 80%;
       .message-center_h1 {
-        color: $white;
+        color: $title-text;
         margin: 2rem 0;
-        padding: 1rem 0;
       }
       .delete-container {
         @include flex-space-between(space-between, center);

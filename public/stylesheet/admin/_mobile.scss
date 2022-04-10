@@ -1,11 +1,13 @@
 @import "../variables";
 
 .title-container {
-  margin-top: 3rem;
+  background: none;
+  padding-top: 1rem;
+  margin: 0;
   h1 {
     @include text-align(center);
-    margin-top: 1rem;
     border: none;
+    background-color: none;
   }
 }
 
@@ -26,6 +28,7 @@
 }
 
 .article-container {
+  box-shadow: $box-shadow;
   .card {
     .card-content {
       padding: 1rem 1rem 1.5rem;
@@ -35,7 +38,7 @@
           display: inline-block;
           width: 100%;
           @include text-align(center);
-          margin: 0;
+          margin-top: 1rem;
         }
       }
     }

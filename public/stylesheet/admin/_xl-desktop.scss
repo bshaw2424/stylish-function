@@ -10,8 +10,6 @@
     @include text-align(center);
     margin: 1rem 0;
     font-size: 3.5rem;
-    padding: 1.5rem 0;
-    color: $white;
   }
 }
 
@@ -88,23 +86,38 @@
   }
 }
 
-.article-container {
+.index-container {
   box-shadow: none;
-  .button-container {
-    width: 100%;
-    margin-top: 0;
-    @include flex();
-    a {
-      display: inline-block;
-      width: 90%;
-      margin: 0;
-      display: none;
+  .container {
+    .article-container {
+      box-shadow: none;
     }
-    form {
-      width: 50%;
-      button {
-        width: 90%;
-        margin-left: 10%;
+    .card {
+      margin: 1rem;
+      .card-content {
+        padding: 1rem 0;
+        margin: 0;
+        .card-title {
+          margin: 0;
+        }
+      }
+      .button-container {
+        width: 100%;
+        margin-top: 0;
+        @include flex();
+        a {
+          display: inline-block;
+          width: 90%;
+          margin: 0;
+          display: none;
+        }
+        form {
+          width: 50%;
+          button {
+            width: 90%;
+            margin-left: 10%;
+          }
+        }
       }
     }
   }

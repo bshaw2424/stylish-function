@@ -5,9 +5,9 @@
   .container {
     margin-top: 0;
     .message-center_h1 {
-      color: $white;
+      color: $title-text;
       margin: 2rem 0;
-      padding: 1rem 0;
+      padding: 0;
     }
     .delete-container {
       @include flex-direction(column);
@@ -25,6 +25,7 @@
       a {
         .collection-item-info {
           @include flex-space-between(space-between, center);
+
           form {
             display: none;
           }

@@ -233,9 +233,9 @@ h4,
 }
 
 .message-center-header .container .message-center_h1 {
-  color: white;
+  color: #333333;
   margin: 2rem 0;
-  padding: 1rem 0;
+  padding: 0;
 }
 
 .message-center-header .container .delete-container {
@@ -343,9 +343,8 @@ h4,
 }
 
 .message-center-header .container .message-center_h1 {
-  color: white;
+  color: #333333;
   margin: 2rem 0;
-  padding: 1rem 0;
 }
 
 .message-center-header .container .delete-container {
@@ -1059,8 +1058,6 @@ h1 {
     text-align: center;
     margin: 1rem 0;
     font-size: 3.5rem;
-    padding: 1.5rem 0;
-    color: white;
   }
   .filter-search {
     padding: 1rem 0.75rem;
@@ -1161,27 +1158,41 @@ h1 {
     padding: 0.5rem 0;
     border: none;
   }
-  .article-container {
+  .index-container {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .article-container .button-container {
+  .index-container .container .article-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .index-container .container .card {
+    margin: 1rem;
+  }
+  .index-container .container .card .card-content {
+    padding: 1rem 0;
+    margin: 0;
+  }
+  .index-container .container .card .card-content .card-title {
+    margin: 0;
+  }
+  .index-container .container .card .button-container {
     width: 100%;
     margin-top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .article-container .button-container a {
+  .index-container .container .card .button-container a {
     display: inline-block;
     width: 90%;
     margin: 0;
     display: none;
   }
-  .article-container .button-container form {
+  .index-container .container .card .button-container form {
     width: 50%;
   }
-  .article-container .button-container form button {
+  .index-container .container .card .button-container form button {
     width: 90%;
     margin-left: 10%;
   }
@@ -1444,9 +1455,9 @@ h1 {
     margin-top: 0;
   }
   .message-page .message-center-header .container .message-center_h1 {
-    color: white;
+    color: #333333;
     margin: 2rem 0;
-    padding: 1rem 0;
+    padding: 0;
   }
   .message-page .message-center-header .container .delete-container {
     display: -webkit-box;
@@ -1904,7 +1915,6 @@ h1 {
   }
   .container .title-container h1 {
     text-align: center;
-    color: white;
     padding: 1.5rem 0;
   }
   .filter-search {
@@ -1938,7 +1948,14 @@ h1 {
   }
   .article-container .card {
     padding-bottom: 0;
-    margin-bottom: 2rem;
+    margin: 1rem;
+  }
+  .article-container .card .card-content {
+    padding: 1rem 0;
+    margin-top: 0;
+  }
+  .article-container .card .card-content h3 {
+    margin: 0;
   }
   .article-container .card .button-container {
     width: 100%;
@@ -1988,7 +2005,7 @@ h1 {
         align-self: flex-end;
   }
   .index-container .container .card-content {
-    margin-top: 0;
+    margin: 0;
   }
   .index-container .container .card-content a {
     padding: 0;
@@ -2236,9 +2253,8 @@ h1 {
     width: 80%;
   }
   .message-page .message-center-header .container .message-center_h1 {
-    color: white;
+    color: #333333;
     margin: 2rem 0;
-    padding: 1rem 0;
   }
   .message-page .message-center-header .container .delete-container {
     display: -webkit-box;
@@ -2726,21 +2742,16 @@ h1 {
     margin-bottom: 1rem;
     width: 70%;
   }
-  .container {
-    margin-top: 3rem;
-  }
   .title-container {
-    margin-bottom: 1rem;
-    background: #333;
     width: 100%;
   }
   .title-container h1 {
     text-align: center;
-    padding: 0;
+    padding-top: 1rem;
   }
   .title-container h1 a {
     background-color: none;
-    color: white;
+    color: #333333;
   }
   .filter-search {
     display: -webkit-box;
@@ -2771,22 +2782,29 @@ h1 {
             box-shadow: none;
     margin-top: 1rem;
   }
-  .article-container .button-container {
+  .article-container .card .card-content {
+    padding: 1rem 0;
+  }
+  .article-container .card .card-content .card-title {
+    margin: 0;
+    padding: 0;
+  }
+  .article-container .card .card-content .button-container {
     width: 95%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .article-container .button-container .go-button {
+  .article-container .card .card-content .button-container .go-button {
     display: inline-block;
     min-width: 50%;
     margin: 0;
   }
-  .article-container .button-container form {
+  .article-container .card .card-content .button-container form {
     width: 100%;
     margin-left: 1rem;
   }
-  .article-container .button-container form button {
+  .article-container .card .card-content .button-container form button {
     width: 100%;
   }
   .product-count {
@@ -3029,9 +3047,8 @@ h1 {
     height: 960px;
   }
   .message-center-header .container .message-center_h1 {
-    color: white;
+    color: #333333;
     margin: 2rem 0;
-    padding: 1rem 0;
   }
   .message-center-header .container .delete-container {
     display: -webkit-box;
@@ -3349,6 +3366,9 @@ h1 {
   .contact-page .contact-page_header {
     padding: 0;
   }
+  .contact-page .contact-page_header .contact-title {
+    background: none;
+  }
   .success-page .success-body {
     margin: 0 1rem;
     height: 75vh;
@@ -3386,21 +3406,16 @@ h1 {
     margin-bottom: 1rem;
     width: 90%;
   }
-  .container {
-    margin-top: 3rem;
-  }
   .title-container {
-    margin-bottom: 1rem;
-    background: #333;
     width: 100%;
   }
   .title-container h1 {
     text-align: center;
-    padding: 0;
+    padding-top: 1rem;
   }
   .title-container h1 a {
     background-color: none;
-    color: white;
+    color: #333333;
   }
   .filter-search {
     display: -webkit-box;
@@ -3431,22 +3446,29 @@ h1 {
             box-shadow: none;
     margin-top: 1rem;
   }
-  .article-container .button-container {
+  .article-container .card .card-content {
+    padding: 1rem 0;
+  }
+  .article-container .card .card-content .card-title {
+    margin: 0;
+    padding: 0;
+  }
+  .article-container .card .card-content .button-container {
     width: 95%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .article-container .button-container .go-button {
+  .article-container .card .card-content .button-container .go-button {
     display: inline-block;
     min-width: 50%;
     margin: 0;
   }
-  .article-container .button-container form {
+  .article-container .card .card-content .button-container form {
     width: 100%;
     margin-left: 1rem;
   }
-  .article-container .button-container form button {
+  .article-container .card .card-content .button-container form button {
     width: 100%;
   }
   .product-count {
@@ -3686,12 +3708,14 @@ h1 {
     border-bottom: 1px solid #333;
   }
   .title-container {
-    margin-top: 3rem;
+    background: none;
+    padding-top: 1rem;
+    margin: 0;
   }
   .title-container h1 {
     text-align: center;
-    margin-top: 1rem;
     border: none;
+    background-color: none;
   }
   .filter-search {
     display: -webkit-box;
@@ -3714,6 +3738,10 @@ h1 {
   .filter-search #filter-search {
     height: 36px;
   }
+  .article-container {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
   .article-container .card .card-content {
     padding: 1rem 1rem 1.5rem;
   }
@@ -3724,7 +3752,7 @@ h1 {
     display: inline-block;
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin-top: 1rem;
   }
   .article-container .button-container {
     width: 100%;
@@ -4189,9 +4217,9 @@ h1 {
     margin-top: 0;
   }
   .message-center-header .container .message-center_h1 {
-    color: white;
+    color: #333333;
     margin: 2rem 0;
-    padding: 1rem 0;
+    padding: 0;
   }
   .message-center-header .container .delete-container {
     display: -webkit-box;
