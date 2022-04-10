@@ -3276,17 +3276,7 @@ h1 {
   .index-navigation-links a {
     color: #333333;
   }
-  .article-product_description {
-    margin-top: 3rem;
-  }
-  .article-product_description h1 {
-    text-align: center;
-    margin: 0.75rem 0;
-    color: white;
-    padding: 1.5rem 0;
-  }
   .article-product_description p {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-bottom: 1rem;
   }
   .row .col.s12 {
@@ -4318,6 +4308,8 @@ h1 {
   letter-spacing: 0.2rem;
   background: none;
   margin: 1rem 0;
+  color: #333333;
+  text-align: center;
 }
 
 .card-title h3 {

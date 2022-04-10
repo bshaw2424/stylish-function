@@ -1,13 +1,5 @@
 .article-product_description {
-  margin-top: 3rem;
-  h1 {
-    @include text-align(center);
-    margin: 0.75rem 0;
-    color: $white;
-    padding: 1.5rem 0;
-  }
   p {
-    border-bottom: 1px solid $border;
     padding-bottom: 1rem;
   }
 }

@@ -74,6 +74,8 @@ h1 {
   letter-spacing: 0.2rem;
   background: none;
   margin: 1rem 0;
+  color: $title-text;
+  @include text-align(center);
 }
 .card-title h3 {
   margin: 1rem 0;
