@@ -32,9 +32,11 @@
               </div>
             </div>
             <div class="card-content">
-              <a href="/admin/articles/<%= article.slug %>" class="card-title">
-                <%= article.title %>
-              </a>
+              <div class="card-title">
+                <a href="/admin/articles/<%= article.slug %>">
+                  <%= article.title %>
+                </a>
+              </div>
               <p><%= article.description %></p>
               <div class="button-container">
                 <a
