@@ -92,16 +92,19 @@
   box-shadow: none;
   .button-container {
     width: 100%;
+    margin-top: 0;
     @include flex();
     a {
       display: inline-block;
       width: 90%;
+      margin: 0;
+      display: none;
     }
     form {
-      width: 100%;
+      width: 50%;
       button {
         width: 90%;
-        margin-left: 1rem;
+        margin-left: 10%;
       }
     }
   }
@@ -111,7 +114,11 @@
 .product-count {
   padding-left: 0.75rem;
 }
-
+.product-section {
+  input[type="file"] {
+    border: none;
+  }
+}
 .index-container {
   .container {
     @include flex-direction(column);
@@ -166,22 +173,20 @@
       font-size: 3.5rem;
     }
   }
-}
-
-.button-container {
-  @include flex();
-  padding: 0;
-  width: 50%;
-  margin: 1.5 auto;
-  a {
-    display: line-block;
-    width: 50%;
-    border: 1px solid $border;
+  .button-container {
+    @include flex();
+    padding: 0;
+    width: 100%;
+    margin: 1.5 auto;
+    .go-button {
+      display: line-block;
+      width: 95%;
+      border: 1px solid $border;
+    }
   }
-
-  .go-button {
-    margin-right: 2rem;
-    width: 50%;
+  a {
+    margin-left: 5%;
+    width: 95%;
   }
 }
 

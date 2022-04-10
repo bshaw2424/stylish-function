@@ -2,7 +2,6 @@
 
 .container {
   margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 .title-container {
   margin-bottom: 1rem;
@@ -39,19 +38,16 @@
   box-shadow: none;
   margin-top: 1rem;
   .button-container {
-    width: 100%;
-    margin: 1rem 0;
-    padding: 1rem 0;
-    border-top: 1px solid $border;
-    border-bottom: 1px solid $border;
+    width: 95%;
     @include flex();
-    a {
+    .go-button {
       display: inline-block;
       min-width: 50%;
-      margin-right: 2rem;
+      margin: 0;
     }
     form {
       width: 100%;
+      margin-left: 1rem;
       button {
         width: 100%;
       }
@@ -64,7 +60,14 @@
   padding-left: 0.75rem;
 }
 
+.product-section {
+  input[type="file"] {
+    border: none;
+  }
+}
+
 .index-container {
+  margin-top: 0;
   .container {
     padding: 0;
   }

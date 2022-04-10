@@ -17,21 +17,27 @@
 }
 
 .card {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
+  box-shadow: $box-shadow;
+  margin-top: 0;
   .card-content {
-    padding: 0 8px;
-    h3 {
-      @include text-align(center);
-      margin: 0.75rem 0;
+    padding: 1rem 1rem 1.5rem;
+    .card-title {
       border: none;
-      a {
-        font-size: 2rem;
+      margin: 0;
+      padding: 0;
+      @include text-align(center);
+      h3 {
+        @include text-align(center);
+        margin: 0.75rem 0;
+        border: none;
+        a {
+          font-size: 2rem;
+        }
       }
     }
     .product-description {
-      padding: 0.75rem;
-      border-top: 1px solid $border;
-      border-bottom: 1px solid $border;
+      @include text-align(center);
     }
   }
 }
@@ -51,10 +57,9 @@
     }
   }
   .card-content {
-    padding: 0 0.75rem;
+    padding-top: 1rem;
     .product_description {
       border-top: 1px solid $border;
-      border-bottom: 1px solid $border;
       padding: 0.75rem;
       margin: 0;
     }
@@ -66,6 +71,7 @@
       .card-title {
         font-size: 2rem;
         margin: 0;
+        @include text-align(center);
       }
       .card-price {
         font-size: 1.5rem;

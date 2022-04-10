@@ -36,7 +36,10 @@
 
   .card-container {
     @include flex-direction(column);
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     .card {
+      margin: 0;
       @include flex();
       .card-image {
         height: 200px;
@@ -46,11 +49,10 @@
         }
       }
       .card-content {
-        padding: 0;
-        margin-left: 1rem;
+        padding: 0.75rem 1.5rem;
         .card-title {
           @include flex-space-between(space-between, center);
-          margin: 0;
+          margin: 0.75rem 0;
           padding-bottom: 0.75rem;
           border-bottom: 1px solid $border;
           font-size: 2rem;
@@ -62,11 +64,11 @@
     }
   }
   .button-container {
-    min-width: 100%;
-    border-top: 1px solid $border;
+    width: 70%;
+    margin: 0 auto;
     a {
-      width: 70%;
-      margin: 2rem auto;
+      width: 100%;
+      margin: 1rem auto;
     }
   }
 }

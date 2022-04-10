@@ -1,11 +1,13 @@
 .article-product_description {
   h1 {
     @include text-align(center);
-    margin: 1rem auto;
+    margin: 3rem 0 0rem 0;
+    color: $white;
+    padding: 1.5rem 0;
   }
   p {
-    padding: 1rem;
-    border-top: 1px solid $border;
+    padding: 1rem 0;
+    margin: 0 0 2rem 0;
     border-bottom: 1px solid $border;
   }
 }
@@ -20,15 +22,12 @@
     }
   }
   .card-content {
-    padding: 0;
+    padding: 1rem 0 1.5rem 0;
     .card-title {
       @include text-align(center);
-      margin: 0.75rem auto;
-    }
-    .product-description {
-      padding: 0.75rem;
-      border-top: 1px solid $border;
-      border-bottom: 1px solid $border;
+      border: none;
+      margin: 0;
+      padding: 0;
     }
   }
 }
@@ -47,6 +46,9 @@
       .card-details {
         @include flex-direction(column);
         border: none;
+        .card-title {
+          border: none;
+        }
       }
       .button-container {
         border: none;

@@ -1,6 +1,7 @@
 @import "../variables";
 
 .title-container {
+  margin-top: 3rem;
   h1 {
     @include text-align(center);
     margin-top: 1rem;
@@ -13,9 +14,11 @@
   padding: 0 0.75rem;
   a {
     width: 100%;
+    margin: 0 0 1rem 0;
   }
   #filter-search {
     margin: 0.75rem 0;
+    width: 100%;
   }
   #filter-search {
     height: 36px;
@@ -23,7 +26,20 @@
 }
 
 .article-container {
-  box-shadow: none;
+  .card {
+    .card-content {
+      padding: 1rem 1rem 1.5rem;
+      .card-title {
+        margin: 0;
+        a {
+          display: inline-block;
+          width: 100%;
+          @include text-align(center);
+          margin: 0;
+        }
+      }
+    }
+  }
   .button-container {
     width: 100%;
     padding: 1rem 0;
@@ -49,7 +65,9 @@
 .product-count {
   padding-left: 0.75rem;
 }
-
+.product-section {
+  margin-top: 0;
+}
 .index-container {
   .container {
     flex-direction: column;
@@ -102,11 +120,14 @@
     .button-container {
       min-width: 100%;
       @include flex-direction(column);
+      form {
+        margin-left: 0;
+      }
     }
   }
 }
 
-// mobile admin forms
+// edit mobile admin forms
 .form-group {
   width: 100%;
   @include flex-direction(column);
@@ -122,18 +143,19 @@
   label {
     padding-bottom: 0.1rem;
   }
-}
 
-.button-container {
-  @include flex-direction(column);
-  padding: 0;
-  a {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-  .go-button {
-    display: none;
-    width: 100%;
+  .button-container {
+    @include flex-direction(column);
+    padding: 0;
+    margin: 0;
+    .go-button {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+    .go-button {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
   }
 }
 
