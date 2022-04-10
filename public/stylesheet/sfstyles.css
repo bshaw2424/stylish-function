@@ -866,11 +866,9 @@ h1 {
   }
   .article-section h1 {
     text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: white;
     max-width: 100%;
     font-size: 4rem;
+    padding-top: 1rem;
   }
   .article-section .article-container {
     margin-bottom: 2rem;
