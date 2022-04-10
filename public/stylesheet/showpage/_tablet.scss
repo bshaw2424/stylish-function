@@ -1,41 +1,38 @@
 .article-product {
-  margin: 3rem 0;
   .article-product_description {
     h1 {
       @include text-align(center);
-      color: $white;
-      padding: 1rem 0;
-      margin: 0;
+      font-size: 3rem;
     }
     p {
-      border-bottom: 1px solid $border;
       padding-bottom: 1rem;
       font-size: 1.2rem;
     }
   }
+
+  .card {
+    .card-image {
+      height: 350px;
+      img {
+        @include images(100%, 100%, cover);
+      }
+    }
+    .card-content {
+      padding: 1rem 0;
+      .card-title {
+        @include text-align(center);
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+      .product-description {
+        padding: 0;
+        @include text-align(center);
+      }
+    }
+  }
 }
 
-.card {
-  .card-image {
-    height: 350px;
-    img {
-      @include images(100%, 100%, cover);
-    }
-  }
-  .card-content {
-    padding: 1rem 0;
-    .card-title {
-      @include text-align(center);
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
-    .product-description {
-      padding: 0;
-      @include text-align(center);
-    }
-  }
-}
 // index product showpage section
 .product-container {
   .product {

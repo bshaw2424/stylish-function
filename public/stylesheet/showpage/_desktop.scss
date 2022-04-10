@@ -1,41 +1,36 @@
 .article-product {
-  margin: 4rem 0 0 0;
   .article-product_description {
     h1 {
-      @include text-align(center);
-      margin: 1rem auto;
-      color: $white;
-      padding: 1.5rem 0;
+      padding-top: 1rem;
+      font-size: 3.5rem;
     }
     p {
-      border-bottom: 1px solid $border;
-      padding-bottom: 1rem;
       font-size: 1.3rem;
     }
   }
-}
 
-.row {
-  -webkit-box-flex: unset;
-  flex: unset;
-}
-.card {
-  margin: 0 0.75rem;
-  padding-bottom: 2rem;
-  box-shadow: $box-shadow;
-  .card-image {
-    height: 350px;
-    img {
-      @include images(100%, 100%, cover);
-    }
+  .row {
+    -webkit-box-flex: unset;
+    flex: unset;
   }
-  .card-content {
-    padding: 1rem 1rem 1.5rem;
-    .card-title {
-      @include text-align(center);
-      margin: 0 0 0.75rem 0;
-      padding: 0;
-      border: none;
+  .card {
+    margin: 1rem;
+    padding-bottom: 2rem;
+    box-shadow: $box-shadow;
+    .card-image {
+      height: 350px;
+      img {
+        @include images(100%, 100%, cover);
+      }
+    }
+    .card-content {
+      padding: 1rem 1rem 1.5rem;
+      .card-title {
+        @include text-align(center);
+        margin: 0 0 0.75rem 0;
+        padding: 0;
+        border: none;
+      }
     }
   }
 }
