@@ -8,11 +8,8 @@
 .article-section {
   h1 {
     @include text-align(center);
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 0;
-    background: #333;
-    color: $white;
-    padding: 1.5rem 0;
   }
 }
 
@@ -29,7 +26,6 @@
         padding: 0;
         h3 {
           width: 100%;
-          margin: 0;
           a {
             font-size: 2rem;
           }

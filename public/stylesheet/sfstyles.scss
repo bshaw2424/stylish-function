@@ -71,8 +71,11 @@ h6 {
   color: $title-text;
 }
 h1 {
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
   background: none;
+  margin: 1rem 0;
+}
+.card-title h3 {
   margin: 1rem 0;
 }
 form {
