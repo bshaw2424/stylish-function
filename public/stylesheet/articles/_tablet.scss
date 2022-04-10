@@ -10,11 +10,11 @@
   }
 
   .article-container {
+    box-shadow: $box-shadow;
     .article-container_card {
       margin-bottom: 1.8rem;
     }
     .card {
-      box-shadow: $box-shadow;
       @include flex();
       .card-image {
         height: 100%;

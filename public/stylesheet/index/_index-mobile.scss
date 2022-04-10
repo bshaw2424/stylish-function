@@ -52,12 +52,6 @@
     padding: 2rem 0;
     color: white;
   }
-  .card-content .card-title {
-    text-align: center;
-    margin: 1rem;
-    padding: 0;
-    font-size: 2rem;
-  }
 
   .card-container {
     margin-bottom: 2rem;
@@ -73,15 +67,9 @@
         }
       }
       .card-content {
-        padding: 0 8px;
+        padding: 1rem 1rem 1.5rem;
         .card-title {
-          margin: 0.75rem 0;
           border: 0;
-        }
-        .card-description {
-          border-top: 1px solid $border;
-          border-bottom: 1px solid $border;
-          padding: 0.75rem 0;
         }
       }
     }
