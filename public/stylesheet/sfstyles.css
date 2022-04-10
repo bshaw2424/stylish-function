@@ -4210,6 +4210,7 @@ h1 {
   }
   .button-container .go-button {
     display: inline-block;
+    width: 100%;
     margin: 0;
   }
   .button-container .go-button:hover {
