@@ -4084,6 +4084,10 @@ h1 {
     font-size: 3rem;
     margin: 0;
   }
+  .article-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .article-container .card {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
