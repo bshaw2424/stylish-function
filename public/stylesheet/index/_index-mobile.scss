@@ -78,17 +78,16 @@
       }
     }
   }
-}
 
-.button-container {
-  margin-bottom: 1rem;
-  .go-button {
-    display: inline-block;
-    width: 100%;
-    margin: 0;
-    &:hover {
-      padding: 0;
-      @include box-shadow(none);
+  .button-container {
+    margin-bottom: 2rem;
+    .go-button {
+      display: inline-block;
+      width: 100%;
+      &:hover {
+        padding: 0;
+        @include box-shadow(none);
+      }
     }
   }
 }

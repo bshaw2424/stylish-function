@@ -2554,7 +2554,7 @@ h1 {
   }
   .index-articles .container .button-container a {
     width: 100%;
-    margin: 1rem auto;
+    margin-bottom: 2rem;
   }
   .article-section {
     margin: 2rem 0;
@@ -4209,15 +4209,14 @@ h1 {
   .index-articles .container .card-container .card .card-content .card-title {
     border: 0;
   }
-  .button-container {
-    margin-bottom: 1rem;
+  .index-articles .button-container {
+    margin-bottom: 2rem;
   }
-  .button-container .go-button {
+  .index-articles .button-container .go-button {
     display: inline-block;
     width: 100%;
-    margin: 0;
   }
-  .button-container .go-button:hover {
+  .index-articles .button-container .go-button:hover {
     padding: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
