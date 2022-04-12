@@ -29,8 +29,11 @@
         padding: 0 1rem 1.5rem 1rem;
         .card-title {
           @include text-align(justify);
-
+          border: none;
+          margin: 0;
+          padding: 0;
           h3 {
+            margin: 0;
             a {
               font-size: 2rem;
               margin: 0;

@@ -870,7 +870,7 @@ h1 {
     padding-top: 1rem;
   }
   .article-section .article-container {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   .article-section .article-container .card {
     display: -webkit-box;
@@ -890,10 +890,16 @@ h1 {
        object-fit: cover;
   }
   .article-section .article-container .card .card-content {
-    padding: 0 1rem 1.5rem 1rem;
+    padding: 1rem 1rem 1.5rem;
   }
   .article-section .article-container .card .card-content .card-title {
+    margin: 0;
+    padding: 0;
+    border: none;
     text-align: justify;
+  }
+  .article-section .article-container .card .card-content .card-title h3 {
+    margin: 0;
   }
   .article-section .article-container .card .card-content .card-title h3 a {
     font-size: 2.5rem;
@@ -1720,6 +1726,12 @@ h1 {
   }
   .article-section .article-container .card .card-content .card-title {
     text-align: justify;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .article-section .article-container .card .card-content .card-title h3 {
+    margin: 0;
   }
   .article-section .article-container .card .card-content .card-title h3 a {
     font-size: 2rem;
@@ -2591,9 +2603,11 @@ h1 {
   }
   .article-section .article-container .card .card-content .card-title {
     text-align: center;
+    border: none;
   }
   .article-section .article-container .card .card-content .card-title h3 {
     width: 100%;
+    margin: 0;
     text-align: left;
     font-size: 2rem;
   }
@@ -4112,6 +4126,7 @@ h1 {
   }
   .article-container .card .card-content .card-title h3 {
     width: 100%;
+    margin: 0;
   }
   .article-container .card .card-content .card-title h3 a {
     font-size: 2rem;
