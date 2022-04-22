@@ -1,14 +1,10 @@
 "use strict";
 
-const {
-  findById
-} = require("../../models/Contacts");
+const { findById } = require("../../models/Contacts");
 
 const ContactModel = require("../../models/Contacts");
 
-const {
-  ajaxFilter
-} = require("../../functions");
+const { ajaxFilter } = require("../../functions");
 
 module.exports.index = async (req, res, next) => {
   const messages = await ContactModel.find();
@@ -18,16 +14,14 @@ module.exports.index = async (req, res, next) => {
   }
 
   res.render("admin/contacts/contact", {
-    messages
+    messages,
   });
 };
 
 module.exports.create = (req, res) => res.render("admin/contacts/contactUs");
 
 module.exports.post = async (req, res, next) => {
-  const {
-    Message
-  } = req.body;
+  const { Message } = req.body;
   const newMessage = new ContactModel(Message);
 
   if (!newMessage) {
@@ -43,24 +37,21 @@ module.exports.update = (req, res) => {
 };
 
 module.exports.showPage = async (req, res, next) => {
-  const {
-    id
-  } = req.params;
+  const { id } = req.params;
   const message = await ContactModel.findById(id);
 
-  if (!message) {
-    throw new asyncError("Message Not Found", 404);
-  }
+  // if (!message) {
+  //   throw new asyncError("Message Not Found", 404);
+  // }
 
   res.render("admin/contacts/contactShowPage", {
-    message
+    message,
   });
 };
 
 module.exports.delete = async (req, res, next) => {
-  const {
-    id
-  } = req.params;
+  const { id } = req.params;
+
   const deleteMessage = await ContactModel.findByIdAndDelete(id);
 
   if (!deleteMessage) {
