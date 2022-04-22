@@ -45,4 +45,18 @@
     </div>
   </section>
 </article>
+<script>
+  const deleteButton = document.querySelectorAll(".delete-button");
+  deleteButton.forEach(button => {
+    button.addEventListener("click", async e => {
+      e.preventDefault();
+      await fetch("/admin/messages/", {
+        method: "DELETE",
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      })
+        .then(data => console.log("data was deleted"))
+        .catch(err => console.log(err));
+    });
+  });
+</script>
 <%- include ../../partials/footer %>
