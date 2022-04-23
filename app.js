@@ -34,8 +34,12 @@ app.use(methodOverride("_method"));
 app.use(
   session({
     secret: "lookingtogetthisstarted",
-    resave: true,
-    saveUninitialized: true,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: false,
+      maxAge: 3600000, //1 hour
+    },
   }),
 );
 app.use(passport.initialize());
