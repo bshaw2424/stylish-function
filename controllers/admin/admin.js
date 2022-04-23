@@ -4,9 +4,7 @@ const ENV = require("dotenv").config();
 
 const ArticleModel = require("../../models/Article");
 
-const {
-  AsyncError
-} = require("../../utility/error");
+const { AsyncError } = require("../../utility/error");
 
 module.exports.index = async (req, res) => {
   const articles = await ArticleModel.find();
@@ -16,10 +14,11 @@ module.exports.index = async (req, res) => {
   }
 
   res.render("admin/adminIndex", {
-    articles
+    articles,
   });
 };
 
+// login in route
 module.exports.login = (req, res) => {
   res.render("admin/login");
 };
