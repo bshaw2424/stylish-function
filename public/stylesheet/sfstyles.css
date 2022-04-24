@@ -575,8 +575,6 @@ h4,
 
 .success-page .success-body h1 {
   margin: 0;
-  color: white;
-  padding: 1rem;
 }
 
 .success-page .success-body p {
@@ -1264,8 +1262,8 @@ h1 {
   .form .title-container h1 {
     width: 100%;
     border: none;
-    padding: 1.5rem 0;
     font-size: 3.5rem;
+    color: #333;
   }
   .form .button-container {
     display: -webkit-box;
