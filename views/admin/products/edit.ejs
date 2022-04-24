@@ -31,17 +31,38 @@
           value="<%= product.price %>"
         />
 
-        <label for="product-description">Product Description</label>
+        <label for="key-features">Key Features</label>
         <textarea
-          name="Product[description]"
-          id="description"
+          name="Product[key_features]"
+          id="key-features"
           cols="30"
           rows="10"
           class="form-field"
         >
-<%= product.description %>
-          </textarea
+         <%= product.key_features %>
+        </textarea>
+
+        <label for="drawbacks">Drawbacks</label>
+        <textarea
+          name="Product[drawbacks]"
+          id="drawbacks"
+          cols="30"
+          rows="10"
+          class="form-field"
         >
+          <%= product.drawbacks %>
+        </textarea>
+
+        <label for="product-description">Product Description</label>
+        <textarea
+          name="Product[description]"
+          id="product-description"
+          cols="30"
+          rows="10"
+          class="form-field"
+        >
+         <%= product.description %>
+        </textarea>
       </div>
       <div class="button-container">
         <button class="btn go-button" id="add-a-product-button">save</button>
