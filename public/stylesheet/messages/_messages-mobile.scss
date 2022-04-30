@@ -22,6 +22,7 @@
       }
     }
     .collection {
+      height: 100%;
       a {
         .collection-item-info {
           @include flex-space-between(space-between, center);

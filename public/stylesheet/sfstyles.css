@@ -259,6 +259,10 @@ h4,
   padding: 0.75rem 0;
 }
 
+.message-center-header .container .collection {
+  height: 100%;
+}
+
 .message-center-header .container .collection a .collection-item-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,10 +340,6 @@ h4,
 
 .footer-navigation .container ul li, .footer-navigation .container .copyright li {
   padding-bottom: 0.5rem;
-}
-
-.message-center-header {
-  height: 960px;
 }
 
 .message-center-header .container .message-center_h1 {
@@ -1502,6 +1502,12 @@ h1 {
   }
   .message-page .message-center-header .container .collection a .collection-item-info div {
     width: 100%;
+  }
+  .message-page .message-center-header .container .collection a .collection-item-info .collection-group_date {
+    text-align: center;
+  }
+  .message-page .message-center-header .container .collection a .collection-item-info .message-center_delete {
+    background: transparent;
   }
   .message-page .message-center-header .container .collection a .collection-item-info form {
     display: block;
@@ -3059,9 +3065,6 @@ h1 {
   .index-container .container .card-content .card-details {
     border-bottom: 1px solid #333;
   }
-  .message-center-header {
-    height: 960px;
-  }
   .message-center-header .container .message-center_h1 {
     color: #333333;
     margin: 2rem 0;
@@ -4259,6 +4262,9 @@ h1 {
     font-size: 1.4rem;
     text-align: center;
     padding: 0.75rem 0;
+  }
+  .message-center-header .container .collection {
+    height: 100%;
   }
   .message-center-header .container .collection a .collection-item-info {
     display: -webkit-box;
