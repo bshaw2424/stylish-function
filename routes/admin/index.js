@@ -17,7 +17,6 @@ router.get("/login", AsyncError(Admin.login));
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/admin/dashboard",
     failureRedirect: "/admin/login",
   }),
   AsyncError(Admin.post),
