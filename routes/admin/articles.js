@@ -22,18 +22,15 @@ const upload = multer({
 
 const Article = require("../../controllers/admin/articles");
 
-router
-  .route("/")
-  .get(checkAuthentication, AsyncError(Article.index))
-  .post(
-    upload.single("Article[image]"),
-    checkAuthentication,
-    AsyncError(Article.post),
-  );
+router.route("/").get(AsyncError(Article.index)).post(
+  upload.single("Article[image]"),
+
+  AsyncError(Article.post),
+);
 router.get("/new", checkAuthentication, Article.create);
 router
   .route("/:slug")
-  .get(checkAuthentication, AsyncError(Article.showPage))
+  .get(AsyncError(Article.showPage))
   .patch(checkAuthentication, AsyncError(Article.update))
   .delete(checkAuthentication, AsyncError(Article.delete)); //edit routes
 
