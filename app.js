@@ -44,10 +44,10 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-passport.use(new LocalStrategy(User.authenticate()));
 
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
