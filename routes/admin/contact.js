@@ -14,8 +14,6 @@ router.get("/", checkAuthentication, AsyncError(Contact.index));
 router.get("/new", Contact.create);
 router.post("/", AsyncError(Contact.post));
 router.post("/post", checkAuthentication, AsyncError(Contact.update));
-router.get("/:id", checkAuthentication, AsyncError(Contact.showPage));
-router.delete("/:id", checkAuthentication, AsyncError(Contact.delete));
+router.get("/:id", AsyncError(Contact.showPage));
+router.delete("/:id", AsyncError(Contact.delete));
 module.exports = router;
-// checkAuthentication,
-// checkAuthentication,
