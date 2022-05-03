@@ -72,9 +72,6 @@
       @include flex-space-between(space-between, center);
       a {
         width: 100%;
-        &:first-child {
-          margin-right: 1rem;
-        }
       }
     }
   }
