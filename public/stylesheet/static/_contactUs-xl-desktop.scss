@@ -28,3 +28,8 @@
     }
   }
 }
+
+.g-recaptcha {
+  @include flex-align(center, center);
+  margin: 1rem 0;
+}
