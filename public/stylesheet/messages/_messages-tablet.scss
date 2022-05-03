@@ -1,6 +1,7 @@
 @import "../variables";
 
 .message-center-header {
+  min-height: 815px;
   .container {
     .message-center_h1 {
       color: $title-text;
@@ -38,7 +39,7 @@
 .message-page {
   .message-details {
     .container {
-      height: 800px;
+      min-height: 800px;
       margin-top: 5rem;
       h2 {
         @include text-align(center);
