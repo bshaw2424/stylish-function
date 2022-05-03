@@ -41,6 +41,7 @@
   .message-details {
     margin: 0;
     .container {
+      height: auto;
       h2 {
         @include text-align(center);
       }
