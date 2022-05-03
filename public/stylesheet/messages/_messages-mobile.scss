@@ -42,6 +42,7 @@
     margin: 0;
     .container {
       height: auto;
+      margin-top: 0;
       h2 {
         @include text-align(center);
       }

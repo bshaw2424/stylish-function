@@ -285,6 +285,7 @@ h4,
 
 .message-page .message-details .container {
   height: auto;
+  margin-top: 0;
 }
 
 .message-page .message-details .container h2 {
@@ -4290,6 +4291,7 @@ h1 {
   }
   .message-page .message-details .container {
     height: auto;
+    margin-top: 0;
   }
   .message-page .message-details .container h2 {
     text-align: center;
