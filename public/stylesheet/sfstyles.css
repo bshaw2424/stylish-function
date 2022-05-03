@@ -3773,7 +3773,7 @@ h1 {
     text-align: center;
     margin-top: 1rem;
   }
-  .article-container .button-container {
+  .article-container .card .card-content .button-container {
     width: 100%;
     padding: 1rem 0;
     margin: 0;
@@ -3783,15 +3783,16 @@ h1 {
     display: -ms-flexbox;
     display: flex;
   }
-  .article-container .button-container a {
+  .article-container .card .card-content .button-container a {
     display: inline-block;
     min-width: 50%;
     margin-right: 2rem;
   }
-  .article-container .button-container form {
+  .article-container .card .card-content .button-container form {
     width: 100%;
+    margin: 1.5rem 0 0 0;
   }
-  .article-container .button-container form button {
+  .article-container .card .card-content .button-container form button {
     width: 100%;
   }
   .product-count {
