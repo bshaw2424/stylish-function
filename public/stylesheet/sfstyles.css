@@ -565,6 +565,19 @@ h4,
   background-color: #00aaff;
 }
 
+.contact-page .contact-page_form .g-recaptcha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+}
+
 .success-page .success-body {
   height: 75vh;
   display: -webkit-box;
@@ -1060,18 +1073,6 @@ h1 {
   }
   .button-container .btn-submit:hover {
     background-color: #00aaff;
-  }
-  .g-recaptcha {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 1rem 0;
   }
   .row .col {
     padding: 0;
