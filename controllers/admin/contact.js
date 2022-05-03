@@ -21,7 +21,7 @@ module.exports.create = (req, res) => res.render("admin/contacts/contactUs");
 module.exports.post = async (req, res, next) => {
   const { Message } = req.body;
   const newMessage = new ContactModel(Message);
-
+  console.log(req.body);
   await newMessage.save();
   res.redirect("/contact-us/success");
 };
