@@ -1077,7 +1077,7 @@ h1 {
   }
   .success-page .success-body div a {
     margin-bottom: 1rem;
-    width: 70%;
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1087,6 +1087,9 @@ h1 {
     -webkit-box-align: space-between;
         -ms-flex-align: space-between;
             align-items: space-between;
+  }
+  .success-page .success-body div a:first-chilld {
+    margin-right: 2rem;
   }
   .button-container {
     display: -webkit-box;
