@@ -30,10 +30,10 @@
     }
     div {
       width: 100%;
-      @include flex-direction(column);
       a {
         margin-bottom: 1rem;
         width: 70%;
+        @include flex-align(center, space-between);
       }
     }
   }
