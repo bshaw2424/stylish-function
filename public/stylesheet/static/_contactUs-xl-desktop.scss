@@ -32,10 +32,10 @@
       width: 100%;
       a {
         margin-bottom: 1rem;
-        width: 50%;
-        @include flex-align(center, space-between);
-        &:first-chilld {
-          margin-right: 2rem;
+        width: 100%;
+        &:first-child {
+          display: inline-block;
+          margin: 0 2rem;
         }
       }
     }
