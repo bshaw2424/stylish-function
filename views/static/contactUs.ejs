@@ -60,7 +60,7 @@
         class="g-recaptcha"
         name="captcha"
         data-sitekey="6LfDB7UfAAAAAPf31ZXJb6EYamYE-NZ0ENftjQO1"
-        data-callback="formButton"
+        data-callback="undisableFormButton"
       ></div>
       <div class="button-container">
         <button
@@ -82,24 +82,19 @@
     .addEventListener("submit", submitForm);
   const button = document.querySelector("#contact-send-button");
 
+  // submits recaptcha response
   function submitForm(e) {
     const secretKey = "6LfDB7UfAAAAAAs1e_yxA1gprsTEuZn--7ihanyF";
-    const a = document.querySelector("#g-recaptcha-response").value;
+    //const a = document.querySelector("#g-recaptcha-response").value;
 
     const response = grecaptcha.getResponse();
     // const verify = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${response}`;
     // fetch(verify).then(data =>)
-
-    if (response.length === 0) {
-      e.preventDefault();
-      alert("Captcha must be clicked!!!");
-      console.log(a);
-    } else {
-      console.log(response);
-    }
+    console.log(response);
   }
 
-  function formButton() {
+  // removes disabled attribute from button when recaptcha passes
+  function undisableFormButton() {
     const btn = document.querySelector("#contact-send-button");
     btn.removeAttribute("disabled");
   }
