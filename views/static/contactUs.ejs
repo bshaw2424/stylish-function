@@ -9,7 +9,14 @@
         may have. We look forward to your message.
       </p>
     </div>
-    <form class="contact-page_form" action="/admin/messages" method="POST">
+    <form
+      class="contact-page_form"
+      id="contact-form"
+      action="/admin/messages/?response="
+      +
+      g-captcha-response;
+      method="POST"
+    >
       <!-- name input field -->
       <label for="name">Name</label>
       <input
@@ -49,30 +56,52 @@
         required
       >
       </textarea>
+      <div
+        class="g-recaptcha"
+        name="captcha"
+        data-sitekey="6LfDB7UfAAAAAPf31ZXJb6EYamYE-NZ0ENftjQO1"
+        data-callback="formButton"
+      ></div>
       <div class="button-container">
-        <button type="submit" id="contact-send-button" class="btn btn-submit">
+        <button
+          type="submit"
+          id="contact-send-button"
+          class="btn btn-submit"
+          disabled
+        >
           Submit
         </button>
       </div>
-      <div
-        class="g-recaptcha"
-        name="Message[g-recaptcha-response]"
-        data-sitekey="6LfDB7UfAAAAAPf31ZXJb6EYamYE-NZ0ENftjQO1"
-      ></div>
     </form>
   </div>
 </section>
-<!-- <script>
+
+<script>
+  document
+    .querySelector("#contact-form")
+    .addEventListener("submit", submitForm);
   const button = document.querySelector("#contact-send-button");
-  const form = document.querySelector(".contact-page_form");
-  form.addEventListener("submit", e => {
-    const parentElement = document.querySelector(".contact-page");
-    const container = document.querySelector(".container");
-    const newDiv = document.createElement("div");
-    newDiv.classList.add("new-div");
-    const text = document.createTextNode("message successfully sent");
-    button.setAttribute("disabled", "");
-    newDiv.appendChild(text);
-  });
-</script> -->
+
+  function submitForm(e) {
+    const secretKey = "6LfDB7UfAAAAAAs1e_yxA1gprsTEuZn--7ihanyF";
+    const a = document.querySelector("#g-recaptcha-response").value;
+
+    const response = grecaptcha.getResponse();
+    // const verify = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${response}`;
+    // fetch(verify).then(data =>)
+
+    if (response.length === 0) {
+      e.preventDefault();
+      alert("Captcha must be clicked!!!");
+      console.log(a);
+    } else {
+      console.log(response);
+    }
+  }
+
+  function formButton() {
+    const btn = document.querySelector("#contact-send-button");
+    btn.removeAttribute("disabled");
+  }
+</script>
 <% include ../partials/footer %>
