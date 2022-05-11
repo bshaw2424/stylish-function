@@ -227,7 +227,6 @@
       margin: 1rem auto;
       width: 100%;
       @include flex-align(center, center);
-      flex-direction: column;
       .photo-update-container {
         width: 70%;
         margin-bottom: 1rem;
@@ -241,6 +240,15 @@
       }
       .button-container {
         width: 100%;
+        margin: 1rem 0 0 0;
+        @include flex();
+        .static-button,
+        .go-button {
+          width: 90%;
+        }
+        .go-button {
+          margin-right: 10%;
+        }
       }
     }
   }

@@ -4053,10 +4053,6 @@ h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .image-update .image-update_container form .photo-update-container {
     width: 70%;
@@ -4071,6 +4067,17 @@ h1 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+    margin: 1rem 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .image-update .image-update_container form .button-container .static-button,
+  .image-update .image-update_container form .button-container .go-button {
+    width: 90%;
+  }
+  .image-update .image-update_container form .button-container .go-button {
+    margin-right: 10%;
   }
   .admin-login-form {
     padding: 1rem;
