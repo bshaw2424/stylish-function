@@ -1336,6 +1336,7 @@ h1 {
   }
   .image-update {
     width: 100%;
+    margin: 3rem auto;
   }
   .image-update .image-update_container {
     display: -webkit-box;
@@ -1385,7 +1386,7 @@ h1 {
   }
   .image-update .image-update_container form .photo-update-container {
     display: inline-block;
-    width: 100%;
+    width: 40%;
     margin: 1rem auto;
     border: none;
   }
@@ -1397,6 +1398,13 @@ h1 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+  }
+  .image-update .image-update_container form .button-container .go-button,
+  .image-update .image-update_container form .button-container .static-button {
+    width: 100%;
+  }
+  .image-update .image-update_container form .button-container .go-button {
+    margin-right: 5%;
   }
   .admin-login-form {
     padding: 1rem;
@@ -2156,6 +2164,7 @@ h1 {
   }
   .image-update {
     width: 100%;
+    margin: 3.5rem auto;
   }
   .image-update .image-update_container {
     display: -webkit-box;
@@ -2189,7 +2198,6 @@ h1 {
   }
   .image-update .image-update_container form {
     margin: 1rem auto;
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2218,6 +2226,13 @@ h1 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+  }
+  .image-update .image-update_container form .button-container .go-button,
+  .image-update .image-update_container form .button-container .static-button {
+    min-width: 100%;
+  }
+  .image-update .image-update_container form .button-container .go-button {
+    margin-right: 10%;
   }
   .admin-login-form {
     padding: 1rem;
@@ -2980,6 +2995,7 @@ h1 {
   }
   .image-update {
     width: 100%;
+    margin: 3.5rem auto;
   }
   .image-update .image-update_container {
     display: -webkit-box;
@@ -3030,7 +3046,6 @@ h1 {
   }
   .image-update .image-update_container form .photo-update-container {
     display: inline-block;
-    width: 100%;
     margin: 1rem auto;
     border: none;
   }
@@ -3042,6 +3057,16 @@ h1 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .image-update .image-update_container form .button-container .go-button,
+  .image-update .image-update_container form .button-container .static-button {
+    width: 95%;
+  }
+  .image-update .image-update_container form .button-container .go-button {
+    margin-right: 5%;
   }
   .admin-login-form {
     padding: 1rem;
@@ -3644,6 +3669,7 @@ h1 {
   }
   .image-update {
     width: 100%;
+    margin: 3.5rem auto;
   }
   .image-update .image-update_container {
     display: -webkit-box;
@@ -3694,7 +3720,6 @@ h1 {
   }
   .image-update .image-update_container form .photo-update-container {
     display: inline-block;
-    width: 100%;
     margin: 1rem auto;
     border: none;
   }
@@ -3706,6 +3731,16 @@ h1 {
   }
   .image-update .image-update_container form .button-container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .image-update .image-update_container form .button-container .go-button,
+  .image-update .image-update_container form .button-container .static-button {
+    width: 95%;
+  }
+  .image-update .image-update_container form .button-container .go-button {
+    margin-right: 5%;
   }
   .admin-login-form {
     padding: 1rem;

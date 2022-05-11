@@ -159,6 +159,7 @@
 
 .image-update {
   width: 100%;
+  margin: 3.5rem auto;
   .image-update_container {
     @include flex-align(center, center);
     flex-direction: column;
@@ -181,7 +182,6 @@
       flex-direction: column;
       .photo-update-container {
         display: inline-block;
-        width: 100%;
         margin: 1rem auto;
         border: none;
         input {
@@ -193,6 +193,14 @@
       }
       .button-container {
         width: 100%;
+        @include flex();
+        .go-button,
+        .static-button {
+          width: 95%;
+        }
+        .go-button {
+          margin-right: 5%;
+        }
       }
     }
   }
