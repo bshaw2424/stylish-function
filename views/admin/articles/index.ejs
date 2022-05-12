@@ -1,6 +1,7 @@
-<%- include ../../partials/header %> <%- include ../../admin/mobile-nav %>
+<%- include ("../../partials/header") %> <%- include ("../../admin/mobile-nav")
+%>
 <section class="index-container">
-  <%- include ../../admin/admin-nav %>
+  <%- include ("../../admin/admin-nav") %>
   <div class="container">
     <div class="title-container">
       <h1>Articles</h1>
@@ -59,7 +60,7 @@
     </div>
   </div>
 </section>
-<%- include ../../partials/footer %>
+<%- include ("../../partials/footer") %>
 
 <script>
   const filterInput = document.querySelector(".filter-search #filter-search");

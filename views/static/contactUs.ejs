@@ -1,4 +1,4 @@
-<% include ../partials/header %> <% include ../partials/nav %>
+<%- include ("../partials/header") %> <%- include ("../partials/nav") %>
 
 <section class="contact-page">
   <div class="container">
@@ -12,9 +12,7 @@
     <form
       class="contact-page_form"
       id="contact-form"
-      action="/admin/messages/?response="
-      +
-      g-captcha-response;
+      action="/admin/messages/"
       method="POST"
     >
       <!-- name input field -->
@@ -58,7 +56,6 @@
       </textarea>
       <div
         class="g-recaptcha"
-        name="captcha"
         data-sitekey="6LfDB7UfAAAAAPf31ZXJb6EYamYE-NZ0ENftjQO1"
         data-callback="undisableFormButton"
       ></div>
@@ -79,24 +76,17 @@
 <script>
   document
     .querySelector("#contact-form")
-    .addEventListener("submit", submitForm);
+    .addEventListener("submit", undisableFormButton);
   const button = document.querySelector("#contact-send-button");
-
-  // submits recaptcha response
-  function submitForm(e) {
-    const secretKey = "6LfDB7UfAAAAAAs1e_yxA1gprsTEuZn--7ihanyF";
-    //const a = document.querySelector("#g-recaptcha-response").value;
-
-    const response = grecaptcha.getResponse();
-    // const verify = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${response}`;
-    // fetch(verify).then(data =>)
-    console.log(response);
-  }
 
   // removes disabled attribute from button when recaptcha passes
   function undisableFormButton() {
     const btn = document.querySelector("#contact-send-button");
     btn.removeAttribute("disabled");
+
+    const captchaResponse = document.querySelector(
+      "#g-recaptcha-response",
+    ).value;
   }
 </script>
-<% include ../partials/footer %>
+<%- include("../partials/footer") %>

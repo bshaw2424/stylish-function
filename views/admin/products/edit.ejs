@@ -1,7 +1,8 @@
-<%- include ../../partials/header %><%- include ../../admin/mobile-nav %>
+<%- include ("../../partials/header") %><%- include ("../../admin/mobile-nav")
+%>
 
 <section class="index-container">
-  <% include ../../admin/admin-nav %>
+  <% include ("../../admin/admin-nav") %>
   <div class="container">
     <form
       action="/admin/articles/<%= article.slug %>/products/<%= product.slug %>?_method=PATCH"
@@ -73,4 +74,4 @@
     </form>
   </div>
 </section>
-<%- include ../../partials/footer %>
+<%- include ("../../partials/footer") %>

@@ -1,10 +1,10 @@
-<% include ../../partials/header %>
+<%- include ("../../partials/header") %>
 <article class="featured">
-  <% include ../../admin/admin-nav %>
+  <%- include ("../../admin/admin-nav") %>
   <section class="form-container container">
     <h1 class="form-title">Featured Article</h1>
     <form action="/admin/featured/articles" method="POST">
-      <%- include("../../admin/_featuredEditForm") %>
+      <%- include ("../../admin/_featuredEditForm") %>
       <div class="contact-form-buttons">
         <button type="submit" class="form-button submit btn">Submit</button>
         <a href="/admin/products/seating" class="btn form-button back">Back</a>
