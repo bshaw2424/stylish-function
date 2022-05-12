@@ -52,6 +52,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+
 app.use("/admin", adminIndexRoutes);
 app.use("/admin/articles", articleRoutes);
 app.use("/admin/articles/:slug/products", productRoutes);
@@ -59,8 +60,9 @@ app.use("/admin/messages", contactRoutes);
 app.use("/admin/users", userRoutes);
 app.use("/articles", mainArticleRoutes);
 app.use("/articles/:slug/products", indexProductRoutes);
-
 app.use("/", staticRoutes);
+
 app.use(errorRoutes.errorMessage);
 app.use(errorRoutes.AsyncError);
+
 app.listen(PORT, () => console.log(`Server on PORT ${PORT}`));
