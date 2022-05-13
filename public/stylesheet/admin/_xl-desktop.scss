@@ -53,38 +53,48 @@
   }
 }
 
-.image-update {
-  .image-update_container {
-    @include flex-align(center, center);
-    flex-direction: column;
-    .image-container {
-      max-width: 70%;
-      height: 525px;
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    form {
-      margin: 1rem auto;
-      width: 70%;
-      @include flex-align(center, center);
-      flex-direction: column;
-      .photo-update-container {
-        width: 70%;
-        margin-bottom: 1rem;
-        border: none;
-        input {
-          display: inline-block;
-          width: 50%;
-          padding: 0.5rem 0;
-          border: none;
-        }
-      }
-    }
-  }
-}
+// .image-update {
+//   .image-update_container {
+//     @include flex-align(center, center);
+//     flex-direction: column;
+//     .image-container {
+//       max-width: 70%;
+//       height: 525px;
+//       img {
+//         object-fit: cover;
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+//     form {
+//       margin: 1rem auto;
+//       width: 70%;
+//       @include flex-align(center, center);
+//       flex-direction: column;
+//       .photo-update-container {
+//         width: 70%;
+//         margin-bottom: 1rem;
+//         border: none;
+//         input {
+//           display: inline-block;
+//           width: 50%;
+//           padding: 0.5rem 0;
+//           border: none;
+//         }
+//       }
+//     }
+//     .button-container {
+//       width: 100%;
+//       .go-button,
+//       .static-button {
+//         width: 100%;
+//       }
+//       .go-button {
+//         margin-right: 5%;
+//       }
+//     }
+//   }
+// }
 
 .index-container {
   box-shadow: none;
@@ -227,7 +237,7 @@
       flex-direction: column;
       .photo-update-container {
         display: inline-block;
-        width: 40%;
+        width: 100%;
         margin: 1rem auto;
         border: none;
         input {
@@ -241,7 +251,7 @@
         width: 100%;
         .go-button,
         .static-button {
-          width: 100%;
+          min-width: 100%;
         }
         .go-button {
           margin-right: 5%;
