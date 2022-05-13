@@ -22,11 +22,10 @@ const upload = multer({
 
 const Article = require("../../controllers/admin/articles");
 
-router.route("/").get(AsyncError(Article.index)).post(
-  upload.single("Article[image]"),
-
-  AsyncError(Article.post),
-);
+router
+  .route("/")
+  .get(AsyncError(Article.index))
+  .post(upload.single("Article[image]"), AsyncError(Article.post));
 router.get("/new", checkAuthentication, Article.create);
 router
   .route("/:slug")
@@ -39,7 +38,7 @@ router.get(
   "/:slug/photo-edit",
   checkAuthentication,
   AsyncError(Article.photoEdit),
-); //photo update
+);
 
 router.patch(
   "/:slug/photo",
