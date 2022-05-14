@@ -1255,14 +1255,14 @@ h1 {
             flex-direction: column;
     max-width: 100%;
   }
-  .form .title-container {
-    margin-bottom: 1.5rem;
-  }
-  .form .title-container h1 {
+  .form h1 {
     width: 100%;
     border: none;
     font-size: 3.5rem;
     color: #333;
+  }
+  .form .title-container {
+    margin-bottom: 1.5rem;
   }
   .form .button-container {
     display: -webkit-box;

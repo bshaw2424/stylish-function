@@ -4,8 +4,6 @@ const messageDeleteButtons = document.querySelectorAll(
 
 const collection_items = document.querySelectorAll(".collection-item");
 
-//const articleForm = document.querySelector(".article-form");
-
 (() => {
   collectionsButtonShowOnHover();
   collectionsButtonHideOnHover();

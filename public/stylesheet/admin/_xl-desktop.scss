@@ -187,14 +187,14 @@
 .form {
   @include flex-direction(column);
   max-width: 100%;
+  h1 {
+    width: 100%;
+    border: none;
+    font-size: 3.5rem;
+    color: #333;
+  }
   .title-container {
     margin-bottom: 1.5rem;
-    h1 {
-      width: 100%;
-      border: none;
-      font-size: 3.5rem;
-      color: #333;
-    }
   }
   .button-container {
     @include flex();
