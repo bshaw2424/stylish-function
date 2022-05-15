@@ -147,7 +147,11 @@
     @include flex-direction(column);
     margin: 3rem auto;
     @include flex();
-
+    .display-message {
+      font-size: 3rem;
+      letter-spacing: 0.3px;
+      opacity: 0.5;
+    }
     .card-image {
       img {
         @include images(100%, 100%, cover);
