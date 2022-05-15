@@ -18,7 +18,7 @@
     </div>
     <div class="article-container">
       <div class="row">
-        <div class="display-message hide">Article Not Found!</div>
+        <h1 class="display-message hide"></h1>
         <% for(const article of articles) { %>
         <div class="col s12 m6 l6 xl4">
           <div class="card">
@@ -102,6 +102,7 @@
       filterMessage.classList.add("hide");
     } else {
       filterMessage.classList.remove("hide");
+      filterMessage.innerText = "Article Not Found";
     }
   };
 </script>
