@@ -57,7 +57,7 @@
       <div
         class="g-recaptcha"
         data-sitekey="6LfDB7UfAAAAAPf31ZXJb6EYamYE-NZ0ENftjQO1"
-        data-callback="undisableFormButton"
+        data-callback="submitButtonClickableIfRecaptchaTrue"
       ></div>
       <div class="button-container">
         <button
@@ -76,17 +76,10 @@
 <script>
   document
     .querySelector("#contact-form")
-    .addEventListener("submit", undisableFormButton);
-  const button = document.querySelector("#contact-send-button");
+    .addEventListener("submit", submitButtonClickableIfRecaptchaTrue);
 
-  // removes disabled attribute from button when recaptcha passes
-  function undisableFormButton() {
-    const btn = document.querySelector("#contact-send-button");
-    btn.removeAttribute("disabled");
-
-    const captchaResponse = document.querySelector(
-      "#g-recaptcha-response",
-    ).value;
+  function submitButtonClickableIfRecaptchaTrue() {
+    document.querySelector("#contact-send-button").removeAttribute("disabled");
   }
 </script>
 <%- include("../partials/footer") %>
