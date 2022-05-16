@@ -1,8 +1,6 @@
 "use strict";
-
+require("dotenv").config();
 const mongoose = require("mongoose");
-
-const ENV = require("dotenv").config();
 
 mongoose.Promise = global.Promise;
 const MONGODB_URL = `mongodb+srv://bshaw-stylefunction:${process.env.DB_PASSWORD}@cluster0.3kkqi.mongodb.net/${process.env.DB_USER}`;
