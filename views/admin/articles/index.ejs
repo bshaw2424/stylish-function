@@ -67,10 +67,9 @@
     ".filter-search #filter-search",
   );
   const cardTitles = document.querySelectorAll(".card-content .card-title");
-  const card = document.querySelectorAll(".article-container .col");
+  const cards = document.querySelectorAll(".article-container .col");
   const filterMessage = document.querySelector(".display-message");
 
-  // listener to filter out article cards if they dont match user input
   articleFilterInput.addEventListener("input", e => {
     filterCards(e.target.value.toLowerCase().trim());
   });
@@ -85,13 +84,13 @@
 
   const filterOutCardsByTitleName = (cardTitles, letters) => {
     let cardArray = [];
-    const articleCards = [...card];
-    return cardTitles.filter((titleWord, index) => {
+    const articleCards = [...cards];
+    return cardTitles.filter((titleWord, cardTitleIndex) => {
       if (titleWord.indexOf(letters) > -1) {
-        cardArray.push(articleCards[index]);
-        articleCards[index].style.display = "";
+        cardArray.push(articleCards[cardTitleIndex]);
+        articleCards[cardTitleIndex].style.display = "";
       } else {
-        articleCards[index].style.display = "none";
+        articleCards[cardTitleIndex].style.display = "none";
       }
       displayMessageIfCardsDontMatchInput(cardArray);
     });
