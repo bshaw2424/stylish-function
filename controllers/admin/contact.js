@@ -3,6 +3,7 @@ const fetch = require("node-fetch");
 const { findById } = require("../../models/Contacts");
 
 const ContactModel = require("../../models/Contacts");
+require("dotenv").config();
 
 module.exports.index = async (req, res) => {
   const messages = await ContactModel.find();
@@ -18,9 +19,8 @@ module.exports.post = async (req, res) => {
   const { Message } = req.body;
   // reCaptcha response token
   const captcha = req.body["g-recaptcha-response"];
-  const secretKey = "6LfDB7UfAAAAAAs1e_yxA1gprsTEuZn--7ihanyF";
-
-  const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captcha}`;
+ 
+  const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captcha}`;
 
   const response = await fetch(verifyCaptchaResponseURL);
   const data = await response.json();
@@ -29,6 +29,8 @@ module.exports.post = async (req, res) => {
     await newMessage.save();
     res.redirect("/contact-us/success");
   }
+
+  
 };
 
 // module.exports.update = (req, res) => {
