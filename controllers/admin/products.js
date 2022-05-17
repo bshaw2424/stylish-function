@@ -128,7 +128,7 @@ module.exports.update = async (req, res, next) => {
   } = req.body;
   const product = await ProductModel.findOneAndUpdate({
     slug: product_slug
-  }, _objectSpread({}, Product), {
+  }, { ...Product }, {
     new: true
   });
   await product.save();
