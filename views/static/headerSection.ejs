@@ -29,7 +29,9 @@
           </div>
           <div class="card-content index-articles_card-content">
             <h3 class="card-title index-article-section_card-title">
-              <a href="/articles/<%= article.slug %>"> <%= article.title %> </a>
+              <a href="/main/articles/<%= article.slug %>">
+                <%= article.title %>
+              </a>
             </h3>
             <p class="card-description index-articles_card-description">
               <%= article.sub_description %>
@@ -40,7 +42,7 @@
       <% } %>
     </div>
     <div class="button-container index-articles_button-container">
-      <a class="go-button btn" href="/articles">see more articles</a>
+      <a class="go-button btn" href="/main/articles">see more articles</a>
     </div>
   </div>
 </section>
