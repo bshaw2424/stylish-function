@@ -14,7 +14,7 @@
         class="browser-default"
         placeholder="filter search"
       />
-      <a href="/admin/articles/new" class="btn go-button">Create New Article</a>
+      <a href="/articles/new" class="btn go-button">Create New Article</a>
     </div>
     <div class="article-container">
       <div class="row">
@@ -25,28 +25,26 @@
             <div class="card-image admin-card-image">
               <img src="<%= article.image.url %>" alt="<%= article.image %>" />
               <div class="overlay-icon">
-                <a
-                  href="/admin/articles/<%= article.slug %>/photo-edit"
-                  class="btn"
+                <a href="/articles/<%= article.slug %>/photo-edit" class="btn"
                   >update photo</a
                 >
               </div>
             </div>
             <div class="card-content">
               <h3 class="card-title">
-                <a href="/admin/articles/<%= article.slug %>">
+                <a href="/articles/<%= article.slug %>">
                   <%= article.title %>
                 </a>
               </h3>
               <p><%= article.description %></p>
               <div class="button-container">
                 <a
-                  href="/admin/articles/<%= article.slug %>/edit"
+                  href="/articles/<%= article.slug %>/edit"
                   class="btn go-button"
                   >Edit</a
                 >
                 <form
-                  action="/admin/articles/<%= article.slug %>?_method=DELETE"
+                  action="/articles/<%= article.slug %>?_method=DELETE"
                   method="POST"
                 >
                   <button class="btn delete-button">delete</button>

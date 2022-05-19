@@ -5,7 +5,7 @@
   <div class="container">
     <form
       class="form form-group"
-      action="/admin/articles/<%= articles.slug %>?_method=PATCH"
+      action="/articles/<%= articles.slug %>?_method=PATCH"
       method="POST"
     >
       <div class="title-container">
@@ -43,7 +43,7 @@
       </div>
       <div class="button-container">
         <button type="submit" class="btn go-button">update</button>
-        <a href="/admin/articles" class="static-button btn">cancel</a>
+        <a href="/articles" class="static-button btn">cancel</a>
       </div>
     </form>
   </div>

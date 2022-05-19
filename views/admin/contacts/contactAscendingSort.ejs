@@ -25,16 +25,14 @@
               "
             >
               <li>
-                <a
-                  href="/admin/messages/sortAsc/asc"
-                  class="message-ascending-button"
+                <a href="/messages/sortAsc/asc" class="message-ascending-button"
                   >oldest</a
                 >
               </li>
               -
               <li>
                 <a
-                  href="/admin/messages/sortDesc/desc"
+                  href="/messages/sortDesc/desc"
                   class="message-descending-button"
                   >newest</a
                 >
@@ -49,7 +47,7 @@
       <div class="collection">
         <% ascendingSort.forEach(sort =>{ %>
         <a
-          href="/admin/messages/<%= sort._id %>"
+          href="/messages/<%= sort._id %>"
           id="message-container"
           class="collection-item"
         >
@@ -67,7 +65,7 @@
             </div>
             <form
               class="message-delete-button"
-              action="/admin/messages/<%= sort._id %>?_method=DELETE"
+              action="/messages/<%= sort._id %>?_method=DELETE"
               method="POST"
             >
               <button

@@ -7,7 +7,7 @@
       <img src="<%= articles.image.url %>" alt="" />
     </div>
     <form
-      action="/admin/articles/<%= articles.slug %>/photo?_method=PATCH"
+      action="/articles/<%= articles.slug %>/photo?_method=PATCH"
       method="POST"
       enctype="multipart/form-data"
     >
@@ -19,7 +19,7 @@
       />
       <div class="button-container">
         <button type="submit" class="go-button btn">update</button>
-        <a href="/admin/articles" class="static-button btn">cancel</a>
+        <a href="/articles" class="static-button btn">cancel</a>
       </div>
     </form>
   </div>

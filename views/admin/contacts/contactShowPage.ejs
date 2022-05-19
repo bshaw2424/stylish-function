@@ -34,12 +34,12 @@
       <!-- end of contact message body -->
       <div class="message-showpage-buttons button-container">
         <form
-          action="/admin/messages/<%= message._id %>?_method=DELETE"
+          action="/messages/<%= message._id %>?_method=DELETE"
           method="POST"
         >
           <button class="btn delete-button">Delete</button>
         </form>
-        <a href="/admin/messages" class="btn static-button">cancel</a>
+        <a href="/messages" class="btn static-button">cancel</a>
       </div>
     </div>
   </section>
