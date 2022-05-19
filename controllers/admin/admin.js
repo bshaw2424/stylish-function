@@ -32,5 +32,5 @@ module.exports.post = (req, res, next) => {
 
 module.exports.logout = (req, res) => {
   req.logout();
-  res.redirect("/admin/login");
+  res.redirect("/login");
 };
