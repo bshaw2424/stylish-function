@@ -1,27 +1,24 @@
 "use strict";
 
+const subdomain = require("express-subdomain");
 const express = require("express");
+const app = express();
 
-const router = express.Router();
-
+const adminRouter = express.Router();
 const passport = require("passport");
-
 const { AsyncError } = require("../../utility/error");
-
 const { checkAuthentication } = require("../../middleware");
-
 const Admin = require("../../controllers/admin/admin");
-
 const { response } = require("express");
 
-router.get("/dashboard", checkAuthentication, AsyncError(Admin.index));
-router.get("/login", AsyncError(Admin.login));
-router.post(
+adminRouter.get("/dashboard", checkAuthentication, AsyncError(Admin.index));
+adminRouter.get("/login", AsyncError(Admin.login));
+adminRouter.post(
   "/login",
-  passport.authenticate("local", {
-    failureRedirect: "/admin/login",
-  }),
+  passport.authenticate("local", { failureRedirect: "/admin/login" }),
   AsyncError(Admin.post),
 );
-router.get("/logout", AsyncError(Admin.logout));
-module.exports = router;
+adminRouter.get("/logout", AsyncError(Admin.logout));
+
+app.use(subdomain("admin", adminRouter));
+module.exports = adminRouter;

@@ -1,20 +1,21 @@
 "use strict";
 
+const subdomain = require("express-subdomain");
 const express = require("express");
+const app = express();
 
-const router = express.Router();
-
+const adminRouter = express.Router();
 const { AsyncError } = require("../../utility/error");
-
 const { checkAuthentication } = require("../../middleware");
-
 const Contact = require("../../controllers/admin/contact");
 
-router.get("/", checkAuthentication, AsyncError(Contact.index));
-router.get("/new", Contact.create);
-router.post("/", AsyncError(Contact.post));
-router.get("/sortDesc/:sort", AsyncError(Contact.descSort));
-router.get("/sortAsc/:sort", AsyncError(Contact.ascSort));
-router.get("/:id", AsyncError(Contact.showPage));
-router.delete("/:id", AsyncError(Contact.delete));
-module.exports = router;
+adminRouter.get("/", checkAuthentication, AsyncError(Contact.index));
+adminRouter.get("/new", Contact.create);
+adminRouter.post("/", AsyncError(Contact.post));
+adminRouter.get("/sortDesc/:sort", AsyncError(Contact.descSort));
+adminRouter.get("/sortAsc/:sort", AsyncError(Contact.ascSort));
+adminRouter.get("/:id", AsyncError(Contact.showPage));
+adminRouter.delete("/:id", AsyncError(Contact.delete));
+
+app.use(subdomain("admin", adminRouter));
+module.exports = adminRouter;

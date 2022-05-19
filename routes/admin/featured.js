@@ -1,16 +1,19 @@
 "use strict";
 
+const subdomain = require("express-subdomain");
 const express = require("express");
+const app = express();
 
-const router = express.Router();
-
+const adminRouter = express.Router();
 const AdminArticles = require("../../controllers/admin/featured");
 
-router.get("/", AdminArticles.index);
-router.get("/new", AdminArticles.create);
-router.post("/", AdminArticles.post);
-router.get("/:id", AdminArticles.showPage);
-router.get("/:id/edit", AdminArticles.edit);
-router.put("/:id", AdminArticles.update);
-router.delete("/:id", AdminArticles.delete);
-module.exports = router;
+adminRouter.get("/", AdminArticles.index);
+adminRouter.get("/new", AdminArticles.create);
+adminRouter.post("/", AdminArticles.post);
+adminRouter.get("/:id", AdminArticles.showPage);
+adminRouter.get("/:id/edit", AdminArticles.edit);
+adminRouter.put("/:id", AdminArticles.update);
+adminRouter.delete("/:id", AdminArticles.delete);
+
+app.use(subdomain("admin", adminRouter));
+module.exports = adminRouter;
