@@ -1,9 +1,7 @@
 "use strict";
 
 const ENV = require("dotenv").config();
-
 const ArticleModel = require("../../models/Article");
-
 const { AsyncError } = require("../../utility/error");
 
 module.exports.index = async (req, res) => {
@@ -12,10 +10,7 @@ module.exports.index = async (req, res) => {
   if (!articles) {
     throw new AsyncError("Articles Not Found", 404);
   }
-
-  res.render("admin/adminIndex", {
-    articles,
-  });
+  res.render("admin/adminIndex", { articles });
 };
 
 // login in route
@@ -25,10 +20,10 @@ module.exports.login = (req, res) => {
 };
 
 module.exports.post = (req, res, next) => {
-  const redirectUrl = req.session.returnTo || "/admin/dashboard";
+  const redirectUrl = req.session.returnTo || "/dashboard";
 
   delete req.session.returnTo;
-  res.redirect(redirectUrl);
+  res.redirect("/dashboard");
 };
 
 module.exports.logout = (req, res) => {
