@@ -30,7 +30,6 @@ const mainArticleRoutes = require("./routes/index/articles");
 const indexProductRoutes = require("./routes/index/products");
 
 const errorRoutes = require("./utility/error");
-// const bcrypt = require("./bcrypt");
 
 app.use(express.static("public"));
 app.use(express.json());
@@ -60,16 +59,14 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // admin middleware
-// app.use("/admin", );
 app.use("/articles", adminArticleRoutes);
 app.use("/articles/:slug/products", adminProductRoutes);
 app.use("/messages", adminContactRoutes);
-app.use("/users", adminUserRoutes);
 
 // client-side middleware
 app.use("/main/articles", mainArticleRoutes);
 app.use("/main/articles/:slug/products", indexProductRoutes);
-app.use("/", staticRoutes, adminIndexRoutes);
+app.use("/", staticRoutes, adminIndexRoutes, adminUserRoutes);
 
 // error middleware
 app.use(errorRoutes.errorMessage);
