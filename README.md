@@ -21,4 +21,4 @@ login functionality is currently disabled for some work to be fix bugs. If featu
 Username: admin
 Password: password
 
-Check out the admin backend section at https://www.stylishfunction.com/admin/dashboard and navigate throught the sections with the admin navigation.
+Check out the admin backend section at https://admin.stylishfunction.com/dashboard and navigate throught the sections with the admin navigation.
