@@ -6,28 +6,32 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
-require("./mongoDatabase");
-require("./utility/error");
 const path = require("path");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/AdminUsers");
+
+require("./mongoDatabase");
+require("./utility/error");
+
 const PORT = process.env.PORT || 8080;
 
-// imported routes
+// admin routes
 const adminIndexRoutes = require("./routes/admin");
-const articleRoutes = require("./routes/admin/articles");
-const productRoutes = require("./routes/admin/products");
-const indexProductRoutes = require("./routes/index/products");
-const contactRoutes = require("./routes/admin/contact");
-const userRoutes = require("./routes/admin/users");
+const adminArticleRoutes = require("./routes/admin/articles");
+const adminProductRoutes = require("./routes/admin/products");
+const adminContactRoutes = require("./routes/admin/contact");
+const adminUserRoutes = require("./routes/admin/users");
+
+// client-side routes
 const staticRoutes = require("./routes/index/static");
 const mainArticleRoutes = require("./routes/index/articles");
-const errorRoutes = require("./utility/error");
-const bcrypt = require("./bcrypt");
+const indexProductRoutes = require("./routes/index/products");
 
-// middleware
+const errorRoutes = require("./utility/error");
+// const bcrypt = require("./bcrypt");
+
 app.use(express.static("public"));
 app.use(express.json());
 app.use(methodOverride("_method"));
@@ -42,6 +46,8 @@ app.use(
     },
   }),
 );
+
+// passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
@@ -53,15 +59,19 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.use("/admin", adminIndexRoutes);
-app.use("/admin/articles", articleRoutes);
-app.use("/admin/articles/:slug/products", productRoutes);
-app.use("/admin/messages", contactRoutes);
-app.use("/admin/users", userRoutes);
-app.use("/articles", mainArticleRoutes);
-app.use("/articles/:slug/products", indexProductRoutes);
-app.use("/", staticRoutes);
+// admin middleware
+// app.use("/admin", );
+app.use("/articles", adminArticleRoutes);
+app.use("/articles/:slug/products", adminProductRoutes);
+app.use("/messages", adminContactRoutes);
+app.use("/users", adminUserRoutes);
 
+// client-side middleware
+app.use("/main/articles", mainArticleRoutes);
+app.use("/main/articles/:slug/products", indexProductRoutes);
+app.use("/", staticRoutes, adminIndexRoutes);
+
+// error middleware
 app.use(errorRoutes.errorMessage);
 app.use(errorRoutes.AsyncError);
 
