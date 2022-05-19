@@ -19,6 +19,7 @@ module.exports.index = async (req, res) => {
 };
 
 // login in route
+
 module.exports.login = (req, res) => {
   res.render("admin/login");
 };
