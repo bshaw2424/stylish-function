@@ -15,6 +15,7 @@ module.exports.create = (req, res) => res.render("admin/contacts/contactUs");
 
 module.exports.post = async (req, res) => {
   const { Message } = req.body;
+
   // reCaptcha response token
   const captcha = req.body["g-recaptcha-response"];
 
@@ -25,8 +26,9 @@ module.exports.post = async (req, res) => {
   if (data.success) {
     const newMessage = new ContactModel(Message);
     await newMessage.save();
-    res.redirect("/contact-us/success");
   }
+  console.log(data);
+  res.redirect("/contact-us/success");
 };
 
 module.exports.ascSort = async (req, res) => {

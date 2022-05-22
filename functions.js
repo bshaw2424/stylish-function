@@ -7,3 +7,7 @@ module.exports.convertPriceWithComma = price => {
 module.exports.deleteAjaxButton = async (url, method) => {
   await fetch(url, { method });
 };
+
+module.exports.hide = () => {
+  console.log("this is working again!!!");
+};

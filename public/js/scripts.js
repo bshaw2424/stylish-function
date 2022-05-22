@@ -1,6 +1,7 @@
 const messageDeleteButtons = document.querySelectorAll(
   ".message-delete-button .material-icons",
 );
+const messageFilter = document.querySelectorAll(".message-filter-container");
 
 const collection_items = document.querySelectorAll(".collection-item");
 
