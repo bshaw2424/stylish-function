@@ -23,7 +23,7 @@ module.exports.post = (req, res, next) => {
   const redirectUrl = req.session.returnTo || "/dashboard";
 
   delete req.session.returnTo;
-  res.redirect("/dashboard");
+  res.redirect(redirectUrl);
 };
 
 module.exports.logout = (req, res) => {

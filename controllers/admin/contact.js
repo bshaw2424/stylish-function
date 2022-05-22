@@ -53,9 +53,5 @@ module.exports.delete = async (req, res) => {
 
   const deleteMessage = await ContactModel.findByIdAndDelete(id);
 
-  if (!deleteMessage) {
-    throw new asyncError("Message Not Found", 404);
-  }
-
-  res.redirect("/admin/messages");
+  res.redirect("/messages");
 };
