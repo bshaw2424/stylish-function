@@ -8,7 +8,7 @@ require("dotenv").config();
 module.exports.index = async (req, res) => {
   const messages = await ContactModel.find({});
 
-  res.render("admin/contacts/contact", { messages });
+  res.render("admin/contacts/contact", { messages, sortMessage: "All Clear...No Messages" });
 };
 
 module.exports.create = (req, res) => res.render("admin/contacts/contactUs");
@@ -34,12 +34,12 @@ module.exports.post = async (req, res) => {
 
 module.exports.ascSort = async (req, res) => {
   const ascendingSort = await ContactModel.find({}).sort({ created_on: 1 });
-  res.render("admin/contacts/contactAscendingSort", { ascendingSort });
+  res.render("admin/contacts/contactAscendingSort", { ascendingSort, sortMessage: "All Clear...No Messages" });
 };
 
 module.exports.descSort = async (req, res) => {
   const descendingSort = await ContactModel.find({}).sort({ created_on: -1 });
-  res.render("admin/contacts/contactDescendingSort", { descendingSort });
+  res.render("admin/contacts/contactDescendingSort", { descendingSort, sortMessage: "All Clear...No Messages" });
 };
 
 module.exports.showPage = async (req, res) => {

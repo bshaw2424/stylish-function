@@ -44,6 +44,7 @@
       </div>
 
       <!-- individual message body section -->
+      <% if( ascendingSort.length > 0) {%>
       <div class="collection">
         <% ascendingSort.forEach(sort =>{ %>
         <a
@@ -79,6 +80,11 @@
         <% }) %>
         <!-- end of message body container -->
       </div>
+      <% } else { %>
+      <div class="display-message-container">
+        <h1 class="display-message"><%= sortMessage %></h1>
+      </div>
+      <% } %>
       <!-- end of collection container -->
     </div>
   </div>

@@ -10,7 +10,7 @@
       <!-- collection container -->
       <div class="delete-container collection with-header">
         <div class="check-all-button-message-counter">
-          <span>Messages: <%= descendingSort.length %></span>
+          <span> Messages: <%= descendingSort.length %> </span>
         </div>
         <div class="input-field">
           <div style="width: 65%">
@@ -44,6 +44,7 @@
       </div>
 
       <!-- individual message body section -->
+       <% if( descendingSort.length > 0) { %>
       <div class="collection">
         <% descendingSort.forEach(sort =>{ %>
         <a
@@ -79,6 +80,11 @@
         <% }) %>
         <!-- end of message body container -->
       </div>
+       <% } else { %>
+      <div class="display-message-container">
+        <h1 class="display-message"><%= sortMessage %></h1>
+      </div>
+      <% } %>
       <!-- end of collection container -->
     </div>
   </div>
