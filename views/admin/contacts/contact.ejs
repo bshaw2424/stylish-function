@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-
+      <% if( messages.length > 0) {%>
       <!-- individual message body section -->
       <div class="collection">
         <% messages.forEach(message =>{ %>
@@ -79,8 +79,11 @@
         <% }) %>
         <!-- end of message body container -->
       </div>
-      <!-- end of collection container -->
+      <% } else { %>
+      <h1 class="display-message">No messages</h1>
+      <% } %>
     </div>
+    <!-- end of collection container -->
   </div>
 </section>
 <script src="../../../js/scripts.js"></script>
