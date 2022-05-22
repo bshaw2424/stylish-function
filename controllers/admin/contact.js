@@ -22,11 +22,13 @@ module.exports.post = async (req, res) => {
   const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captcha}`;
 
   const response = await fetch(verifyCaptchaResponseURL);
-  const data = await response.json();
-  if (data.success) {
-    const newMessage = new ContactModel(Message);
-    await newMessage.save();
-    res.redirect("/contact-us/success");
+  if (response.ok) {
+    const data = await response.json();
+    if (data.success) {
+      const newMessage = new ContactModel(Message);
+      await newMessage.save();
+      res.redirect("/contact-us/success");
+    }
   }
 };
 
