@@ -1,7 +1,6 @@
 "use strict";
+
 const fetch = require("node-fetch");
-const { descSort } = require("../../functions");
-const { findById } = require("../../models/Contacts");
 const ContactModel = require("../../models/Contacts");
 require("dotenv").config();
 
