@@ -15,7 +15,7 @@ adminRouter.get("/dashboard", checkAuthentication, AsyncError(Admin.index));
 adminRouter.get("/login", AsyncError(Admin.login));
 adminRouter.post(
   "/login",
-  passport.authenticate("local", { failureRedirect: "/admin/login" }),
+  passport.authenticate("local", { failureRedirect: "/login" }),
   AsyncError(Admin.post),
 );
 adminRouter.get("/logout", AsyncError(Admin.logout));
