@@ -86,8 +86,6 @@ module.exports.photoUpdate = async (req, res) => {
 
 module.exports.delete = async (req, res, next) => {
   const { slug } = req.params;
-  await ArticleModel.findOneAndDelete({
-    slug: slug,
-  });
+  await ArticleModel.findOneAndDelete({ slug: slug });
   res.redirect("/admin/articles");
 };

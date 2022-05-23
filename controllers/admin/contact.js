@@ -24,8 +24,10 @@ module.exports.post = async (req, res) => {
   const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${reCaptchaBodyResponse}`;
 
   const response = await fetch(verifyCaptchaResponseURL);
-  if (response.ok) {
+
+  if (response.status === 200) {
     const data = await response.json();
+    console.log(data.success);
     if (data.success) {
       const newMessage = new ContactModel(Message);
       await newMessage.save();
@@ -53,14 +55,11 @@ module.exports.descSort = async (req, res) => {
 module.exports.showPage = async (req, res) => {
   const { id } = req.params;
   const message = await ContactModel.findById(id);
-
   res.render("admin/contacts/contactShowPage", { message });
 };
 
 module.exports.delete = async (req, res) => {
   const { id } = req.params;
-
   const deleteMessage = await ContactModel.findByIdAndDelete(id);
-
   res.redirect("/messages");
 };

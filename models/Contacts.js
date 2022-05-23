@@ -2,34 +2,32 @@
 
 const mongoose = require("mongoose");
 
-const {
-  Schema,
-  model
-} = mongoose;
+const { Schema, model } = mongoose;
 const contactSchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   subject: {
     type: String,
-    required: true
+    required: true,
   },
   email: {
     type: String,
-    required: true
+    required: true,
   },
   message: {
     type: String,
-    required: true
+    required: true,
   },
   message_value: {
     type: Boolean,
-    default: false
+    default: false,
   },
   created_on: {
     type: Date,
-    default: new Date()
-  }
+    default: new Date(),
+  },
 });
+
 module.exports = model("contact", contactSchema);
