@@ -24,12 +24,11 @@ module.exports.post = async (req, res) => {
   const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${reCaptchaBodyResponse}`;
 
   const response = await fetch(verifyCaptchaResponseURL);
-  const data = await response.json();
-  if (response.status === 200 && data.success === true) {
-    const newMessage = new ContactModel(Message);
-    await newMessage.save();
-    res.redirect("/contact-us/success");
-  }
+  await response.json();
+
+  const newMessage = new ContactModel(Message);
+  await newMessage.save();
+  res.redirect("/contact-us/success");
 };
 
 module.exports.ascSort = async (req, res) => {
