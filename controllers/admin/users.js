@@ -13,9 +13,7 @@ module.exports.create = (req, res) => {
 module.exports.post = async (req, res) => {
   try {
     const { username, password } = req.body;
-    const user = new UsersModel({
-      username,
-    });
+    const user = new UsersModel({ username });
     await UsersModel.register(user, password);
     await user.save();
     req.login(user, function (err) {
