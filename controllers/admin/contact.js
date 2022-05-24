@@ -27,13 +27,11 @@ module.exports.post = async (req, res) => {
   const data = await response.json();
 
   if (data.success) {
-    console.log(data);
+    const newMessage = new ContactModel(Message);
+    await newMessage.save();
   }
-  // if (data.success) {
-  //   const newMessage = new ContactModel(Message);
-  //   await newMessage.save();
-  //   res.redirect("/contact-us/success");
-  // }
+  console.log(req.body, data);
+  res.redirect("/contact-us/success");
 };
 
 module.exports.ascSort = async (req, res) => {
