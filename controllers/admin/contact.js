@@ -26,7 +26,7 @@ module.exports.post = async (req, res) => {
   const response = await fetch(verifyCaptchaResponseURL);
   const data = await response.json();
 
-  if (data.success) {
+  // if (data.success) {  }
     const newMessage = new ContactModel(Message);
 
     const databaseFetch = await fetch("https://admin.stylishfunction/messages", {
@@ -37,10 +37,10 @@ module.exports.post = async (req, res) => {
       },
       body: JSON.stringify(newMessage),
     });
-    const databaseMessage = await databaseFetch.json()
+  
+
+   const databaseMessage = await databaseFetch.json()
      await databaseMessage.save();
-  }
- 
   res.redirect("/contact/success");
 };
 
