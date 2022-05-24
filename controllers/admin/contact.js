@@ -29,7 +29,7 @@ module.exports.post = async (req, res) => {
   // if (data.success) {  }
     const newMessage = new ContactModel(Message);
 
-    const databaseFetch = await fetch("https://admin.stylishfunction/messages", {
+    const databaseFetch = await fetch("/messages", {
       method: "POST",
       headers: {
         "Accept": "application/json",
