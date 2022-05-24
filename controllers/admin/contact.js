@@ -37,10 +37,10 @@ module.exports.post = async (req, res) => {
       },
       body: JSON.stringify(newMessage),
     });
-    await databaseFetch.json();
-    
+    const databaseMessage = await databaseFetch.json()
+     await databaseMessage.save();
   }
-  await databaseFetch.save();
+ 
   res.redirect("/contact/success");
 };
 
