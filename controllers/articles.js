@@ -17,10 +17,6 @@ module.exports.showPage = async (req, res, next) => {
     slug,
   }).populate("products");
 
-  if (!articles) {
-    throw new asyncError("Article Page Not Found", 404);
-  }
-
   res.render("articles/showPage", {
     articles,
   });

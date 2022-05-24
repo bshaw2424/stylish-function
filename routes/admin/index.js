@@ -9,7 +9,6 @@ const passport = require("passport");
 const { AsyncError } = require("../../utility/error");
 const { checkAuthentication } = require("../../middleware");
 const Admin = require("../../controllers/admin/admin");
-const { response } = require("express");
 
 adminRouter.get("/dashboard", checkAuthentication, AsyncError(Admin.index));
 adminRouter.get("/login", AsyncError(Admin.login));

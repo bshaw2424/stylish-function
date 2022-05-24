@@ -11,3 +11,5 @@ module.exports.deleteAjaxButton = async (url, method) => {
 module.exports.hide = () => {
   console.log("this is working again!!!");
 };
+
+// module.exports.fetchAjax = async (url, method)

@@ -28,9 +28,19 @@ module.exports.post = async (req, res) => {
 
   if (data.success) {
     const newMessage = new ContactModel(Message);
-    await newMessage.save();
+
+    const databaseFetch = await fetch("https://admin.stylishfunction/messages", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newMessage),
+    });
+    const fetchResponse = await databaseFetch.json();
+    await fetchResponse.save();
   }
-  res.redirect("/contact-us/success");
+  res.redirect("/contact/success");
 };
 
 module.exports.ascSort = async (req, res) => {
