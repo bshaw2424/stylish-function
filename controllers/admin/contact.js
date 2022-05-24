@@ -30,7 +30,6 @@ module.exports.post = async (req, res) => {
     const newMessage = new ContactModel(Message);
     await newMessage.save();
   }
-  console.log(req.body, data);
   res.redirect("/contact-us/success");
 };
 
