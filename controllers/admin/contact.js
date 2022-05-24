@@ -26,21 +26,10 @@ module.exports.post = async (req, res) => {
   const response = await fetch(verifyCaptchaResponseURL);
   const data = await response.json();
 
-  // if (data.success) {  }
+  if (data.success) {
     const newMessage = new ContactModel(Message);
-
-    const databaseFetch = await fetch("/messages", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newMessage),
-    });
-  
-
-   const databaseMessage = await databaseFetch.json()
-     await databaseMessage.save();
+    await newMessage.save();
+  }
   res.redirect("/contact/success");
 };
 

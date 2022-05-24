@@ -74,10 +74,6 @@
 </section>
 
 <script>
-  document
-    .querySelector("#contact-form")
-    .addEventListener("submit", sendMessageAjax);
-
   function submitButtonClickableIfRecaptchaTrue() {
     document.querySelector("#contact-send-button").removeAttribute("disabled");
   }
