@@ -11,7 +11,7 @@ const { checkAuthentication } = require("../../middleware");
 const Admin = require("../../controllers/admin/admin");
 
 adminRouter.get("/dashboard", checkAuthentication, AsyncError(Admin.index));
-adminRouter.get("/login", AsyncError(Admin.login));
+adminRouter.get("/", AsyncError(Admin.login));
 adminRouter.post(
   "/login",
   passport.authenticate("local", { failureRedirect: "/login" }),
