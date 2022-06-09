@@ -7,10 +7,6 @@ const app = express();
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const path = require("path");
-const session = require("express-session");
-const passport = require("passport");
-const LocalStrategy = require("passport-local");
-const User = require("./models/AdminUsers");
 
 require("./mongoDatabase");
 require("./utility/error");
@@ -30,25 +26,6 @@ const errorRoutes = require("./utility/error");
 app.use(express.static("public"));
 app.use(express.json());
 app.use(methodOverride("_method"));
-app.use(
-  session({
-    secret: "lookingtogetthisstarted",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      secure: false,
-      maxAge: 3600000, //1 hour
-    },
-  }),
-);
-
-// passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(new LocalStrategy(User.authenticate()));
-
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
 
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
