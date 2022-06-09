@@ -18,11 +18,7 @@ require("./utility/error");
 const PORT = process.env.PORT || 8080;
 
 // admin routes
-const adminIndexRoutes = require("./routes/admin");
-const adminArticleRoutes = require("./routes/admin/articles");
-const adminProductRoutes = require("./routes/admin/products");
 const adminContactRoutes = require("./routes/admin/contact");
-const adminUserRoutes = require("./routes/admin/users");
 
 // client-side routes
 const staticRoutes = require("./routes/index/static");
@@ -59,14 +55,12 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // admin middleware
-app.use("/articles", adminArticleRoutes);
-app.use("/articles/:slug/products", adminProductRoutes);
 app.use("/messages", adminContactRoutes);
 
 // client-side middleware
 app.use("/main/articles", mainArticleRoutes);
 app.use("/main/articles/:slug/products", indexProductRoutes);
-app.use("/", staticRoutes, adminIndexRoutes, adminUserRoutes);
+app.use("/", staticRoutes);
 
 // error middleware
 app.use(errorRoutes.errorMessage);
