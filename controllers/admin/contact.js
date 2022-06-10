@@ -4,14 +4,14 @@ const fetch = require("node-fetch");
 const ContactModel = require("../../models/Contacts");
 require("dotenv").config();
 
-module.exports.index = async (req, res) => {
-  const messages = await ContactModel.find({});
+// module.exports.index = async (req, res) => {
+//   const messages = await ContactModel.find({});
 
-  res.render("admin/contacts/contact", {
-    messages,
-    sortMessage: "All Clear...No Messages",
-  });
-};
+//   res.render("admin/contacts/contact", {
+//     messages,
+//     sortMessage: "All Clear...No Messages",
+//   });
+// };
 
 module.exports.create = (req, res) => res.render("admin/contacts/contactUs");
 
