@@ -29,7 +29,7 @@ module.exports.post = async (req, res) => {
   const newMessage = new ContactModel(Message);
   await newMessage.save();
 
-  res.redirect("/static/success");
+  res.redirect("/success");
 };
 
 module.exports.ascSort = async (req, res) => {
