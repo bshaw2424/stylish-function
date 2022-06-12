@@ -1,24 +1,36 @@
 # stylish-function
 
-A full stack crud personal portfolio project.
+About the project:
+The project is a ficitious affilite blog. My goal was to learn how the front end and backend connect to
+bring a single application together. Also to learn the fundamentals of JavaScript before I jumped into a framework such as React.js. Through my learning experience I was guided with online resources such as MDN Docs, W3schools, Udemy courses, and YouTube Tutorials. Other resources used was books.
 
-Built with:
-Vanilla Javascript
-MongoDB/Mongoose
-EJS Template Engine
-reCaptcha V2
-Sass
-MaterializeCSS
+Some road blocks I encountered and learned
 
-Fictitious blogging affiliate marketing site.
-Project application was designed with a front end and backend admin section.
+- Getting a good grasp of RESTful HTTP routes / MVC design.
+- Understanding how the routes connect with route parameters.
+- One big learning experience that I had was understanding how to read error messages to fix bugs.
+- Dealing with bots was an issued which lead me to researching and implementing Google Recaptcha V2.
+- Getting use to the use of SCSS (sass).
 
--Admin section includes a place were an admin user has the ability to create, views, update, and delete posts along with associated photos.
+My github account:
 
-For demo purposes admin login in
+- Frontend code => https://www.github.com/bshaw2424/stylish-function
 
-login functionality is currently disabled for some work to be fix bugs. If feature is put back up the login in for demo purposes is:
-Username: admin
-Password: password
+npm run start command is used to start app once cloned to local machine
 
-Check out the admin backend section at https://admin.stylishfunction.com/dashboard and navigate throught the sections with the admin navigation.
+Tools use to developed my project:
+
+- Node.js,
+- EJS,
+- Sass,
+- vanilla JavaScript,
+- MongoDB,
+- Mongoose,
+- Express.js,
+- Cloudinary (image storage),
+- ES6 modules,
+- google Recaptcha to guard against bots
+
+NPM packages such as: multer, slugify.
+
+Deployed via digital ocean.
