@@ -11,13 +11,12 @@ module.exports.post = async (req, res) => {
 
   // reCaptcha response token
   const reCaptchaBodyResponse = req.body["g-recaptcha-response"];
-  let newMessage;
   const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${reCaptchaBodyResponse}&remoteip=${req.connection.remoteAddress}`;
 
   const response = await fetch(verifyCaptchaResponseURL);
   const data = await response.json();
   if (response.status === 200 && data.success === true) {
-    newMessage = new ContactModel(Message);
+    const newMessage = new ContactModel(Message);
     await newMessage.save();
     res.redirect("/contact/success");
   }
