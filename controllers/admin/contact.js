@@ -18,9 +18,9 @@ module.exports.post = async (req, res) => {
   const data = await response.json();
   if (response.status === 200 && data.success === true) {
     newMessage = new ContactModel(Message);
+    await newMessage.save();
+    res.redirect("/contact/success");
   }
-  await newMessage.save();
-  res.redirect("/contact/success");
 };
 
 module.exports.ascSort = async (req, res) => {
