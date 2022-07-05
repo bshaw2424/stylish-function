@@ -16,7 +16,7 @@ module.exports.post = async (req, res) => {
   const response = await fetch(verifyCaptchaResponseURL);
   const data = await response.json();
   console.log(data);
-  res.send(response);
+  res.send(data);
   // const newMessage = new ContactModel(Message);
   // await newMessage.save();
   // res.redirect("/contact/success");
