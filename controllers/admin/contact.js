@@ -15,10 +15,10 @@ module.exports.post = async (req, res) => {
 
   const response = await fetch(verifyCaptchaResponseURL);
   const data = await response.json();
-
-  const newMessage = new ContactModel(Message);
-  await newMessage.save();
-  res.redirect("/contact/success");
+  console.log(data);
+  // const newMessage = new ContactModel(Message);
+  // await newMessage.save();
+  // res.redirect("/contact/success");
 };
 
 module.exports.ascSort = async (req, res) => {
