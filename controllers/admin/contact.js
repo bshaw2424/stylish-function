@@ -14,7 +14,6 @@ module.exports.post = async (req, res) => {
   const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${reCaptchaBodyResponse}&remoteip=${req.connection.remoteAddress}`;
 
   const response = await fetch(verifyCaptchaResponseURL);
-  const data = await response.json();
   const newMessage = new ContactModel(Message);
   await newMessage.save();
   res.redirect("/contact/success");
