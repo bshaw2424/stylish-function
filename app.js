@@ -9,7 +9,6 @@ const methodOverride = require("method-override");
 const path = require("path");
 
 require("./mongoDatabase");
-require("./utility/error");
 
 const PORT = process.env.PORT || 8080;
 
