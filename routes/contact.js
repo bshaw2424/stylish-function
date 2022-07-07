@@ -7,10 +7,9 @@ const app = express();
 const adminRouter = express.Router();
 const { AsyncError } = require("../utility/error");
 const { checkAuthentication } = require("../middleware");
-// contact admin controller
 const Contact = require("../controllers/contact");
 
-adminRouter.get("/", checkAuthentication, AsyncError(Contact.index));
+//adminRouter.get("/", checkAuthentication, AsyncError(Contact.index));
 adminRouter.get("/new", Contact.create);
 adminRouter.post("/", AsyncError(Contact.post));
 
