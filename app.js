@@ -11,7 +11,6 @@ const errorRoutes = require("./utility/error");
 require("./mongoDatabase");
 const PORT = process.env.PORT || 8080;
 
-// client-side routes
 const staticRoutes = require("./routes/index/static");
 const mainArticleRoutes = require("./routes/index/articles");
 const indexProductRoutes = require("./routes/index/products"); 
