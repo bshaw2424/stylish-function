@@ -31,6 +31,4 @@ Tools use to developed my project:
 - ES6 modules,
 - google Recaptcha to guard against bots
 
-NPM packages such as: multer, slugify.
-
 Deployed via digital ocean.
