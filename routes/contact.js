@@ -6,7 +6,6 @@ const app = express();
 
 const adminRouter = express.Router();
 const { AsyncError } = require("../utility/error");
-const { checkAuthentication } = require("../middleware");
 const Contact = require("../controllers/contact");
 
 //adminRouter.get("/", checkAuthentication, AsyncError(Contact.index));
