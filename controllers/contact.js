@@ -3,7 +3,6 @@
 const { json } = require("body-parser");
 const fetch = require("node-fetch");
 const ContactModel = require("../models/Contacts");
-require("dotenv").config();
 
 module.exports.create = (req, res) => res.render("contactUs");
 
