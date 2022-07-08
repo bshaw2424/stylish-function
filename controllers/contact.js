@@ -20,7 +20,8 @@ module.exports.post = async (req, res) => {
   if (data.success === true) {
     const newMessage = new ContactModel(Message);
     await newMessage.save();
-    res.redirect("/contact/success");
+    res.send(data);
+    //res.redirect("/contact/success");
   }
   res.redirect("/contact");
 };
