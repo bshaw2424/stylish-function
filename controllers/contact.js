@@ -13,12 +13,12 @@ module.exports.post = async (req, res) => {
   // reCaptcha response token
   const reCaptchaBodyResponse = req.body["g-recaptcha-response"];
   const secret_key = process.env.RECAPTCHA_SECRET_KEY
-  const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=6LfDB7UfAAAAAAs1e_yxA1gprsTEuZn--7ihanyF&response=${reCaptchaBodyResponse}&remoteip=${req.connection.remoteAddress}`;
+  const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${reCaptchaBodyResponse}&remoteip=${req.connection.remoteAddress}`;
 
   const response = await fetch(verifyCaptchaResponseURL, {method: "post"});
   const data = await response.json({});
   if(data.success === true){
-    res.send({response: "True"})
+    res.send(data)
   }else{
     res.send({response: "false"})
   }
