@@ -1,5 +1,6 @@
 "use strict";
 
+const { json } = require("body-parser");
 const fetch = require("node-fetch");
 const ContactModel = require("../models/Contacts");
 require("dotenv").config();
@@ -11,11 +12,17 @@ module.exports.post = async (req, res) => {
 
   // reCaptcha response token
   const reCaptchaBodyResponse = req.body["g-recaptcha-response"];
-  const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${reCaptchaBodyResponse}&remoteip=${req.connection.remoteAddress}`;
+  const secret_key = process.env.RECAPTCHA_SECRET_KEY
+  const verifyCaptchaResponseURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${reCaptchaBodyResponse}&remoteip=${req.connection.remoteAddress}`;
 
-  const response = await fetch(verifyCaptchaResponseURL);
+  const response = await fetch(verifyCaptchaResponseURL, {method: "post"});
   const data = await response.json({});
-  res.send(data)
+  if(data.success === true){
+    res.send({response: "True"})
+  }else{
+    res.send({response: "false"})
+  }
+  console.log(verifyCaptchaResponseURL, data)
   // const newMessage = new ContactModel(Message);
   // await newMessage.save();
   // res.redirect("/contact/success");
