@@ -41,9 +41,7 @@ const Products = new Schema({
   },
 });
 Products.pre("save", function (next) {
-  this.slug = slugify(this.title, {
-    lower: true,
-  });
+  this.slug = slugify(this.title, { lower: true });
   next();
 });
 const Product = model("Product", Products);

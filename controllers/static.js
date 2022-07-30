@@ -3,15 +3,11 @@
 const ArticleModel = require("../models/Article");
 
 module.exports.index = async (req, res) => {
-  const articles = await ArticleModel.find()
-    .sort({
-      created_on: "DESC",
-    })
+  const articles = await ArticleModel.find({})
+    .sort({ created_on: "DESC" })
     .limit(4);
 
-  res.render("pages/index", {
-    articles,
-  });
+  res.render("pages/index", { articles });
 };
 
 module.exports.aboutUs = (req, res) => res.render("static/aboutUs");

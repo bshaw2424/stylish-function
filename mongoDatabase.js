@@ -11,4 +11,5 @@ const databaseConnection = mongoose
   })
   .then(() => console.log("Database connected"))
   .catch(err => console.log(`Error: ${err.message}`));
+
 module.exports = databaseConnection;
