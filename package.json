@@ -16,7 +16,7 @@
     "express-subdomain": "^1.0.5",
     "method-override": "^3.0.0",
     "mongodb": "^3.6.9",
-    "mongoose": "^6.0.8",
+    "mongoose": "^6.4.6",
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.19",
     "passport-local": "^1.0.0",
