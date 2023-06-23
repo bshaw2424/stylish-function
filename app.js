@@ -9,11 +9,11 @@ const methodOverride = require("method-override");
 const path = require("path");
 const errorRoutes = require("./utility/error");
 require("./mongoDatabase");
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
 const staticRoutes = require("./routes/index/static");
 const mainArticleRoutes = require("./routes/index/articles");
-const indexProductRoutes = require("./routes/index/products"); 
+const indexProductRoutes = require("./routes/index/products");
 const contactRoutes = require("./routes/contact");
 
 app.use(express.static("public"));
@@ -26,7 +26,7 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use("/main/articles", mainArticleRoutes);
 app.use("/main/articles/:slug/products", indexProductRoutes);
-app.use("/messages", contactRoutes); 
+app.use("/messages", contactRoutes);
 app.use("/", staticRoutes);
 
 // error middleware
